@@ -11,10 +11,13 @@ Linux is an open source, multi-user operating system based on UNIX Operating sys
 
 Kernel acts as the main bridge between your computer hardware and software applications running on it. Below are the jobs that Kernel does : 
 
->> Memory Management: Keeps track of memory to decide how much to be assigned for each program running.
->> Process Management: Deciding CPU allocation for each of the process running , and how much CPU to be assigned for the program. And also teminate the process as required.
->> Device Management : Kernel facilitate the communication between with devices ( like mice, memory, network cards) using the device drivers.
->> System Calls and Security : System calls ( syscall ) is a fundamental programmatic interface which lets a user application to request for the permission service from the Linux Kernel. There are many tasks that runs in a restricted mode in order to prevent them from crashing, these tasks can not access hardware, memory or the network device directly, a system calls act as a secure and way that request Kernel to execute these tasks on behalf of the application. 
+>Memory Management: Keeps track of memory to decide how much to be assigned for each program running.
+
+>Process Management: Deciding CPU allocation for each of the process running , and how much CPU to be assigned for the program. And also teminate the process as required.
+
+>Device Management : Kernel facilitate the communication between with devices ( like mice, memory, network cards) using the device drivers.
+
+>System Calls and Security : System calls ( syscall ) is a fundamental programmatic interface which lets a user application to request for the permission service from the Linux Kernel. There are many tasks that runs in a restricted mode in order to prevent them from crashing, these tasks can not access hardware, memory or the network device directly, a system calls act as a secure and way that request Kernel to execute these tasks on behalf of the application. 
 
 #### What Shell does? Why it is the core component of Linux?
 
