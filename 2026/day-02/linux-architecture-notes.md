@@ -6,9 +6,11 @@ Linux is an open source, multi-user operating system based on UNIX Operating sys
 
 ### Core Components of Linux 
 
-#### Kernel 
+#### What Kernel does? Why it is the core component of Linux? 
 
-#### Shell 
+Kernel acts as the main bridge between your computer hardware and software applications running on it. 
+
+#### What Shell does? Why it is the core component of Linux?
 
 #### Application 
 
