@@ -4,13 +4,15 @@
 
 We already gone through what is a process, types of process states, and background/foreground process. Lets review some more commands that are used in daily life of a DevOps Engineer to troubleshoot issues.
 
-ps -aux
+``ps -aux``
+
 // for finding the resource usage for a particular process with single page snapshot.
 a=process for all the users
 u=user oriend format that shows user layout.
 x=display background process, system daemons
 
-ps -ef 
+``ps -ef``
+
 // for finding process owner and child relationship info with single page snapshot.
 e= every process 
 f= full details
