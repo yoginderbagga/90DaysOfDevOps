@@ -1,4 +1,4 @@
-## Linux Commands Mostly Used
+# Linux Commands Mostly Used
 
 #### PROCESS MANAGEMENT
 
