@@ -41,17 +41,34 @@ Kernel Space: This is the place which is only reserved for running a privilege o
 To put simply, user space is an area is responsible for all the applications, code that runs outside the operating system's kernel. 
 
 
+#### What is init and Systemd?
+
+Init : When you power on the laptop, "init" ( inialization ) is the first process which gets launched during the boot process. It makes sure everyhing runs in the right order. The init process is daemon process that continue running until the system is fully shut down. You can also say that, init is the direc ot indirect ancestor for all of the Linux processess. 
+
+DO YOU KNOW ? 
+
+Init itself is started by Linux Kernel and a kernel panic will occur if the Linux Kernel is unable to start properly or dies in between due any reason. It gets assigned the PID 1. 
+
+SystemD
+
+Systemdd is the default system and service manager for the modern Linux distributions such as Fedora, RHEL. It is used to manager the system settings, services on your Linux machine. Systemd organize tasks into components called units and groupf of units into targets. 
+
+Systemd is responsible for several functions like : service management like background daemons services, resolving network configuration, mounting filesystems, logging, resource management, system control etc. It replaces the traditional init scripts by providing the parallelization and dependency management which largely improves the system boot speeds. 
 
 
+How does Systemd works?
 
+Systemd uses Units, which is the standard configuration object that Linux initialization system (systemd) uses to to monitor and manage 
+the system resources. The resources could be : background applications, hardware components, network sockets and storage devices. 
+Systemd replaces the legacy SysVinit shell scripts with the plain-text declarative configuration files called unit files. 
 
+Types of Systemd Units : 
 
-
-
-
-
-
-
+``.service`` this unit files manages daemons and applications (example : sshd.service, nginx service)
+``.socket`` this manages network sockets or socket communication
+``.timer`` this is an alternative to cronjob, uses to schedule the tasks as per user time requirement. 
+``.target`` this is also a systemd unit file ( like graphical.target, multi-user.target ) which combines several other systemd units like ( services, sockets, mounts ) to define a particular system state. 
+``.path``
 
 
 
