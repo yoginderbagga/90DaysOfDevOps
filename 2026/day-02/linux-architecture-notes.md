@@ -126,15 +126,23 @@ x=include processess which are not attached to the terminal
 Sort Process by Memory usage: 
 
 ps aux is useful for finding the resources usages like CPU / memory
+
 ``ps aux --sort=-%mem | head -5``
 
 ps -ef focuses more on finding the process owner and process child info along with the process info.
+
 ``ps -ef | grep ssh``
 
 
 **Real Time Monitoring**
 
 Use the top and htop commands.
+
+###Background Process Vs Foreground Process
+
+Background process do not block the terminal while you're running your command on the terminal or doing any activity. It works independently, allows you to run do the work on terminal while it runs in the background. 
+
+Foreground process blocks the terminal until the execution of the program, or command gets completed like when you create a container and runs it in the foreground on your terminal. 
 
 
 
