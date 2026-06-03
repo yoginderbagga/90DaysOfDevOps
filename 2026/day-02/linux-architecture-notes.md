@@ -100,7 +100,9 @@ For making the changes right after the reboot time rather than immediately :
 
 <img width="1255" height="412" alt="Screenshot 2026-06-03 170203" src="https://github.com/user-attachments/assets/92e73833-9727-4fce-9f56-b85d420c8802" />
 
-``journalctl -f``           &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;    		   //display live logs for authentication, service (like nginx), anything that is not working, giving issues.
+
+
+``journalctl -f``           &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;  		   //display live logs for authentication, service (like nginx), anything that is not working, giving issues.
 
 
 ### Process
@@ -138,13 +140,23 @@ ps -ef focuses more on finding the process owner and process child info along wi
 
 Use the top and htop commands.
 
-###Background Process Vs Foreground Process
+### Background Process Vs Foreground Process
 
 Background process do not block the terminal while you're running your command on the terminal or doing any activity. It works independently, allows you to run do the work on terminal while it runs in the background. 
 
 Foreground process blocks the terminal until the execution of the program, or command gets completed like when you create a container and runs it in the foreground on your terminal. 
 
+### Process States : Running, Sleep, Zombie and Stopped 
 
+Run below command and look at the column stat to check the process state. 
+
+``ps -aux``
+
+Running: When a new process starts, it gets placed into the running or runnable state.
+Sleeping: When a process request IO to read file from disk or networ connection, and suppose resources are not available, it stall and do nothing. Goes to sleep.
+For example : A process reads data from a NFS or SAN storage and if the network speed is very slow, the read operation might take time, since the process is blocked at this moment. It can not be killed or interrupted as its waiting for hardware condition. Here it is in uninterruptable sleeping state as it waits for the resources to be available, before it moves into a runnable state and doesn't react to any command. 
+Zombie: 
+Stopped:
 
 
 
