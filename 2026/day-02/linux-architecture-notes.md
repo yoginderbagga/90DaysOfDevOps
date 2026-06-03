@@ -65,10 +65,12 @@ Systemd replaces the legacy SysVinit shell scripts with the plain-text declarati
 Types of Systemd Units : 
 
 ``.service`` this unit files manages daemons and applications (example : sshd.service, nginx service)
+
 ``.socket`` this manages network sockets or socket communication
+
 ``.timer`` this is an alternative to cronjob, uses to schedule the tasks as per user time requirement. 
+
 ``.target`` this is also a systemd unit file ( like graphical.target, multi-user.target ) which combines several other systemd units like ( services, sockets, mounts ) to define a particular system state. 
-``.path``
 
 
 
