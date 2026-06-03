@@ -153,10 +153,14 @@ Run below command and look at the column stat to check the process state.
 ``ps -aux``
 
 Running: When a new process starts, it gets placed into the running or runnable state.
+
 Sleeping: When a process request IO to read file from disk or networ connection, and suppose resources are not available, it stall and do nothing. Goes to sleep.
 For example : A process reads data from a NFS or SAN storage and if the network speed is very slow, the read operation might take time, since the process is blocked at this moment. It can not be killed or interrupted as its waiting for hardware condition. Here it is in uninterruptable sleeping state as it waits for the resources to be available, before it moves into a runnable state and doesn't react to any command. 
-Zombie: 
-Stopped:
+
+Zombie: When a process has completed its execution or is terminated, it will go into the zombie state. It will remain in the zombie state until the parent
+process clears it off from the process table. 
+
+Stopped:You can put a running process into a stopped state by using the SIGSTOP signals ( CTRL + Z )
 
 
 
