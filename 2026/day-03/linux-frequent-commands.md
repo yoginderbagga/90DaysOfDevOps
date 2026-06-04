@@ -55,6 +55,15 @@ The highest the value (19) -- lowest priority will be given to it.
 
 To set the priority of a already running process, assign a new value with (-n) argument and select the PID id for which you would like to make a change. 
 
+``bg [job_spec]``
+
+To resume an already stopped process and runs it in the background, this frees up the terminal so the user can continue the work 
+
+``fg [job_id]``
+
+To pull a background or paused job into the active foreground terminal. 
+
+
 #### FILE SYSTEM
 
 ls -l
