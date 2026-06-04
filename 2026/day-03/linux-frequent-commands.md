@@ -13,6 +13,12 @@
    - fg
 3. File System
 4. Network Troubleshooting
+   - nslookup
+   - dig
+   - ping
+   - traceroute
+   - curl
+6. 
 
 ### PROCESS MANAGEMENT
 
@@ -95,13 +101,52 @@ In Linux, you can start a new command entirely in the background to keep termina
 
 
 
-#### FILE SYSTEM
+#### FILE Management Commands
 
-ls -l
+ls -l<br>
+To display the files, directory in long listing format with columns of permissions, links, owner, groups, modification time, and file name at the end.<br>
+<br>
+cp <br>
+To copy files or directory to a location. <br>
+``cp -r source_location destination_location ( Recursively copy all files in it )``<br>
+<br>
+ mv  <br>
+To move a file to a location or to rename it. <br><br>
+``mv old_name new_name``
+<br>
+<br>
+touch<br>
+To create an empty file on your system.<br>
+``touch myfile``<br>
+rm <br>
+To remove files or directory permanently from your system. <br>
+``rm -rf directory name``   // carefull while run it
+<br>
+cat <br>
+To print the content of a text file to your terminal and also can be used to create a new file which allows you to type text directly into the terminal. <br>
+<img width="851" height="221" alt="image" src="https://github.com/user-attachments/assets/7aa00c12-e94a-43bd-adad-08eca907333c" /> <br>
+
+<img width="810" height="226" alt="image" src="https://github.com/user-attachments/assets/ab7d6220-fac1-4002-bbab-00fb443309f8" />
 
 
 
 
 #### NETWORK TROUBLESHOOTING
+
+nslookup:
+Name server lookup command is used to find the IP address assocaited with a given domain name and also query the Domain Name System records such as MX or TXT records. <br>
+
+nslookup w3school.com
+<br>
+dig:
+dig command is used frequently to investigate network issues, domain name system troubleshooting purpose for a given hostname or IP address. <br>
+<img width="912" height="417" alt="image" src="https://github.com/user-attachments/assets/0c60b765-4a9e-479e-a1f4-7a05c220d2d9" />
+
+
+curl:
+Curl command is used to transfer data from your host to server, and server to the host and it works without the user interaction. Curl allows you to download or upload data using the protocols like HTTP, HTTPS, SCP, SFTP, and FTP.
+
+``yoginderbagga@fedora:~$ curl -o output.html w3school.com``
+
 
 
