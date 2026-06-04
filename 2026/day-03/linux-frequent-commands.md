@@ -1,5 +1,19 @@
 # Linux Commands Mostly Used
 
+1. Process Management
+   - pgrep
+   - ps -aux
+   - ps -ef
+   - uptime
+   - nice -n
+   - renice
+2. Jobs Control
+   - bg
+   - &
+   - fg
+3. File System
+4. Network Troubleshooting
+
 ### PROCESS MANAGEMENT
 
 We already gone through what is a process, types of process states, and background/foreground process. Lets review some more commands that are used in daily life of a DevOps Engineer to troubleshoot issues.<br>
@@ -38,7 +52,7 @@ To display realtime view of the interactive process
 
 To display list of processes with high CPU consumption. 
 
-<img width="1562" height="326" alt="image" src="https://github.com/user-attachments/assets/17ead8e3-5539-4e89-855c-115765dff3bd" />
+<img width="1562" height="326" alt="image" src="https://github.com/user-attachments/assets/17ead8e3-5539-4e89-855c-115765dff3bd" /><br><br>
 
 ``uptime``
 
@@ -55,18 +69,37 @@ The highest the value (19) -- lowest priority will be given to it.
 
 To set the priority of a already running process, assign a new value with (-n) argument and select the PID id for which you would like to make a change. 
 
-``bg [job_spec]``
+### Concept of Jobs Control
 
-To resume an already stopped process and runs it in the background, this frees up the terminal so the user can continue the work 
+``bg [job_spec]``<br>
+In Linux, you can run a process in the background with the help of bg command. This is used with an already running process to send a signal to run it in the background, this frees up the terminal so the user can continue the work. <br>In below example, user ping ping 8.8.8.8 IP address and then suddently stopped the process by hitting CTRL +Z, now to resume this process user can type bg or bg %1 ( the job id ) to start it back but in the background. 
+( Note: You might notice even when you resumed it in the background, the ping output still shows on the terminal because the output is attached to the terminal whereas this is running in the background. ) <br>
 
-``fg [job_id]``
+<img width="927" height="342" alt="image" src="https://github.com/user-attachments/assets/75ace95a-51c0-4eaf-81a9-c2b91ee90eb5" /><br><br>
 
+
+``fg jobid`` <br>
 To pull a background or paused job into the active foreground terminal. 
+
+<img width="967" height="167" alt="image" src="https://github.com/user-attachments/assets/127f02d2-b45d-4719-abc6-48b69e2a6921" />
+
+<br>
+
+``&``<br>
+In Linux, you can start a new command entirely in the background to keep terminal free so you can focus on your other task. To achieve this add the ampersand & at the end of the command. 
+
+``yoginderbagga@fedora:~$ tar -cvzf /home/yoginderbagga/Documents/random.targz .minikube/cache/linux/ &``
+
+<br>
+<img width="1227" height="47" alt="image" src="https://github.com/user-attachments/assets/99e667ee-8dda-4674-9d50-8a484a34818b" />
+
 
 
 #### FILE SYSTEM
 
 ls -l
+
+
 
 
 #### NETWORK TROUBLESHOOTING
