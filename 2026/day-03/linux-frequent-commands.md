@@ -133,12 +133,12 @@ To print the content of a text file to your terminal and also can be used to cre
 
 #### NETWORK TROUBLESHOOTING
 
-nslookup:
+nslookup:<br>
 Name server lookup command is used to find the IP address assocaited with a given domain name and also query the Domain Name System records such as MX or TXT records. <br>
 
-nslookup w3school.com
+``nslookup w3school.com<br>``
 <br>
-dig:
+dig:<br>
 dig command is used frequently to investigate network issues, domain name system troubleshooting purpose for a given hostname or IP address. <br>
 <img width="912" height="417" alt="image" src="https://github.com/user-attachments/assets/0c60b765-4a9e-479e-a1f4-7a05c220d2d9" />
 
@@ -147,12 +147,17 @@ curl:
 Curl command is used to transfer data from your host to server, and server to the host and it works without the user interaction. Curl allows you to download or upload data using the protocols like HTTP, HTTPS, SCP, SFTP, and FTP. User can enter the hostname of the
 website and download the home page, or any other page from that site, or even download a .sh file which is hosted on that server. 
 
-To download the web-page and save it in output.html
-``yoginderbagga@fedora:~$ curl -o output.html w3school.com``
+To download the web-page and save it in output.html<br>
+``yoginderbagga@fedora:~$ curl -o output.html w3school.com``<br>
 
 To download a file from below host, 
 ``curl ftp://ftp-your-domain-name/file.tar.gz``
 
+<img width="851" height="136" alt="Screenshot 2026-06-05 122700" src="https://github.com/user-attachments/assets/ecf9a89a-b3bf-4a48-9e78-34cd58a82f19" />
+
+Display quick weather report using CURL on your terminal : <br>
+
+``yoginderbagga@fedora:~$ curl wttr.in/Delhi``
 
 
 
