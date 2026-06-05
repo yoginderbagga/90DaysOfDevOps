@@ -24,7 +24,7 @@ Systemd is a Linux System and Service manager which runs as a first process ( PI
 <br>
 ## Journalct command<br> 
 
-Journalctl with -u is used to display logs specific to a particular service like sshd.service, httpd.service, or NetworkManager.service
+Journalctl with -u is used to display logs specific to a particular service like sshd.service, httpd.service, or NetworkManager.service<br>
 -> journalctl -u httpd.service<br> 
 -> journalctl -u sshd.service<br>
 -> journalctl -u NetworkManager.service<br>
