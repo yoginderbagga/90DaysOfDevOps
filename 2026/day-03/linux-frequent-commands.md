@@ -144,9 +144,15 @@ dig command is used frequently to investigate network issues, domain name system
 
 
 curl:
-Curl command is used to transfer data from your host to server, and server to the host and it works without the user interaction. Curl allows you to download or upload data using the protocols like HTTP, HTTPS, SCP, SFTP, and FTP.
+Curl command is used to transfer data from your host to server, and server to the host and it works without the user interaction. Curl allows you to download or upload data using the protocols like HTTP, HTTPS, SCP, SFTP, and FTP. User can enter the hostname of the
+website and download the home page, or any other page from that site, or even download a .sh file which is hosted on that server. 
 
+To download the web-page and save it in output.html
 ``yoginderbagga@fedora:~$ curl -o output.html w3school.com``
+
+To download a file from below host, 
+``curl ftp://ftp-your-domain-name/file.tar.gz``
+
 
 
 
