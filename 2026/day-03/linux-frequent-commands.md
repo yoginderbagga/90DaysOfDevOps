@@ -20,7 +20,7 @@
    - curl
    - ss -tulpn
    - lsof
-6. 
+   
 
 ### PROCESS MANAGEMENT
 
