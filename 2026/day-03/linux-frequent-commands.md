@@ -18,6 +18,8 @@
    - ping
    - traceroute
    - curl
+   - ss -tulpn
+   - lsof
 6. 
 
 ### PROCESS MANAGEMENT
@@ -160,5 +162,26 @@ Display quick weather report using CURL on your terminal : <br>
 ``yoginderbagga@fedora:~$ curl wttr.in/Delhi``
 
 <img width="1360" height="632" alt="image" src="https://github.com/user-attachments/assets/4dc4bf09-77e4-4af8-80d1-805dbaddaeed" />
+<br>
+<br>
+ss -tulpn ( Socket Statistics )
+
+It is a linux utility to display status information of network sockets. User can view the TCP, UDP port connection status with their states and associated process. <br>
+
+t: display TCP sockets<br>
+u: display UDP sockets<br>
+l: display listening sockets<br>
+p: display associated process<br>
+n: display numeric address<br>
+<br>
+To filter a port: <br>
+
+<img width="1656" height="121" alt="image" src="https://github.com/user-attachments/assets/7a453d28-2de7-4305-a91d-c5ce4e979e59" />
+
+_DevOps Scenario
+_
+A container is not working due to the port 80 is already being used by another application and you would like to troubleshoot the issue to find out which application/service is using that port 80, you can use below command in that case : 
+
+``yoginderbagga@fedora:~$ ss -tulpn | grep :80``
 
 
