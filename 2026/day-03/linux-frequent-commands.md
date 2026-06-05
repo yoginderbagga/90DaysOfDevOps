@@ -159,5 +159,6 @@ Display quick weather report using CURL on your terminal : <br>
 
 ``yoginderbagga@fedora:~$ curl wttr.in/Delhi``
 
+<img width="1360" height="632" alt="image" src="https://github.com/user-attachments/assets/4dc4bf09-77e4-4af8-80d1-805dbaddaeed" />
 
 
