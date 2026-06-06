@@ -63,5 +63,38 @@ Journalctl with -u is used to display logs specific to a particular service like
 
 yoginderbagga@fedora:~$ systemctl status sshd.service 
 
+## DevOps Troubleshooting Scenario #1: Nginx server not loading the site 
+
+
+Error on browser : <br>
+
+<img width="910" height="290" alt="image" src="https://github.com/user-attachments/assets/d7e54dab-4ecd-4ddb-a90b-d0dbecee0a3b" />
+<br>
+
+Logs Captured : <br>
+
+``yoginderbagga@fedora:/var/www/html$ sudo cat /var/log/nginx/error.log | tail -n 10``
+<br>
+
+<img width="1721" height="210" alt="image" src="https://github.com/user-attachments/assets/47ae7e79-1c8b-495f-8430-8b4b83d3e073" />
+
+
+Troubleshooting:
+- I purposely added incorrect path at the nginx server configuration ( /etc/nginx/nginx.conf )<br>
+   ``root         /var/www/html/index.html;`` which should have been <br>
+   ``root    /var/www/html;`` only
+- After replacing error got fixed. Also, reload the configuration so the changes are in effect :<br>
+``yoginderbagga@fedora:/var/www/html$ sudo systemctl reload nginx.service ``
+
+- Capture the error using the journalct systemd utility with the nginx service<br>
+  ``yoginderbagga@fedora:/etc/nginx$ journalctl -u nginx.service | tail -n 20``
+
+
+<img width="1500" height="217" alt="image" src="https://github.com/user-attachments/assets/fa25e521-ef63-4119-a2db-b0daa9548c2c" />
+
+
+
+
+
 
 
