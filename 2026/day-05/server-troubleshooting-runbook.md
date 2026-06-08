@@ -49,6 +49,16 @@ After changing permission SSH worked successfully.
 Always, ensure the public present at the server location where you're trying to take the SSH only then it would work.
 <br>
 
+3. Third issue, deleted the inbound firewall rule for SSH port 22 in AWS. As SSH works on port 22 by default, what would happened if you delete the SSH inbound rule from the AWS? To test this, i deleted the rule and then verified the SSH connectivity which didn't work. So added the inbound port 22 back to firewall
+   this fixed the problem. <br>
+
+``yoginderbagga@fedora:~$ ssh -i "testing-ssh.pem" ubuntu@ec2-1.2.3.4.compute-1.amazonaws.com
+ssh: connect to host ec2-1.2.3.4.compute-1.amazonaws.com port 22: Connection refused``<br>
+
+<img width="1735" height="741" alt="InboundRule" src="https://github.com/user-attachments/assets/a95c22c6-64d7-4d81-9908-bb48fa18d292" />
+
+
+
 
 
 
