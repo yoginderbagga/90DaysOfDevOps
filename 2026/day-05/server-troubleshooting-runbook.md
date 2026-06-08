@@ -41,9 +41,13 @@ This shows the private key file (.pem) is too open for anybody to use it or can 
 for group and other. <br>
 
 <img width="1045" height="176" alt="image" src="https://github.com/user-attachments/assets/800fd954-875e-4e09-ac16-662b0104ac49" />
+<br>
+After changing permission SSH worked successfully. 
 
-
-
+2. Second issue, removed the SSH key from the .ssh directory ( /root/.ssh ) as a sudo user and then exit from the SSH connection. Tried connecting again which worked fine,  this was bit surprising as i had already removed the public key from the authorized_keys file. So I removed the public key from the "authorized_keys" file inside the .ssh folder at home directory instead of as the root user.. Now after restarting the SSH service access didn't worked. Therefore, added the public key back inside the /home/ubuntu/.ssh/authorized_keys file which then fixed the issue.
+<br>
+Always, ensure the public present at the server location where you're trying to take the SSH only then it would work.
+<br>
 
 
 
