@@ -56,11 +56,39 @@ Always, ensure the public present at the server location where you're trying to 
 ssh: connect to host ec2-1.2.3.4.compute-1.amazonaws.com port 22: Connection refused``<br>
 
 <img width="1735" height="741" alt="InboundRule" src="https://github.com/user-attachments/assets/a95c22c6-64d7-4d81-9908-bb48fa18d292" />
+<br>
 
+4. Fourth issue, this didn't directly stopped the SSH access or cause troubles with your SSH connectivity but slowed down the CPU resources. Created below shell script and run it in the background (using &) ; once your run below script this will take highest CPU resource and increase the uptime value. Now, create another script to repeat below code 10 times using for loop. 
 
+Part A)
+```
+ubuntu@ip-1.2.3.4:~/shell_script$ cat repeat_cpu_hog.sh 
+#!/bin/bash
 
+while true
+do 
+	:
+done 
+```
+<br>
+Part B)
 
+```
+ubuntu@ip-1.2.3.4:~/shell_script$ cat repeat_cpu_hog.sh 
+#!/bin/bash
 
+for repeat in {1..10}
+do 
+	./CPU_hog.sh &
+done
+ubuntu@ip-1.2.3.4:~/shell_script$ 
+```
+
+<img width="1025" height="92" alt="Screenshot 2026-06-08 233016" src="https://github.com/user-attachments/assets/08fd9a38-43bb-48bb-a161-acbd2eaacdf1" />
+
+<br>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b475ed3f-6f2f-42f0-8594-da2d9b33dcff" /><br>
+Since these scripts are for the testing purpose only, you can kill them using kill -9 command and then verify the results of the CPU consumption and load should be decreased. 
 
 
 
