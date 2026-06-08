@@ -20,9 +20,8 @@ Operating System: Ubuntu (uname -a) <br>
 IP Address : 10.X.X.X <br>
 User info : 
 <br>
-#### Troubleshooting Steps <br>
 
-Prerequisite Knowledge About: <br>
+#### Prerequisite Knowledge About: <br>
 
 1. ~/.ssh/authorized_keys: It is a local configuration file at the server side which stores the public key information. One line at a time. <br>
 2. /etc/ssh/sshd_config file: It is a system wide configuration file for the SSH server. <br>
@@ -30,6 +29,22 @@ Prerequisite Knowledge About: <br>
 4. ssh-keygen: A command to create the SSH-keys.<br>
 5. ~/.ssh/id_rsa.pub OR ~/.ssh/id_ed25519.pub : Public Keys ( Stays at server location, where user is trying to reach ) <br>
 6. ~/.ssh/id_ed25519 : Private Keys ( Stays at client location, where user is currently stay)<br>
+
+#### Troubleshooting Steps <br>
+
+1. First issue that occured during the SSH from Virtual Machine ( Fedora ) to Amazone EC2 Instance was below error message :<br>
+
+<img width="1427" height="285" alt="SSH_Runbook" src="https://github.com/user-attachments/assets/db99b7c9-a99e-4ca6-ae77-53d15205aa49" />
+<br>
+
+This shows the private key file (.pem) is too open for anybody to use it or can cause issue in future if not changed the permission. Hence modify its permission to 0644 with below command. Since it showed 644 permission which is read for the group and others as well. Now after changing its only read for the user and zero 
+for group and other. <br>
+
+<img width="1045" height="176" alt="image" src="https://github.com/user-attachments/assets/800fd954-875e-4e09-ac16-662b0104ac49" />
+
+
+
+
 
 
 
