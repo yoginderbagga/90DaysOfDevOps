@@ -88,7 +88,12 @@ ubuntu@ip-1.2.3.4:~/shell_script$
 
 <br>
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b475ed3f-6f2f-42f0-8594-da2d9b33dcff" /><br>
-Since these scripts are for the testing purpose only, you can kill them using kill -9 command and then verify the results of the CPU consumption and load should be decreased. 
+Since these scripts are for the testing purpose only, you can kill them using kill -9 command and then verify the results of the CPU consumption and load should be decreased. <br><br>
+
+``kill -9 6759 7442 7443``<br>
+<br>
+<img width="1920" height="1080" alt="Screenshot (8)" src="https://github.com/user-attachments/assets/c77a35b8-7a91-48c4-a021-84ad6196acdb" />
+
 
 
 
