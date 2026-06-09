@@ -52,7 +52,7 @@ During this deployment, we setup an EC2 instance to host the nginx web-server an
 
 ## Lessons Learned
 
--- A point to remember, while copy file using the SCP protocol always follow below syntax which is [SOURCE] and then [DESTINATION]; this is something i ususally forget. 
+-- A point to remember, while copy file using the SCP protocol always follow below syntax which is [SOURCE] and then [DESTINATION]; this is something i ususally forget. Even if you're on Base OS and you would like to copy from an EC2 to the Base OS, then EC2 will be considered as your source location which is remote in this case. 
 
 `` scp options [SOURCE /dir/file] user@host:[DESTINATION /dir/file]``
 `` scp options ubuntu@ec2:[SOURCE /dir/file] [DESTINATION /home/yoginderbagga]``
