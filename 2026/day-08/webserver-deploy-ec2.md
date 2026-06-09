@@ -44,6 +44,6 @@ yoginderbagga@192.168.56.101's password:``<br>
 <img width="1920" height="1080" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/4f6c0efb-2347-424e-b011-26fdc7d33521" />
 <br>
 
-5. Finally copied the nginx logs ( /var/log/nginx/access.log ) from Ubuntu EC2 to base Fedora OS machine. <br>
+5. Finally copied the nginx logs ( /var/log/nginx/access.log ) from Ubuntu EC2 to base Fedora OS machine. <br> <br>
 ``yoginderbagga@fedora:~$ scp -i nginx-webserver-deploy.pem  ubuntu@ec2-54-227-123-229.compute-1.amazonaws.com:/home/ubuntu/nginx-access.txt .``
 
