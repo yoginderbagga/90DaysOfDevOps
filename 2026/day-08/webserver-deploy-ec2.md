@@ -28,10 +28,12 @@ yoginderbagga@192.168.56.101's password:``<br>
 2. Update system with latest packages and install nginx, verify nginx service is running. 
 
 ``ubuntu@ip-172-31-20-187:~$ sudo apt update`` <br>
-``ubuntu@ip-172-31-20-187:~$ sudo apt upgrade -y<br>
+``ubuntu@ip-172-31-20-187:~$ sudo apt upgrade -y`` <br>
+
 <br>
 <img width="1920" height="1080" alt="Screenshot (11)" src="https://github.com/user-attachments/assets/7471c4bc-94eb-4661-9e0a-b49834112d0a" />
 <br>
+
 ``ubuntu@ip-172-31-20-187:~$ systemctl status nginx.service`` 
 
 
