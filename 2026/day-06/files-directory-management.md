@@ -12,7 +12,7 @@ In Linux, you can read and write to files using using built-in shell commands, I
 
 
 
-3. Output Redirection (">"): Which redirects the standard output of any command into a file defined by you like .html, .text, .md etc and this completely overwrite any existing content. See below example, I ran the command
+2. Output Redirection (">"): Which redirects the standard output of any command into a file defined by you like .html, .text, .md etc and this completely overwrite any existing content. See below example, I ran the command
    df -h > output_list
 <br>
 <br>
@@ -25,3 +25,10 @@ Now overwrite the existing content with same output redirection operator but dif
 
 Example #2 : Output Redirection <br>
 <img width="1307" height="191" alt="image" src="https://github.com/user-attachments/assets/dff95177-2a73-4d77-9f43-c49617bd36e2" />
+
+3. Append Operator ( >> ) : Which appends the output / text to an existing file instead of overwriting the file content, it inserts the new output at the bottom of the document or text file.<br>
+
+<img width="977" height="372" alt="image" src="https://github.com/user-attachments/assets/50f2aebe-1f97-452a-b9d7-588741867b11" />
+
+
+   
