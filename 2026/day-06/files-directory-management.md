@@ -2,14 +2,17 @@
 <br>
 In Linux, you can read and write to files using using built-in shell commands, Input/Output redirection operators such as "<" and the output redirection operators ">". <br>
 
-1. Input Redirection ("<") : The input ("<") operator in Linux redirects the standard input of a command to read from a file instead of the keyboard.
+1. Input Redirection ("<") : The input ("<") redirection in Linux allows you to force a particular command to read the data ( with a pattern like sort etc) from a file or text block instead of waiting for the keyboard input from the terminal screen. 
 
    Example: Input Redirection ("<"):
    <br>
 ``sandbox@playground:~/file_management$ grep "/bash" < high_cpu_process.txt``<br><br>
-   <img width="1267" height="142" alt="image" src="https://github.com/user-attachments/assets/65dc4345-06f8-48ad-8457-4bd96aa0fe0f" /><br>
-   <img width="852" height="157" alt="image" src="https://github.com/user-attachments/assets/cd69b7b7-f12a-42aa-91fb-36940c58ab38" />
+   <img width="1267" height="142" alt="image" src="https://github.com/user-attachments/assets/65dc4345-06f8-48ad-8457-4bd96aa0fe0f" /><br><br>
+   <img width="852" height="157" alt="image" src="https://github.com/user-attachments/assets/cd69b7b7-f12a-42aa-91fb-36940c58ab38" /><br>
+   <br>
+   <img width="787" height="347" alt="image" src="https://github.com/user-attachments/assets/a594d642-2939-4e30-a834-aec4308fcc06" />
 
+<br>
 
 
 2. Output Redirection (">"): Which redirects the standard output of any command into a file defined by you like .html, .text, .md etc and this completely overwrite any existing content. See below example, I ran the command
