@@ -28,6 +28,11 @@ Example #2 : Output Redirection <br>
 
 3. Append Operator ( >> ) : Which appends the output / text to an existing file instead of overwriting the file content, it inserts the new output at the bottom of the document or text file.<br>
 
+5. Head and Tail command : Head prints the top few lines of the text file. And tail prints the bottom few lines of a text file.
+
+   <img width="987" height="297" alt="image" src="https://github.com/user-attachments/assets/9d65a960-b39d-4373-b7c7-c91764bfc9e5" />
+
+
 <img width="977" height="372" alt="image" src="https://github.com/user-attachments/assets/50f2aebe-1f97-452a-b9d7-588741867b11" />
 
 
