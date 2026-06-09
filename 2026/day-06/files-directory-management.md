@@ -3,11 +3,16 @@
 In Linux, you can read and write to files using using built-in shell commands, Input/Output redirection operators such as "<" and the output redirection operators ">". <br>
 
 1. Input Redirection ("<") : The input ("<") operator in Linux redirects the standard input of a command to read from a file instead of the keyboard.
+
+   Example: Input Redirection ("<"):
    <br>
 ``sandbox@playground:~/file_management$ grep "/bash" < high_cpu_process.txt``<br><br>
-   <img width="1267" height="142" alt="image" src="https://github.com/user-attachments/assets/65dc4345-06f8-48ad-8457-4bd96aa0fe0f" />
+   <img width="1267" height="142" alt="image" src="https://github.com/user-attachments/assets/65dc4345-06f8-48ad-8457-4bd96aa0fe0f" /><br>
+   <img width="852" height="157" alt="image" src="https://github.com/user-attachments/assets/cd69b7b7-f12a-42aa-91fb-36940c58ab38" />
 
-2. Output Redirection (">"): Which redirects the standard output of any command into a file defined by you like .html, .text, .md etc and this completely overwrite any existing content. See below example, I ran the command
+
+
+3. Output Redirection (">"): Which redirects the standard output of any command into a file defined by you like .html, .text, .md etc and this completely overwrite any existing content. See below example, I ran the command
    df -h > output_list
 <br>
 <br>
