@@ -35,7 +35,15 @@ yoginderbagga@192.168.56.101's password:``<br>
 <br>
 
 ``ubuntu@ip-172-31-20-187:~$ systemctl status nginx.service`` 
+<br>
 
+3. Configured the secruity group at inbound rules for security group with port 80 to allow the Nginx server to be accessible.<br>
 
+4. Verified the nginx web-server connectivity at the instance IP address ( Public IP ). Tried access it with mobile or any other laptop too with the given public IP address and it should work. <br>
 
+<img width="1920" height="1080" alt="Screenshot (12)" src="https://github.com/user-attachments/assets/4f6c0efb-2347-424e-b011-26fdc7d33521" />
+<br>
+
+5. Finally copied the nginx logs ( /var/log/nginx/access.log ) from Ubuntu EC2 to base Fedora OS machine. <br>
+``yoginderbagga@fedora:~$ scp -i nginx-webserver-deploy.pem  ubuntu@ec2-54-227-123-229.compute-1.amazonaws.com:/home/ubuntu/nginx-access.txt .``
 
