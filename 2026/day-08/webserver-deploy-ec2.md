@@ -50,3 +50,12 @@ yoginderbagga@192.168.56.101's password:``<br>
 ## Conclusion<br>
 During this deployment, we setup an EC2 instance to host the nginx web-server and allowed the security firewall to accept incoming connection on the port 80 from any host 0.0.0.0/0 You could also change the range to a specific subnet when you create a VPC as per the requirement so only certain groups are allowed access the host. Next we captured the nginx access.logs and send it to the host machine at Fedora Linux in this case. We used the SCP command to transfer the file which also uses SSH as the default port. 
 
+## Lessons Learned
+
+-- A point to remember, while copy file using the SCP protocol always follow below syntax which is [SOURCE] and then [DESTINATION]; this is something i ususally forget. 
+
+`` scp options [SOURCE /dir/file] user@host:[DESTINATION /dir/file]``
+`` scp options ubuntu@ec2:[SOURCE /dir/file] [DESTINATION /home/yoginderbagga]``
+
+
+
