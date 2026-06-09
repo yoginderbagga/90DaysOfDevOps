@@ -47,3 +47,6 @@ yoginderbagga@192.168.56.101's password:``<br>
 5. Finally copied the nginx logs ( /var/log/nginx/access.log ) from Ubuntu EC2 to base Fedora OS machine. <br> <br>
 ``yoginderbagga@fedora:~$ scp -i nginx-webserver-deploy.pem  ubuntu@ec2-54-227-123-229.compute-1.amazonaws.com:/home/ubuntu/nginx-access.txt .``
 
+## Conclusion<br>
+During this deployment, we setup an EC2 instance to host the nginx web-server and allowed the security firewall to accept incoming connection on the port 80 from any host 0.0.0.0/0 You could also change the range to a specific subnet when you create a VPC as per the requirement so only certain groups are allowed access the host. Next we captured the nginx access.logs and send it to the host machine at Fedora Linux in this case. We used the SCP command to transfer the file which also uses SSH as the default port. 
+
