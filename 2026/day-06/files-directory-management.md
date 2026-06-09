@@ -20,7 +20,7 @@ Example : Output Redirection<br>
 
 <img width="1000" height="511" alt="image" src="https://github.com/user-attachments/assets/f1038518-67c6-4540-a341-7114879c254c" />
 <br>
-Now overwrite the existing content with same output redirection operator but different results. <br>
+Now overwrite the existing content with same output redirection operator but different results. <br><br>
 <img width="962" height="357" alt="image" src="https://github.com/user-attachments/assets/3d901cbb-35ce-45f8-b54a-2b48a6043a5e" />
 
 Example #2 : Output Redirection <br>
