@@ -165,6 +165,7 @@ root@fedora:~# cat /etc/pam.d/system-auth
 E)Verified the journalct -xe logs which showed the root cause of the issue. 
 
 <br>
+
 ``root@fedora:~# journalctl -xe``
 
 <img width="1920" height="1080" alt="Screenshot (13)" src="https://github.com/user-attachments/assets/0d96cf7c-a001-4a08-85f4-56e0b6e58774" />
