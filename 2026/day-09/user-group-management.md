@@ -85,11 +85,22 @@ yoginderbagga@fedora:~$ sudo usermod John -aG devops
 ```
 
 
-4. Shared Directory
+4. Created a Shared Directory and assign the group permission<br>
 
 A directory with the name "/opt/client_project" and assigned its group ownership to the programmers group. Also, made the permission as 775.
 <br>
 <img width="1032" height="107" alt="Screenshot 2026-06-10 134247" src="https://github.com/user-attachments/assets/c40e26e1-2bc1-443f-8205-2ab1dc10126a" /> <br>
+
+<br>
+
+Files getting created from the user Raju and John but not with Tina as she is not the part of the group "programmers". 
+<br>
+
+<img width="1465" height="191" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/1a34b9a5-152b-46c6-b7db-626e64b4dc2e" />
+
+
+5. 
+
 
 <br>
 
