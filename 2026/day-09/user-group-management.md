@@ -27,7 +27,7 @@ verify at: /etc/group or id "user" command to check if their group is properly a
 
 #### 4. Create a share directory for the users and set appropriate permission
 
-1. Create a directory named: /opt/client-project
+1. Create a directory named: /opt/client_project
 2. Set group owner to the programmers
 3. Set the permission to 775 (rwxrwxr-x)
 4. Create the test files as the user Raju, John and Tina
@@ -85,10 +85,13 @@ yoginderbagga@fedora:~$ sudo usermod John -aG devops
 ```
 
 
+4. Shared Directory
 
+A directory with the name "/opt/client_project" and assigned its group ownership to the programmers group. Also, made the permission as 775.
+<br>
+<img width="1032" height="107" alt="Screenshot 2026-06-10 134247" src="https://github.com/user-attachments/assets/c40e26e1-2bc1-443f-8205-2ab1dc10126a" />
 
-
-
+<br>
 
 # Observation / Challenges 
 
