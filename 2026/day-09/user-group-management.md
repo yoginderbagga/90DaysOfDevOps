@@ -78,8 +78,11 @@ verify group creation at location /etc/group
 3. Assign users to their secondary group. 
 
 
-
-
+```
+yoginderbagga@fedora:~$ sudo usermod Raju -aG programmers 
+yoginderbagga@fedora:~$ sudo usermod John -aG programmers 
+yoginderbagga@fedora:~$ sudo usermod John -aG devops
+```
 
 
 
