@@ -202,6 +202,6 @@ Relabeled /etc/nshadow from system_u:object_r:unlabeled_t:s0 to system_u:object_
 <br>
 Restorecon command in linux used to restore the default security context ( labels ) of the files and directories. It is permission above the traditional linux (rwx permission) that you normally use, means even if user having certain permission for a file but the selinux context block it then it won't be accessible. 
 SELinux : It adds an another layer of security by enforcing strict, administred defined policies that defines which process, files, users can have permission and can communicate with each other. 
+<br> <br> 
 
-Learning: Draft a runbook of steps before start performing any lab, project or task activity so you have clarity about each step, its struggles and the results to expect. 
-
+_Learning : Draft a runbook of steps before start performing any lab, project or task activity so you have clarity about each step, its struggles and the results to expect_
