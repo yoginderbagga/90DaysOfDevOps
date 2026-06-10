@@ -172,7 +172,7 @@ E)Verified the journalct -xe logs which showed the root cause of the issue.
 
 Resolution: 
 
-restorecon -Rv /etc
+``restorecon -Rv /etc``
 
 Applied the SeLinux default context to the complete directory ( /etc ) and its fils/folders to fix any permission issue with the password file /
 
