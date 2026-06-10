@@ -98,9 +98,7 @@ Files getting created from the user Raju and John but not with Tina as she is no
 
 <img width="1465" height="191" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/1a34b9a5-152b-46c6-b7db-626e64b4dc2e" />
 
-
-5. Directory prod_workspace created and following new user was added to the group as well.
-<br>
+5. Directory prod_workspace created and following new user was added to the group as well. <br>
 Created a new user Harman and a new group "production"; then added the user Harman to the production group.
 
 ```
@@ -108,6 +106,9 @@ yoginderbagga@fedora:~$ sudo usermod -aG production Harman
 yoginderbagga@fedora:~$ id Harman 
 uid=1007(Harman) gid=22227(Harman) groups=22227(Harman),22228(production)
 ```
+<br>
+
+<img width="1151" height="165" alt="image" src="https://github.com/user-attachments/assets/e54386e8-57cd-40b6-b5bc-085dfbb737e5" />
 <br>
 
 # Observation / Challenges 
