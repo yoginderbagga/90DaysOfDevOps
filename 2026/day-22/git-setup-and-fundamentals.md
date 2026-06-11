@@ -4,6 +4,7 @@
 - What is Git and where it is used?
 - What features Git provides?
 - Setup Git on your laptop and Perform below challenges
+- Git Workflow "The 3 Stage workflow of Git including working directory, staging area and local repository"
 
 ### Git:
 
@@ -82,4 +83,44 @@ user.email=yoginder.bagga@gmail.com
 
 #### Task 3: Create a Git Commands Referrence 
 1. Create a git-command.md file inside devops-git-practice repo and list down the commands you practiced so far.
-2. Add a short description about the command you tried. 
+2. Add a short description about the command you tried.
+
+``yoginderbagga@fedora:~/devops-git-practice$ git add .``
+
+<img width="1017" height="83" alt="Screenshot 2026-06-11 161546" src="https://github.com/user-attachments/assets/5165448a-0092-48c1-a89a-21427ed39723" />
+
+In previous steps, I created a git-command.md file and then added it to the staging area (a place where git files are added before committing them permanently to the git); then i commited the file using git commit -m command to make the changes permanently in the git directory. 
+
+In below screenshot, i created two more files source_code.txt and index.html, i added both the files to staging area first and then commited the source_code.txt to git. But I didn't commit index.html to the commit and kept it there in the staging area. Now use below commands to see the status:
+
+``git status``  
+``git log``
+
+
+<img width="992" height="161" alt="Screenshot 2026-06-11 162447" src="https://github.com/user-attachments/assets/4eaff6bf-cdd2-4b07-be90-e467f05e02b6" />
+
+
+Below screenshot shows that first commit done at "Date:   Thu Jun 11 16:02:57 2026 +0530" for the file git-command.md and second commit done at "Date:   Thu Jun 11 16:12:30 2026 +0530" for the file source_code.txt" both were done by me. Now you notice that third file "index.html" doesn't in the git log history because it was never commited. 
+
+
+<img width="1035" height="266" alt="Screenshot 2026-06-11 162549" src="https://github.com/user-attachments/assets/c7b70b77-6654-450e-971f-078298634a85" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
