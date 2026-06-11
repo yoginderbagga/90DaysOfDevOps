@@ -160,26 +160,39 @@ yoginderbagga@fedora:~/devops-git-practice$
 
 #### Task 6: Git Workflow
 
-difference between git add and git commit?
+- What is the difference between git add and git commit?  
+- What is staging area do? Why doesn't git just commit directly?  
+- What is git log use for?  
+- what is .git/ directory and what happens if you delete it?  
+- what is the difference between a working directory, staging area and repository?  
 
-What is staging area do? Why doesn't git just commit directly?
-What is git log use for?
-what is .git/ directory and what happens if you delete it?
-what is the difference between a working directory, staging area and repository?
+> git add 
 
+This command is used to move new or an existing modified files from the working directory -> into Git Staging area (index). Staging area is a temporary or intermediate space where the file are gathered before finalizing a save (commit). 
 
+> git commit
 
+This command is used to save the changes of your staged files to the local project history. Once you commit a change, it creates a secure checkpoint (or "save point") which allows you to track, manager and revert back to specific version of your codebase. 
 
-
-
-
-
-
-
-
+> Why staging area is needed in Git?
 
 
+The staging area is a rough draft space, this is place you can add file or multiple files that you want to save in your next commit. Another thing that makes staging area helpful is-- instead of forcing all the commits or no commits of the entire folder to go, with the help of staging area developer can decide which files to be included during the commit part. 
 
 
+> What is git log?
+
+Git log records the history of the recent commits done by the user to their repository. 
+
+
+> What is git/ directory ?
+
+.git directory is a hidden folder in your git project which consist of entire database and metadata of the Git repository. It gets created automatically when you run the git init command or download via git clone. 
+
+> What is the difference between a working directory, staging area and repository?
+
+Working directory is a folder on your computer where you create / list the files.  
+Staging area is the place where you moved the files temporarily to review it before actually commiting to the repository.  
+Repository is database where the commited snapshots of your files/ directory are stored on your machine.  
 
 
