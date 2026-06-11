@@ -1,11 +1,11 @@
 # Git Fundamentals and Commands 
 
-#### Runbook:  
+### Runbook:  
 - What is Git and where it is used?
 - What features Git provides?
 - Setup Git on your laptop and Perform below challenges
 
-#### Git:
+### Git:
 
 Before diving into the Git definition, lets take an example, suppose you created a web-development project for your work and kept in your laptop or shared with your colleagues. Due to some reason, the laptop gets corrupted and you don't have any backup
 over the cloud what would you in this scenario? Anyone would be panic in this scenario, because noone wants to loose a hardworking project all of the sudden without any backup options. 
@@ -22,7 +22,7 @@ a user does to the project. If at anytime user want to go back to previous versi
 version, restore the changes of the code whenever needed. "
 
 
-#### Git Features:
+### Git Features:
 
 1. Distributed Version Control System: Every teammember working on a project possess a full local clone of the project history. In comparision to CVS (Centralize Version Control) which stores the all version of the files exclusively on a central server. There is no possibility of single point of failure as every local machine contains the clone which is entire project history. 
 2. Commits: As mentioned in previous definition, each commits made by a user gets save in the Git history are called commits. User can track each of those commits and revert back to any of the change per the requirement. 
@@ -36,5 +36,16 @@ version, restore the changes of the code whenever needed. "
 4. Merge: As you complete the changes in your testing branch, you can then merge it with main branch. Means the changes will be now live with rest of the project as well. 
 5. Cloning: You make a copy of the entire project from a remote central location like a website or server to your own server ( Laptop )
 6. Collaboration: Git allows you to collaborate between your team to work on a similar project at the same time without affecting other members code. 
+
+
+### Setup Git:
+
+#### Task 1: Git Installation and configuration
+
+One of the first thing to do is to verify if Git software is installed on your laptop or not. If not then install it before proceeding with any further steps. <br>
+```
+yoginderbagga@fedora:~$ git --version
+git version 2.54.0
+```
 
 
