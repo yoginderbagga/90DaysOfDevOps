@@ -27,9 +27,10 @@ version, restore the changes of the code whenever needed. "
 1. Distributed Version Control System: Every teammember working on a project possess a full local clone of the project history. In comparision to CVS (Centralize Version Control) which stores the all version of the files exclusively on a central server. There is no possibility of single point of failure as every local machine contains the clone which is entire project history. 
 2. Commits: As mentioned in previous definition, each commits made by a user gets save in the Git history are called commits. User can track each of those commits and revert back to any of the change per the requirement. 
 3. Branch: Brach is the safest place in your repository where you can develope a new code fature, experiment, fix bugs or do the changes without altering the main or production-ready codebase. Some examples of Git Branches are :
-a) create a branch new_design, and keep building a new feature here without directly affecting the main branch
-b) EMERGENCY TESTING! There is major error in the project which needs to be tested separately from the main branch and fix ASAP!
-c) Once you successfully test the changes or created a new feature then you can merge (join) with the main branch.
+   
+      a) create a branch new_design, and keep building a new feature here without directly affecting the main branch<br>
+      b) EMERGENCY TESTING! There is major error in the project which needs to be tested separately from the main branch and fix ASAP!<br>
+      c) Once you successfully test the changes or created a new feature then you can merge (join) with the main branch.<br>
 
 5. 
 6. Merging:
