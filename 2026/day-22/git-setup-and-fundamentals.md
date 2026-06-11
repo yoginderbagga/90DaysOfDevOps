@@ -50,7 +50,7 @@ git version 2.54.0
 
 #### Identity Setup
 
-Next is to let Git know about your identitiy with your Full Name and Email Address. This must match with the name and email id of your Git Hub account. You may update these information in futrue if you need to, but its important step to do whenever your Git in a new environment or server(Laptop)
+Next is to let Git know about your identitiy with your Full Name and Email Address on your local environment. This must match with the name and email id of your Git Hub account. You may update these information in futrue if you need to, but its important step to do whenever your Git in a new environment or server(Laptop)
 
 ```
 yoginderbagga@fedora:~$ git config --global user.name "Yoginder Bagga"
@@ -64,3 +64,15 @@ user.email=yoginder.bagga@gmail.com
 ```
 
 #### Task 2: Build your first Git Project
+
+
+1. Create a project directory ``devops-git-practice`` to build this as your Git project.
+2. Initiatlize the directory as Git repository: To setup a completely new, empty Git repository where you will do the all work. This also create a .git hidden folder inside your project directory. 
+3. Carefully read and understand Git status
+4. See the Git folder to find the .git/ directory
+
+
+``yoginderbagga@fedora:~$ mkdir devops-git-practice``
+
+
+
