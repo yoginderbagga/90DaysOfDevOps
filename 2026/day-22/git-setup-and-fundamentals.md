@@ -34,4 +34,7 @@ version, restore the changes of the code whenever needed. "
       c) Once you successfully test the changes or created a new feature then you can merge (join) with the main branch.<br>
 
 4. Merge: As you complete the changes in your testing branch, you can then merge it with main branch. Means the changes will be now live with rest of the project as well. 
-5. Cloning: You make a copy of the entire project from a remote central location like a website or server to your own server ( Laptop ) 
+5. Cloning: You make a copy of the entire project from a remote central location like a website or server to your own server ( Laptop )
+6. Collaboration: Git allows you to collaborate between your team to work on a similar project at the same time without affecting other members code. 
+
+
