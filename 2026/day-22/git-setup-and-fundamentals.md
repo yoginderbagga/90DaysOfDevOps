@@ -116,7 +116,47 @@ Below screenshot shows that first commit done at "Date:   Thu Jun 11 16:02:57 20
 
 #### Task 5: Experiment with the existing files and modify them. Verify their history. 
 
+Made changes to the file git-commands and added to the staging area. 
 
+<img width="796" height="171" alt="Screenshot 2026-06-11 180813" src="https://github.com/user-attachments/assets/6f10f333-9b08-485d-990a-6ade9591d056" />
+
+```
+yoginderbagga@fedora:~/devops-git-practice$ git log
+commit caa8a2022d447d7caecc2009ef2a890457ff6fc2 (HEAD -> master)
+Author: Yoginder Bagga <yoginder.bagga@gmail.com>
+Date:   Thu Jun 11 17:57:42 2026 +0530
+
+    Added another heading for the file index.html
+
+commit ccaa7c15e99c74d731fb033e22a5dd916fbeaa65
+Author: Yoginder Bagga <yoginder.bagga@gmail.com>
+Date:   Thu Jun 11 17:45:00 2026 +0530
+
+    modified the file with new commands
+
+commit 25fab0809c73bf5706596806e26c3775c3cbf4d0
+Author: Yoginder Bagga <yoginder.bagga@gmail.com>
+Date:   Thu Jun 11 16:12:30 2026 +0530
+
+    Adding the source_code.txt file permanently to the Git directory.
+
+commit 7697a8088d0566d400092bf01f4f9001c82baa99
+Author: Yoginder Bagga <yoginder.bagga@gmail.com>
+Date:   Thu Jun 11 16:02:57 2026 +0530
+
+    First file created for the git commands reference
+yoginderbagga@fedora:~/devops-git-practice$ git add git-commands.md 
+yoginderbagga@fedora:~/devops-git-practice$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   git-commands.md
+
+yoginderbagga@fedora:~/devops-git-practice$ git commit -m "Added changes to the git-commands.md file"
+[master b901d9a] Added changes to the git-commands.md file
+ 1 file changed, 8 insertions(+)
+yoginderbagga@fedora:~/devops-git-practice$ 
+```
 
 #### Task 6: Added the file to the staging area and commit the change to Git.
 
