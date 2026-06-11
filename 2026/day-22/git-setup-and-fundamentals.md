@@ -75,4 +75,11 @@ user.email=yoginder.bagga@gmail.com
 ``yoginderbagga@fedora:~$ mkdir devops-git-practice``
 
 
+<img width="836" height="443" alt="Screenshot 2026-06-11 153623" src="https://github.com/user-attachments/assets/390e19cb-a888-4843-a9b0-5f6566144ae0" />
 
+<img width="738" height="105" alt="Screenshot 2026-06-11 154225" src="https://github.com/user-attachments/assets/f9531232-d6b8-42dd-916e-96c48504899d" />
+
+
+#### Task 3: Create a Git Commands Referrence 
+1. Create a git-command.md file inside devops-git-practice repo and list down the commands you practiced so far.
+2. Add a short description about the command you tried. 
