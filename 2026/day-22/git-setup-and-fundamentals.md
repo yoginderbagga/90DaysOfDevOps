@@ -40,7 +40,7 @@ version, restore the changes of the code whenever needed. "
 
 ### Setup Git:
 
-#### Task 1: Git Installation and configuration
+#### Task 1: Git Installation and Configuration
 
 One of the first thing to do is to verify if Git software is installed on your laptop or not. If not then install it before proceeding with any further steps. <br>
 ```
@@ -48,4 +48,19 @@ yoginderbagga@fedora:~$ git --version
 git version 2.54.0
 ```
 
+#### Identity Setup
 
+Next is to let Git know about your identitiy with your Full Name and Email Address. This must match with the name and email id of your Git Hub account. You may update these information in futrue if you need to, but its important step to do whenever your Git in a new environment or server(Laptop)
+
+```
+yoginderbagga@fedora:~$ git config --global user.name "Yoginder Bagga"
+yoginderbagga@fedora:~$ git config --global user.email "yoginder.bagga@gmail.com"
+```
+
+```
+yoginderbagga@fedora:~$ git config --global --list
+user.name=Yoginder Bagga
+user.email=yoginder.bagga@gmail.com
+```
+
+#### Task 2: Build your first Git Project
