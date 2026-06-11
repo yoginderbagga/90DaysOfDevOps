@@ -185,7 +185,7 @@ The staging area is a rough draft space, this is place you can add file or multi
 Git log records the history of the recent commits done by the user to their repository. 
 
 
-> What is git/ directory ?
+> What is .git/ directory ?
 
 .git directory is a hidden folder in your git project which consist of entire database and metadata of the Git repository. It gets created automatically when you run the git init command or download via git clone. 
 
