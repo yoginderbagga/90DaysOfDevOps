@@ -114,6 +114,11 @@ Below screenshot shows that first commit done at "Date:   Thu Jun 11 16:02:57 20
 
 
 
+#### Task 5: Experiment with the existing files and modify them. Verify their history. 
+
+
+
+#### Task 6: Added the file to the staging area and commit the change to Git.
 
 
 
