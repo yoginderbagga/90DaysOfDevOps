@@ -158,7 +158,14 @@ yoginderbagga@fedora:~/devops-git-practice$ git commit -m "Added changes to the 
 yoginderbagga@fedora:~/devops-git-practice$ 
 ```
 
-#### Task 6: Added the file to the staging area and commit the change to Git.
+#### Task 6: Git Workflow
+
+difference between git add and git commit?
+
+What is staging area do? Why doesn't git just commit directly?
+What is git log use for?
+what is .git/ directory and what happens if you delete it?
+what is the difference between a working directory, staging area and repository?
 
 
 
