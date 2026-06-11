@@ -5,7 +5,7 @@
 - What features Git provides?
 - Setup Git on your laptop and Perform below challenges
 
-1. Git:
+#### Git:
 
 Before diving into the Git definition, lets take an example, suppose you created a web-development project for your work and kept in your laptop or shared with your colleagues. Due to some reason, the laptop gets corrupted and you don't have any backup
 over the cloud what would you in this scenario? Anyone would be panic in this scenario, because noone wants to loose a hardworking project all of the sudden without any backup options. 
@@ -17,3 +17,20 @@ they both have the documentation and steps for each of their work. But still the
 Now image, having a centralize system which keeps your code to a central repository (GitHub, GitLab, Bitbucket) wherein the whole team can work on the BetterMovies project, they all will have their dedicated responsibility and a place to track
 which person is making which changes in the code. As Git keep track of each changes you make to the code in the repository with an identification or comment. This is called version control system which make sure to track every single changes 
 a user does to the project. If at anytime user want to go back to previous version he/she can do that. 
+
+"Technical Definition: Git is a "distributed" version control system software which help in tracking and managing the changes in code over the time. It allows multiple developers to work on the same project, view the previous
+version, restore the changes of the code whenever needed. "
+
+
+#### Git Features:
+
+1. Distributed Version Control System: Every teammember working on a project possess a full local clone of the project history. In comparision to CVS (Centralize Version Control) which stores the all version of the files exclusively on a central server. There is no possibility of single point of failure as every local machine contains the clone which is entire project history. 
+2. Commits: As mentioned in previous definition, each commits made by a user gets save in the Git history are called commits. User can track each of those commits and revert back to any of the change per the requirement. 
+3. Branch: Brach is the safest place in your repository where you can develope a new code fature, experiment, fix bugs or do the changes without altering the main or production-ready codebase. Some examples of Git Branches are :
+a) create a branch new_design, and keep building a new feature here without directly affecting the main branch
+b) EMERGENCY TESTING! There is major error in the project which needs to be tested separately from the main branch and fix ASAP!
+c) Once you successfully test the changes or created a new feature then you can merge (join) with the main branch.
+
+5. 
+6. Merging:
+7. Cloning: 
