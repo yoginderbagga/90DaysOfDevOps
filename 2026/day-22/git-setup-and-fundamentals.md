@@ -29,9 +29,9 @@ version, restore the changes of the code whenever needed. "
 3. Branch: Brach is the safest place in your repository where you can develope a new code fature, experiment, fix bugs or do the changes without altering the main or production-ready codebase. Some examples of Git Branches are :
    
       a) create a branch new_design, and keep building a new feature here without directly affecting the main branch<br>
-      b) EMERGENCY TESTING! There is major error in the project which needs to be tested separately from the main branch and fix ASAP!<br>
+      b) EMERGENCY TESTING! There is major error in the project wherein an image from TradeOnline main page throwing an error and this needs to be resolved ASAP. You can create a separate branch                from the master branch, make changes and then apply the changes to the production without affecting the other branches. 
+   <br>
       c) Once you successfully test the changes or created a new feature then you can merge (join) with the main branch.<br>
 
-5. 
-6. Merging:
-7. Cloning: 
+4. Merge: As you complete the changes in your testing branch, you can then merge it with main branch. Means the changes will be now live with rest of the project as well. 
+5. Cloning: You make a copy of the entire project from a remote central location like a website or server to your own server ( Laptop ) 
