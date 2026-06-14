@@ -19,3 +19,18 @@ Task 6: Evaluate file permission
 
 
 
+## Solutions: 
+
+Task 1: 
+
+Created files and added the text in it.  
+
+<img width="1292" height="317" alt="image" src="https://github.com/user-attachments/assets/f6a0b964-c2b9-4bee-adf1-347b78a1a00a" />  
+
+Try execute the script.sh without adding chmod +x permission ( i.e execute permission ) as seen its giving permission denied error message.   
+
+
+<img width="1103" height="142" alt="Screenshot 2026-06-14 212733" src="https://github.com/user-attachments/assets/70409e43-0c3b-4044-9e80-13ea05495825" />
+
+
+
