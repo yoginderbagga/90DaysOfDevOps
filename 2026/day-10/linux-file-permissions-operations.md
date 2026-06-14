@@ -42,4 +42,24 @@ Use the tail command to print bottom 4 lines of the /etc/group file.
 
 <img width="1277" height="117" alt="Screenshot 2026-06-14 213214" src="https://github.com/user-attachments/assets/ea0a4345-e0dc-49e7-8dec-4e00d8ec2927" />
 
+<br> <br>
+Task 3:
+
+Print the permission of all the three files created in this session and review them, as you can see script.sh has not yet added the execute permission because we will do in next step. 
+
+<img width="1361" height="96" alt="Screenshot 2026-06-14 213530" src="https://github.com/user-attachments/assets/9fe13364-a753-4168-9851-f293d2126c4f" />
+
+As you can see, read and write permission are set for "User" but for the "Group" and "Other" -> Only the "Read" Permission got added.  
+
+
+Task 4:
+
+Modify the permission of script to make it executable so that owner can run the script. As currently this is only a text file with read + write permission and not the execute. 
+
+Also, remove the read only permission from the devops.txt and make 640 for the my_notes.txt file
+
+
+<img width="1157" height="90" alt="Screenshot 2026-06-14 214004" src="https://github.com/user-attachments/assets/1af63a70-cfc4-4ad5-8f25-f05714f75e6d" />
+
+
 
