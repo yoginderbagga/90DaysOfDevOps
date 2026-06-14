@@ -61,5 +61,22 @@ Also, remove the read only permission from the devops.txt and make 640 for the m
 
 <img width="1157" height="90" alt="Screenshot 2026-06-14 214004" src="https://github.com/user-attachments/assets/1af63a70-cfc4-4ad5-8f25-f05714f75e6d" />
 
+To remove the execute permission (use x) and remove it using the chmod command. 
+
+``yoginderbagga@fedora:~/TWS_Practice$ chmod ugo-x my_notes.txt ``
+
+<br>
+<img width="1231" height="120" alt="image" src="https://github.com/user-attachments/assets/bed8ee72-f126-4421-9878-a1246ec81a72" />
+
+The directory which was created got assigned with the 755 permission only
+
+``drwxr-xr-x. 1 yoginderbagga yoginderbagga       62 Jun 14 21:20  TWS_Practice``
 
 
+Task 5:
+
+Try execute the script file without the +x permission and see the error message that is coming as it doesn't have the permission. 
+
+<img width="1176" height="43" alt="Screenshot 2026-06-14 214833" src="https://github.com/user-attachments/assets/86e16261-b25b-4cba-8f73-36fad2e1029b" />
+
+Try to write on a text file notes.txt and devops.txt wherein the file shows its read only, but strangely it allowed me to write though it doesn't happen normally. 
