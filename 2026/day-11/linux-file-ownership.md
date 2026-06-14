@@ -69,7 +69,8 @@ As you can see, the group "yoginderbagga" has changed to devops, with running th
 
 Task 4:
 
-In below tasks, we create a new file named as new-candidates.txt and with a single command changed its owner to dhurandar and group owner as well to "production"
+In below tasks, we create a new file named as new-candidates.txt and with a single command changed its owner to dhurandar and group owner as well to "production"<br>
+
 <br>
 
 ``sudo chown owner:group filename``
@@ -79,9 +80,19 @@ In below tasks, we create a new file named as new-candidates.txt and with a sing
 The owner and group owner has been changed from "yoginderbagga" to Dhurandar and production and then we confirmed it using the ls -l command. Also, again we ran the chown command changed the owner from Dhurandar to Tina, and group production to devops. 
 
 <br>
-<br>
 
 Task 5:
 
+Changed the ownership of an entire directory.  <br>
+``yoginderbagga@fedora:~$ sudo chown -R Tina:executors deployment-env/``
+<br>
+
 <img width="1441" height="302" alt="image" src="https://github.com/user-attachments/assets/3f48cb90-6e00-4a81-b972-e5b90026d7de" />
+<br>
+
+<img width="941" height="322" alt="image" src="https://github.com/user-attachments/assets/54cc6d49-b0bd-4ea9-9df1-00e55fb1c2ad" />
+
+As you can see in above picture, we have changed the ownership of the entire directory itself so the files that are part of the 
+deployment-env directory their owner and group owner got changed as well. 
+
 
