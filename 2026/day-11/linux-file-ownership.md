@@ -12,10 +12,10 @@ User is a single entitiy or an individual account ( a pserson or a service ) tha
 - Task 1: Review the ownership of the existing files and directory  
         a) Identify the owner and group columns for the given files and directory  
         b) verify the owner  
-- Task 2: Perform file owner changing operation  <br>
+- Task 2: Perform file owner changing operation with chown command  <br>
         a) Create a devops-learning.txt file and verify its current ownership.  
         b) change the owner of the file to Dhurandar using the chown command.  
-- Task 3: Perform the file group ownership changing operation  <br>
+- Task 3: Perform the file group ownership changing operation with chgrp command <br>
         a) create a file project-data.txt and review its group permission using ls -l command  
         b) since we already have a group named as devops, assign the project-data.txt file group ownership to the devops  
         c) review the change.   
@@ -45,7 +45,14 @@ In below tasks, we created a file named as devops-learning.txt and changed its o
 <img width="1517" height="335" alt="image" src="https://github.com/user-attachments/assets/209e4eb6-9585-4a14-ba0e-5bea746a200e" />
 
 <br>
-  
+<br> 
 
+Task 3:
 
+In below tasks, we create a new file named as project-data.txt and changed its group ownership (not the user ownership), once its done then created a new directory 
 
+<img width="1715" height="307" alt="image" src="https://github.com/user-attachments/assets/ea424f32-8b73-4ca1-a032-a6e28ac7f89a" />
+
+As you can see, the group "yoginderbagga" has changed to devops, with running the above step. 
+<br>
+<br>
