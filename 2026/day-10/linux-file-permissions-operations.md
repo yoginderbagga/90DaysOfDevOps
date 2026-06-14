@@ -31,6 +31,15 @@ Try execute the script.sh without adding chmod +x permission ( i.e execute permi
 
 
 <img width="1103" height="142" alt="Screenshot 2026-06-14 212733" src="https://github.com/user-attachments/assets/70409e43-0c3b-4044-9e80-13ea05495825" />
+<br> <br>
+Task 2:  
 
+Use the head command to print top 4 lines of the /etc/passwd file. 
+
+<img width="1192" height="115" alt="image" src="https://github.com/user-attachments/assets/6fdf32dc-24b1-4dbc-87e7-72b5500a070f" />
+
+Use the tail command to print bottom 4 lines of the /etc/group file.
+
+<img width="1277" height="117" alt="Screenshot 2026-06-14 213214" src="https://github.com/user-attachments/assets/ea0a4345-e0dc-49e7-8dec-4e00d8ec2927" />
 
 
