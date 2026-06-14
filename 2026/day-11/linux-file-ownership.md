@@ -2,6 +2,10 @@
 
 In this session, we will understand file and directory ownership for the user and group perspective. 
 
+Difference between User and Group?
+<br>
+User is a single entitiy or an individual account ( a pserson or a service ) that logs into the system to do the work, whereas a group is a collection of users, groups are used to effectively assigned the permission to large number of users at a time.  
+
 
 ## List of Activities
 
