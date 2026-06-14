@@ -20,7 +20,7 @@ Task 4: Use chown to change the file owner and group with same command.
         b) create a new file named as new-candidates.txt  
         c) change the owner to Dhurandar and group to devops in single command itself.   
         d) Now create a directory and change its owner to Tina and group to devops.   
-
+Task 5: Change the ownership of the entire directory and its sub-directory. 
     
     
     
