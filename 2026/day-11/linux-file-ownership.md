@@ -25,16 +25,16 @@ User is a single entitiy or an individual account ( a pserson or a service ) tha
         c) change the owner to Dhurandar and group to devops in single command itself.   
         d) Now create a directory and change its owner to Tina and group to devops.   
 - Task 5: Change the ownership of the entire directory and its sub-directory. <br>
-        a) create a new directory called deployment-env/test
-        b) create another directory called deployment-env/prod
-        c) create a file called predata.txt in /test
-        d) create a file called postdata.txt /prod
-        e) create a group called executors
-        f) changed the ownership of entire directory deployment-env
-                  - Owner:
-                  - Group:
-                  - User recursive flag ( -R)
-        g) verify the permission of all the files and sub-directories. 
+        a) create a new directory called deployment-env/test  
+        b) create another directory called deployment-env/prod  
+        c) create a file called predata.txt in /test  
+        d) create a file called postdata.txt /prod  
+        e) create a group called executors  
+        f) changed the ownership of entire directory deployment-env  
+                  - Owner:  
+                  - Group:  
+                  - User recursive flag ( -R)  
+        g) verify the permission of all the files and sub-directories.   
     
     
 Task 1:
