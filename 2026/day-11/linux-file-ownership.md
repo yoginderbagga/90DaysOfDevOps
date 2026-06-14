@@ -56,3 +56,16 @@ In below tasks, we create a new file named as project-data.txt and changed its g
 As you can see, the group "yoginderbagga" has changed to devops, with running the above step. 
 <br>
 <br>
+
+Task 4:
+
+In below tasks, we create a new file named as new-candidates.txt and with a single command changed its owner to dhurandar and group owner as well to "production"
+<br>
+
+``sudo chown owner:group filename``
+
+<img width="1245" height="210" alt="image" src="https://github.com/user-attachments/assets/09a8e9b7-cf1e-4452-a866-4c320f88923a" />
+
+The owner and group owner has been changed from "yoginderbagga" to Dhurandar and production and then we confirmed it using the ls -l command. Also, again we ran the chown command changed the owner from Dhurandar to Tina, and group production to devops. 
+
+
