@@ -1,4 +1,4 @@
-# Linux FiLinux File Permission and Modify Permissions
+# Linux File Permission and Modify Permissions
 
 In this session, we will cover Linux file permissions, how to assign permission to the files, read the permission and modify the existing permission to a given file / directory.  
 
