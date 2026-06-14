@@ -78,4 +78,10 @@ In below tasks, we create a new file named as new-candidates.txt and with a sing
 
 The owner and group owner has been changed from "yoginderbagga" to Dhurandar and production and then we confirmed it using the ls -l command. Also, again we ran the chown command changed the owner from Dhurandar to Tina, and group production to devops. 
 
+<br>
+<br>
+
+Task 5:
+
+<img width="1441" height="302" alt="image" src="https://github.com/user-attachments/assets/3f48cb90-6e00-4a81-b972-e5b90026d7de" />
 
