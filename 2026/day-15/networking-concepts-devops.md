@@ -49,10 +49,9 @@ Computer only understand the address and not the google.com which you type on br
 3. HTTP Request : In this step, HTTP asks the server ( destination ) for the website files to load. The browser has request packet which consist of information such as target path, the HTTP version and metadata headers for the browser type.  
 
 4. HTTP Response : As the web-server receives the packet it then ready the page for you also known as payload. Nginx or ( apache ) webs server are used on the destination location to process your request and prepare the website files you have requested ( index.html ) for example. <br>
+The server now ready to reply with the HTTP response packet ( 200 OK for the success ) and the HTML,CSS or Javascript  file in the response body. 
 
-The server now ready to reply with the HTTP response packet ( 200 OK for the success ) and the HTML text file in the response body. 
-
-5. Rendering the page: 
+5. Rendering the page: Now the response page is at the source location ( your computer ) where the browser makes it beautiful? Here the browser adds the styling on HTML files using the CSS and adds the Javascript features like DOM to make the page more dynamic. 
 
 
 
