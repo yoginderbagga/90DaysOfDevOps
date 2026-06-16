@@ -61,17 +61,27 @@ DNS records are basically the instructions or the steps written on a plain text 
 
 
 - A record: An A-record of a domain retrieve the actual IPv4 address.<br>
-  `` dig w3school.com``<br?
-<img width="1470" height="467" alt="image" src="https://github.com/user-attachments/assets/fd1f0e41-f169-43d0-888f-e1f984700685" />
+  `` dig w3school.com``<br>
+<img width="1470" height="467" alt="image" src="https://github.com/user-attachments/assets/fd1f0e41-f169-43d0-888f-e1f984700685" /><br>
 
   
 - AAAA record: An AAAA-record of a domain retrieve the IPv6 address <br> Its same as IPv4 type of record, just a different IP address type.
 
   <img width="1311" height="498" alt="Screenshot 2026-06-16 213208" src="https://github.com/user-attachments/assets/e4c611c0-d4b4-4960-b871-c20978b5b347" />
 
-- CNAME:
+- CNAME: In CNAME records, no IP address are there. CNAME records is used to map an alias domain or a subdomain to an actual domain name of the website itself. Lets take an example of a website called ``company.com`` , suppose ``company.com`` is the hostname which user uses to access the website but tha actual web-server is configured for ``server123.hostingprovider.com``; instead of pointing multiple DNS records to the IP address you can do like this :
+<br>
+
+``www.company.com    CNAME    server123.hostingprovider.com``
+The benefit of using CNAME is suppose the organization has changed the server IP address ``198.51.100.20`` to something else ``203.0.113.10``  which can happen time to time in org. In this case, you will not have to update the new IP address in each of the records of the sub-domains, as there can be multiple domains for a company website. The only place you have to update the IP address is one time and the rest of the 5 domains will automatically use the CNAM ( alias ) 
+
+<br>
+
 - MX: AN MX record is responsible for telling you which email server are used to accept email messages for a particular domain. 
-- SOA: 
+- SOA: A start of authority in DNS maintain a critical information about a domain such as primary server, contact email address and zone update intervals.
+
+<img width="1261" height="426" alt="Screenshot 2026-06-16 215248" src="https://github.com/user-attachments/assets/44822640-6a4b-4896-b6af-26126d94f80e" />
+
 
 <img width="635" height="356" alt="image" src="https://github.com/user-attachments/assets/5600efc0-3ece-495f-a2c1-9d900948000c" />
 
