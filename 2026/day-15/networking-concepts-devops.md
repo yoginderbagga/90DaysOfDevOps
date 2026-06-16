@@ -54,4 +54,25 @@ The server now ready to reply with the HTTP response packet ( 200 OK for the suc
 5. Rendering the page: Now the response page is at the source location ( your computer ) where the browser makes it beautiful? Here the browser adds the styling on HTML files using the CSS and adds the Javascript features like DOM to make the page more dynamic. 
 
 
+Different types of DNS records <br>
+
+DNS records are basically the instructions or the steps written on a plain text files which are used to connect domain names with the IP address within the DNS server. Use commands like ``dig``, ``nslookup`` on terminal to check info about DNS records.
+<br>
+
+
+- A record: An A-record of a domain retrieve the actual IPv4 address.<br>
+  `` dig w3school.com``<br?
+<img width="1470" height="467" alt="image" src="https://github.com/user-attachments/assets/fd1f0e41-f169-43d0-888f-e1f984700685" />
+
+  
+- AAAA record: An AAAA-record of a domain retrieve the IPv6 address <br> Its same as IPv4 type of record, just a different IP address type.
+
+  <img width="1311" height="498" alt="Screenshot 2026-06-16 213208" src="https://github.com/user-attachments/assets/e4c611c0-d4b4-4960-b871-c20978b5b347" />
+
+- CNAME:
+- MX: AN MX record is responsible for telling you which email server are used to accept email messages for a particular domain. 
+- SOA: 
+
+<img width="635" height="356" alt="image" src="https://github.com/user-attachments/assets/5600efc0-3ece-495f-a2c1-9d900948000c" />
+
 
