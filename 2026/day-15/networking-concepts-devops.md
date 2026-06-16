@@ -11,7 +11,7 @@ Task 1: Domain Name System
 
 Task 2: IP Addressessing in Network
 
-- what is the purpose of IPv5 address? How is it structured?
+- what is the purpose of IPv4 address? How is it structured?
 - write one line summary of public and private IPs -- also share an example of each
 - define private IP ranges?
 - on terminal, run ip addr command identify the private ip address.
