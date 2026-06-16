@@ -84,5 +84,9 @@ The benefit of using CNAME is suppose the organization has changed the server IP
 
 
 <img width="635" height="356" alt="image" src="https://github.com/user-attachments/assets/5600efc0-3ece-495f-a2c1-9d900948000c" />
+<br>  
 
+``nslookup w3school.com``  
+<br>
+<img width="1200" height="208" alt="Screenshot 2026-06-16 215420" src="https://github.com/user-attachments/assets/b0790874-7c36-47bd-b12a-7d37eccd2719" />
 
