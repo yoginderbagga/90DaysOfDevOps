@@ -207,4 +207,18 @@ Suppose your browser is not working/slow or you just need to use the terminal to
 
 Suppose your terminal is also occupied of you're running some containers and that too on the terminal directly which is consuming too much space / memory. And you just need to download the content to your laptop add the option ``(-o)`` to download the specific file : 
 
-curl -o capture_file.html http://github.com/yoginderbagga
+``curl -o capture_file.html http://github.com/yoginderbagga``
+
+### Use Case 3: To test the rest API
+
+Curl command used alot for testing the API as this allows you to transmit data with many networking protocols like HTTP, HTTPS, just from your terminal. 
+
+- GET (Read the data): You can quickly fetch the data from an endpoint and there's no need to define a GET method explicitly as it uses GET by default. <br>
+
+``curl https://api.example.com/users``
+<br>
+
+- POST (Create the data): If you like to send payload for creating any new resources on the server location. You can add the argument ``-X POST`` to explicitly set the methohd and ``-d`` to provide the raw JSON. 
+
+
+``curl https://api.example.com/users -H "Conent-Type: application/json" -d '{"name": "John Doe", "email": "john@example.com"}'``
