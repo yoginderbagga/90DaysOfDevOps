@@ -123,6 +123,33 @@ Private IP: A private IP is mainly used within a local network or an organizatio
 ``172.16.0.0 - 172.31.255.255``  
 ``192.168.0.0 - 192.168.255.255``  
 
+<img width="931" height="497" alt="Screenshot 2026-06-17 163849" src="https://github.com/user-attachments/assets/9e8244c8-fe0e-4389-8214-b8b691855e54" />
 
+As you can see the IP address starting with inet is private IP address : ``10.0.2.15``  <br>
+
+## Task 3:
+
+
+## CIDR and Subnetting
+
+
+what is /24 notation in an IP address 192.168.1.0/24? <br> 
+
+Whenever you see a / (slash) notation always remember that /24 or /16 or /8 they all indicate the first 24 bits of an IPv4 address of the 32 bits which define a network. The reamanining 8 bits left are the host part of the network. 
+/24 = 255.255.255.0
+
+<br>
+
+How many usable hosts in a /24, /16, /28 ?
+ 
+In a /24 subnet network there are total 256 ( 2*2*2*2*2*2*2*2) IPv4 address out of which 2 address are reserved for the default gateway and broadcast address the reamaining 254 assigned to the host IPs.
+
+in a /16 subnet, there are total of 65,536 IPv4 address out of which 2 are reserved for default gateway and broadcast communication and the reamining 65,534 are used for the host IPs.
+
+<br>
+
+Subnet in Networking:
+<br>
+The main purpose of subnet is to divide a large network into small logical groups of network known as subnets. If there was never a subnet concept, then each network range will have huge number of IP address and in case only some of them from that range are required then a large chunk of the IPs will be wasted. Hence its useful to reduce the wastage of the IPs to divide them into a small logical groups and also to increase the security of the network. 
 
 
