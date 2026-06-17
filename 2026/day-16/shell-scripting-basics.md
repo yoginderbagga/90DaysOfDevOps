@@ -67,3 +67,10 @@ Script ``if-else_user-input.sh`` is created and below is the result when executi
 
 <img width="1667" height="253" alt="Screenshot 2026-06-17 194618" src="https://github.com/user-attachments/assets/0eea37d6-4466-44ff-b0e5-d6ad989c4818" />
 
+
+## Task 5: 
+
+Script ``server-testing.sh`` is created and below is the result when executing it. One thing i observed, when you compare a string like "Y" "N" "YES" or "NO" anything, then do not use -eq operator as its not a valid data type to compare the string character. Instead use "==" operator for the comparison of string, only in case of number comparison you can use "-eq" operator. 
+
+<img width="1283" height="622" alt="Screenshot 2026-06-17 200202" src="https://github.com/user-attachments/assets/fb6c502f-cd1d-4f7a-aa31-b6a73cdb6baf" />
+
