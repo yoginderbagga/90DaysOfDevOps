@@ -29,5 +29,12 @@ Task 4: Utilizing If-else condition
 
 Task 5: Integrate them all 
 
+These scripts are all individual script which does a single task in isolation but they're not a fully fledge production level script or not even a script that shows what is being automated, or no service is specified. 
 
+So create another script ``server_testing.sh`` which does below activitiy:
+
+1. Capture the service name into a variable (like nginx, sshd)
+2. Take input from user : "Do you want to test the service status? (y/n)"
+3. If answer is ``y`` -- runs the ``systemctl status <service>``; and print whether service is active status or not.
+4. If answer is ``n`` -- print "skipping"
 
