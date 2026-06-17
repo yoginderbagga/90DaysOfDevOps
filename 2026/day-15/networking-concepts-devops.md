@@ -167,3 +167,27 @@ Define Port and its purpose
 
 Port makes it easy for the computer to quickly identify the different kinds of internet traffic : for example, email communication goes to a different port that a web-page access. Same for the Zoom meeting port or your SSH port are different types of traffic routing. 
 When the computer receives data from a destination device, it makes easy for computer to understand what to do with the data that they receive. For instance, an engineer is sending file to a client computer using the File Transfer Protocol (FTP) this will use the port 21 for the identification of the traffic once it receives or sends from the engineer device. Meanwhile the client can continue to receive and access facebook.com, Github.com or any other website simaltaneiously on a different port like http (80) or https (443)
+
+
+| Port | Service |
+|------|---------|
+| 22   | SSH     |
+| 80   | HTTP    |
+| 443  | HTTPS   |
+| 53   | DNS     |
+| 3306 | MySql   |
+| 6379 | Redis   |
+| 27017| MongoDB |
+
+SS (socket statistics )
+
+When combine an IP address with a port number it creates a socket. This is like a software object which functions to transmit data from a source to a destination port. The socket can be in listening, established and closed state. 
+
+NOTE: Socket is two way end point object that creates a communication end point, where as port is actually a number to identify that communication end point object at source or destination location. 
+
+<img width="1060" height="413" alt="Screenshot 2026-06-17 171104" src="https://github.com/user-attachments/assets/29305f42-f5ed-4b29-9707-efd7fa213bdc" />
+
+
+
+## Task 5:
+
