@@ -83,3 +83,7 @@ Press Y if you would like to testY
 ./server-testing.sh: line 13: [: Y: integer expected
 No choice
 ```
+
+## Learning
+
+Writing the script and executing is not enough, but documenting it cleanly with each step or instruction that you understood or faced any challenges is as critical as running it. As many times we might miss the details, so you can come back and refer to the flow, the place when you wrote it down. 
