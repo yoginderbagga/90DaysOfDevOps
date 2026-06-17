@@ -191,3 +191,15 @@ NOTE: Socket is two way end point object that creates a communication end point,
 
 ## Task 5:
 
+CURL Command
+
+
+Client URL is one of the frequent used command line tool to transfer data to or from a server across various network protocols. It works the same way as the browser but it operates on the terminal rather than the browser. With Curl you can download files, upload the data and interact seamlessly with backend APIs. 
+
+
+### Use Case 1: To fetch the website content
+
+Suppose your browser is not working/slow or you just need to use the terminal to test some web-site functionality such as getting the raw response from the website with HTML/JSON format directly inside your terminal. 
+
+``curl http://w3school.com``
+
