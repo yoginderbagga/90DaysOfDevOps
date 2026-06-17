@@ -74,3 +74,12 @@ Script ``server-testing.sh`` is created and below is the result when executing i
 
 <img width="1283" height="622" alt="Screenshot 2026-06-17 200202" src="https://github.com/user-attachments/assets/fb6c502f-cd1d-4f7a-aa31-b6a73cdb6baf" />
 
+You can get below error message if you use -eq for comparing the string character. After replacing it with == it will work. 
+```
+yoginderbagga@fedora:~/90-days-devops-Practice/90DaysOfDevOps/2026/day-16$ ./server-testing.sh 
+This script is test the service status on the server
+Press Y if you would like to testY
+./server-testing.sh: line 11: [: Y: integer expected
+./server-testing.sh: line 13: [: Y: integer expected
+No choice
+```
