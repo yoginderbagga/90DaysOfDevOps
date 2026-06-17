@@ -90,3 +90,39 @@ The benefit of using CNAME is suppose the organization has changed the server IP
 <br>
 <img width="1200" height="208" alt="Screenshot 2026-06-16 215420" src="https://github.com/user-attachments/assets/b0790874-7c36-47bd-b12a-7d37eccd2719" />
 
+
+## Task 2:
+
+## IP Addressessing in Network <br>
+<br>
+
+
+Internet Protocol is an 32 bit IPv4 address which is used to uniquely identify a device on the internet. IP address is divided with 4 octets of 8 bits each and seperated with a dotted notation. 
+<br>
+
+Mainly there are three parts of an IPv4 address, first Network, second Host and third is the Subnet. The network part help identify the network an IPv4 address belongs to. Host part is used to uniquely identify a machine on the network ( private or a public network ) ; each device on a network has a unique host id. The largest number of the Subnet means less number of IP address will be in one of their group. 
+
+Subnet part: is a part of an IPv4 address which divides a network into smaller or logically independend network segments. Lets see how the subnet mask works in real world :  
+
+- IP Address: ``192.168.1.14``  
+- Subnet Mask: ``255.255.255.0``  
+- Network Part: ``192.168.1.0``  
+- Host ID: ``.14``  
+
+Some of the most common subnet size : Suppose a network has a Subnet of /24 (255.255.255.0) this will have about 256 number of the IP address. Guess how many IP address will be in /16 network (255.255.0.0) it will be 65,536 number of hosts. <br>
+
+## Difference in Public and Private IP address 
+<br>
+
+Public IP: Public is what used by the network to communicate globally with the other networks. This address is usually assigned by the ISP and web-applications, online service uses Public IP only to communicate with the outside world. You can also call a Public IP as a routable IP address. 
+<br>
+
+Private IP: A private IP is mainly used within a local network or an organization with no access outside the local internet. Loca IP address ranges are:
+
+``10.0.0.0 - 10.255.255.255``  
+``172.16.0.0 - 172.31.255.255``  
+``192.168.0.0 - 192.168.255.255``  
+
+
+
+
