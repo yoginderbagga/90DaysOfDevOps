@@ -11,7 +11,7 @@ Task 1: Create your first ``hello-devops.sh``shell script and run it.
 - write about each line that you understood from the script.
 - how did you executed it?
 
-Task 2: Create another script with variables in it.
+Task 2: Create another script ``variable-data`` with variables in it.
 
 - Add a variable to store your Name.
 - Add a variable to store your Role.
