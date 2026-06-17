@@ -11,7 +11,7 @@ Task 1: Create your first ``hello-devops.sh``shell script and run it.
 - write about each line that you understood from the script.
 - how did you executed it?
 
-Task 2: Create another script ``variable-data`` with variables in it.
+Task 2: Create another script ``variable-data.sh`` with variables in it.
 
 - Add a variable to store your Name.
 - Add a variable to store your Role.
@@ -48,4 +48,8 @@ Script ``hello-devops.sh`` is created and below is the results of the script whe
 
 
 Task 2:
+
+Script ``variable-data`` is created and below is the result when executing the script. You can see the difference with single quote (``) the variable value was not expended as the single quote treat each string data as literally as string only. Whereas if you use the double quote ("") in the script that will treat each variable as the variable itself i.e it will expand the variable and display its values. 
+
+<img width="1583" height="208" alt="Screenshot 2026-06-17 190929" src="https://github.com/user-attachments/assets/54ba5b0b-1b5e-4338-90e3-4e2cc3438196" />
 
