@@ -203,3 +203,8 @@ Suppose your browser is not working/slow or you just need to use the terminal to
 
 ``curl http://w3school.com``
 
+### Use Case 2: To download the website content and saving files
+
+Suppose your terminal is also occupied of you're running some containers and that too on the terminal directly which is consuming too much space / memory. And you just need to download the content to your laptop add the option ``(-o)`` to download the specific file : 
+
+curl -o capture_file.html http://github.com/yoginderbagga
