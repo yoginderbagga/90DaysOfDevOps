@@ -6,7 +6,7 @@ For example, you would like to take a backup of a directory to a location, you c
 
 
 
-Task 1: Create first shell script and run it. 
+Task 1: Create your first ``hello-devops.sh``shell script and run it. 
 
 - write about each line that you understood from the script.
 - how did you executed it?
@@ -37,4 +37,15 @@ So create another script ``server_testing.sh`` which does below activitiy:
 2. Take input from user : "Do you want to test the service status? (y/n)"
 3. If answer is ``y`` -- runs the ``systemctl status <service>``; and print whether service is active status or not.
 4. If answer is ``n`` -- print "skipping"
+
+
+
+Task 1:
+
+Script ``hello-devops.sh`` is created and below is the results of the script when executing it. 
+
+<img width="1107" height="122" alt="Screenshot 2026-06-17 184919" src="https://github.com/user-attachments/assets/99e1fa40-d73e-4f51-86a3-fa01a9254e1c" />
+
+
+Task 2:
 
