@@ -222,3 +222,33 @@ Curl command used alot for testing the API as this allows you to transmit data w
 
 
 ``curl https://api.example.com/users -H "Conent-Type: application/json" -d '{"name": "John Doe", "email": "john@example.com"}'``
+
+
+## Application can't reach to a database 10.0.1.50:3306 -- what is the first thing you would check?
+
+1. Diagnosing the database connectivity: 
+
+- check application service status: use the command systemctl status postgresql
+- resource consumption: check if the database server has run out of CPU, memory, disk space which can also be the culprit of dropping connection.
+- verify the network connectivity status. 
+
+2. Verify the network and port connectivity status:
+
+- use command like telnet, nc to check the network connection for the database is open
+- verify the firewall and security groups
+
+3. Verify the DNS and Host resolution
+
+- use command like ``nslookup <database-hostname> or dig command from the application server
+- test with both hostname and IP address to identify if there's a DNS issue.
+
+4. Identify the database connection strings & authentication
+
+- verify the connection strings for database name, username, password or format of the credentials.
+- verify the envirionment variable
+- check the user permission.
+
+5. Review the application logs
+
+- Look into the application logs: check for EITMEDOUT or ECONNREFUSED or ``access denied`` error
+- Look into the Database logs : /var/log/mysql/error.log 
