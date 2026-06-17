@@ -152,4 +152,18 @@ Subnet in Networking:
 <br>
 The main purpose of subnet is to divide a large network into small logical groups of network known as subnets. If there was never a subnet concept, then each network range will have huge number of IP address and in case only some of them from that range are required then a large chunk of the IPs will be wasted. Hence its useful to reduce the wastage of the IPs to divide them into a small logical groups and also to increase the security of the network. 
 
+| CIDR | Subnet Mask     | Total IPs   | Usable Hosts |
+|------|-----------------|-------------|--------------|
+| /24  | 255.255.255.0   |  256        |  254         |
+| /16  | 255.255.0.0     |  65,536     |  65,534      |
+| /28  | 255.0.0.0       |  16,777,216 |  16,777,214  |
 
+
+<br>
+
+## Task 4:
+
+Define Port and its purpose 
+
+Port makes it easy for the computer to quickly identify the different kinds of internet traffic : for example, email communication goes to a different port that a web-page access. Same for the Zoom meeting port or your SSH port are different types of traffic routing. 
+When the computer receives data from a destination device, it makes easy for computer to understand what to do with the data that they receive. For instance, an engineer is sending file to a client computer using the File Transfer Protocol (FTP) this will use the port 21 for the identification of the traffic once it receives or sends from the engineer device. Meanwhile the client can continue to receive and access facebook.com, Github.com or any other website simaltaneiously on a different port like http (80) or https (443)
