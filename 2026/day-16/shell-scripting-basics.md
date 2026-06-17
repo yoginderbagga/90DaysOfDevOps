@@ -40,24 +40,30 @@ So create another script ``server_testing.sh`` which does below activitiy:
 
 
 
-Task 1:
+## Task 1:
 
 Script ``hello-devops.sh`` is created and below is the results of the script when executing it. 
 
 <img width="1107" height="122" alt="Screenshot 2026-06-17 184919" src="https://github.com/user-attachments/assets/99e1fa40-d73e-4f51-86a3-fa01a9254e1c" />
 
 
-Task 2:
+## Task 2:
 
 Script ``variable-data`` is created and below is the result when executing the script. You can see the difference with single quote (``) the variable value was not expended as the single quote treat each string data as literally as string only. Whereas if you use the double quote ("") in the script that will treat each variable as the variable itself i.e it will expand the variable and display its values. 
 
 <img width="1583" height="208" alt="Screenshot 2026-06-17 190929" src="https://github.com/user-attachments/assets/54ba5b0b-1b5e-4338-90e3-4e2cc3438196" />
 
 
-Task 3: 
+## Task 3: 
 
 Script ``user-input.sh`` shows how to take the input with the ``read`` statement that stores the value of input into a variable. Also, used the (-p)
 to keep the message and input into a single line. 
 
 <img width="1612" height="188" alt="Screenshot 2026-06-17 192816" src="https://github.com/user-attachments/assets/8fab86ec-4a3f-4bf0-9fd4-49a2b3508f7a" />
+
+## Task 4: 
+
+Script ``if-else_user-input.sh`` is created and below is the result when executing the script. 
+
+<img width="1667" height="253" alt="Screenshot 2026-06-17 194618" src="https://github.com/user-attachments/assets/0eea37d6-4466-44ff-b0e5-d6ad989c4818" />
 
