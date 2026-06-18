@@ -107,3 +107,34 @@ yoginderbagga@fedora:~$ curl -o my_website.html https://www.w3school.com
                                  Dload  Upload   Total   Spent    Left  Speed
 100  228k  100  228k    0     0  94951      0  0:00:02  0:00:02 --:--:-- 94969
 
+
+### Task 4:
+
+Use CURL command to test the API connectivity or backend service. For the API testing purpose with the CURL I created below flask app ( using GPT) to create a local server and then tested the CURL from the terminal to see the POST sends the data and retrieve it fine
+to my terminal. 
+
+
+<img width="1237" height="122" alt="image" src="https://github.com/user-attachments/assets/b0e6d76d-8769-440f-82d4-5a6f51c36736" />
+
+
+<img width="1082" height="253" alt="Screenshot 2026-06-19 045705" src="https://github.com/user-attachments/assets/19208ff7-8716-4867-afa9-13ef928f1c32" />
+
+
+run on terminal as ``yoginderbagga@fedora:~$ python flasktest.py``
+```
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Flask is working!"
+
+@app.route("/post", methods=["POST"])
+def post():
+    return {
+        "received": request.form.to_dict()
+    }
+
+app.run(host="0.0.0.0", port=5000)
+```
