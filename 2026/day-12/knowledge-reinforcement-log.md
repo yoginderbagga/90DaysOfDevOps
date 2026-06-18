@@ -12,6 +12,7 @@
 ### Check If Service Is Healthy - List 3 Commands to Test
 
 - Use the systemct status
+- Use the journalctl -u <service-name>
 - Use the netstat command
 
 ### Safely Change Ownership and Permission - List a Command
