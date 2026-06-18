@@ -25,7 +25,7 @@ The DevOps moment was started somewhere in between 2007-2008 when "IT Operations
 
 #### What is Cloud Engineering?
 
-The purpose of cloud engineering is to design, building, and securing the cloud environment. The primary focus of a cloud engineer is to  design the infrastructure, cost optimization, and managing cloud resources. 
+The purpose of cloud engineering is to design, building, and securing the cloud environment, managing the resources without handeling the physical servers. The primary focus of a cloud engineer is to  design the infrastructure, cost optimization, and managing cloud resources. A cloud engineer works with a pay as you go model which is to pay for only the resources that were used.  
 
 #### Why are you learning DevOps?
 
