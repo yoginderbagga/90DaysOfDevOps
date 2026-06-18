@@ -14,7 +14,6 @@
 
 - Use the systemct status
 - Use the journalctl -u <service-name>
-- Use the netstat command
 
 ### Safely Change Ownership and Permission - List a Command
 
@@ -69,3 +68,16 @@ tmpfs           1.2G  1.6M  1.2G   1% /run
 Using chmod command to change the permission of a file. 
 
 <img width="1522" height="173" alt="Screenshot 2026-06-18 212945" src="https://github.com/user-attachments/assets/b72b4647-136a-4bef-92c2-9c8014b43934" />
+
+
+### Task 2:
+
+Use journalct command with -u to print logs for a particular server and add the tail argument to display last 4 lines of the logs.
+
+
+yoginderbagga@fedora:~/90-days-devops-Practice/90DaysOfDevOps/2026/day-12$ journalctl -u nginx.service | tail -n 4
+Jun 18 19:49:06 fedora systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
+Jun 18 19:49:07 fedora nginx[1067]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Jun 18 19:49:07 fedora nginx[1067]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Jun 18 19:49:08 fedora systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.
+yoginderbagga@fedora:~/90-days-devops-Practice/90DaysOfDevOps/2026/day-12$ 
