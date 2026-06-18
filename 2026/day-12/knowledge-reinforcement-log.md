@@ -25,3 +25,47 @@
 ### Focus and Improvement Area For Upcoming Days
 
 - Using Curl command
+
+
+### Task 1:
+
+high CPU consumption command
+
+```
+yoginderbagga@fedora:~$ ps -aux --sort=-%cpu | head -n 4
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+yoginde+    5198 1566  0.0 235112  5352 pts/0    R+   21:21   0:00 ps -aux --sort=-%cpu
+yoginde+    3225 45.1  2.1 1984060 130976 ?      Sl   20:22  26:15 /opt/docker-desktop/bin/com.docker.backend services
+yoginde+    2513  1.4  6.9 5364380 413640 ?      Ssl  20:22   0:50 /usr/bin/gnome-shell
+yoginderbagga@fedora:~$
+```
+
+find the port used by which process 
+
+```
+yoginderbagga@fedora:~$ ss -tulpn | grep 22
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      128             [::]:22            [::]:*
+```
+find out the total disk usage available and how much it has used in a particular file system 
+
+```
+yoginderbagga@fedora:~$ df -h /home/yoginderbagga/Downloads/
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        29G   12G   17G  40% /home
+yoginderbagga@fedora:~$ df -h /root/
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        29G   12G   17G  40% /
+yoginderbagga@fedora:~$ df -h /tmp
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           2.9G   36K  2.9G   1% /tmp
+yoginderbagga@fedora:~$ df -h /mnt/
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        29G   12G   17G  40% /
+yoginderbagga@fedora:~$ df -h /run/user
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1.2G  1.6M  1.2G   1% /run
+```
+Using chmod command to change the permission of a file. 
+
+<img width="1522" height="173" alt="Screenshot 2026-06-18 212945" src="https://github.com/user-attachments/assets/b72b4647-136a-4bef-92c2-9c8014b43934" />
