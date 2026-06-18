@@ -88,7 +88,11 @@ yoginderbagga@fedora:/90-days-devops-Practice/90DaysOfDevOps/2026/day-12$
 
 ### Task 3:
 
-Use chown command to change the group ownership for the given file. 
+Use chown command to change the group ownership for the given file. One thing to note, do add a (:) as prefix before the group name that you would like to add for a particular file or the directory. 
+
+``sudo chown :stage demo_file.txt``
+
+After chown, first you add a column and group name right after that who will be given access, proceeded with the filename. 
 
 ```
 yoginderbagga@fedora:~$ sudo chown :production test_permission.txt 
