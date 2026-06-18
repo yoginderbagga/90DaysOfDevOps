@@ -4,6 +4,7 @@
 
 - Identify high consumption proces : ps aux, top 
 - Identify which ports are listening : ss - tulpn
+- Identify which process is using the given port
 - Identify the service status : systemct status
 - Display available disk space in human readable format : df -h
 - Change the permission : chmod
@@ -46,6 +47,16 @@ yoginderbagga@fedora:~$ ss -tulpn | grep 22
 tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*          
 tcp   LISTEN 0      128             [::]:22            [::]:*
 ```
+find which process is using the port 5000
+
+```
+yoginderbagga@fedora:~$ lsof -i :5000
+COMMAND   PID          USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+python  18290 yoginderbagga    3u  IPv4 144052      0t0  TCP *:commplex-main (LISTEN)
+yoginderbagga@fedora:~$ kill -9 18290
+yoginderbagga@fedora:~$ lsof -i :5000
+```
+
 find out the total disk usage available and how much it has used in a particular file system 
 
 ```
