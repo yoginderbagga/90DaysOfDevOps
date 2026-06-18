@@ -7,6 +7,7 @@
 - Identify the service status : systemct status
 - Display available disk space in human readable format : df -h
 - Change the permission : chmod
+- Output redirection command ( ">") : df -h > output-disk-space.txt
 
 
 ### Check If Service Is Healthy - List 3 Commands to Test
