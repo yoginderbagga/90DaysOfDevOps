@@ -99,3 +99,11 @@ yoginderbagga@fedora:~$ sudo chown :production test_permission.txt
 yoginderbagga@fedora:~$ ls -l test_permission.txt 
 --w-r--r--. 1 yoginderbagga production 58 Jun 18 21:29 test_permission.txt
 ```
+
+Use of the CURL command : 
+
+yoginderbagga@fedora:~$ curl -o my_website.html https://www.w3school.com
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  228k  100  228k    0     0  94951      0  0:00:02  0:00:02 --:--:-- 94969
+
