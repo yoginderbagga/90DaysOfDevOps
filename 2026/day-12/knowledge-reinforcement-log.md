@@ -18,6 +18,7 @@
 
 - Use the chmod command and chown
 - Use the chgrp command
+- Use the selinux ( semanage command ) 
 
 ### Focus and Improvement Area For Upcoming Days
 
