@@ -75,19 +75,23 @@ Using chmod command to change the permission of a file.
 Use journalct command with -u to print logs for a particular server and add the tail argument to display last 4 lines of the logs.
 
 
-yoginderbagga@fedora:~/90-days-devops-Practice/90DaysOfDevOps/2026/day-12$ journalctl -u nginx.service | tail -n 4
-Jun 18 19:49:06 fedora systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
-Jun 18 19:49:07 fedora nginx[1067]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-Jun 18 19:49:07 fedora nginx[1067]: nginx: configuration file /etc/nginx/nginx.conf test is successful
-Jun 18 19:49:08 fedora systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.
-yoginderbagga@fedora:~/90-days-devops-Practice/90DaysOfDevOps/2026/day-12$ 
 
+
+```
+yoginderbagga@fedora:/90-days-devops-Practice/90DaysOfDevOps/2026/day-12$ journalctl -u nginx.service | tail -n 4 
+Jun 18 19:49:06 fedora systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server... 
+Jun 18 19:49:07 fedora nginx[1067]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok 
+Jun 18 19:49:07 fedora nginx[1067]: nginx: configuration file /etc/nginx/nginx.conf test is successful 
+Jun 18 19:49:08 fedora systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server. 
+yoginderbagga@fedora:/90-days-devops-Practice/90DaysOfDevOps/2026/day-12$
+```
 
 ### Task 3:
 
 Use chown command to change the group ownership for the given file. 
 
+```
 yoginderbagga@fedora:~$ sudo chown :production test_permission.txt 
 yoginderbagga@fedora:~$ ls -l test_permission.txt 
 --w-r--r--. 1 yoginderbagga production 58 Jun 18 21:29 test_permission.txt
-
+```
