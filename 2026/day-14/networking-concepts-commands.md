@@ -40,7 +40,7 @@
 
 Using CURL command to fetch the data about the web-browser : 
 
-As you can see below CULR - I command is used to ask the web-server to provide the http server header response but not the actual HTML page content. Its like knocking a door the near by and asking "Is everything alright?" 
+As you can see below CULR - I command is used to ask the web-server to provide the http server header response but not the actual HTML page content. Its like knocking a door the near by and asking "Is everything alright?" In production env you may use nginx, apache or gunicorn web-server in that moment it will be helpful to run a CURL toward that server to check if the server HTTP is working good or not. 
 
 ``200 means success in HTTP code`` and ``404 means not found`` and ``403 means forbidden``   
 
