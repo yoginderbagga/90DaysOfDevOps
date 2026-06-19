@@ -7,14 +7,21 @@
 3. Installing Linux packages with Shell Scripting
 4. Adding the error handeling feature
 
-Task 1:
+### Task 1:
 
 1. Write a for loop ``simple_for.sh`` to print 5 fruits from the list, print each one.
 2. Write a for loop ``simple_count.sh`` to print number 1 to 10 using a for loop
 
 Solution: Added both the for loop scripts in the repository with the file name as ``simple_for.sh`` and ``simple_count.sh``
 
-Learning: In second script, used the range {..} concept to increment, also there was no condition to perform the increment as for loop works differently in bash as comparison to for loop C (which uses condition)
+Learning: In second script, used the range {..} concept to increment, also there was no condition to perform the increment as for loop works differently in bash as comparison to for loop C (which uses condition) and also add the counter ((num--) inside the do - done block not the outside. 
 
-Task 2:
+### Task 2:
 
+1. Write a script to take input from the user and decrement it till its 0 using the while loop and print done.
+
+Solution: Added the script ``count_while.sh``
+
+Learning: When comparing a number (numeric comparison) use the -gt or -lt not the < or > symbol in the condition block []
+
+<img width="1027" height="171" alt="image" src="https://github.com/user-attachments/assets/b1662113-7d70-44cd-852b-c3ae4ae88f3b" />
