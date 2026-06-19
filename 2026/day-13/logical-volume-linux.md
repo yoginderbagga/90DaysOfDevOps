@@ -122,5 +122,12 @@ root@fedora:~# lvextend -L +100M /dev/my_vg/new_LV
 
 ## Task 5:
 
+Why mkfs.xfs?
+
+mkfs stands for make file system, as the partition gets created in order to copy the files to the disk it needs to be formatted as a particular type of file system, it kinds of initialzie the data structure ( inode, metadata data blocks) that are required by the ext4 or xfs file system. 
+
+<img width="1022" height="458" alt="Screenshot 2026-06-19 185331" src="https://github.com/user-attachments/assets/958ff8f1-fc6b-4b1e-b2b0-17621e74f72e" />
+
+
 
 ## Task 6:
