@@ -31,3 +31,15 @@
 - ss -tulpn
 - dig <domain> / nslookup <domain>
 - CURL : responsible to transferring data to a URL and it supports various protocol like http, HTTPS, FTP etc
+
+
+``yoginderbagga@fedora:~$ sudo ss -tulpn | grep :80`` the ss command quickly fetches the process which is using the port 80. 
+
+<img width="1787" height="166" alt="image" src="https://github.com/user-attachments/assets/048a5f28-8de2-439b-a4f1-edcf0e35b710" />
+
+
+
+
+
+
+
