@@ -131,3 +131,9 @@ mkfs stands for make file system, as the partition gets created in order to copy
 
 
 ## Task 6:
+
+Use lvextend to increase the size of logical volume.
+
+
+<img width="1072" height="120" alt="Screenshot 2026-06-19 190015" src="https://github.com/user-attachments/assets/7afee908-b0c1-4150-b648-5c77f071180e" />
+
