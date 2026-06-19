@@ -1,1 +1,19 @@
+# Networking Concepts and Commands
 
+
+## OSI Layer vs TCP / IP Stack 
+
+<img width="850" height="1177" alt="image" src="https://github.com/user-attachments/assets/44b4ca0f-1e6f-41e6-9d2f-c608dd8818a1" />
+
+1. Application Layer: This is where the network layer data is shown to an application which can be an email or web-browser. HTTP, FTP, and SMTP are some of the common services used at the application layer level.
+
+ 
+2. Presentation Layer: This is where the data gets encrypted / decrypted, compressed to ensure that data is available in the correct format for the application which runs it. SSL / TLS security are the common protocols which are used to encrypt and authenticate data between the client and the server.
+
+   
+4. Session Layer: When you login to a application say facebook.com it establish, maintain, and eventually terminate the connection between the applications. The job of session layer is to manage the on-going session from the time it initiates to closing the session.
+   
+6. Transport Layer: 
+7. Network Layer
+8. Data Link Layer
+9. Physical Layer: 
