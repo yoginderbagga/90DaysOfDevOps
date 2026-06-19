@@ -38,6 +38,18 @@
 <img width="1787" height="166" alt="image" src="https://github.com/user-attachments/assets/048a5f28-8de2-439b-a4f1-edcf0e35b710" />
 
 
+Using CURL command to fetch the data about the web-browser : 
+
+As you can see below CULR - I command is used to ask the web-server to provide the http server header response but not the actual HTML page content. Its like knocking a door the near by and asking "Is everything alright?" 
+
+``200 means success in HTTP code`` and ``404 means not found`` and ``403 means forbidden``   
+
+The terminal result shows which means HTTP is working good  ``HTTP/1.1 200 OK``
+
+
+
+<img width="987" height="360" alt="image" src="https://github.com/user-attachments/assets/0474f123-98c6-4411-8cde-90f590604f6a" />
+
 
 
 
