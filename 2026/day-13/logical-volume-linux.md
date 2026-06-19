@@ -53,6 +53,36 @@ root@fedora:~# pvs
   /dev/sdc2  my_vg lvm2 a--  196.00m 196.00m
 ```
 
+3. VGS Output: vgs command is used to display all volume groups on your linux system in one line per group format. 
+
+```
+root@fedora:~# vgs
+  VG    #PV #LV #SN Attr   VSize   VFree  
+  my_vg   1   0   0 wz--n- 196.00m 196.00m
+```
+
+4. LVS Output: lvs command display the information about the logical volume in your linux system. ( Currently I"m not able to get the output as there are no logical volume on my Fedora VM)
+
+5. df -h: Display info about the overall space on the disk and available space on the file system right now.
+
+```
+root@fedora:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        29G   12G   17G  41% /
+devtmpfs        2.9G     0  2.9G   0% /dev
+tmpfs           2.9G  5.8M  2.9G   1% /dev/shm
+tmpfs           1.2G  1.6M  1.2G   1% /run
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           2.9G   24K  2.9G   1% /tmp
+/dev/sda3        29G   12G   17G  41% /home
+/dev/sda2       2.0G  512M  1.3G  29% /boot
+/dev/sdb1       1.8G   68M  1.8G   4% /mnt/new_drive
+/dev/sdc1       436M   34M  403M   8% /home/yoginderbagga/new_drive2
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+tmpfs           584M  172K  584M   1% /run/user/1000
+/dev/sr0        2.6G  2.6G     0 100% /run/media/yoginderbagga/Fedora-WS-Live-43
+tmpfs           584M   44K  584M   1% /run/user/0
+```
 
 ## Task 2:
 
