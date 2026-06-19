@@ -25,3 +25,23 @@ Solution: Added the script ``count_while.sh``
 Learning: When comparing a number (numeric comparison) use the -gt or -lt not the < or > symbol in the condition block []
 
 <img width="1027" height="171" alt="image" src="https://github.com/user-attachments/assets/b1662113-7d70-44cd-852b-c3ae4ae88f3b" />
+
+
+## Task 3: Command Line Arguments
+
+Suppose a script is being executed and you would like to pass an a value that moment. This can be achieved with argument, they also control the behaviour of the script dynamically. 
+
+1. Write a script welcome.sh and accept a name as argument. 
+
+
+```
+yoginderbagga@fedora:~/90-days-devops-Practice/90DaysOfDevOps/2026/day-17$ ./welcome.sh golu
+--------Demonstrage Command Line Argument-----
+The first argument is : golu
+```
+
+In below screenshot, i passed three argument value golu, bholu and kyoko during execution of the script, and they get executed in the output. In script, used ``$#`` to print total number of the argument, ``$1`` to print the first argument, and ``$@`` to print all the arguments passed. 
+
+<img width="1035" height="100" alt="image" src="https://github.com/user-attachments/assets/599f7359-e722-4774-a89b-c91eca3dfc86" />
+
+2. 
