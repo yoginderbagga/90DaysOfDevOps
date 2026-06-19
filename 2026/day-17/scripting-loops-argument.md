@@ -44,4 +44,12 @@ In below screenshot, i passed three argument value golu, bholu and kyoko during 
 
 <img width="1035" height="100" alt="image" src="https://github.com/user-attachments/assets/599f7359-e722-4774-a89b-c91eca3dfc86" />
 
-2. 
+## Task 4: Script to install the packages
+
+1. Write a script to install the packages on the linux machine
+   1) First declare all the packages : ``nginx``, ``curl``, ``wget``
+   2) Iterate through the list
+   3) Verify if each package is installed use ``dpkg -s`` or ``rpm -q``; and proceed to install again if missing and skip if already present.
+   4) print the status of each package.
+
+Run this as sudo. 
