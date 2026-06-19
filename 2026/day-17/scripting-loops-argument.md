@@ -53,3 +53,9 @@ In below screenshot, i passed three argument value golu, bholu and kyoko during 
    4) print the status of each package.
 
 Run this as sudo. 
+
+Script ``install_packages.sh`` is added and it can install the package if previously not installed. We used ``&>`` to send the standard output and standard error at /dev/null location; and once anything goes in the black hole /dev/null that's not usable.  
+
+Used array ``packages`` to store the values of all the three packages. 
+Outer -> For loop
+Inner -> If-else condition. 
