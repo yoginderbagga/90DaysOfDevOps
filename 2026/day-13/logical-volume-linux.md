@@ -86,14 +86,39 @@ tmpfs           584M   44K  584M   1% /run/user/0
 
 ## Task 2:
 
+Since the existing physical volume space was ran out of the memory, so i first created a new parition with the name /dev/sdc3 and with that created a new physical volume to get the memory. 
+
+<img width="1027" height="560" alt="Screenshot 2026-06-19 184507" src="https://github.com/user-attachments/assets/2e51d23d-ae5c-4aef-a09d-4bbced1f4add" />
+
+```
+root@fedora:~# pvcreate /dev/sdc3
+  Physical volume "/dev/sdc3" successfully created.
+```
 
 ## Task 3:
 
+Extended the volume group size using the physical volume memory. 
+
+```
+root@fedora:~# vgextend my_vg /dev/sdc3
+  Volume group "my_vg" successfully extended
+root@fedora:~# vgs
+  VG    #PV #LV #SN Attr   VSize  VFree   
+  my_vg   2   1   0 wz--n- <1.19g 1020.00m
+```
 
 
 ## Task 4:
 
+Logical volume was already created yesterday so used this logical volume and extended its space. 
 
+```
+root@fedora:~# lvextend -L +100M /dev/my_vg/new_LV 
+  Size of logical volume my_vg/new_LV changed from 196.00 MiB (49 extents) to 296.00 MiB (74 extents).
+  Logical volume my_vg/new_LV successfully resized.
+```
+
+<img width="1018" height="485" alt="Screenshot 2026-06-19 184930" src="https://github.com/user-attachments/assets/864d1bbc-2752-4bcc-8c5c-0004e05ec292" />
 
 ## Task 5:
 
