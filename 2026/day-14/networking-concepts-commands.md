@@ -21,3 +21,13 @@
 6. Data Link Layer: This layer is responsible to ensure that data reaches correctly from the network to a physical layer, and it manages the error detection. ( A MAC address, network switches( Cisco, Juniper) they work on the data link layer at the local network communication. 
 
 7. Physical Layer: This layer is responsible for the physical and electrical signal transmission between the devices. When a computer connect to a network through Cat5, Cat6cable then physical layer handle the tranmission of the binary data through the electrical signals along the cable. 
+
+
+# Quick Checklist
+
+- ifconfig / ip addr
+- ping <ip-address>
+- traceroute
+- ss -tulpn
+- dig <domain> / nslookup <domain>
+- CURL : responsible to transferring data to a URL and it supports various protocol like http, HTTPS, FTP etc
