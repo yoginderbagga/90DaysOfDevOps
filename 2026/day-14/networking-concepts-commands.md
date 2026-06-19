@@ -11,9 +11,13 @@
 2. Presentation Layer: This is where the data gets encrypted / decrypted, compressed to ensure that data is available in the correct format for the application which runs it. SSL / TLS security are the common protocols which are used to encrypt and authenticate data between the client and the server.
 
    
-4. Session Layer: When you login to a application say facebook.com it establish, maintain, and eventually terminate the connection between the applications. The job of session layer is to manage the on-going session from the time it initiates to closing the session.
+3. Session Layer: When you login to a application say facebook.com it establish, maintain, and eventually terminate the connection between the applications. The job of session layer is to manage the on-going session from the time it initiates to closing the session. ( Example sockets ) 
    
-6. Transport Layer: 
-7. Network Layer
-8. Data Link Layer
-9. Physical Layer: 
+4. Transport Layer: This layer is responsible for reliable, transparent data transfer among the end systems. ( Used for error recovery, flow control and end to end transfer examples are : TCP and UDP protocols ) TCP make sure that once the data is send to destination it gets reached there without any error message, and if there's any error or issue it reports the error. Whereas the UDP protocol which is used in connection-less application like videos, gaming, VOIP they don't ensure if the data is dropped in between, its gone there's no way to recover that. ( UDP is less reliable)
+    
+5. Network Layer: The actual layer which manages the data packet routing, IP addressing and the IP protocols from the source to a destination network. ( Protocols include: IP, ICMP, IPSec)
+
+
+6. Data Link Layer: This layer is responsible to ensure that data reaches correctly from the network to a physical layer, and it manages the error detection. ( A MAC address, network switches( Cisco, Juniper) they work on the data link layer at the local network communication. 
+
+7. Physical Layer: This layer is responsible for the physical and electrical signal transmission between the devices. When a computer connect to a network through Cat5, Cat6cable then physical layer handle the tranmission of the binary data through the electrical signals along the cable. 
