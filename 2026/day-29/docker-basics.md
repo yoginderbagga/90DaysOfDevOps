@@ -62,3 +62,11 @@ Container virtualize the operating system layer rather than the exact physical l
 
 Below is official image of Docker architecture from Docker website. 
 <img width="1233" height="651" alt="image" src="https://github.com/user-attachments/assets/f6f3f69d-e4e1-4099-a9a6-d8f6cac07185" />
+
+
+### Task 2:
+
+In this task, we will install docker from scractch assuming that this is plain linux with no docker app at all. 
+
+
+
