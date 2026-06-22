@@ -27,4 +27,22 @@
 - Give the container a name
 - Map a port from your host machine to the container
 - Identify the logs of the existing running container.
-- How to run a command inside a running container. 
+- How to run a command inside a running container.
+
+### Task 1:
+
+## Docker  
+
+Docker is an open source platform which helps you to build, deploy and run the containers and manage in different environment. 
+
+Containers: 
+
+A docker container is a lightweight, standalone "executable package" of an application which includes everything needed to run an applications. It includes source code, with runtimes, system tools, librariries and configuration to smoothly run it acrosss different computing environments. 
+
+- It solves the problem of portability by reducing the friction of "it works on my machine"; as a container can not only run on a laptop but can easily be moved to cloud environment or hybrid cloud environment or on-premise server. 
+
+- It provides "isolation" means multiple applications can run simultaneously on the same server without any conflicting of the software version or without any interference to each other.
+
+- It provides "efficiency" by removing the use of heavy resources to run the applications on a single physical host servers.
+
+## Difference in Containers and Virtual Machine 
