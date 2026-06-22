@@ -78,3 +78,10 @@ In this task, we will install docker from scractch assuming that this is plain l
 ``yoginderbagga@fedora:~$ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin``
 
 <img width="1917" height="546" alt="image" src="https://github.com/user-attachments/assets/857608ea-82f5-40d4-a19b-d0027b048982" />
+
+3. Start the docker engine
+
+``yoginderbagga@fedora:~$ systemctl enable docker.service``
+
+<img width="912" height="540" alt="image" src="https://github.com/user-attachments/assets/5dbbc7f7-f66c-4127-97a0-2ed14902ba28" />
+
