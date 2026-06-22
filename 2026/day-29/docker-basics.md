@@ -90,3 +90,6 @@ In this task, we will install docker from scractch assuming that this is plain l
 Since the image was not in the system it pulled from the docker repository and after downloading to the local machine it ran. Also, there is nothing in the hello-world so it runs for a second and immediately exits so when you run ``docker ps`` command it won't show up there. But if you run ``docker ps -a`` it will show up under the exited container. 
 
 <img width="1212" height="647" alt="image" src="https://github.com/user-attachments/assets/af9909c4-b6b4-45fc-8e56-ea53f16f291a" />
+
+<img width="1596" height="122" alt="image" src="https://github.com/user-attachments/assets/d47d5d7c-2712-45b6-b13a-439795d5609a" />
+
