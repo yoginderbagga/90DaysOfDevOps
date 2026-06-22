@@ -46,3 +46,14 @@ A docker container is a lightweight, standalone "executable package" of an appli
 - It provides "efficiency" by removing the use of heavy resources to run the applications on a single physical host servers.
 
 ## Difference in Containers and Virtual Machine 
+
+<img width="1260" height="515" alt="Screenshot 2026-06-22 201312" src="https://github.com/user-attachments/assets/d66a188a-9381-465a-be92-22eb57c204ea" />
+
+Virtuali Machine:
+
+Virtualization is the process in which a system resources like RAM, CPU, Disk and Networking can be "virtualized" and used as multiple resources with multiple virtual machines ( VMs Instances ) The difference between a container and virtual machine is that a virtual machine virtualize an entire machine down at the hardware layers. 
+
+
+Containers :
+
+Container virtualize the operating system layer rather than the exact physical layer (Like in case of VM) . Container share a single host OS Kernel and create lightweight isolated user spaces for the individual application and their dependencies. 
