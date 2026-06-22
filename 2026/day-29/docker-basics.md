@@ -85,3 +85,8 @@ In this task, we will install docker from scractch assuming that this is plain l
 
 <img width="912" height="540" alt="image" src="https://github.com/user-attachments/assets/5dbbc7f7-f66c-4127-97a0-2ed14902ba28" />
 
+### Started the hello-world container 
+
+Since the image was not in the system it pulled from the docker repository and after downloading to the local machine it ran. Also, there is nothing in the hello-world so it runs for a second and immediately exits so when you run ``docker ps`` command it won't show up there. But if you run ``docker ps -a`` it will show up under the exited container. 
+
+<img width="1212" height="647" alt="image" src="https://github.com/user-attachments/assets/af9909c4-b6b4-45fc-8e56-ea53f16f291a" />
