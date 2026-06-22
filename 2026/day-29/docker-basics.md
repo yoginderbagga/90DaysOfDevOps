@@ -66,7 +66,9 @@ Below is official image of Docker architecture from Docker website.
 
 ### Task 2:
 
-In this task, we will install docker from scractch assuming that this is plain linux with no docker app at all. 
+In this task, we will install docker from scractch assuming that this is plain linux with no docker app at all. Since i already have ``docker-ce-cli`` package on Fedora 43 so removing it to start everything from fresh. 
+
+(docker-ce-cli is client side tool which accepts your command and give to API to talk with docker daemon ``dockerd``)
 
 
 
