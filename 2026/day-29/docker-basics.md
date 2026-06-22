@@ -73,4 +73,8 @@ In this task, we will install docker from scractch assuming that this is plain l
 1. The first step before installing a docker engine is to configure the docker repository on your Fedora (Linux) and from then only you can install and update the docker. 
 <img width="1662" height="327" alt="image" src="https://github.com/user-attachments/assets/4344fc21-e7f7-41ce-95cf-d007a2c55016" />
 
-2. 
+2. Install the docker engine with below packages. As checked in output Package "containerd.io-2.2.5-1.fc43.x86_64" is already installed when doing the yum update.
+
+``yoginderbagga@fedora:~$ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin``
+
+<img width="1917" height="546" alt="image" src="https://github.com/user-attachments/assets/857608ea-82f5-40d4-a19b-d0027b048982" />
