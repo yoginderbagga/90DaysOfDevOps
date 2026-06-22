@@ -57,3 +57,8 @@ Virtualization is the process in which a system resources like RAM, CPU, Disk an
 Containers :
 
 Container virtualize the operating system layer rather than the exact physical layer (Like in case of VM) . Container share a single host OS Kernel and create lightweight isolated user spaces for the individual application and their dependencies. 
+
+### Architecture of Docker
+
+Below is official image of Docker architecture from Docker website. 
+<img width="1233" height="651" alt="image" src="https://github.com/user-attachments/assets/f6f3f69d-e4e1-4099-a9a6-d8f6cac07185" />
