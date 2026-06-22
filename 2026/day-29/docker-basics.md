@@ -70,5 +70,7 @@ In this task, we will install docker from scractch assuming that this is plain l
 
 (docker-ce-cli is client side tool which accepts your command and give to API to talk with docker daemon ``dockerd``)
 
+1. The first step before installing a docker engine is to configure the docker repository on your Fedora (Linux) and from then only you can install and update the docker. 
+<img width="1662" height="327" alt="image" src="https://github.com/user-attachments/assets/4344fc21-e7f7-41ce-95cf-d007a2c55016" />
 
-
+2. 
