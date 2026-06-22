@@ -93,3 +93,8 @@ Since the image was not in the system it pulled from the docker repository and a
 
 <img width="1596" height="122" alt="image" src="https://github.com/user-attachments/assets/d47d5d7c-2712-45b6-b13a-439795d5609a" />
 
+Learning: 
+
+You use ``docker run``command when you need to create a container from start for the first time using an image, in this case as you can see, it pulled the image from the docker hub so its a combination of two commands. You can also specifify the image name and if the image is not found locally then only it pulls from the registry or docker hub. 
+
+The first column shows a unique ID also known as container ID which gets created when a docker runs. If you destroy the container then a new ID will get created. The second column is the container image column which list the image used for the particular container, in this case hello-world is name of the image developed by someone and hosted on the Docker Hub platform. The third column display the primary process or command that was used to start a container and is running inside it. 
