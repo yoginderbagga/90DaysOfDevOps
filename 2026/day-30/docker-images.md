@@ -16,3 +16,16 @@
 
 
 ## Task 3: Lifecycle of a container
+
+What is the lifecycle of a container, understand it and write in your own notes.
+
+- create a container without starting it
+- Start the container
+- Pause it and verify the status
+- Unpause a container
+- Stop a container
+- Restart
+- Kill
+- Remove
+
+## Task 4: Container Cleanup
