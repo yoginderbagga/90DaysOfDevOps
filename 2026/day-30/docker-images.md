@@ -118,6 +118,11 @@ Docker use layered approach to optize for the storage, and minimize the image bu
 
 ### Lifecycle of a Container:
 
+Below image shows how to create a container with ``docker create`` command without actually starting it. In this case, it pulls the docker image but not run the container. 
+
+<img width="843" height="246" alt="Screenshot 2026-06-24 023202" src="https://github.com/user-attachments/assets/d48c48c5-77d4-4169-9601-23aed0d971ab" />
+
+
 - create a container without starting it:
   This create a container without actually running it, use the command ``docker create --name <container name>    <image name>``
 
