@@ -41,3 +41,12 @@ Identify the message printed after running this container; and write 2 lines abo
 
 ## Task 6:
 
+
+## Task 1:
+
+<img width="1032" height="220" alt="Screenshot 2026-06-24 033518" src="https://github.com/user-attachments/assets/bb3aff7e-61db-4bff-85b3-df6a6fd2d279" />
+
+
+<img width="1045" height="498" alt="Screenshot 2026-06-24 034333" src="https://github.com/user-attachments/assets/64fd41e1-b4ad-4996-ac19-eed2f6aa4c98" />
+
+
