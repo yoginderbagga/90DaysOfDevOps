@@ -172,8 +172,11 @@ To execute a command inside a running container and then look around the file sy
 
 To execute a command in a container without actually entering it but just from the outside itself. 
 
-ubuntu@ip-172-31-19-178:~$ docker exec web-server ls -l
+``ubuntu@ip-172-31-19-178:~$ docker exec web-server ls -l``
 
+To view the real time logs of the container:
+
+``ubuntu@ip-172-31-19-178:~$ docker logs -f web-server``
 
 
 ## Task 5:
