@@ -30,7 +30,8 @@ What is the lifecycle of a container, understand it and write in your own notes.
 
 ## Task 4: Container Cleanup
 
-
+- stop all containers and remove them
+- remove all the images associated with containers
 
 
 ## Task 1:
@@ -115,7 +116,7 @@ Docker use layered approach to optize for the storage, and minimize the image bu
 
 ## Task 3:
 
-Lifecycle of a Container:
+### Lifecycle of a Container:
 
 - create a container without starting it:
   This create a container without actually running it, use the command ``docker create --name <container name>    <image name>``
@@ -141,10 +142,22 @@ Lifecycle of a Container:
 - Remove
   To remove a container, use the command ``docker remove nginx``
 
-  ## Task 4:
+## Task 4:
+
+### Containers Cleanup activity
+
+  In this task, we are going to clean the mess as all the containers were created for the test purpose on EC2     Instance and since they're no longer in use. We are going to first stop the container, then delete the          containers and finally remove the images associated with those containers.
 
   To stop all the container at once, use the below command, as ``docker ps -q`` will list the numeric ID only     of all the running containers and combine it with ``docker stop`` to actually stop them. 
 
   ``ubuntu@ip-172-31-19-178:~$ docker stop $(docker ps -q)`` 
-
   
+  Below image shows how to stop and then remove all the containers in a single command. 
+
+  <img width="1007" height="187" alt="Screenshot 2026-06-24 021333" src="https://github.com/user-attachments/assets/07134357-5bc2-4ec8-8a0f-ed5c558cfb21" />
+
+ 
+  Next is to remove the images that were associated with the containers.
+
+  <img width="1037" height="442" alt="Screenshot 2026-06-24 021600" src="https://github.com/user-attachments/assets/eb181631-a231-4253-a89a-3ffc5290b835" />
+
