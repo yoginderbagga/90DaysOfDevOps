@@ -37,7 +37,7 @@ What is the lifecycle of a container, understand it and write in your own notes.
 
 ### Docker Image:
 
-To pull / download a docker image from Docker Hub registry, use below command. 
+1. To pull / download a docker image from Docker Hub registry, use below command. 
 
 ``ubuntu@ip-172-31-19-178:~$ docker image pull debian``
 
@@ -51,3 +51,12 @@ Digest: sha256:fe7312b5f05bf5f43fad76bcd8945642e4e47a68aefd1b73f447615899d0fac1
 Status: Downloaded newer image for debian:latest
 docker.io/library/debian:latest
 ```
+2. To list the docker images that you have on system:
+
+``ubuntu@ip-172-31-19-178:~$ docker images``
+
+<img width="992" height="187" alt="image" src="https://github.com/user-attachments/assets/48cf8e4c-3db4-482d-88e8-8657cab624d5" />
+
+3. Observe the difference in size of alpine vs ubuntu docker image. Alpine is relatively less in disk usage size 13MB whereas the ubuntu docker size is 160MB which is 15 times high. The reason Ubuntu image size is high as Ubuntu is a features rich OS which provides you thousands of packages, capabilities. Now the Alpine docker image gives you very small size and it has almost nothing pre-installed.
+
+4. <img width="983" height="176" alt="image" src="https://github.com/user-attachments/assets/a6ceb719-12b1-4116-bd90-4fbcc66a19a4" />
