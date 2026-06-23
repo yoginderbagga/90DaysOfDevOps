@@ -66,11 +66,36 @@ docker.io/library/debian:latest
 
 ``ubuntu@ip-172-31-19-178:~$ docker image inspect 28bd5fe8b56d``
 
-## Task 2:
 
 ### How to remove a docker image?
 
 Use docker rm <image_id> command to remove a docker container image, however ensure that the demage being removed should not be depended on any other container already running. If that's the case then stop that container first before deleting the image. (Also, if you don't care about that dependednt container, then you can delete it ``-f`` force option which doesn't prompt you to to delete any container first )
 
 ``ubuntu@ip-172-31-19-178:~$ docker rmi fe7312b5f05b``
+
+## Task 2: Image Layer
+
+
+```
+ubuntu@ip-172-31-19-178:~$ docker image history nginx:latest 
+IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
+42f2d24ae18d   5 days ago    CMD ["nginx" "-g" "daemon off;"]                0B        buildkit.dockerfile.v0
+<missing>      5 days ago    STOPSIGNAL SIGQUIT                              0B        buildkit.dockerfile.v0
+<missing>      5 days ago    EXPOSE map[80/tcp:{}]                           0B        buildkit.dockerfile.v0
+<missing>      5 days ago    ENTRYPOINT ["/docker-entrypoint.sh"]            0B        buildkit.dockerfile.v0
+<missing>      5 days ago    COPY 30-tune-worker-processes.sh /docker-ent…   16.4kB    buildkit.dockerfile.v0
+<missing>      5 days ago    COPY 20-envsubst-on-templates.sh /docker-ent…   12.3kB    buildkit.dockerfile.v0
+<missing>      5 days ago    COPY 15-local-resolvers.envsh /docker-entryp…   12.3kB    buildkit.dockerfile.v0
+<missing>      5 days ago    COPY 10-listen-on-ipv6-by-default.sh /docker…   12.3kB    buildkit.dockerfile.v0
+<missing>      5 days ago    COPY docker-entrypoint.sh / # buildkit          8.19kB    buildkit.dockerfile.v0
+<missing>      5 days ago    RUN /bin/sh -c set -x     && groupadd --syst…   87.1MB    buildkit.dockerfile.v0
+<missing>      5 days ago    ENV DYNPKG_RELEASE=1~trixie                     0B        buildkit.dockerfile.v0
+<missing>      5 days ago    ENV PKG_RELEASE=1~trixie                        0B        buildkit.dockerfile.v0
+<missing>      5 days ago    ENV ACME_VERSION=0.4.1                          0B        buildkit.dockerfile.v0
+<missing>      5 days ago    ENV NJS_RELEASE=1~trixie                        0B        buildkit.dockerfile.v0
+<missing>      5 days ago    ENV NJS_VERSION=0.9.9                           0B        buildkit.dockerfile.v0
+<missing>      5 days ago    ENV NGINX_VERSION=1.31.2                        0B        buildkit.dockerfile.v0
+<missing>      5 days ago    LABEL maintainer=NGINX Docker Maintainers <d…   0B        buildkit.dockerfile.v0
+<missing>      13 days ago   # debian.sh --arch 'amd64' out/ 'trixie' '@1…   87.4MB    debuerreotype 0.17
+```
 
