@@ -49,4 +49,7 @@ Identify the message printed after running this container; and write 2 lines abo
 
 <img width="1045" height="498" alt="Screenshot 2026-06-24 034333" src="https://github.com/user-attachments/assets/64fd41e1-b4ad-4996-ac19-eed2f6aa4c98" />
 
+Run it with interactive shell ``it`` to check if ``curl`` was installed in this image or not. 
+
+<img width="1027" height="205" alt="Screenshot 2026-06-24 034508" src="https://github.com/user-attachments/assets/d03e2b26-cd38-4d39-a00e-7f1c7a954a98" />
 
