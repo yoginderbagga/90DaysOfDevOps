@@ -140,3 +140,11 @@ Lifecycle of a Container:
   
 - Remove
   To remove a container, use the command ``docker remove nginx``
+
+  ## Task 4:
+
+  To stop all the container at once, use the below command, as ``docker ps -q`` will list the numeric ID only     of all the running containers and combine it with ``docker stop`` to actually stop them. 
+
+  ``ubuntu@ip-172-31-19-178:~$ docker stop $(docker ps -q)`` 
+
+  
