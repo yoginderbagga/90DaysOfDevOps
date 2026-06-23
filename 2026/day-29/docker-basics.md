@@ -147,3 +147,9 @@ Run a command inside the container:
 In below example, created a nginx web-server "my-web-server" and ran a command inside this container using the ``exec``
 
 <img width="882" height="86" alt="image" src="https://github.com/user-attachments/assets/53f60c23-e2c8-4e63-8271-19547da06eb5" />
+
+Run a container in attached mode: 
+
+<img width="1035" height="242" alt="image" src="https://github.com/user-attachments/assets/a5913bcd-c636-474f-a2c3-ba5154f6a339" />
+
+When you run the container in normal mode its usually attached with the terminal and keep this terminal busy; in order to keep the terminal free so you can do the work add (-d) to make it dettached mode. 
