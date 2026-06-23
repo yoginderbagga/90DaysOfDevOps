@@ -99,4 +99,13 @@ IMAGE          CREATED       CREATED BY                                      SIZ
 <missing>      5 days ago    LABEL maintainer=NGINX Docker Maintainers <d…   0B        buildkit.dockerfile.v0
 <missing>      13 days ago   # debian.sh --arch 'amd64' out/ 'trixie' '@1…   87.4MB    debuerreotype 0.17
 ```
+### Docker image Layer
+
+A layer in a Docker image is a immutable filesystem change (addition, modification) that acts as a foundational block of docker image. Whenever you create a Docker image, the commands used in the Dockerfile actually create these sequential layers and stack them using a file system. 
+
+Does all commands in Dockerfile create layer? 
+Short anser - no.
+
+Commands like : ``RUN``, ``COPY``, and ``ADD`` are the only commands that aler the file sytstem and add the layers. However, the commands like ``ENV``, ``EXPOSE``, ``CMD`` and ``LABEL`` only add the configuration details (metadata)
+
 
