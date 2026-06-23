@@ -67,3 +67,10 @@ docker.io/library/debian:latest
 ``ubuntu@ip-172-31-19-178:~$ docker image inspect 28bd5fe8b56d``
 
 ## Task 2:
+
+### How to remove a docker image?
+
+Use docker rm <image_id> command to remove a docker container image, however ensure that the demage being removed should not be depended on any other container already running. If that's the case then stop that container first before deleting the image. (Also, if you don't care about that dependednt container, then you can delete it ``-f`` force option which doesn't prompt you to to delete any container first )
+
+``ubuntu@ip-172-31-19-178:~$ docker rmi fe7312b5f05b``
+
