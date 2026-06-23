@@ -108,4 +108,8 @@ Short anser - no.
 
 Commands like : ``RUN``, ``COPY``, and ``ADD`` are the only commands that aler the file sytstem and add the layers. However, the commands like ``ENV``, ``EXPOSE``, ``CMD`` and ``LABEL`` only add the configuration details (metadata)
 
+### Why Docker uses Layered Architecture?
+
+Docker use layered approach to optize for the storage, and minimize the image building time; and instead of packing the entire operating system into a single monolothic file, Docker structure images as a stack distinct read-only file system callsed as "layers"
+
 
