@@ -29,3 +29,25 @@ What is the lifecycle of a container, understand it and write in your own notes.
 - Remove
 
 ## Task 4: Container Cleanup
+
+
+
+
+## Task 1:
+
+### Docker Image:
+
+To pull / download a docker image from Docker Hub registry, use below command. 
+
+``ubuntu@ip-172-31-19-178:~$ docker image pull debian``
+
+```
+ubuntu@ip-172-31-19-178:~$ docker image pull debian
+Using default tag: latest
+latest: Pulling from library/debian
+ef1b08ddd59d: Pull complete 
+739dd2bc851d: Download complete 
+Digest: sha256:fe7312b5f05bf5f43fad76bcd8945642e4e47a68aefd1b73f447615899d0fac1
+Status: Downloaded newer image for debian:latest
+docker.io/library/debian:latest
+```
