@@ -98,3 +98,18 @@ Learning:
 You use ``docker run``command when you need to create a container from start for the first time using an image, in this case as you can see, it pulled the image from the docker hub so its a combination of two commands. You can also specifify the image name and if the image is not found locally then only it pulls from the registry or docker hub. 
 
 The first column shows a unique ID also known as container ID which gets created when a docker runs. If you destroy the container then a new ID will get created. The second column is the container image column which list the image used for the particular container, in this case hello-world is name of the image developed by someone and hosted on the Docker Hub platform. The third column display the primary process or command that was used to start a container and is running inside it. 
+
+### Task 3:
+
+Running an Nginx container and access it from your browser. 
+
+
+To run an nginx web-server container, use below command and add ``-d`` to run it in the background and use ``-p host-port:docker-port`` to map the port from the host port to the docker, so this can be accessible outside the container as well. 
+
+``yoginderbagga@fedora:~$ sudo docker run --name my-web-server -d -p 8080:80 nginx``
+
+```
+yoginderbagga@fedora:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+87d47417d9eb   nginx     "/docker-entrypoint.…"   12 seconds ago   Up 10 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web-server
+```
