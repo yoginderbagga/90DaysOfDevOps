@@ -118,10 +118,21 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS       
 87d47417d9eb   nginx     "/docker-entrypoint.…"   12 seconds ago   Up 10 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web-server
 ```
 
+<img width="1275" height="432" alt="image" src="https://github.com/user-attachments/assets/668d5715-e620-48bf-a904-9a7d8a4b6f55" />
 
 
-**Always stop the running container first before removing it directly**
+``Removing a container, but stop it first``
+
 ```
-yoginderbagga@fedora:~$ docker rm my-web-server
-Error response from daemon: cannot remove container "my-web-server": container is running: stop the container before removing or force remove
+ yoginderbagga@fedora:~$ docker stop my-web-server 
+my-web-server
+yoginderbagga@fedora:~$ docker rm my-web-server 
+my-web-server
+yoginderbagga@fedora:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
+
+**List all the container including stopped one**
+
+<img width="996" height="207" alt="image" src="https://github.com/user-attachments/assets/84807a12-50f2-44d7-8157-e3037bebcfd2" />
+
