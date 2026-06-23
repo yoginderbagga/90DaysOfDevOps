@@ -136,3 +136,14 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 <img width="996" height="207" alt="image" src="https://github.com/user-attachments/assets/84807a12-50f2-44d7-8157-e3037bebcfd2" />
 
+## Task 4:
+
+Run a command inside the container: 
+
+``yoginderbagga@fedora:~$ docker exec -t my-web-hosting ls -la`` 
+
+``docker exec`` command runs a new process inside an already running container, this becomes useful when you want to debug, troubleshootot or look inside the configuration of a running container. 
+
+In below example, created a nginx web-server "my-web-server" and ran a command inside this container using the ``exec``
+
+<img width="882" height="86" alt="image" src="https://github.com/user-attachments/assets/53f60c23-e2c8-4e63-8271-19547da06eb5" />
