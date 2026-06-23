@@ -60,3 +60,10 @@ docker.io/library/debian:latest
 3. Observe the difference in size of alpine vs ubuntu docker image. Alpine is relatively less in disk usage size 13MB whereas the ubuntu docker size is 160MB which is 15 times high. The reason Ubuntu image size is high as Ubuntu is a features rich OS which provides you thousands of packages, capabilities. Now the Alpine docker image gives you very small size and it has almost nothing pre-installed.
 
 4. <img width="983" height="176" alt="image" src="https://github.com/user-attachments/assets/a6ceb719-12b1-4116-bd90-4fbcc66a19a4" />
+
+
+5. Look inside a docker image, use below command to inspect it:
+
+``ubuntu@ip-172-31-19-178:~$ docker image inspect 28bd5fe8b56d``
+
+## Task 2:
