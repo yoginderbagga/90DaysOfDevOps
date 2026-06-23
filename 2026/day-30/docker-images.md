@@ -75,6 +75,7 @@ Use docker rm <image_id> command to remove a docker container image, however ens
 
 ## Task 2: Image Layer
 
+``docker image history`` command is used to display all the build steps and the layerss that were used to make up a particular Docker image. With this command, you can inspect the size, creation dates and the exact Dockerfile instructions used to create each of the layer. 
 
 ```
 ubuntu@ip-172-31-19-178:~$ docker image history nginx:latest 
