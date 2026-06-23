@@ -106,10 +106,22 @@ Running an Nginx container and access it from your browser.
 
 To run an nginx web-server container, use below command and add ``-d`` to run it in the background and use ``-p host-port:docker-port`` to map the port from the host port to the docker, so this can be accessible outside the container as well. 
 
-``yoginderbagga@fedora:~$ sudo docker run --name my-web-server -d -p 8080:80 nginx``
+``yoginderbagga@fedora:~$ docker run --name my-web-server -d -p 8080:80 nginx``
+
+**Port Mapping**
+
+Port mapping allows the docker container to route the traffic from a specific port on the host machine to a port inside the isolated container. As by default, containers runs on closed internal networks. With the help of port mapping this isolation breaks and allows the external world application to communicate inside the web--browser and communicate with the apps running inside the container. 
 
 ```
 yoginderbagga@fedora:~$ docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                     NAMES
 87d47417d9eb   nginx     "/docker-entrypoint.…"   12 seconds ago   Up 10 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web-server
+```
+
+
+
+**Always stop the running container first before removing it directly**
+```
+yoginderbagga@fedora:~$ docker rm my-web-server
+Error response from daemon: cannot remove container "my-web-server": container is running: stop the container before removing or force remove
 ```
