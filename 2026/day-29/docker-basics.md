@@ -153,3 +153,16 @@ Run a container in attached mode:
 <img width="1035" height="242" alt="image" src="https://github.com/user-attachments/assets/a5913bcd-c636-474f-a2c3-ba5154f6a339" />
 
 When you run the container in normal mode its usually attached with the terminal and keep this terminal busy; in order to keep the terminal free so you can do the work add (-d) to make it dettached mode. 
+
+<img width="927" height="360" alt="image" src="https://github.com/user-attachments/assets/7df3111c-ada7-487b-b608-b40f7b83c61d" />
+
+To get logs of the docker to perform troubleshooting:
+
+``ubuntu@ip-172-31-19-178:~$ docker logs web-hosting``
+
+
+### docker inspect: 
+
+Docker inspect command is used to gather information about docker objects such as container, images, volumes, networks etc in JSON array format. 
+
+``ubuntu@ip-172-31-19-178:~$ docker inspect web-hosting``
