@@ -28,7 +28,12 @@ What is the lifecycle of a container, understand it and write in your own notes.
 - Kill
 - Remove
 
-## Task 4: Container Cleanup
+## Task 4: Working with the Running Container
+
+- Run a container in detached mode.
+
+
+## Task 5: Container Cleanup
 
 - stop all containers and remove them
 - remove all the images associated with containers
@@ -148,6 +153,30 @@ Below image shows how to create a container with ``docker create`` command witho
   To remove a container, use the command ``docker remove nginx``
 
 ## Task 4:
+
+### Work with the Running Container
+
+To run a container in dettached mode. 
+```
+ubuntu@ip-172-31-19-178:~$ docker  run -d --name web-server -p 8080:80 nginx
+7cc0037d08097e34c7636ae1eb827ff6997739886fc830e16fbec70c77ce969f
+```
+
+To view the logs inside a running container.
+
+``ubuntu@ip-172-31-19-178:~$ docker logs web-server`` 
+
+To execute a command inside a running container and then look around the file system create a files. 
+
+<img width="988" height="188" alt="Screenshot 2026-06-24 025330" src="https://github.com/user-attachments/assets/986b2176-3503-4767-b132-803c02305742" />
+
+To execute a command in a container without actually entering it but just from the outside itself. 
+
+ubuntu@ip-172-31-19-178:~$ docker exec web-server ls -l
+
+
+
+## Task 5:
 
 ### Containers Cleanup activity
 
