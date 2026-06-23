@@ -161,3 +161,24 @@ Docker use layered approach to optize for the storage, and minimize the image bu
 
   <img width="1037" height="442" alt="Screenshot 2026-06-24 021600" src="https://github.com/user-attachments/assets/eb181631-a231-4253-a89a-3ffc5290b835" />
 
+
+  ```
+  ubuntu@ip-172-31-19-178:~$ docker ps --size
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS         PORTS                                     NAMES        SIZE
+db569e5e7be3   nginx     "/docker-entrypoint.…"   10 seconds ago   Up 9 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-hosting   81.9kB (virtual 175MB)
+```
+
+I just created few empty files as I go inside the docker shell with ``docker exec -it`` command and after that the size increased from 81.9KB to 98.1KB see below output.
+
+
+```
+ubuntu@ip-172-31-19-178:~$ docker exec -it my-hosting bash
+root@db569e5e7be3:/# touch a b c c
+root@db569e5e7be3:/# ls
+a  b  bin  boot  c  dev  docker-entrypoint.d  docker-entrypoint.sh  etc  home  lib  lib64  media  mnt  opt  proc  root	run  sbin  srv	sys  tmp  usr  var
+root@db569e5e7be3:/# exit
+exit
+ubuntu@ip-172-31-19-178:~$ docker ps --size
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                                     NAMES        SIZE
+db569e5e7be3   nginx     "/docker-entrypoint.…"   4 minutes ago   Up 4 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-hosting   90.1kB (virtual 175MB)
+```
