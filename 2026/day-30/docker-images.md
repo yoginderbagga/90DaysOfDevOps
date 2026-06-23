@@ -113,3 +113,30 @@ Commands like : ``RUN``, ``COPY``, and ``ADD`` are the only commands that aler t
 Docker use layered approach to optize for the storage, and minimize the image building time; and instead of packing the entire operating system into a single monolothic file, Docker structure images as a stack distinct read-only file system callsed as "layers"
 
 
+## Task 3:
+
+Lifecycle of a Container:
+
+- create a container without starting it:
+  This create a container without actually running it, use the command ``docker create --name <container name>    <image name>``
+
+- Start the container:
+  To start the container we can use the command ``docker start hello-world``
+  
+- Pause it and verify the status:
+  To pause a process running inside the container use the command ``docker pause``
+  
+- Unpause a container:
+  To unpause a container ``docker unpause``
+  
+- Stop a container:
+  docker stop will stop the running container, use the command ``docker stop nginx``
+
+- Restart:
+  To stop the container immediately and start it again, use this command ``docker restart nginx``
+
+- Kill:
+  To kill a running container.
+  
+- Remove
+  To remove a container, use the command ``docker remove nginx``
