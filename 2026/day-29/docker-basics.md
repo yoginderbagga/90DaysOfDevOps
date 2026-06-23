@@ -138,15 +138,23 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 ## Task 4:
 
-Run a command inside the container: 
+### Run Command in a Container
+
+There are two ways to run a command inside a container one is to start a a container fresh and then use interactive terminal to start the bash shell where you then run the commands. Second, is to run a command inside a already running container like below :
 
 ``yoginderbagga@fedora:~$ docker exec -t my-web-hosting ls -la`` 
 
 ``docker exec`` command runs a new process inside an already running container, this becomes useful when you want to debug, troubleshootot or look inside the configuration of a running container. 
 
-In below example, created a nginx web-server "my-web-server" and ran a command inside this container using the ``exec``
+Example #1 created a nginx web-server "my-web-server" and ran a command inside this container using the ``exec``
 
 <img width="882" height="86" alt="image" src="https://github.com/user-attachments/assets/53f60c23-e2c8-4e63-8271-19547da06eb5" />
+
+
+Example #2 : As you can see in below container "17a0202e3229" was already running it so we used ``docker exe`` command with ``it`` for interactive terminal and ``bash`` with these combinations we executed a command inside the container buit also opend an interactive terminal. 
+
+<img width="1032" height="157" alt="Screenshot 2026-06-24 004352" src="https://github.com/user-attachments/assets/0e303b63-d68e-4b68-8322-b7d32466b77b" />
+
 
 Run a container in attached mode: 
 
