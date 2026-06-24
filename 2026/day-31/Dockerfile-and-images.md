@@ -8,7 +8,7 @@ A Dockerfile is simple text file which consists of sequential instructions(comma
 
 
 
-## Task 1:
+## Task 1: Create a simple Dockerfile
 
 1. Create a simple ``Dockerfile`` which has
    1. ``Ubuntu`` as the base image
@@ -21,13 +21,20 @@ A Dockerfile is simple text file which consists of sequential instructions(comma
 
 Identify the message printed after running this container; and write 2 lines about what you learned about this flow from Dockerfile -> Docker image ``simple-ubuntu:v1`` -> Eventually the container ``my-container``
 
-## Task 2:
+## Task 2: Use all Instructions 
 
 Create a Dockerfile which uses all the Dockerfile instructions givne below.
 
+- FROM 
+- RUN  
+- COPY 
+- WORKDIR 
+- EXPOSE  
+- CMD  
 
-## Task 3:
+## Task 3: CMD vs ENTRYPOINT
 
+1. Create two docker image first with ``CMD`` instruction that display ``Hello DevOps`` and second image with ``ENTRYPOINT`` and build their container seperately. Run those container and observe the results. What you understood write in your words : when to use CMD vs ENTRYPOINT
 
 
 
