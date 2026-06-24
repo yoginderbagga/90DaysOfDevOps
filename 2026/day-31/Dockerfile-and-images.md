@@ -1,6 +1,11 @@
 # Build Custome Images & Learn how to create Dockerfile
 
-What is a Dockerfile?
+#### What is a Dockerfile?
+
+A Dockerfile is simple text file which consists of sequential instructions(commands) for building a Docker image. Just like a receipt is needed to make the dish. 
+
+<img width="800" height="261" alt="image" src="https://github.com/user-attachments/assets/faee57c4-8f83-4bc6-8729-d54e484748d3" />
+
 
 
 ## Task 1:
@@ -16,10 +21,9 @@ What is a Dockerfile?
 
 Identify the message printed after running this container; and write 2 lines about what you learned about this flow from Dockerfile -> Docker image ``simple-ubuntu:v1`` -> Eventually the container ``my-container``
 
-
 ## Task 2:
 
-
+Create a Dockerfile which uses all the Dockerfile instructions givne below.
 
 
 ## Task 3:
@@ -53,3 +57,27 @@ Run it with interactive shell ``it`` to check if ``curl`` was installed in this 
 
 <img width="1027" height="205" alt="Screenshot 2026-06-24 034508" src="https://github.com/user-attachments/assets/d03e2b26-cd38-4d39-a00e-7f1c7a954a98" />
 
+## Task 2:
+
+#### Dockerfile Instructions
+
+- ``FROM`` : It is the first instruction in Dockerfile and it sets the base image ( for example: an Ubuintu OS      or a programming runtime) needed for the application.
+
+  
+- ``RUN``: RUN is an instruction which executes any commands in new layer on top of the current image and then      commits the results. They are mainly used to to install application packages, download dependencies, create     directories, and configuration purpose. ( for example: in Task 1, used apt-get update and apt-get install       curl for installing updates and CURL app)
+
+  
+- ``COPY``: To transfer files, directories from the host machine to the Docker filesysstem of the container         you're building. 
+
+  
+- ``WORKDIR``: To set a current working directory for executing the commands like ``RUN``, ``CMD``, ``ENTRYPOINT`` and ``CMD`` . This works just like ``cd command`` in Fedora or any Linux.
+
+  ``WORKDIR /home/yoginder`` 
+  
+- ``EXPOSE``: EXPOSE instruction is kind of informational way to update Docker and other user containerized application should listed to a specific network ports at runtime. Note: Expose does not actually open, or map a specific port, its more like for the documentation purpose for the image builder and person using container. 
+  
+- ``CMD``: CMD instrcutions in a Dockerfile specifies the default command that needs to be executed when a container starts from the beginning. 
+
+   ``CMD ["echo", "hello from the Yogi image"]``
+
+   ``CMD ["python", "app.py"]``
