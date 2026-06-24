@@ -117,3 +117,12 @@ b) build an image ``web_server_python-image:v1`` using the ``Dockerfile`` create
 c) run container using the Docker image created previously ``web_server_python-image:v1``
 
 <img width="1882" height="602" alt="image" src="https://github.com/user-attachments/assets/78f27555-48fe-48b2-8bec-365fc7a426e7" />
+
+
+<img width="1907" height="467" alt="image" src="https://github.com/user-attachments/assets/d816c1b5-1b9c-4e27-b4e3-2cc63c61efb2" />
+
+#### LEARNING
+
+In above example, created a Dockerfile with the necessary instructions and use that Dockerfile to build an image. Lets understand what each of the instructions means : 
+
+1. ``FROM ubuntu:24.04`` 
