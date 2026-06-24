@@ -81,3 +81,39 @@ Run it with interactive shell ``it`` to check if ``curl`` was installed in this 
    ``CMD ["echo", "hello from the Yogi image"]``
 
    ``CMD ["python", "app.py"]``
+
+
+
+  #### Steps followed from Dockerfile creation to the container running
+
+ a) create a ``Dockerfile`` 
+
+      ```
+      ubuntu@ip-172-31-19-178:~/second_docker$ cat Dockerfile 
+#declare the base image
+FROM ubuntu:24.04
+
+#declare the command that will will run once the base image is ready
+RUN apt-get update && apt-get install -y python3 && apt-get clean
+
+# Set working directory
+WORKDIR /app
+
+#Copy file from host to docker image
+COPY myweb.html .
+
+#Give the port for the container
+EXPOSE 8000
+
+#Default command
+CMD ["python3", "-m", "http.server", "8000"]
+
+
+b) build an image ``web_server_python-image:v1`` using the ``Dockerfile`` created in previous step
+
+``ubuntu@ip-172-31-19-178:~/second_docker$ docker build -t web_server_python-image:v1 .``
+
+
+c) run container using the Docker image created previously ``web_server_python-image:v1``
+
+<img width="1882" height="602" alt="image" src="https://github.com/user-attachments/assets/78f27555-48fe-48b2-8bec-365fc7a426e7" />
