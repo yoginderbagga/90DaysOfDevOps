@@ -171,7 +171,7 @@ CMD ["echo", "Hello from Yogi image"]
 
 Container Outpu with commandline argument => 
 
-As you can see from image, its not pringint the message ``Hello from Yogi image`` instead it display the list of files which is passed as command line argument ``ls -l``. 
+As you can see from below results, its not printing the message ``Hello from Yogi image`` instead it display the list of files which is passed as command line argument ``ls -l``. Means its replacing it completely. 
  <img width="1202" height="460" alt="image" src="https://github.com/user-attachments/assets/5d2140e8-3eca-4f5f-812b-0754787cc8e9" />
 
 
@@ -189,3 +189,11 @@ RUN apt-get update -y
 # ENTRYPOINT so you can pass argument during CLI 
 ENTRYPOINT ["echo", "Hi, from ENTRYPOINT"]
 ```
+
+Container Output with commandline argument => 
+
+As you can see from below results, its appending the new message which I added via the command line along with the message there in the Dockerfile 
+
+<img width="1297" height="737" alt="image" src="https://github.com/user-attachments/assets/7864cc0f-0d46-4217-9d32-e2cd2f48c151" />
+
+
