@@ -148,4 +148,44 @@ CMD = "Execute when the container starts."
 
 1. Create two docker image first with ``CMD`` instruction that display ``Hello DevOps`` and second image with ``ENTRYPOINT`` and build their container seperately. Run those container and observe the results. What you understood write in your words : when to use CMD vs ENTRYPOINT
 
+#### LEARNING
 
+What I observed with CMD instruction, when you pass a message inside the Dockerfile like ``Hello DevOps`` and later when you execute the container build from this image, and during the runtime if you add ``hostname`` or ``ls -l`` or any other command then it will replaced the ``Hello DevOps`` message with the command line argument you provided. 
+
+Lets look at CMD Example : 
+
+Dockerfile =>
+
+```
+ubuntu@ip-172-31-19-178:~/first_image$ cat Dockerfile 
+# Use an official base image on top of which you will build your custom image
+FROM ubuntu:24.04
+
+
+# Install curl app
+RUN apt-get update && apt-get install -y curl 
+
+# Default command to print message
+CMD ["echo", "Hello from Yogi image"]
+```
+
+Container Outpu with commandline argument => 
+
+As you can see from image, its not pringint the message ``Hello from Yogi image`` instead it display the list of files which is passed as command line argument ``ls -l``. 
+ <img width="1202" height="460" alt="image" src="https://github.com/user-attachments/assets/5d2140e8-3eca-4f5f-812b-0754787cc8e9" />
+
+
+
+ Lets look at ENTRYPOINT Example: 
+
+ Dockerfile =>
+ 
+```
+ubuntu@ip-172-31-19-178:~/dock$ cat Dockerfile 
+FROM ubuntu:22.04
+
+RUN apt-get update -y
+
+# ENTRYPOINT so you can pass argument during CLI 
+ENTRYPOINT ["echo", "Hi, from ENTRYPOINT"]
+```
