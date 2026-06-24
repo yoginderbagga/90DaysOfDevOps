@@ -38,19 +38,23 @@ Create a Dockerfile which uses all the Dockerfile instructions givne below.
 
 
 
-## Task 4:
+## Task 4: Build your Simple Web-Application with Docker
 
 
 
 
 
-## Task 5:
+## Task 5: What is .dockerignore
 
 
 
 
 
-## Task 6:
+## Task 6: How to achieve optimization with Docker ?
+
+1. Docker cache : What happens when you rebuild an image after doing a modifcation on one line?
+2. Reorder the Dockerfile
+3. Why does layer order matter for the build speed?
 
 
 ## Task 1:
