@@ -125,4 +125,8 @@ c) run container using the Docker image created previously ``web_server_python-i
 
 In above example, created a Dockerfile with the necessary instructions and use that Dockerfile to build an image. Lets understand what each of the instructions means : 
 
-1. ``FROM ubuntu:24.04`` 
+1. ``FROM ubuntu:24.04`` : Fetch a ubuntu base image to create the image you're building for your container.
+2. ``RUN apt-get update && apt-get install -y python3 && apt-get clean`` : RUN is used to install the packages or ready the environment during the image building phase.
+3. ``WORKDIR /app`` : To setup the working directory. So if you run the command  ``docker exec -it simple_python_server bash`` this will take you ``root@76b2de85af17:/app#`` so /app is the current working directory.
+4.  ``EXPOSE 8000`` : For the documentation purpose, to let the image builder and user know that use port 8000 for accessing this web. See below output on the browser web-server is accessible on 8000 port, this doesn't map but documenting purpose.
+5.  ``CMD ["python3", "-m", "http.server", "8000"]`` : Interesting command, CMD doesn't run during the image building process, all above commands run during the image building process. Whereas CMD run once the image building completed and you run the conotainer, this will be the first to run as process and whatever command mentioned here will get executed. 
