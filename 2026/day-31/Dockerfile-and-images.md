@@ -88,8 +88,8 @@ Run it with interactive shell ``it`` to check if ``curl`` was installed in this 
 
  a) create a ``Dockerfile`` 
 
-      ```
-      ubuntu@ip-172-31-19-178:~/second_docker$ cat Dockerfile 
+```
+ubuntu@ip-172-31-19-178:~/second_docker$ cat Dockerfile 
 #declare the base image
 FROM ubuntu:24.04
 
@@ -107,7 +107,7 @@ EXPOSE 8000
 
 #Default command
 CMD ["python3", "-m", "http.server", "8000"]
-
+```
 
 b) build an image ``web_server_python-image:v1`` using the ``Dockerfile`` created in previous step
 
