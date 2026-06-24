@@ -129,4 +129,16 @@ In above example, created a Dockerfile with the necessary instructions and use t
 2. ``RUN apt-get update && apt-get install -y python3 && apt-get clean`` : RUN is used to install the packages or ready the environment during the image building phase.
 3. ``WORKDIR /app`` : To setup the working directory. So if you run the command  ``docker exec -it simple_python_server bash`` this will take you ``root@76b2de85af17:/app#`` so /app is the current working directory.
 4.  ``EXPOSE 8000`` : For the documentation purpose, to let the image builder and user know that use port 8000 for accessing this web. See below output on the browser web-server is accessible on 8000 port, this doesn't map but documenting purpose.
-5.  ``CMD ["python3", "-m", "http.server", "8000"]`` : Interesting command, CMD doesn't run during the image building process, all above commands run during the image building process. Whereas CMD run once the image building completed and you run the conotainer, this will be the first to run as process and whatever command mentioned here will get executed. 
+5.  ``CMD ["python3", "-m", "http.server", "8000"]`` : Interesting command, CMD doesn't run during the image building process, all above commands run during the image building process. Whereas CMD run once the image building completed and you run the conotainer, this will be the first to run as process and whatever command mentioned here will get executed.
+
+```
+RUN = "Execute during image creation."
+CMD = "Execute when the container starts."
+```
+
+
+## Task 3: CMD vs ENTRYPOINT Difference
+
+1. Create two docker image first with ``CMD`` instruction that display ``Hello DevOps`` and second image with ``ENTRYPOINT`` and build their container seperately. Run those container and observe the results. What you understood write in your words : when to use CMD vs ENTRYPOINT
+
+
