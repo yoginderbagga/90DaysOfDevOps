@@ -208,3 +208,13 @@ As you can see from below results, its appending the new message which I added v
 <img width="1297" height="737" alt="image" src="https://github.com/user-attachments/assets/7864cc0f-0d46-4217-9d32-e2cd2f48c151" />
 
 
+## Task 4: Build a static website to host the index.html page
+
+A small correction : in below image i did mistake with ``EXPOSE 8000`` which should be ``EXPOSE 80`` as nginx web-server listen on port 80, so as per the Dockerfile instruction EXPOSE should be 80 for the container inside. 
+
+``ubuntu@ip-172-31-19-178:~/magicworld$ docker build -t nginx_server:v1 .``
+
+<img width="1717" height="322" alt="image" src="https://github.com/user-attachments/assets/e72b5982-f803-407e-a8da-5c15fc6d04ad" />
+
+<img width="1897" height="437" alt="image" src="https://github.com/user-attachments/assets/fa7e3c1a-94b6-4038-90b6-ae552a58bd19" />
+
