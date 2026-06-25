@@ -218,3 +218,9 @@ A small correction : in below image i did mistake with ``EXPOSE 8000`` which sho
 
 <img width="1897" height="437" alt="image" src="https://github.com/user-attachments/assets/fa7e3c1a-94b6-4038-90b6-ae552a58bd19" />
 
+```
+ubuntu@ip-172-31-19-178:~/magicworld$ docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS         PORTS                                               NAMES
+98b20c488467   nginx_server:v1   "/docker-entrypoint.…"   4 seconds ago   Up 4 seconds   8000/tcp, 0.0.0.0:8000->80/tcp, [::]:8000->80/tcp   goofy_herschel
+```
+
