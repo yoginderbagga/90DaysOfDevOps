@@ -40,7 +40,14 @@ Create a Dockerfile which uses all the Dockerfile instructions givne below.
 
 ## Task 4: Build your Simple Web-Application with Docker
 
-
+1. Create a simple static website HTML ( index.html )
+2. Now write a Dockerfile which uses:
+   1. ``nginx:alpine`` as the base image
+   2. copy the index.html file to nginx web server directory
+3. Build a docker image ``my-website:v1`` using above Dockerfile
+4. Run a container from the ``my-website:v1`` image and access it on your browser, also do the port mapping 
+      
+Build an nginx web-server and deploy your website to i
 
 
 
