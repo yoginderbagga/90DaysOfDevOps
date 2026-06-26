@@ -126,4 +126,6 @@ d) Re-build the same container and you can see there no longer exist ``companydb
 
 <img width="1780" height="602" alt="image" src="https://github.com/user-attachments/assets/50ed1bd2-b14a-4919-b068-cca3b169d711" />
 
-# Task 2: 
+# Task 2: Named volums
+
+Excersise completed. Removed the previous container and rebuild it again with a Volume data and then removed it back again. This time data was persisted into the same container as the data persistent done with volume. 
