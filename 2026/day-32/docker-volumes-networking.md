@@ -21,7 +21,10 @@ Write your observation in few lines.
 
 ## Task 2: Creating Volumes
 
-1. 
+1. Created a Named Volume , run the same container with volume attached to it.
+2. Add the database companydb and a table, and then remove the container again
+3. Now create a new container with the same Volume you had attached before.
+4. Verify if the data is still there. 
 
 
 
@@ -126,6 +129,6 @@ d) Re-build the same container and you can see there no longer exist ``companydb
 
 <img width="1780" height="602" alt="image" src="https://github.com/user-attachments/assets/50ed1bd2-b14a-4919-b068-cca3b169d711" />
 
-# Task 2: Named volums
+# Task 2: Named volumes
 
 Excersise completed. Removed the previous container and rebuild it again with a Volume data and then removed it back again. This time data was persisted into the same container as the data persistent done with volume. 
