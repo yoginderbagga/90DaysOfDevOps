@@ -40,7 +40,7 @@ Write your observation in few lines.
 ## Task 6: Bring All Concepts Together
 
 
-# Task 1:
+# Task 1: Creating a Postgres container 
 
 a) created a container with the official postgres image and run the container. 
 
@@ -113,7 +113,7 @@ companydb=# SELECT * FROM employees;
 (3 rows)
 ```
 
-c) Stop the container and remove it compltely. 
+c) Stop the container and remove it compltely 
 
 ```
 ubuntu@ip-172-31-19-178:~/postgre$ docker stop idatabase 
@@ -122,6 +122,8 @@ ubuntu@ip-172-31-19-178:~/postgre$ docker rm idatabase
 idatabase
 ```
 
-d) Re-build the same container and you can see there no longer exist ``companydb``   
+d) Re-build the same container and you can see there no longer exist ``companydb``; this is the disadvantage when not using the ``Docker volume`` as whatever data storage in your container gets lost as you remove the container.  In Next task we will learn Docker Volume to understand how to persist this data. 
 
 <img width="1780" height="602" alt="image" src="https://github.com/user-attachments/assets/50ed1bd2-b14a-4919-b068-cca3b169d711" />
+
+# Task 2: 
