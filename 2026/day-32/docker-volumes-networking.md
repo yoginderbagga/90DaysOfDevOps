@@ -28,10 +28,9 @@ Write your observation in few lines.
 
 ## Task 3: Setting up Bind Mounts
 
-
+Build Mount point is done. Added notes below. 
 
 ## Task 4: What is Docker Networking?
-
 
 
 ## Task 5: Setting up Customer Networks
@@ -197,3 +196,16 @@ Message three, this should get updated live without re-creating the Docker image
 <img width="1907" height="455" alt="image" src="https://github.com/user-attachments/assets/a103c881-30df-4d10-a973-195d331b9a34" />
 
 Also, i added a message from the /usr/share/nginx/html folder from inside the container and that got added live as well. This means changes are immediately reflected from either side ( container or the host ) and no need to update on both the location or re-create the container image again. 
+
+# Task 4: Docker Networking 
+
+Docker networking is isolate and communicate the container with each other, from the host machine and towards the external networks using pluggable drivers. 
+
+Types of Network Drivers:
+
+1. Bridge
+2. Host
+3. Overlay
+4. mcvlan
+5. ipvlan
+6. none
