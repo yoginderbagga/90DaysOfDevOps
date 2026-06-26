@@ -1,1 +1,1 @@
-# Persistent Data Storage and Container Communication [ Docker Volumes & Networking ]
+# Persistent Data and Container Communication [ Docker Volumes & Networking ]
