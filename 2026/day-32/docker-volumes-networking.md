@@ -226,3 +226,13 @@ ff30b9e7f1f7   none      null      local
 A command that provide detailed configuration and status info about the one or more Docker networks in JSON format. You can view subnets, gateway configurations, drivers and the list of containers currently connected to a specific network. 
 
 <img width="1401" height="477" alt="image" src="https://github.com/user-attachments/assets/3f3bb614-b97d-4de3-be70-83102212a2e2" />
+
+Create the Docker network with your own name so there can be communication between those containers using the command ``docker network create network_name``, once the network is created you can then create two container and in that command itself add them to the custom network of your choice. Since I had already created the second container without adding the network of my choice ``my-custom-net`` so i added it later with the Docker connect command ``ubuntu@ip-172-31-19-178:~/learn_bind$ docker network connect my-custom-net container2`` 
+
+
+```
+ubuntu@ip-172-31-19-178:~/learn_bind$ docker network create my-custom-net
+29ddd733af01e07eb1efe7b8507cb5c8733b023f85ebab75353f1e545e66f151
+ubuntu@ip-172-31-19-178:~/learn_bind$ docker run -d --name container1 --network my-custom-net nginx
+c69b6a7e178ae1f958f6187e15cb2dd5787724e096e8d9dde6241ca076f46ba9
+```
