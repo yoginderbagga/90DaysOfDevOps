@@ -17,11 +17,12 @@ Two most common docker storage mechanisms are
 2. Stop and remove the container
 3. Run a new one and verify if the data is still there or not
 
-Write your observation in few lines
+Write your observation in few lines.
 
 ## Task 2: Creating Volumes
 
 1. 
+
 
 
 ## Task 3: Setting up Bind Mounts
@@ -38,3 +39,89 @@ Write your observation in few lines
 
 ## Task 6: Bring All Concepts Together
 
+
+# Task 1:
+
+a) created a container with the official postgres image and run the container. 
+
+```
+ubuntu@ip-172-31-19-178:~/postgre$ docker run --name idatabase -e POSTGRES_PASSWORD=mypass -p 5432:5432 -d postgres
+Unable to find image 'postgres:latest' locally
+latest: Pulling from library/postgres
+d5d76d0b0f65: Pull complete 
+e95a6c7ea7d4: Pull complete 
+97bcc504aa3b: Pull complete 
+0ff2e2431cea: Pull complete 
+12eb26f51ae1: Pull complete 
+68a752b4a968: Pull complete 
+60c77d82eba8: Pull complete 
+4eb3b0865106: Pull complete 
+2fcab0f6cbf5: Pull complete 
+926c1bf368d7: Pull complete 
+74c100cd0ed8: Pull complete 
+78b3b98b5637: Pull complete 
+cdf3c51537bb: Pull complete 
+0bdfb2e194c4: Download complete 
+29bf8f85e20b: Download complete 
+Digest: sha256:1a5b3e745bbd82d6deb146505e504da3c2f248cac15e431951b148fbe4f8613a
+Status: Downloaded newer image for postgres:latest
+ee30a3c247bc37c0bf672ee5c1937b519b4b53a96e46aa904ab49f563810fee2
+```
+
+b) Go inside the container using ``exec`` and run the psql for the database creation.
+
+```
+ubuntu@ip-172-31-19-178:~/postgre$ docker exec -it idatabase psql -U postgres
+psql (18.4 (Debian 18.4-1.pgdg13+1))
+Type "help" for help.
+
+postgres=# CREATE DATABASE companydb;
+CREATE DATABASE
+postgres=# \c companydb 
+You are now connected to database "companydb" as user "postgres".
+
+c) Create a table name as employees and inser the data 
+companydb=# CREATE TABLE employees (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT
+);
+CREATE TABLE
+companydb=# \dt
+            List of tables
+ Schema |   Name    | Type  |  Owner   
+--------+-----------+-------+----------
+ public | employees | table | postgres
+(1 row)
+
+companydb=# INSERT INTO employees (name, department, salary)
+VALUES ('Alice', 'IT', 70000);
+INSERT 0 1
+companydb=# INSERT INTO employees (name, department, salary)
+VALUES ('Bob', 'HR', 50000);
+INSERT 0 1
+companydb=# INSERT INTO employees (name, department, salary)
+VALUES ('Charlie', 'Finance', 65000);
+INSERT 0 1
+companydb=# SELECT * FROM employees;
+ id |  name   | department | salary 
+----+---------+------------+--------
+  1 | Alice   | IT         |  70000
+  2 | Bob     | HR         |  50000
+  3 | Charlie | Finance    |  65000
+(3 rows)
+```
+
+c) Stop the container and remove it compltely. 
+
+```
+ubuntu@ip-172-31-19-178:~/postgre$ docker stop idatabase 
+idatabase
+ubuntu@ip-172-31-19-178:~/postgre$ docker rm idatabase 
+idatabase
+```
+
+d) Re-build the same container and you can see there no longer exist ``companydb``   
+
+<img width="1780" height="602" alt="image" src="https://github.com/user-attachments/assets/50ed1bd2-b14a-4919-b068-cca3b169d711" />
