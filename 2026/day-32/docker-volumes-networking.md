@@ -176,4 +176,23 @@ yogi_postgre
 
 # Task 3: Bind Mounts in Docker 
 
+step 1: Create a directory on local host and add index.html file with any message. 
+
+``ubuntu@ip-172-31-19-178:~/learn_bind$ vim index.html``
+
+step 2: Now run a container using the nginx image and mount the present directory i.e "/home/ubuntu/learn_bind" to the target location "/usr/share/nginx/html" which is the default location of nginx web-server to store the website files particulary index.html, .css, js etc. 
+
+
+<img width="1710" height="277" alt="image" src="https://github.com/user-attachments/assets/1b138d06-8eca-4d1c-ad02-691eb8797f92" />
+
+
+step 3: Go to index.html file and make a change as mentioned below and then refresh the browser to see if the changes were immediately reflected. 
+
+```
+ubuntu@ip-172-31-19-178:~/learn_bind$ cat >> index.html 
+Message three, this should get updated live without re-creating the Docker image again! BOOM
+```
+
+
+<img width="1907" height="455" alt="image" src="https://github.com/user-attachments/assets/a103c881-30df-4d10-a973-195d331b9a34" />
 
