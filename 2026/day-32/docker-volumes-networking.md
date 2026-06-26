@@ -11,3 +11,30 @@ Two most common docker storage mechanisms are
 
 
 
+## Task 1: Adding data to Postgre Container
+
+1. Run a Postgres or MySQL Container and add some data inside it ( a table or rows )
+2. Stop and remove the container
+3. Run a new one and verify if the data is still there or not
+
+Write your observation in few lines
+
+## Task 2: Creating Volumes
+
+1. 
+
+
+## Task 3: Setting up Bind Mounts
+
+
+
+## Task 4: What is Docker Networking?
+
+
+
+## Task 5: Setting up Customer Networks
+
+
+
+## Task 6: Bring All Concepts Together
+
