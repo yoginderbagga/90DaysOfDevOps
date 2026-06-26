@@ -196,3 +196,4 @@ Message three, this should get updated live without re-creating the Docker image
 
 <img width="1907" height="455" alt="image" src="https://github.com/user-attachments/assets/a103c881-30df-4d10-a973-195d331b9a34" />
 
+Also, i added a message from the /usr/share/nginx/html folder from inside the container and that got added live as well. This means changes are immediately reflected from either side ( container or the host ) and no need to update on both the location or re-create the container image again. 
