@@ -53,9 +53,9 @@ Build an nginx web-server and deploy your website to i
 
 ## Task 5: What is .dockerignore
 
+- Create a .dockerignore file in your existing project and in that file include the files you would like to ignore since they can have confidential information ``node_modules``, ``.git``, ``*.md``, ``env`` 
 
-
-
+- Build the image again and verify that ignore files are not included
 
 ## Task 6: How to achieve optimization with Docker ?
 
