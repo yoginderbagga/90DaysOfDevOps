@@ -224,3 +224,7 @@ CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS
 98b20c488467   nginx_server:v1   "/docker-entrypoint.…"   4 seconds ago   Up 4 seconds   8000/tcp, 0.0.0.0:8000->80/tcp, [::]:8000->80/tcp   goofy_herschel
 ```
 
+## Task 5: .dockerignore 
+
+Added .dockerignore file to the existing project and then add a file in the same directory ``ignore-me``, verify when you build the image does that file gets included or not. 
+
