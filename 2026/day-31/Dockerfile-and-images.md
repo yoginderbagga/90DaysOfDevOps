@@ -228,3 +228,6 @@ CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS
 
 Added .dockerignore file to the existing project and then add a file in the same directory ``ignore-me``, verify when you build the image does that file gets included or not. 
 
+In below example, i created two text file ignore-me and include-me and while creating the .dockerignore file i ensure that ignore-me was added there but not the include-me. After re-building the image i verified by going inside the container ``/usr/share/nginx/html/`` and ``include-me`` was present. 
+
+<img width="1917" height="483" alt="Screenshot 2026-06-26 153440" src="https://github.com/user-attachments/assets/d3ed41a1-87cd-4aab-9cc3-5910c106065e" />
