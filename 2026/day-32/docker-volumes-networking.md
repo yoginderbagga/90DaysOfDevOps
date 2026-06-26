@@ -6,10 +6,8 @@ Docker volume is a persistent data storage mechanism used to store the data perm
 
 Two most common docker storage mechanisms are 
 
-1. Docker Volume: Stored at the host operating system ( In linux at : /var/lib/docker/volumes/)
-2. Bind Mounts: Another way to store Docker container data to the localhost is to use Bind mounts which link a specific file or folder from the host machine to the container. Bind Mounts are not directly managed by the Docker CLI and they are not used as frequently as Docker volume.
-
-
+1. Docker Volume: Stored at the host operating system ( In linux at : /var/lib/docker/volumes/), they are used mostly for the production data, and managed by the docker itself. 
+2. Bind Mounts: Another way to store Docker container data to the localhost is to use Bind mounts which link a specific file or folder from the host machine to the container. Bind Mounts are not directly managed by the Docker CLI and they are not used as frequently as Docker volume. Bind mounts create a link between a file or directory on the host machine (Fedora Linux) and a file or directory inside the container. If any changes made to either location they are immediately reflected in the other side too. So the ``Bind Mounts`` are not managed by Docker instead they're like a connectivity link, if change happens on one source code the other side of the file with same name get changed as well. ( Useful during the development stage as software developers are consistenyl making changes, editing the code )
 
 ## Task 1: Adding data to Postgre Container
 
@@ -174,4 +172,8 @@ yogi_postgre
 ```
 
 ``ubuntu@ip-172-31-19-178:~/postgre$ docker run -d --name yogi_postgre -e POSTGRES_PASSWORD=mypass -p 5432:5432 --mount type=volume,source=yogi_data_vol,target=/var/lib/postgresql postgres``
+
+
+# Task 3: Bind Mounts in Docker 
+
 
