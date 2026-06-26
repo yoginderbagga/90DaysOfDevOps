@@ -132,3 +132,46 @@ d) Re-build the same container and you can see there no longer exist ``companydb
 # Task 2: Named volumes
 
 Excersise completed. Removed the previous container and rebuild it again with a Volume data and then removed it back again. This time data was persisted into the same container as the data persistent done with volume. 
+
+
+ubuntu@ip-172-31-19-178:~/postgre$ docker run -d --name yogi_postgre -e POSTGRES_PASSWORD=mypass -p 5432:5432 --mount type=volume,source=yogi_data_vol,target=/var/lib/postgresql postgres
+
+
+```
+ubuntu@ip-172-31-19-178:~/postgre$ docker exec -it yogi_postgre psql -U postgres
+psql (18.4 (Debian 18.4-1.pgdg13+1))
+Type "help" for help.
+
+postgres=# CREATE DATABASE companydb;
+CREATE DATABASE
+postgres=# \c companydb 
+You are now connected to database "companydb" as user "postgres".
+companydb=# CREATE TABLE employees (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    salary INT
+);
+CREATE TABLE
+```
+
+```
+companydb=# INSERT INTO employees (name, salary)
+VALUES
+('Alice', 70000),
+('Bob', 80000);
+INSERT 0 2
+companydb=# SELECT * FROM employees;
+ id | name  | salary 
+----+-------+--------
+  1 | Alice |  70000
+  2 | Bob   |  80000
+(2 rows)
+```
+
+```
+ubuntu@ip-172-31-19-178:~/postgre$ docker rm -f yogi_postgre 
+yogi_postgre
+```
+
+``ubuntu@ip-172-31-19-178:~/postgre$ docker run -d --name yogi_postgre -e POSTGRES_PASSWORD=mypass -p 5432:5432 --mount type=volume,source=yogi_data_vol,target=/var/lib/postgresql postgres``
+
