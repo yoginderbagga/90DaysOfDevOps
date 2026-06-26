@@ -209,3 +209,20 @@ Types of Network Drivers:
 4. mcvlan
 5. ipvlan
 6. none
+
+
+### List all Network on your machine :
+
+```
+ubuntu@ip-172-31-19-178:~/learn_bind$ docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+9ccb96626daa   bridge    bridge    local
+97d826701716   host      host      local
+ff30b9e7f1f7   none      null      local
+```
+
+### Docker Network Inspects 
+
+A command that provide detailed configuration and status info about the one or more Docker networks in JSON format. You can view subnets, gateway configurations, drivers and the list of containers currently connected to a specific network. 
+
+<img width="1401" height="477" alt="image" src="https://github.com/user-attachments/assets/3f3bb614-b97d-4de3-be70-83102212a2e2" />
