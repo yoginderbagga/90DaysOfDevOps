@@ -221,6 +221,14 @@ NETWORK ID     NAME      DRIVER    SCOPE
 ff30b9e7f1f7   none      null      local
 ```
 
+<img width="1481" height="326" alt="Screenshot 2026-06-26 194937" src="https://github.com/user-attachments/assets/66fb5179-3acb-49a5-927d-a4d4d23f5f30" />
+
+### Observation:
+As we can see in above screenshot, both the containers are on the bridge network and they are not able to ping while using their container name but ping is possibel when using the IP address. The IP address of the container we are pinging to is "172.17.0.2" and its container name is "condescending_visvesvaraya" and with the name its not pinging. The reason for this failure is -- automatic DNS resolution is not provided on Bridge network in Docker. 
+
+# Task 5: Create your Custom Network
+
+
 ### Docker Network Inspects 
 
 A command that provide detailed configuration and status info about the one or more Docker networks in JSON format. You can view subnets, gateway configurations, drivers and the list of containers currently connected to a specific network. 
