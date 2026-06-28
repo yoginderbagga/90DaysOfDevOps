@@ -54,8 +54,11 @@ Start and access WordPress in your browser.
 2. Create a ``.env`` file and reference variable from it in your compose file
 3. Identify if the variables are picked up.
 
+<br>
+<br>
 
-Task 1:
+
+## Task 1:
 
 ``ubuntu@ip-172-31-19-178:~$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin``
 
