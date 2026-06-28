@@ -65,3 +65,26 @@ Start and access WordPress in your browser.
 
 <img width="1913" height="460" alt="Screenshot 2026-06-28 233929" src="https://github.com/user-attachments/assets/32c12ab8-d287-4782-9489-95455b19394d" />
 
+
+## Task 2:
+
+
+Created a ``docker-compose.yml`` file as below and also used the mount points in it. 
+
+```
+ubuntu@ip-172-31-19-178:~/docker-compose-basics$ cat docker-compose.yml 
+services:
+  webserver:
+    image: nginx:alpine
+    container_name: my_server
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+#      - ./config:/etc/nginx/conf.d
+      - ./logs:/var/log/nginx
+```
+
+Created three directory as below for the mount purpose
+
+``ubuntu@ip-172-31-19-178:~/docker-compose-basics$ mkdir html config logs``
