@@ -88,3 +88,8 @@ services:
 Created three directory as below for the bind mount volume purpose. Suppose you edit the code on your computer at ``./html`` folder now the changes will instantly appear live in the browser without you have to do any further change to the dockerfile or the docker-compose.yml. The reason for that is ``./html`` is directly mounted with the /usr/share/nginx/html directory and when the nginx server runs it look inside the default config directory which is ``/usr/share/nginx/html`` and its mounted with ``./html``
 
 ``ubuntu@ip-172-31-19-178:~/docker-compose-basics$ mkdir html config logs``
+
+``ubuntu@ip-172-31-19-178:~/docker-compose-basics$ docker compose up``
+
+<img width="1457" height="282" alt="image" src="https://github.com/user-attachments/assets/ee9a4d51-5ae7-4dee-9aad-337d40b1abc6" />
+
