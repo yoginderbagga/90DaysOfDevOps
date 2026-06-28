@@ -1,6 +1,8 @@
 # Docker Compose
 
+## What is Docker Compose and How its different from running Standard Docker command?
 
+As the Docker containers grow in number it becomes difficult to bring them up, create their isolate networks, assign the storage volume etc individually. This problem gets solved by a Docker tool which sits on the top of docker known as "Docker compose". With Docker compose, you create a YAML file ``compose.yml`` to define the configuration of your container to bring them up all at once without handeling them individually. The complete applications components stack can be managed like ``UP`` or ``DOWN`` with commands like ``docker compose up`` and ``docker compose down``
 
 ## Task 1: Setup and verify 
 
@@ -43,4 +45,8 @@ Start and access WordPress in your browser.
 1. How to add a varible in ``docker-compose.yml``
 2. Create a ``.env`` file and reference variable from it in your compose file
 3. Identify if the variables are picked up.
+
+
+Task 1:
+
 
