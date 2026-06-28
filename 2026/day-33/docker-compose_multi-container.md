@@ -57,4 +57,8 @@ Start and access WordPress in your browser.
 
 Task 1:
 
+``ubuntu@ip-172-31-19-178:~$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin``
+
+
+<img width="1913" height="460" alt="Screenshot 2026-06-28 233929" src="https://github.com/user-attachments/assets/32c12ab8-d287-4782-9489-95455b19394d" />
 
