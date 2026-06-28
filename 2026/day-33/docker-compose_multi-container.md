@@ -91,5 +91,8 @@ Created three directory as below for the bind mount volume purpose. Suppose you 
 
 ``ubuntu@ip-172-31-19-178:~/docker-compose-basics$ docker compose up``
 
-<img width="1457" height="282" alt="image" src="https://github.com/user-attachments/assets/ee9a4d51-5ae7-4dee-9aad-337d40b1abc6" />
+<img width="1457" height="282" alt="image" src="https://github.com/user-attachments/assets/ee9a4d51-5ae7-4dee-9aad-337d40b1abc6" />  
 
+Below is the output from the browser: 
+
+<img width="1717" height="265" alt="image" src="https://github.com/user-attachments/assets/2a9957b9-e817-4553-9a21-1387491dbf58" />
