@@ -96,3 +96,7 @@ Created three directory as below for the bind mount volume purpose. Suppose you 
 Below is the output from the browser: 
 
 <img width="1717" height="265" alt="image" src="https://github.com/user-attachments/assets/2a9957b9-e817-4553-9a21-1387491dbf58" />
+
+Observation:
+
+In the starting, got the error message on the browser as it was because the config directory is empty and since its mounted with the /etc/nginx/conf.d it was getting replaced and when the container ran it didn't find any config there. Carefully, use the bind mounting point. So to fix it I commented in above docker-compose.yml file ``- ./config:/etc/nginx/conf.d``
