@@ -4,6 +4,14 @@
 
 As the Docker containers grow in number it becomes difficult to bring them up, create their isolate networks, assign the storage volume etc individually. This problem gets solved by a Docker tool which sits on the top of docker known as "Docker compose". With Docker compose, you create a YAML file ``compose.yml`` to define the configuration of your container to bring them up all at once without handeling them individually. The complete applications components stack can be managed like ``UP`` or ``DOWN`` with commands like ``docker compose up`` and ``docker compose down``
 
+Challenges with multi-container management without ``docker compose``
+
+-> Complex Configuration: So far you have seen, running docker containers requires you to type long commands with network ports, volumes creation, environment var info etc. This can get difficult to manage when there are large number of containers to manage. 
+
+-> Manual Network Creation: You create the network manually to allow them to talk with each other, find the IP address, hardcode the network info to the docker network setup. 
+
+
+
 ## Task 1: Setup and verify 
 
 1. Install Docker compose on your machine
