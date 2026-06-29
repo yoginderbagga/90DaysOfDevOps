@@ -118,3 +118,19 @@ Start the container and access WordPress in your browser.
 
 **Verification**: Stop and restart the container with ``docker compose down`` and ``docker compose up`` and see if the WordPress is still there. 
 
+( Below docker-compose is not completed and WIP )
+
+```
+ubuntu@ip-172-31-19-178:~/multi_container_compose$ cat docker-compose.yml 
+# To build multi-containers for WorldPress and MySQL using docker compose
+
+service: 
+  web_server:
+    image: wordpress
+    container_name: wordpress_app
+    ports:
+      8080:80
+
+  database:
+    image: mysql:latest
+``
