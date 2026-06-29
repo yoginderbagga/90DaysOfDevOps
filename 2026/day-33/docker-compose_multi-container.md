@@ -100,3 +100,21 @@ Below is the output from the browser:
 Observation:
 
 In the starting, got the error message on the browser as it was because the config directory is empty and since its mounted with the /etc/nginx/conf.d it was getting replaced and when the container ran it didn't find any config there. Carefully, use the bind mounting point. So to fix it I commented in above docker-compose.yml file ``- ./config:/etc/nginx/conf.d``
+
+## Task 3:
+
+Setting up Two containers in a ``docker-compose.yml`` file
+
+- WordPress container
+- MySQL container
+
+Conditions:
+
+- Both container should be on same network (Do it with compose not manually)
+- MySQL Database should have a named volume for the data persistence
+- WordPress should connect to MySQL using the service name
+
+Start the container and access WordPress in your browser. 
+
+**Verification**: Stop and restart the container with ``docker compose down`` and ``docker compose up`` and see if the WordPress is still there. 
+
