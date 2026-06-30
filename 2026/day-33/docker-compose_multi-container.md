@@ -118,6 +118,55 @@ Start the container and access WordPress in your browser.
 
 **Verification**: Stop and restart the container with ``docker compose down`` and ``docker compose up`` and see if the WordPress is still there. 
 
+Before doing this task with ``docker compose`` I first did with manual approach to understand the concepts and there were couple of mistakes that I made during that which I would list down below. First lets understand the command i used that worked for me : 
+
+a) Create the network first for both the container : ``common-net``
+
+```
+ubuntu@ip-172-31-19-178:~$ docker network create common-net
+349bbd27dc4d2cdfe5364e21b1ce3b5f87d6d4d5ef0e779388044323e534f7c1
+```
+
+b) Buld the container for MySQL database using the ``mysql`` image and ensure that you inject the environment variable like MySQL Root Password, MySQL Database, MySQL User, and assign a network to it.
+
+``ubuntu@ip-172-31-19-178:~$ docker run -d -p 3306:3306 --name db_for_audience --network common-net -e MYSQL_ROOT_PASSWORD=12345 -e MYSQL_DATABASE=idb -e MYSQL_USER=iuser -e MYSQL_PASSWORD=***** -v mysql_data:/var/lib/mysql mysql``
+
+
+c) Build the container for WordPress application using the ``wordpress`` image, and ensure that you inject environment variables including Database Host, Database User, Database Pass, and eventually Database name as WordPress need these variables during the configuration. And assign a network to it. 
+
+``ubuntu@ip-172-31-19-178:~$ docker run -d -p 8080:80 --network common-net --name cms_for_audience -e WORDPRESS_DB_HOST=db_for_audience:3306 -e WORDPRESS_DB_USER=iuser -e WORDPRESS_DB_PASSWORD=12345 -e WORDPRESS_DB_NAME=idb -v wordpress_data:/var/www/html wordpress``
+
+Ensure both the containers are running with their respective port number ?
+
+```
+ubuntu@ip-172-31-19-178:~$ docker ps
+CONTAINER ID   IMAGE       COMMAND                  CREATED         STATUS         PORTS                                                    NAMES
+980478e181c1   wordpress   "docker-entrypoint.s…"   8 seconds ago   Up 6 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp                  cms_for_audience
+1dc4557d9195   mysql       "docker-entrypoint.s…"   5 minutes ago   Up 5 minutes   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   db_for_audience
+```
+
+
+Now there were some challenges occured during this step and onwards, which are as below:
+
+1. Initially I created both the containers isolated and there were no common network assigned to them. So make sure to first create a common network where both containers needs to be part of. Container talk with each other using the container name when they're on the same user-defined bridge network. 
+2. Second, I didn't add any environment variable except password for both WordPress and MySQL Database. Practically, WordPress doesn't know - Which Database? Which Username? Which Password? So without those credential it won't be configured successfully. Now for the MySQL part, at least the password should be created even if you leave other variables like MySQL Database, MySQL User, as they can be created manually during the Database setup.
+3. Not verifying the networking properly. Initially, i thought ``common-net`` network was setup for both of the containers, but somehow it was not as one of the container was still isolated from the ``common-net`` created earlier. So I ran below command which showed that one network IP address was not there :
+   ``docker network inspect common-net`` and ``docker inspect db_for_audience``
+4. Check the container status with ``docker ps -a`` to see if it exited and when did it exited. And after looking at the logs of Ubuntu OS with below command found that there was out of memory error message, since the RAM was running out. So added the RAM using the SWAP memory commands. 
+   ``ubuntu@ip-172-31-19-178:~$ sudo dmesg -T | grep -i -E "oom|out of memory|killed process"``
+
+
+<img width="1767" height="547" alt="image" src="https://github.com/user-attachments/assets/9ac97634-7fa9-41c9-b10c-60def7f534c1" />
+
+```
+ubuntu@ip-172-31-19-178:~$ sudo fallocate -l 2G /swapfile
+ubuntu@ip-172-31-19-178:~$ sudo chmod 600 /swapfile
+ubuntu@ip-172-31-19-178:~$ sudo mkswap /swapfile
+Setting up swapspace version 1, size = 2 GiB (2147479552 bytes)
+no label, UUID=63797350-614c-491d-851c-3eb83a873b48
+ubuntu@ip-172-31-19-178:~$ sudo swapon /swapfile
+```
+
 ( Below docker-compose is not completed and WIP )
 
 ```
