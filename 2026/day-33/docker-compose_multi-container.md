@@ -223,18 +223,54 @@ I also setup the Dbeaver UI tool and connected it with MySQL and here are the re
 <img width="1821" height="955" alt="image" src="https://github.com/user-attachments/assets/4d02104f-be5d-43ed-9164-a54bd3f2611a" />
 
 
-## Below docker-compose is not completed and WIP 
+### Building Multi-Container with Docker-compose.yml file for MySQL Database and WordPress web-app 
 
+
+```
 ubuntu@ip-172-31-19-178:~/multi_container_compose$ cat docker-compose.yml 
 # To build multi-containers for WorldPress and MySQL using docker compose
 
-service: 
+services: 
   web_server:
     image: wordpress
     container_name: wordpress_app
+    networks: 
+      - both_communicate
     ports:
-      8080:80
+      - "8080:80"
+    depends_on:
+      - database_service
+    environment: 
+      - WORDPRESS_DB_HOST=database_service:3306
+      - WORDPRESS_DB_USER=iuser 
+      - WORDPRESS_DB_PASSWORD=12345
+      - WORDPRESS_DB_NAME=idb
+    volumes: 
+      - wordpress_data:/var/www/html
 
-  database:
+
+  database_service:
     image: mysql:latest
-``
+    container_name: database_app
+    volumes:
+        - mysql_data:/var/lib/mysql
+    networks: 
+      - both_communicate
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345
+      - MYSQL_DATABASE=idb
+      - MYSQL_USER=iuser
+      - MYSQL_PASSWORD=12345
+
+networks:
+  both_communicate:
+    driver: bridge
+
+    
+
+volumes: 
+  wordpress_data:
+  mysql_data:
+```
