@@ -212,6 +212,15 @@ mysql> SHOW TABLES;
 
 <img width="1408" height="702" alt="image" src="https://github.com/user-attachments/assets/02d5f27c-e797-4010-b414-1a73baeb4ced" />
 
+WordPress view of the application : 
+
+<img width="1905" height="967" alt="image" src="https://github.com/user-attachments/assets/e396b8a6-8837-4718-93ea-ea84ec2199c9" />
+
+<br>
+
+I also setup the Dbeaver UI tool and connected it with MySQL and here are the results of the same database.
+
+<img width="1821" height="955" alt="image" src="https://github.com/user-attachments/assets/4d02104f-be5d-43ed-9164-a54bd3f2611a" />
 
 
 ## Below docker-compose is not completed and WIP 
