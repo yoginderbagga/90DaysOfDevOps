@@ -120,6 +120,8 @@ Start the container and access WordPress in your browser.
 
 Before doing this task with ``docker compose`` I first did with manual approach to understand the concepts and there were couple of mistakes that I made during that which I would list down below. First lets understand the command i used that worked for me : 
 
+### Manual Approach 
+
 a) Create the network first for both the container : ``common-net``
 
 ```
@@ -156,6 +158,7 @@ Now there were some challenges occured during this step and onwards, which are a
    ``ubuntu@ip-172-31-19-178:~$ sudo dmesg -T | grep -i -E "oom|out of memory|killed process"``
 
 
+
 <img width="1767" height="547" alt="image" src="https://github.com/user-attachments/assets/9ac97634-7fa9-41c9-b10c-60def7f534c1" />
 
 ```
@@ -167,9 +170,52 @@ no label, UUID=63797350-614c-491d-851c-3eb83a873b48
 ubuntu@ip-172-31-19-178:~$ sudo swapon /swapfile
 ```
 
-( Below docker-compose is not completed and WIP )
+5. Now I could login to the WordPress from my browser successfully, and added a post, published it. Then I verified the status of it on the terminal by login to SQL below commands to ensure if the post was added indeed or not.
+
+   ``ubuntu@ip-172-31-19-178:~$ docker exec -it db_for_audience mysql -uiuser -pXXXXX``
 
 ```
+   mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| idb                |
+| information_schema |
+| performance_schema |
++--------------------+
+3 rows in set (0.014 sec)
+
+mysql> use idb;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SHOW TABLES;
++-----------------------+
+| Tables_in_idb         |
++-----------------------+
+| wp_commentmeta        |
+| wp_comments           |
+| wp_links              |
+| wp_options            |
+| wp_postmeta           |
+| wp_posts              |
+| wp_term_relationships |
+| wp_term_taxonomy      |
+| wp_termmeta           |
+| wp_terms              |
+| wp_usermeta           |
+| wp_users              |
++-----------------------+
+12 rows in set (0.001 sec)
+```
+
+<img width="1408" height="702" alt="image" src="https://github.com/user-attachments/assets/02d5f27c-e797-4010-b414-1a73baeb4ced" />
+
+
+
+## Below docker-compose is not completed and WIP 
+
 ubuntu@ip-172-31-19-178:~/multi_container_compose$ cat docker-compose.yml 
 # To build multi-containers for WorldPress and MySQL using docker compose
 
