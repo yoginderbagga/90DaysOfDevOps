@@ -285,3 +285,24 @@ Output of terminal for SQL data:
 
 <img width="1918" height="791" alt="Screenshot 2026-06-30 231619" src="https://github.com/user-attachments/assets/7496b066-0650-4c11-bfb5-6f021fc6b6da" />
 
+
+### Challenges & Observation 
+
+1. The database container ``database_app`` kept crashing after few mins same as in previous example with manual approach it ran out of memory and throwing error. I noticed that disk usage had enough storage and it was the RAM that ran out. free -m  showed 0 in the memory swap column. However, I came across another command that shows whether container crashing due to ran out of memory from the operating system or from the docker itself.
+
+   ``docker inspect <container_id> --format '{{.State.OOMKilled}}'``                      // if this true, means docker hits memory limit for specific docker, and false means OS hit memory limit.
+In this crash it was due to docker memory I believe, as docker kept running while the swap was zero but after adding the resource in the docker-compose.yml file for the container memory then it came up online. 
+
+2. 
+
+
+```
+ubuntu@ip-172-31-19-178:~$ sudo dmesg -T | grep -i oom
+[Wed Jul  1 10:29:00 2026] fwupd invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=0
+[Wed Jul  1 10:29:00 2026]  oom_kill_process.cold+0x8/0xb5
+[Wed Jul  1 10:29:00 2026]  __alloc_pages_may_oom+0x10a/0x1d0
+[Wed Jul  1 10:29:00 2026] [  pid  ]   uid  tgid total_vm      rss rss_anon rss_file rss_shmem pgtables_bytes swapents oom_score_adj name
+[Wed Jul  1 10:29:00 2026] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=fwupd.service,mems_allowed=0,global_oom,task_memcg=/system.slice/docker-31d2f7f43ec42be22400f7b8a5daf45cef874fe8b3e975e11d35900859585b94.scope,task=mysqld,pid=1932,uid=999
+[Wed Jul  1 10:29:00 2026] Out of memory: Killed process 1932 (mysqld) total-vm:1867272kB, anon-rss:452196kB, file-rss:8kB, shmem-rss:0kB, UID:999 pgtables:1292kB oom_score_adj:0
+```
+
