@@ -9,7 +9,7 @@ In previous session, you build basic multi-container using docker compose for My
 - Use Database (Postgres or MySQL)
 - An in-memory database cache (Redis)
 
-### Goal: Create a simple Dockerfile for the app, that prints "Hello World" and connect to the database 
+Goal: Create a simple Dockerfile for the app, that prints "Hello World" and connect to the database 
 
 
 ## Task 2: Use the depends_on and Healthchecks 
