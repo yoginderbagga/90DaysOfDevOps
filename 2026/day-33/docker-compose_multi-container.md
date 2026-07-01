@@ -293,8 +293,16 @@ Output of terminal for SQL data:
    ``docker inspect <container_id> --format '{{.State.OOMKilled}}'``                      // if this true, means docker hits memory limit for specific docker, and false means OS hit memory limit.
 In this crash it was due to docker memory I believe, as docker kept running while the swap was zero but after adding the resource in the docker-compose.yml file for the container memory then it came up online. 
 
-2. 
+2. Ensure that you include environment variables for both the containers MySQL and WordPress in order to allow them to configure and login.
+3. Since database container kept crashing add below deployment resource to limit 4G of RAM :
 
+```
+container_name: wordpress_app
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+```
 
 ```
 ubuntu@ip-172-31-19-178:~$ sudo dmesg -T | grep -i oom
