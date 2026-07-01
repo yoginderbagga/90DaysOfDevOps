@@ -35,3 +35,8 @@ Goal: Create a simple Dockerfile for the app, that prints "Hello World" and conn
 
 - Scale the web application to 3 replicas using ``docker compose up --scale``
 - Observe the status of dockers and see what exactly happens? If anything breaks? Write your observation. Why the scaling didn't work with port mapping. 
+
+
+## Task 1:
+
+Started building a python based container with flask dependencies added to it via the requirements.txt file. Verified the output on the browser the "hello, world" works fine. The next steps is to connect the python container with the MySQL container. 
