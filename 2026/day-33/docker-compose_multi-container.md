@@ -314,3 +314,6 @@ ubuntu@ip-172-31-19-178:~$ sudo dmesg -T | grep -i oom
 [Wed Jul  1 10:29:00 2026] Out of memory: Killed process 1932 (mysqld) total-vm:1867272kB, anon-rss:452196kB, file-rss:8kB, shmem-rss:0kB, UID:999 pgtables:1292kB oom_score_adj:0
 ```
 
+## TASK 4:
+
+Stopped, restarted the container and verified that data persisted after rebuilding the container since volume stored the data. 
