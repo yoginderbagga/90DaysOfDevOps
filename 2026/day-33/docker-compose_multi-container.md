@@ -274,3 +274,14 @@ volumes:
   wordpress_data:
   mysql_data:
 ```
+
+Output of WordPress post:
+
+<img width="1912" height="1032" alt="Screenshot 2026-06-30 233849" src="https://github.com/user-attachments/assets/9835c8d2-eeda-486d-b5b7-0e77cc8e070e" />
+
+Output of terminal for SQL data:
+
+<img width="1882" height="973" alt="Screenshot 2026-06-30 233745" src="https://github.com/user-attachments/assets/64d339df-843f-43d5-9ea4-04efaa20180f" />
+
+<img width="1918" height="791" alt="Screenshot 2026-06-30 231619" src="https://github.com/user-attachments/assets/7496b066-0650-4c11-bfb5-6f021fc6b6da" />
+
