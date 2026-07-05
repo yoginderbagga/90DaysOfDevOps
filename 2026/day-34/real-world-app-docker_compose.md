@@ -165,11 +165,14 @@ if __name__ == "__main__":
 
 ## Task 6
 
-``
+```
 ubuntu@ip-172-31-19-178:~/project-3Service$ docker compose up --scale web=3
 WARNING: The "web" service is using the custom container name "web_container". Docker requires each container to have a unique name. Remove the custom name to scale the service
 ```
 
+
 As you can see from above command that simply scaling with above command won't create multiple instances of the docker, the reason is, first i had created ``container name`` in the existing ``docker-compose.yml`` file. Since if you scale the service web to three container then where would they the name for the remaining those containers? Second, you also defined a port number 5000:5000 for the web ( python flask ) if you create the container with three replicas then only per port (5000) only one process can run. You can't run multiple Flask on a single port.
+
+
 
 <img width="1568" height="246" alt="Screenshot 2026-07-06 030313" src="https://github.com/user-attachments/assets/732ca1c9-2def-435c-b3dc-9cf661129338" />
