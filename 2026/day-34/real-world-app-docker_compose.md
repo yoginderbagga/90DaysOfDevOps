@@ -98,4 +98,4 @@ volumes:
 
 ## Task 2: Add healchecks
 
-
+Healthcheck in Docker compose are used to configure a periodic testing that runs within a container to determine whether the application is functioning correctly at a particular interval of time. It includes parameter such as ``test``, ``interval``, ``timeout`` and ``retries``
