@@ -95,3 +95,7 @@ volumes:
 
 
 <img width="1522" height="499" alt="image" src="https://github.com/user-attachments/assets/5af4ba79-11b8-4347-b18c-324ab6b817e9" />
+
+## Task 2: Add healchecks
+
+
