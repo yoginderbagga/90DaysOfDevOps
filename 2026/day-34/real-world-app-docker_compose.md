@@ -171,7 +171,7 @@ WARNING: The "web" service is using the custom container name "web_container". D
 ```
 
 
-As you can see from above command that simply scaling with above command won't create multiple instances of the docker, the reason is, first i had created ``container name`` in the existing ``docker-compose.yml`` file. Since if you scale the service web to three container then where would they the name for the remaining those containers? Second, you also defined a port number 5000:5000 for the web ( python flask ) if you create the container with three replicas then only per port (5000) only one process can run. You can't run multiple Flask on a single port.
+As you can see from above command that simply scaling with above command won't create multiple instances of the docker, the reason is, first i had created ``container name`` in the existing ``docker-compose.yml`` file. Since if you scale the service web to three container then where would they the name for the remaining those containers? Second, you also defined a port number 5000:5000 for the web ( python flask ) if you create the container with three replicas then only per port (5000) only one process can run. You can't run multiple Flask on a single port. In production env, this is typically solved by placing a load balancer / reverse proxy in front of the application replicas. 
 
 
 
