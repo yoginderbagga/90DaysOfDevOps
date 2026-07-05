@@ -99,3 +99,67 @@ volumes:
 ## Task 2: Add healchecks
 
 Healthcheck in Docker compose are used to configure a periodic testing that runs within a container to determine whether the application is functioning correctly at a particular interval of time. It includes parameter such as ``test``, ``interval``, ``timeout`` and ``retries``
+
+Added healthchecks parameter to test the docker inside shell for running CURL command or any process. 
+
+
+## Task 3: Restarted Policies
+
+Added the ``restart: always`` and ``unless-stopped`` policies and tested them into the existing docker-compose.yml file. Also, below is the python app.py code taken from gpt to perform the deployment. 
+
+```
+from flask import Flask
+import redis
+import mysql.connector
+import os
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+
+    # Connect to Redis
+    redis_client = redis.Redis(
+        host=os.getenv("REDIS_HOST", "redis"),
+        port=6379,
+        decode_responses=True
+    )
+
+    # Connect to MySQL
+    db = mysql.connector.connect(
+        host=os.getenv("MYSQL_HOST", "database"),
+        user=os.getenv("MYSQL_USER", "appuser"),
+        password=os.getenv("MYSQL_PASSWORD", "apppassword"),
+        database=os.getenv("MYSQL_DATABASE", "appdb")
+    )
+
+    # Increase visitor count
+    visitors = redis_client.incr("visitor_count")
+
+    # Read MySQL version
+    cursor = db.cursor()
+    cursor.execute("SELECT VERSION()")
+    message = cursor.fetchone()[0]
+    cursor.close()
+
+    db.close()
+
+    return f"""
+=================================<br>
+Flask + Docker Compose Demo<br>
+=================================<br><br>
+
+MySQL Version : {message}<br><br>
+
+Visitor Count : {visitors}<br><br>
+
+Database : Connected ✅<br>
+Redis : Connected ✅
+"""
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+```
+
+## Task 4 and Task 5 added in the existing docker-compose.yml file
+
