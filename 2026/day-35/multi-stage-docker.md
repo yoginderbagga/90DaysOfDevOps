@@ -85,6 +85,11 @@ On the contrary: multi-stage divide the whole process into two stages as mention
 
 ## Task 3: Push Image to Docker Hub
 
+Finally push the image to the Docker Hub as you can see in below command, first created the tag for the image ``goimage:latest`` and then in the next command pushed the image to the Docker Hub repository.  
+
+<img width="1360" height="216" alt="Screenshot 2026-07-06 221031" src="https://github.com/user-attachments/assets/dae5e9c4-bf0b-4a87-aa4a-bb19626f7a0d" />
+
+
 
 ## Task 4: Docker Hub Repository
 
