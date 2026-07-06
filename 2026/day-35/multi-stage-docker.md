@@ -74,7 +74,7 @@ Then the ``Runtime Stage`` (alpine:latest) is lightweight linux distrubition ( l
 
 <img width="1316" height="537" alt="Screenshot 2026-07-06 213814" src="https://github.com/user-attachments/assets/495dbb47-e3ca-44b9-8e9b-5c6285fb9855" />
 
-See the image size below ``goimage`` is reduced to 16MB from 387MB
+See the image size below ``goimage`` is reduced to 5MB from 80MB
 
 <img width="1570" height="246" alt="image" src="https://github.com/user-attachments/assets/e9513336-a14a-4a1b-b30f-58b98eba610c" />
 
