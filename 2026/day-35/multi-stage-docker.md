@@ -71,6 +71,15 @@ Here in the stage one ( ``builder stage`` which uses ``golang:1.22-alpine`` ) yo
 
 Then the ``Runtime Stage`` (alpine:latest) is lightweight linux distrubition ( less than 5 MB) and in this stage we copied the compiled binary ie ``gokaapp`` from the previous step. Now once you actually build the image using this Docker file, the image will not consist of the Go compiler. 
 
+
+<img width="1316" height="537" alt="Screenshot 2026-07-06 213814" src="https://github.com/user-attachments/assets/495dbb47-e3ca-44b9-8e9b-5c6285fb9855" />
+
+See the image size below ``goimage`` is reduced to 16MB from 387MB
+
+<img width="1570" height="246" alt="image" src="https://github.com/user-attachments/assets/e9513336-a14a-4a1b-b30f-58b98eba610c" />
+
+
+
 ## Task 3: Push Image to Docker Hub
 
 
