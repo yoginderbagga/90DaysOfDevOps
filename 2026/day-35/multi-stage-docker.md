@@ -83,18 +83,20 @@ The single stage Dockerfile uses ``golang:1.22-alpine`` image for both building 
 On the contrary: multi-stage divide the whole process into two stages as mentioned above, and specially during the runtime stage it excludes the tools like Go compiler, build tools, source code, temporary build files which is why as a result the final image consist of alpine linux runtime, and Go executable. 
 
 
-## Task 3: Push Image to Docker Hub
+## Task 3: Push Image to Docker Hub and Task 4
 
 Finally push the image to the Docker Hub as you can see in below command, first created the tag for the image ``goimage:latest`` and then in the next command pushed the image to the Docker Hub repository.  
 
 <img width="1360" height="216" alt="Screenshot 2026-07-06 221031" src="https://github.com/user-attachments/assets/dae5e9c4-bf0b-4a87-aa4a-bb19626f7a0d" />
 
+Verified that image was pushed to the repository successfully. 
+
+<img width="1877" height="853" alt="Screenshot 2026-07-06 223409" src="https://github.com/user-attachments/assets/9316f4fa-40b5-4243-bd87-bc4a3a5c698f" />
+
 Able to pull the image ``yoginderbagga/my-application:v1.0`` from Docker hub to the Fedora Base machine as well and can run the container from the pulled image.
 
 <img width="1798" height="772" alt="Screenshot 2026-07-06 223208" src="https://github.com/user-attachments/assets/d661bd57-5774-4974-a9ea-b9f36e74f15f" />
 
-
-## Task 4: Docker Hub Repository
 
 
 
