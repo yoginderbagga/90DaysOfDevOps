@@ -89,6 +89,9 @@ Finally push the image to the Docker Hub as you can see in below command, first 
 
 <img width="1360" height="216" alt="Screenshot 2026-07-06 221031" src="https://github.com/user-attachments/assets/dae5e9c4-bf0b-4a87-aa4a-bb19626f7a0d" />
 
+Able to pull the image ``yoginderbagga/my-application:v1.0`` from Docker hub to the Fedora Base machine as well and can run the container from the pulled image.
+
+<img width="1798" height="772" alt="Screenshot 2026-07-06 223208" src="https://github.com/user-attachments/assets/d661bd57-5774-4974-a9ea-b9f36e74f15f" />
 
 
 ## Task 4: Docker Hub Repository
