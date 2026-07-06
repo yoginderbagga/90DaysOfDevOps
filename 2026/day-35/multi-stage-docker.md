@@ -78,6 +78,9 @@ See the image size below ``goimage`` is reduced to 5MB from 80MB
 
 <img width="1570" height="246" alt="image" src="https://github.com/user-attachments/assets/722812f1-112c-48c3-8356-2b9143cd6df3" />
 
+The single stage Dockerfile uses ``golang:1.22-alpine`` image for both building and running the application in that case, the actual docker image containers not only the compiled Go app but also the entire Go development environment, standard librarires, compier build tools, and source code which are needed during the compilation but not exactly when app is running. 
+
+On the contrary: multi-stage divide the whole process into two stages as mentioned above, and specially during the runtime stage it excludes the tools like Go compiler, build tools, source code, temporary build files which is why as a result the final image consist of alpine linux runtime, and Go executable. 
 
 
 ## Task 3: Push Image to Docker Hub
