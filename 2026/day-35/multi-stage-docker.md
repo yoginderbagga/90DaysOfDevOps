@@ -7,6 +7,31 @@ Multi-Stage build is used to optimize the size of Dockerfile by using several ``
 
 ## Task 1: Issues with Single Stage Docker image
 
+Created a Go ``Dockerfile`` which prints the ``hello world`` message as below. 
+
+```
+ubuntu@ip-172-31-19-178:~/multi-stagedocker$ cat Dockerfile
+
+# import golang alpine image from docker
+FROM golang:1.22-alpine
+
+#Where you will work i.e the location of the directory or folder in container?
+WORKDIR /app
+
+COPY . .
+
+# Compile the Go application
+RUN go build -o firstapp .
+
+EXPOSE 8080 
+
+# Command to run the executable  
+CMD ["./firstapp"]
+```
+
+
+<img width="1251" height="227" alt="image" src="https://github.com/user-attachments/assets/6822afda-1393-4a40-b7d9-ef8004d55ce2" />
+
 
 ## Task 2: Multi-Stage Docker Build
 
