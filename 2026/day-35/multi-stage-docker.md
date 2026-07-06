@@ -35,7 +35,41 @@ CMD ["./firstapp"]
 
 ## Task 2: Multi-Stage Docker Build
 
+In this step, you build a multi-stage dockerfile which drastically reduce the size that you will see in a minute. First, look at the new Dockerfile that is created for the Multi-Stage for the same app as we used before. 
 
+```
+ubuntu@ip-172-31-19-178:~/build_stage$ cat Dockerfile 
+# Step 1: Use the official Go image to build the app
+FROM golang:1.22-alpine AS builder
+
+# Define the location where you work inside the container
+WORKDIR /app
+
+# Copy the source code into container
+COPY . .
+
+# Complete GO app
+RUN CGO_ENABLED=0 GOOS=linux go build -o gokaapp .
+
+# Step 2: Create a small size runtime image
+
+FROM alpine:latest
+
+WORKDIR /root/
+
+# Copy the compiled binary from the previous builder stage
+
+COPY --from=builder /app/gokaapp . 
+
+EXPOSE 8080
+
+CMD ["./gokaapp"]
+
+```
+
+Here in the stage one ( ``builder stage`` which uses ``golang:1.22-alpine`` ) you are building the app, this consists of Go compiler, tools, and libraries to turn the source code into a runnable application. Even though its quite huge in size, but this will stays behind. 
+
+Then the ``Runtime Stage`` (alpine:latest) is lightweight linux distrubition ( less than 5 MB) and in this stage we copied the compiled binary ie ``gokaapp`` from the previous step. Now once you actually build the image using this Docker file, the image will not consist of the Go compiler. 
 
 ## Task 3: Push Image to Docker Hub
 
