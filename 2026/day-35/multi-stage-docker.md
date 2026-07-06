@@ -83,7 +83,7 @@ The single stage Dockerfile uses ``golang:1.22-alpine`` image for both building 
 On the contrary: multi-stage divide the whole process into two stages as mentioned above, and specially during the runtime stage it excludes the tools like Go compiler, build tools, source code, temporary build files which is why as a result the final image consist of alpine linux runtime, and Go executable. 
 
 
-## Task 3: Push Image to Docker Hub and Task 4
+## Task 3 and Task 4: Push Image to Docker Hub, Explore Latest Tags, Pull image to the different machine. Verify if works.
 
 Finally push the image to the Docker Hub as you can see in below command, first created the tag for the image ``goimage:latest`` and then in the next command pushed the image to the Docker Hub repository.  
 
@@ -102,7 +102,6 @@ Able to pull the image ``yoginderbagga/my-application:v1.0`` from Docker hub to 
 
 Using the minimal base image like alpine which uses less Linux size in comparison to the Ubuntu or other Linux Distribution. Also, use multi-stage Docker file which divide the Dockerfile to two part first in building stage and second runtime stage which exclude binaries, compiler, source etc. 
 
-## Task 5: What are the best practices to reduce image size
 
 
 
