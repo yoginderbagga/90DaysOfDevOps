@@ -98,7 +98,9 @@ Able to pull the image ``yoginderbagga/my-application:v1.0`` from Docker hub to 
 <img width="1798" height="772" alt="Screenshot 2026-07-06 223208" src="https://github.com/user-attachments/assets/d661bd57-5774-4974-a9ea-b9f36e74f15f" />
 
 
+## Task 5: Best Practice to Reduce Image Size
 
+Using the minimal base image like alpine which uses less Linux size in comparison to the Ubuntu or other Linux Distribution. Also, use multi-stage Docker file which divide the Dockerfile to two part first in building stage and second runtime stage which exclude binaries, compiler, source etc. 
 
 ## Task 5: What are the best practices to reduce image size
 
