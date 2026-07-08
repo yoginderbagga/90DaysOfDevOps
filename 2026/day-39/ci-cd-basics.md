@@ -116,7 +116,7 @@ Job: Test
 - Generate report
 ```
 
-- Step: A single command or an action within the job.
+- Step: A single command or an action within the job. Suppose in your Build job there are several things to be done like ``checkout repository``, ``install go``, ``download dependencies`` and ``compile code`` are examples of the step. 
 - Runner: the machine which execute the job, it can be "A github-hosted Ubuntu VM, Windows, MacOS"
-- Atifact: 
+- Atifact: A file or collection of files that are produced after a workflow run complete and finishes the job and share with other jobs in the same workflow. They are persistence means store the data.
 
