@@ -65,6 +65,9 @@ Gemini :
 
 ## Task 2: CI / CD
 
-#### Continuous Integration:
+#### Continuous Integration: what happens, how often and what it catches.
 
 
+When a software developer frequently merge new code changes (features) into a central repository that process is called Continuous Integration (CI) Each time Vijay merge or integrate a change that triggers a build and some automatic testing to make sure the newly added code doesn't mess up the existing application. 
+
+Continuous Integration(CI) normally happens several times a day, as a developer makes a commit or merge a pull request into the shared respository. Each code automatically triggers a build and testing process. 
