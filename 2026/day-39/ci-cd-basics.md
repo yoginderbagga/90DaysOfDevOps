@@ -48,6 +48,8 @@ Draw a CI/CD pipeline for the below scenario and add at least three stages of th
 
 ## Task 1
 
+#### Below are the explanation in your own words for the above queries: 
+
 1. Since all 5 Developers are pushing code to a same repository this can result in duplicate code added to the production repo. Also, as its directly being deployed to ``production`` environment can create bad experience for the customers if there's a wrong code, feature added.
 2. When an application is build according to a particular environment (say Linux RHEL) with particular architecture in mind and gets tested, deployed for that environment only then it creates a portability issue for the other environment (says Linux Ubuntu, Suse, Windows 11, mac OS) or any other environment. Because it was designed, build without adding the software dependencies or libraries that were supported on other operating system and architecture environment. So if second person execute or run the same app in a different environment then it will not run and give the error message.
 3. If we exclude CI/CD from the picture, then an organization can only deploy a code or change to an existing application only few times(2-3) in a month as the new features gets build by the Development team. 
