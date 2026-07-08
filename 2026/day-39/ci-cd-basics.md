@@ -76,4 +76,11 @@ Continuous Integration catches so many things: for example it catches integratio
 - Sntax issues: Linters catches basic formatting errors.
 - Compile and Build errors: Automatic builds verify that code can be compiled and package properly
 - Functional Testing: It does the Unit & Integration testing to verify individual components and system work as expected.
-- Security Vulnerability: SAST and dependency scans catches security flows in code. 
+- Security Vulnerability: SAST and dependency scans catches security flows in code.
+
+#### Continuous Delivery -- what is the difference in CD and CI? Define "Delivery" in CD?
+
+Continous Integration is the first step done during the pipeline where developers are required to merge the code changes to a codebase repository several times a day. The goal is to catch and resolve the bug early on and prevent any issues during the code integration. 
+
+Continous Delivery(CD) is the after step done when CI is completed, it makes sure integrated code is ready to be deployed in the production environment at the click of a button. Note: Continous Delivery requires a kind of manual approval step before the actual code goes live to the production, whereas "Conitinous Deployment" takes it a step further by automatically pushing the every change that passess the test directly to the production without any human intervention. 
+
