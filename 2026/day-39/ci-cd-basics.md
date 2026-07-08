@@ -92,6 +92,31 @@ Below are the commons parts of a pipeline, lets understand each of them and thei
 - Trigger : These are automatic condition or events that works as a first point of your CI/CD pipeline. There are different types of triggers which starts the jobs:
   - Push: Means whenver a code is pushed to a specific branch immediately start the pipeline
   - Pull Request: Means whenever a PR is created or updated, immediately runs tests, linters or security scans to ensure the code is properly merged.
-  - Scheduled Trigger: Means scheduling a particular trigger 
-- 
+  - Scheduled Trigger: Means scheduling a job on clock basis like ``cronjob``, ``automatic backups``
+  - Manual Trigger: Means a developer has to click "run" in the user interface to start the pipeline.  
+- Stage: Though "GitHub Actions" don't officially use stages, but many CI/CD systems do use it. A stage is logical grouping of the actions ( like "Build", "Deploy", "Test" ) and they run sequentially.
+- Job: A job is list of steps in a workflow that is executed on the same runner(machine). Now the steps can be either a shell script or an action that will be executed. Generally steps runs in order, but you can also run them conccurrently to get the benefit of parallel execution.
+  
+```
+Job: Build
+
+- Checkout code
+- Install Go
+- Download dependencies
+- Build binary
+```
+
+Another job can be: 
+
+```
+Job: Test
+
+- Checkout code
+- Run unit tests
+- Generate report
+```
+
+- Step: A single command or an action within the job.
+- Runner: the machine which execute the job, it can be "A github-hosted Ubuntu VM, Windows, MacOS"
+- Atifact: 
 
