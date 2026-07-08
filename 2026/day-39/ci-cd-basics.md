@@ -62,3 +62,9 @@ Gemini :
    ->Environment difference: different version of Python software 3.8 vs 3.11 which changes how the commands and file paths are handles.
    ->hidden config: local env variable ``.env`` with some secret key that are not present in other machine.
 3. Manual deployment consists of hands-on human interventation ( like moving the files, running the scripts) which sometime cause risks and increase the downtime during the rollback. Hence 1 to 3 times per week are the deployment is done.
+
+## Task 2: CI / CD
+
+#### Continuous Integration:
+
+
