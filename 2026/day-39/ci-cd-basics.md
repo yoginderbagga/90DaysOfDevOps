@@ -52,4 +52,13 @@ Draw a CI/CD pipeline for the below scenario and add at least three stages of th
 
 1. Since all 5 Developers are pushing code to a same repository this can result in duplicate code added to the production repo. Also, as its directly being deployed to ``production`` environment can create bad experience for the customers if there's a wrong code, feature added.
 2. When an application is build according to a particular environment (say Linux RHEL) with particular architecture in mind and gets tested, deployed for that environment only then it creates a portability issue for the other environment (says Linux Ubuntu, Suse, Windows 11, mac OS) or any other environment. Because it was designed, build without adding the software dependencies or libraries that were supported on other operating system and architecture environment. So if second person execute or run the same app in a different environment then it will not run and give the error message.
-3. If we exclude CI/CD from the picture, then an organization can only deploy a code or change to an existing application only few times(2-3) in a month as the new features gets build by the Development team. 
+3. If we exclude CI/CD from the picture, then an organization can only deploy a code or change to an existing application only few times(2-3) in a month as the new features gets build by the Development team.
+
+Gemini :
+
+1. Deploying unreviewed code directly to production branch can cause risks such as: a critical downtime due to untested code or merge conflicts, accidental overrides of live data. No Accountability: directly pushing the code cause missing of "Who and when" changes done. Because without any PR or code review makes rollback difficult.
+2. A commons situation when the software functions correctly in your local environment but fails on other person computer or production environment. It happens because of the code depends on hidden data variable outside the app itself :
+   ->Missing dependencies: your computer might have specifict dependencies, packages, tools which are missing on other.
+   ->Environment difference: different version of Python software 3.8 vs 3.11 which changes how the commands and file paths are handles.
+   ->hidden config: local env variable ``.env`` with some secret key that are not present in other machine.
+3. Manual deployment consists of hands-on human interventation ( like moving the files, running the scripts) which sometime cause risks and increase the downtime during the rollback. Hence 1 to 3 times per week are the deployment is done.
