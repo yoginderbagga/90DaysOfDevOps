@@ -28,7 +28,18 @@ Research and write short notes 3-4 lines along with an example on below:
 - Artifact: its an output or a file/collection of files which you get during a workflow run. When job is completed.
 
   
-## Task 4:
+## Task 4: Draw a Pipeline 
+
+Draw a CI/CD pipeline for the below scenario and add at least three stages of the CI/CD
+
+`` A developer pushes code to Github, the application gets tested, built a Docker image and deploy to a staging server``
 
 
-## Task 5: 
+## Task 5: Experiment with a GitHub project
+
+- Look for any project repo on GitHub (Kubernetes, React, FastAPI -- as per your)
+- Look for ``.github/workflows/`` folder and open a wofkflow YAML file
+- Now describe in your own words:
+    - What triggers the pipeline?
+    - How many jobs are there in the pipeline?
+    - What does it do ( best guess) 
