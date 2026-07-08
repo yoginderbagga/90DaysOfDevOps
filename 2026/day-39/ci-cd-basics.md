@@ -82,5 +82,16 @@ Continuous Integration catches so many things: for example it catches integratio
 
 Continous Integration is the first step done during the pipeline where developers are required to merge the code changes to a codebase repository several times a day. The goal is to catch and resolve the bug early on and prevent any issues during the code integration. 
 
+
 Continous Delivery(CD) is the after step done when CI is completed, it makes sure integrated code is ready to be deployed in the production environment at the click of a button. Note: Continous Delivery requires a kind of manual approval step before the actual code goes live to the production, whereas "Conitinous Deployment" takes it a step further by automatically pushing the every change that passess the test directly to the production without any human intervention. 
+
+## Task 3: Components of a Pipeline
+
+Below are the commons parts of a pipeline, lets understand each of them and their use: 
+
+- Trigger : These are automatic condition or events that works as a first point of your CI/CD pipeline. There are different types of triggers which starts the jobs:
+  - Push: Means whenver a code is pushed to a specific branch immediately start the pipeline
+  - Pull Request: Means whenever a PR is created or updated, immediately runs tests, linters or security scans to ensure the code is properly merged.
+  - Scheduled Trigger: Means scheduling a particular trigger 
+- 
 
