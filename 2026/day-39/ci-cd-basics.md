@@ -120,3 +120,8 @@ Job: Test
 - Runner: the machine which execute the job, it can be "A github-hosted Ubuntu VM, Windows, MacOS"
 - Atifact: A file or collection of files that are produced after a workflow run complete and finishes the job and share with other jobs in the same workflow. They are persistence means store the data.
 
+
+## Task 4 : A GitHub Pipeline Visualization
+
+<img width="429" height="469" alt="image" src="https://github.com/user-attachments/assets/37c63141-46dd-4777-9531-f0f56038d747" />
+
