@@ -71,3 +71,9 @@ Gemini :
 When a software developer frequently merge new code changes (features) into a central repository that process is called Continuous Integration (CI) Each time Vijay merge or integrate a change that triggers a build and some automatic testing to make sure the newly added code doesn't mess up the existing application. 
 
 Continuous Integration(CI) normally happens several times a day, as a developer makes a commit or merge a pull request into the shared respository. Each code automatically triggers a build and testing process. 
+
+Continuous Integration catches so many things: for example it catches integration bugs, merge conflicts, syntax errors or test failures automatically. It ensures that new changes to the conde doesn't conflict with the existing funcionality. 
+- Sntax issues: Linters catches basic formatting errors.
+- Compile and Build errors: Automatic builds verify that code can be compiled and package properly
+- Functional Testing: It does the Unit & Integration testing to verify individual components and system work as expected.
+- Security Vulnerability: SAST and dependency scans catches security flows in code. 
