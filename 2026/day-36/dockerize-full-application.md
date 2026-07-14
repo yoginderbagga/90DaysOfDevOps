@@ -100,7 +100,7 @@ There were many error messages and challenges faced during the deployment of Dev
 
 <img width="1903" height="702" alt="postgres_logs" src="https://github.com/user-attachments/assets/4d482028-2035-46e1-8421-9efc5305fba0" />
 
-3. To fix it, there already exist two SQL schema file which has commands to create the table and insert data into the table. These files are : ``init/postgres/01_schema.sql`` and ``init/postgres/02_seed.sql`` which has script to be run against the container in order to make the table creation successfull. 
+3. To fix it, there already exist two SQL schema file which has commands to create the table and insert data into the table. These files are : ``init/postgres/01_schema.sql`` and ``init/postgres/02_seed.sql`` which has script to be run against the container in order to make the table creation successfull. I assumed that tables were created already for this application but it was not, so the .sql needs to be run which consist of the script. 
 
 ```ubuntu@ip-172-31-22-214:~/devboard/devboard/init/postgres$ ls
 01_schema.sql  02_seed.sql
