@@ -96,6 +96,18 @@ Ensure that you have opened the ports for postgre database and nginx ``5432`` ``
 There were many error messages and challenges faced during the deployment of DevBoard application to EC2 instance with container. Some are as:
 
 1. the first issue was git clone didn't work initially as SSH public key created from the EC2 instance was not copied to the GitHub. Note each time you work on a new machine, server to setup the GitHub first time, the SSH key ( public key) has to be stored on the GitHub first.
-2. 
+2. "internal error" message that keeps coming while adding a new task when the UI was up. After digging further it was observed that the SQL schema file was not added and they need to be added manually. As I checked the database got created, but there was no table existed. So i ran the ``docker logs postgres`` command which showed the below error message:
 
+<img width="1903" height="702" alt="postgres_logs" src="https://github.com/user-attachments/assets/4d482028-2035-46e1-8421-9efc5305fba0" />
 
+3. To fix it, there already exist two SQL schema file which has commands to create the table and insert data into the table. These files are : ``init/postgres/01_schema.sql`` and ``init/postgres/02_seed.sql`` which has script to be run against the container in order to make the table creation successfull. 
+
+```ubuntu@ip-172-31-22-214:~/devboard/devboard/init/postgres$ ls
+01_schema.sql  02_seed.sql
+```
+
+Ran below commands to create the table and insert the data : 
+
+`` docker exec -i postgres psql -U devboard -d devboard < init/postgres/01_schema.sql``
+
+``docker exec -i postgres psql -U devboard -d devboard < init/postgres/02_seed.sql``
