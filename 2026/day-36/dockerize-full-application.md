@@ -87,3 +87,7 @@ docker run -d --name frontend --network devboard-net \
   devboard-frontend
 ```
 
+Ensure that you have opened the ports for postgre database and nginx ``5432`` ``8080`` to allow the application to be accessible. Now you can see the Devboard project is accessible on the port 8080 at my EC2 Instance. 
+
+<img width="1920" height="1080" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/4be63c3b-6db5-412b-a91d-901056244d80" />
+
