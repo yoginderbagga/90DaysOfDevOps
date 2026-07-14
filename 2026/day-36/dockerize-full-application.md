@@ -35,5 +35,29 @@
 
 # Task 2: Write Dockerfile for application
 
+See the screenshot below for the main directories in the Devboard project. There are many more files consist in each of those directory and I intentionally didn't mentioned them so to keep the focus only on Dockerfile, and other main directories. 
+
+<img width="1866" height="86" alt="Screenshot 2026-07-14 234538" src="https://github.com/user-attachments/assets/3835a81c-ee34-4250-bfc8-78e6d42fc483" />
+
+Now as mentioned earlier, the Dockerfile are already created for this project, you just have to build the images for frontend, backend containers and for the postgres you will not be building the image since you just have to pull the database image of postgres. 
+
+First create a common network in order to allow the communication between the containers to take place. And this can only be possible if they all use a common network. 
+
+Step 1) 
+
+``docker network create devboard-network``
+
+Step 2)
+
+Build images:
+
+``docker build -t devboard-frontend ./frontend``
+``docker build -t devboard-backend ./backend``
+
+Step 3) 
+
+Build the postgres database container first as this will be running first. 
+
+
 
 
