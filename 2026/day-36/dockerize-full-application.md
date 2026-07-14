@@ -30,3 +30,10 @@
 
 # Task 1: Pick a Web-App "Dockerboard" 
 
+1. The first step before building any docker application is to ensure Docker is install on your machine. So first connect with EC2 Instance(Ubuntu) and install the docker app which also include configuring its repository. The steps can be easily be found on google. Once the Docker is fully installed you can run ``docker ps`` command to verify its status.
+2. As the Devboard is kept on GitHub repository, you need to fork the repo to your GitHub account and clone its complete code at a directory on Ubuntu OS. (You may have to copy the SSH public key which you created on your EC2 to "GitHub Settings" to allow the SSH access to be happen. Though you use ``git clone git@github.com:yoginderbagga/devboard.git`` command but this uses SSH as a connectivity protocol under the hood. Once the respository is fully cloned, you can move to next step.
+
+# Task 2: Write Dockerfile for application
+
+
+
