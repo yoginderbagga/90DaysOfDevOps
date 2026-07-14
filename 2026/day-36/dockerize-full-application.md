@@ -19,7 +19,7 @@
 ## Task 3: Build the containers for the application and deploy it on EC2 Instance. 
 
 1. Buld the container in sequence starting from ``postgres``, ``backend``, ``frontend`` container.
-2. 
+2. Postgre container image creation is not needed as you will be using the official postgre image and run container from it.
 
 ## Document the Experinece: 
 
@@ -59,5 +59,31 @@ Step 3)
 Build the postgres database container first as this will be running first. 
 
 
+```
+docker run -d --name postgres --network devboard-net \
+  -e POSTGRES_USER=devboard \
+  -e POSTGRES_PASSWORD=devboard \
+  -e POSTGRES_DB=devboard \
+  -v "$PWD/init/postgres":/docker-entrypoint-initdb.d:ro \
+  -p 5432:5432 \
+  postgres:16-alpine
+```
 
+Run the backend container:
+
+```
+docker run -d --name backend --network devboard-net \
+  -e PORT=8080 \
+  -e POSTGRES_URL="postgres://devboard:devboard@postgres:5432/devboard?sslmode=disable" \
+  -p 8081:8080 \
+  devboard-backend
+```
+
+Run the frontend container:
+
+```
+docker run -d --name frontend --network devboard-net \
+  -p 8080:4173 \
+  devboard-frontend
+```
 
