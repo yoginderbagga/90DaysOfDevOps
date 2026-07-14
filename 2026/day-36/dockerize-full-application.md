@@ -91,3 +91,11 @@ Ensure that you have opened the ports for postgre database and nginx ``5432`` ``
 
 <img width="1920" height="1080" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/4be63c3b-6db5-412b-a91d-901056244d80" />
 
+## Learnings & Challenges : 
+
+There were many error messages and challenges faced during the deployment of DevBoard application to EC2 instance with container. Some are as:
+
+1. the first issue was git clone didn't work initially as SSH public key created from the EC2 instance was not copied to the GitHub. Note each time you work on a new machine, server to setup the GitHub first time, the SSH key ( public key) has to be stored on the GitHub first.
+2. 
+
+
