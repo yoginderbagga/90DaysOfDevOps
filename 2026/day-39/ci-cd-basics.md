@@ -35,7 +35,7 @@ Draw a CI/CD pipeline for the below scenario and add at least three stages of th
 `` A developer pushes code to Github, the application gets tested, built a Docker image and deploy to a staging server``
 
 
-## Task 5: Experiment with a GitHub project
+## Task 5: Explore a GitHub Project 
 
 - Look for any project repo on GitHub (Kubernetes, React, FastAPI -- as per your)
 - Look for ``.github/workflows/`` folder and open a wofkflow YAML file
@@ -127,4 +127,7 @@ You can also add another block named as ``deploy`` in which you define the steps
 ## Task 4 : A GitHub Pipeline Visualization
 
 <img width="429" height="469" alt="image" src="https://github.com/user-attachments/assets/37c63141-46dd-4777-9531-f0f56038d747" />
+
+## Task 5 : Explore a GitHub Project 
+
 
