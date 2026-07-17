@@ -130,4 +130,17 @@ You can also add another block named as ``deploy`` in which you define the steps
 
 ## Task 5 : Explore a GitHub Project 
 
+- Look for any project repo on GitHub (Kubernetes, React, FastAPI -- as per your)
+- Look for ``.github/workflows/`` folder and open a wofkflow YAML file
+- Now describe in your own words:
+    - What triggers the pipeline?
+    - How many jobs are there in the pipeline?
+    - What does it do ( best guess)
+ 
+1. For this project I choose the [Google][1] example repository
+
+Check out [Google][1]  
+
+[1]: https://github.com/google-github-actions/example-workflows
+[2]: https://wikipedia.org
 
