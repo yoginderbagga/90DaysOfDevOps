@@ -92,9 +92,14 @@ The Actions Tab shows the Workflow status as green and the it got executed succe
 ## Task 3:
 
 ``on:`` This define the event upon which the job gets executed.   
-``jobs:`` The jobs in a workflow are set of steps or functions that gets executed sequentially. Like in this case ``greet`` is the only job.
-``runs-on:`` This define the platform where the code runs like ``ubuntu-latest``
-``steps:`` Steps consist of sequential tasks which are individual executable actions, like running a command say ``echo`` to print a message or ``uses`` which pulls code from a repo or use any existing repo code. 
+``jobs:`` The jobs in a workflow are set of steps or functions that gets executed sequentially. Like in this case ``greet`` is the only job.  
+
+``runs-on:`` This define the platform where the code runs like ``ubuntu-latest``  
+
+``steps:`` Steps consist of sequential tasks which are individual executable actions, like running a command say ``echo`` to print a message or ``uses`` which pulls code from a repo or use any existing repo code.   
+
 ``uses:`` it uses and run a reusable action or any external workflow within your CICD pipeline. Instead of writing a customer shell scripts to perform complext or repetitive task, you can use pre-build blocks of code. 
 
+``run:`` for running a specific command or script.
 
+``name:`` name of the steps
