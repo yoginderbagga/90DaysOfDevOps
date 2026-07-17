@@ -142,3 +142,13 @@ You can also add another block named as ``deploy`` in which you define the steps
 
 [1]: https://github.com/google-github-actions/example-workflows
 
+3. As you visit the ``.github/workflows/release.yml`` there are several option that describe the workflow of the repository. Start with the ``on`` keyword which value is ``push`` and branch within push is set to ``$default_branch``
+
+```
+on:
+  push:
+    branches:
+      - $default_branch
+```
+
+This means the repository will be triggered automatically when a code is pushed or uploaded to the repository ``default_branch``, in this case it will push only during the default push not any other branch
