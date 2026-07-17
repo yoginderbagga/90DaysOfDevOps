@@ -153,7 +153,10 @@ on:
 
 This means the repository will be triggered automatically when a code is pushed or uploaded to the repository ``default_branch``, in this case it will push only during the default push not any other branch. 
 
-There is only job "deploy" in the ``cloud-deploy-to-cloud-run.yml`` file and 10 steps (or sequential tasks) which all get executed in this job. Like the first step is an action check ``action/checkout@v3` which is basically a checkout action that perform a pre-existing code.  Second step named as ``Google auth`` which uses the action ``Google-github-action/auth@v1`` pre-existing code and it list some values like identity provider, service account for the authentication purpose. 
-Next step inside the job is, ``Setup Cloud SDK`` which again uses an action called ``google-github-actions/setup-gcloud@v1`` with some project id info. The workflow continues with other steps such as ``Docker authentication`` ``Build and push container`` ``Render templatised config manifests`` and ``Create Cloud Deploy Release`` etc. 
+There is only job "deploy" in the ``cloud-deploy-to-cloud-run.yml`` file and 10 steps (or sequential tasks) which all get executed in this job. 
+1. First step is an action check ``action/checkout@v3` which is basically a checkout action that perform a pre-existing code.
+2. Second step named as ``Google auth`` which uses the action ``Google-github-action/auth@v1`` pre-existing code and it list some values like identity provider, service account for the authentication purpose. 
+3. Next step inside the job is "Setup Cloud SDK" which again uses an action called ``google-github-actions/setup-gcloud@v1`` with some project id info.
+4. The workflow continues with other steps such as "Docker authentication" ,  "Build and push container" ,  "Render templatised config manifests" and "Create Cloud Deploy Release" etc. 
 
 
