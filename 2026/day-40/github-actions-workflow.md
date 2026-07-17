@@ -19,3 +19,34 @@ Create a ``.github/workflows/hello.yml`` file which has below workflow:
    2. Print ``Hello from the GitHub Actions World"
   
 Now you can push the code and visit the **Actions** tab on Github to identify it running. 
+
+## Task 3: Understand what happens inside the Workflow
+
+Observe the workflow file and write on your word what each of the component does: 
+
+- ``on:``
+- ``jobs:``
+- ``runs-on:``
+- ``steps:``
+- ``uses:``
+- ``run:``
+- ``name:``
+
+## Task 4: Continue Adding More Steps 
+
+In existing ``hello.yml`` file, continue to add more steps and modify the workflows.
+
+1. Print the date and time
+2. Print the name of the branch that has triggered the run
+3. List the files in repository
+4. Print the runner's operating system
+
+Now push this again and observe the running pipeline
+
+## Task 5: Destory the Pipeline On Purpose
+
+1. Add a steps which execute a command to **fail** (for example: ``exit 1`` or any thing mispelled)
+2. Push the change to this pipeline and observe in Actions tab
+3. Fix the pipeline and push again
+
+What did you observe with the failed pipeline? How did you find and read the error message in pipeline? Write in your own words. 
