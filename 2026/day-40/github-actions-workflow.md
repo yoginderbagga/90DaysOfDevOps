@@ -85,4 +85,9 @@ jobs:
         run: echo "Hello from the GitHub actions!"
 ```
 
+<img width="1896" height="666" alt="Screenshot 2026-07-18 014201" src="https://github.com/user-attachments/assets/4bba765d-099a-41fd-a894-9b8f10042894" />
+
+Actions Tab the Workflow status as green and the it got executed successfully with only a warning message that's due to "Node 20 is being depreciated as the current workflow is running with Node 24". If you look at the step functions inside the jobs, the first step function which is ``checkout your repository for any code`` has a line with ``uses`` which basically help is getting a repository in this case to run a bundled or sophisticated program or script. The step function is ``print a greeting message`` that run a command to echo "Hello from the GitHub action!`` message. 
+
+
 
