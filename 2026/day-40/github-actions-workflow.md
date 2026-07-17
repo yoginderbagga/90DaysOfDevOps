@@ -155,4 +155,5 @@ Above image shows the pipeline failure inside the step function "Print a greetin
 
 Eventually, corrected the spelling of step function to observe the status. 
 
+<img width="1871" height="838" alt="Screenshot 2026-07-18 031224" src="https://github.com/user-attachments/assets/d2fa32a5-d870-4fea-8245-fc0200e81543" />
 
