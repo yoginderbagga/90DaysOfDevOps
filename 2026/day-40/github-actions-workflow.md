@@ -103,3 +103,47 @@ The Actions Tab shows the Workflow status as green and the it got executed succe
 ``run:`` for running a specific command or script.
 
 ``name:`` name of the steps
+
+## Task 4: 
+
+Updated ``hello.yml`` with additional steps added to print the ``current date``, ``print current branch``, ``list the files``, ``print the runner OS``. 
+
+Below is the updated ``hello.yml`` file: 
+
+```
+name: Hello WorkFlow
+
+
+# Mention what events trigger the WorkFlow for the Pipeline
+
+on:
+  push: 
+    branches: ["main"]
+
+jobs:
+# Mention the job named as "greet"
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout your repository for any code
+        uses: actions/checkout@v4
+    
+      - name: Print a greeting message
+        run: echo "Hello from the GitHub actions!"
+
+      - name: Print date 
+        run : echo "the date is :" $(date)
+
+      - name: Print the current branch name
+        run : echo "Branch name is " $(git branch --show-current)
+
+      - name: List the files
+        run: echo "Total files are :" $(ls -l)
+
+      - name: Runner OS Info
+        run: echo "Runner OS is :" $( cat /etc/os-release)
+```
+
+
+
