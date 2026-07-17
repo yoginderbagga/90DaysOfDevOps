@@ -145,5 +145,14 @@ jobs:
         run: echo "Runner OS is :" $( cat /etc/os-release)
 ```
 
+## Task 5:
+
+I purposely mispelled the one of the echo command to  ``ech`` instead of ``echo`` which resulted in workflow failure with below error message. 
+
+<img width="1872" height="818" alt="Screenshot 2026-07-18 030411" src="https://github.com/user-attachments/assets/e4815bb7-f7ec-4ce6-8b81-09438fd5dffd" />
+
+Above image shows the pipeline failure inside the step function "Print a greeting message" ; and the workflow stopped after that and didn't print remaining steps like date, branch name, files and Runner OS. 
+
+Eventually, corrected the spelling of step function to observe the status. 
 
 
