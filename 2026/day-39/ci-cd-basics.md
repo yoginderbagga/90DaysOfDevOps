@@ -137,10 +137,8 @@ You can also add another block named as ``deploy`` in which you define the steps
     - How many jobs are there in the pipeline?
     - What does it do ( best guess)
  
-1. For this project I choose the [Google][1] example repository
-
-Check out [Google][1]  
+1. For this project I choose the [Google][1] example repository.
+2. GitHub workflow is a automated process which is defined by the YAML instruction in the directory ``.github/workflows/release.yml`` wherein release.yml is YAML file. 
 
 [1]: https://github.com/google-github-actions/example-workflows
-[2]: https://wikipedia.org
 
