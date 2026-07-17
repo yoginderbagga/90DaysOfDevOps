@@ -50,3 +50,10 @@ Now push this again and observe the running pipeline
 3. Fix the pipeline and push again
 
 What did you observe with the failed pipeline? How did you find and read the error message in pipeline? Write in your own words. 
+
+
+## Task 1:
+
+
+
+
