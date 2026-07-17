@@ -54,6 +54,35 @@ What did you observe with the failed pipeline? How did you find and read the err
 
 ## Task 1:
 
+A public repository with the name ``github-actions-practice`` created and was cloned it successfully. Also, setup a directory ``.github/workflows`` inside the repo.
 
+## Task 2:
+
+Setup a ``hello.yml`` which consist of above instructions to perform, below is the workflow file ``hellp.yml`` code
+
+
+```
+yoginderbagga@fedora:~/github-actions-practice/github-actions-practice/.github/workflows$ cat hello.yml 
+name: Hello WorkFlow
+
+
+# Mention what events trigger the WorkFlow for the Pipeline
+
+on:
+  push: 
+    branches: ["main"]
+
+jobs:
+# Mention the job named as "greet"
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout your repository for any code
+        uses: actions/checkout@v4
+    
+      - name: Print a greeting message
+        run: echo "Hello from the GitHub actions!"
+```
 
 
