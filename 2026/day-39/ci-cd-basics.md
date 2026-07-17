@@ -96,7 +96,8 @@ Below are the commons parts of a pipeline, lets understand each of them and thei
   - Manual Trigger: Means a developer has to click "run" in the user interface to start the pipeline.  
 - Stage: Though "GitHub Actions" don't officially use stages, but many CI/CD systems do use it. A stage is logical grouping of the actions ( like "Build", "Deploy", "Test" ) and they run sequentially.
 - Job: A job is list of steps in a workflow that is executed on the same runner(machine). Now the steps can be either a shell script or an action that will be executed. Generally steps runs in order, but you can also run them conccurrently to get the benefit of parallel execution.
-  
+
+Example of ``Build Job`` :
 ```
 Job: Build
 
@@ -106,7 +107,7 @@ Job: Build
 - Build binary
 ```
 
-Another job can be: 
+Example of ``Test Job`` : 
 
 ```
 Job: Test
@@ -115,6 +116,8 @@ Job: Test
 - Run unit tests
 - Generate report
 ```
+
+You can also add another block named as ``deploy`` in which you define the steps for deploy the app. 
 
 - Step: A single command or an action within the job. Suppose in your Build job there are several things to be done like ``checkout repository``, ``install go``, ``download dependencies`` and ``compile code`` are examples of the step. 
 - Runner: the machine which execute the job, it can be "A github-hosted Ubuntu VM, Windows, MacOS"
