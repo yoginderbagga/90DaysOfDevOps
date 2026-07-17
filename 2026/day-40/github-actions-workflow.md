@@ -87,7 +87,14 @@ jobs:
 
 <img width="1896" height="666" alt="Screenshot 2026-07-18 014201" src="https://github.com/user-attachments/assets/4bba765d-099a-41fd-a894-9b8f10042894" />
 
-Actions Tab the Workflow status as green and the it got executed successfully with only a warning message that's due to "Node 20 is being depreciated as the current workflow is running with Node 24". If you look at the step functions inside the jobs, the first step function which is ``checkout your repository for any code`` has a line with ``uses`` which basically help is getting a repository in this case to run a bundled or sophisticated program or script. The step function is ``print a greeting message`` that run a command to echo "Hello from the GitHub action!`` message. 
+The Actions Tab shows the Workflow status as green and the it got executed successfully with only a warning message that's due to "Node 20 is being depreciated as the current workflow is running with Node 24". If you look at the step functions inside the jobs, the first step function which is ``checkout your repository for any code`` has a line with ``uses`` which basically help is getting a repository in this case to run a bundled or sophisticated program or script. The step function is ``print a greeting message`` that run a command to echo "Hello from the GitHub action!`` message. 
 
+## Task 3:
+
+``on:`` This define the event upon which the job gets executed.   
+``jobs:`` The jobs in a workflow are set of steps or functions that gets executed sequentially. Like in this case ``greet`` is the only job.
+``runs-on:`` This define the platform where the code runs like ``ubuntu-latest``
+``steps:`` Steps consist of sequential tasks which are individual executable actions, like running a command say ``echo`` to print a message or ``uses`` which pulls code from a repo or use any existing repo code. 
+``uses:`` it uses and run a reusable action or any external workflow within your CICD pipeline. Instead of writing a customer shell scripts to perform complext or repetitive task, you can use pre-build blocks of code. 
 
 
