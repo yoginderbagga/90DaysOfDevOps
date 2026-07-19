@@ -27,4 +27,11 @@ Verify: Does it show up on the PR page?
 
 ## Task 4: Matrix Builds
 
+Create ``.github/workflows/matrix.yml`` that : 
 
+1. Uses a matrix strategy to run the same job across:
+   1. Python version: ``3.10``, ``3.11``, ``3.12``
+2. Each job installs Python and prints the version
+3. Watch all 3 run in parallel
+
+## Task 5: Exclude & Fail-Fast
