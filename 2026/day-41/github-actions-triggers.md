@@ -35,3 +35,7 @@ Create ``.github/workflows/matrix.yml`` that :
 3. Watch all 3 run in parallel
 
 ## Task 5: Exclude & Fail-Fast
+
+1. In your matrix, exclude one specific combinations (e.g. Python 3.10 on Windows)
+2. Set ``fail-fast: false`` -- trigger a failure in one job and what happens to the rest
+3. Write in your notes; What exactly is ``fail-fast: true`` (the default) do vs ``false``? 
