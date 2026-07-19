@@ -9,3 +9,22 @@ In this session you will learn various methods to trigger a workflow in GitHub a
 3. Add a step that prints: ``PR check running for branch: <branch name>``
 4. Now create a new branch, push a commit, and opened a PR
 5. Oberserve the workflow run automatically.
+
+Verify: Does it show up on the PR page? 
+
+## Task 2: Scheduled Trigger 
+
+1. Add a ``schedule:`` trigger to any workflow using cron syntax
+2. Set it to run every day at midnight UTC
+3. Write in your words, what is the cron command for every Monday at 9 AM?
+
+## Task 3: Manual Trigger
+
+1. Create a ``.github/workflows/manual.yml`` with a ``workflow_dispatch:`` trigger
+2. Add an input that asks for an ``environment`` name (staging/production)
+3. Print the input value in a step
+4. Go to Action Tab --> Run workflow
+
+## Task 4: Matrix Builds
+
+
