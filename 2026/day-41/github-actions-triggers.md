@@ -38,4 +38,11 @@ Create ``.github/workflows/matrix.yml`` that :
 
 1. In your matrix, exclude one specific combinations (e.g. Python 3.10 on Windows)
 2. Set ``fail-fast: false`` -- trigger a failure in one job and what happens to the rest
-3. Write in your notes; What exactly is ``fail-fast: true`` (the default) do vs ``false``? 
+3. Write in your notes; What exactly is ``fail-fast: true`` (the default) do vs ``false``?
+
+
+## Task 1: 
+
+Suppose you need to run the pipeline automatically upon submitting a ``pull request`` to the repository then you use this concept with the command ``on: pull_request`` to trigger it in the workflow configuration. 
+
+
