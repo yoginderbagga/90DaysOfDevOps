@@ -49,7 +49,10 @@ jobs:
         run: docker run -d -p 80:80 --name simple-app-container simple-app-image
 ```
 
-The ``feature`` branch was not created initially so I added it for this test, and pushed the feature to the repository. Below are the steps to create the ``feature`` branch and next screenshot I made a change to the ``index.js`` file and pushed them to the ``feature`` branch``
+The ``feature`` branch was not created initially so I added it for this test, and pushed the feature to the repository. Below are the steps to create the ``feature`` branch and next screenshot I made a change to the ``index.js`` file and pushed them to the ``feature`` branch``. 
+
+** Note I had used the self-hosted runner for this example, but this can be done in Ubuntu-Latest runner too. A self-hosted runner machine is something that you manage, maintain from your GitHub Actions workflow. Unlike GitHub-hosted runner which are ephermal virtual machine provided by the GitHub. A self-hosted runner depends completely on your operating system, cloud or any on-premise server of your choice **
+
 
 ```
 ubuntu@ip-172-31-23-96:~/My-First-CD-Project$ git checkout -b feature
