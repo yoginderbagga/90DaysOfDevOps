@@ -74,12 +74,25 @@ branch 'feature' set up to track 'origin/feature'.
 
 <img width="1552" height="642" alt="image" src="https://github.com/user-attachments/assets/1b95d837-f604-484a-9715-aa8cd7220444" />
 
+
 You run the self-hosted runner with ``./run.sh`` shell script which is installed as you setup the self-hosted runner packages to your laptop/cloud. For more details on that you check GitHub documentation on setting up self-hosted runner. 
 
+
 <img width="1890" height="292" alt="image" src="https://github.com/user-attachments/assets/02a25c25-a11f-47b5-9755-5b1a31856ca1" />
+
+
+Final results : 
+
+In below picture the line that says "Second update from the feature" is the final update of this project which was added from feature branch. 
+
+<img width="1456" height="540" alt="image" src="https://github.com/user-attachments/assets/27006bdd-a324-4a93-b410-3f3d7ba58a5d" />
 
 
 
 ## Learning & Observations
 
-1. Initially I had pushed the feature branch changes to the ``main`` branch mistakenly, since its a seprate branch the changes should come from the ``feature`` only and once its pushed to that. Later is your decision whether you would like to merge it to the main branch or not. Ofcourse, you do merge it when you test the feature branch changes are successfully working. 
+1. Initially I had pushed the feature branch changes to the ``main`` branch mistakenly, since its a seprate branch the changes should come from the ``feature`` only and once its pushed to that. Later is your decision whether you would like to merge it to the main branch or not. Ofcourse, you do merge it when you test the feature branch changes are successfully working.
+2. A feature branch or any other branch that you create on project doesn't create any separate directory or the files, its more a pointer of the existing branch. Initially, i had thought a feature branch created has a seprate file but instead its a pointer to the same repository files and whichever changes you make to feature will be only visible to you. And to merge the change in main branch, you create a Pull Request (PR) that needs to be later approved.
+3. Creating a feature branch is not enough and you have to manually approve it after creating a PR. 
+
+
