@@ -100,5 +100,8 @@ In below picture the line that says "Second update from the feature" is the fina
 <img width="1697" height="100" alt="image" src="https://github.com/user-attachments/assets/1edaf1a9-c9e0-4bb4-a5c7-38a426f85016" />
 
 
+( Note: Later I re-branded the CI-CD page and then added a new footer section from the feature branch which again gets deployed via the GitHub WorkFlow that runs on "Self-Hosted" runner"; below is the latest output ) 
+
+<img width="1916" height="1017" alt="image" src="https://github.com/user-attachments/assets/6737dc3a-1bc1-4f99-9479-76610a45016b" />
 
 
