@@ -45,4 +45,6 @@ Create ``.github/workflows/matrix.yml`` that :
 
 Suppose you need to run the pipeline automatically upon submitting a ``pull request`` to the repository then you use this concept with the command ``on: pull_request`` to trigger it in the workflow configuration. 
 
+Note -- Task 1 is completed in a different file, go here [1] to check its completion.
 
+[1] https://github.com/yoginderbagga/90DaysOfDevOps/blob/master/2026/day-41/triggers-on-branch-self-hosted-runner.md
