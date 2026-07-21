@@ -93,6 +93,12 @@ In below picture the line that says "Second update from the feature" is the fina
 
 1. Initially I had pushed the feature branch changes to the ``main`` branch mistakenly, since its a seprate branch the changes should come from the ``feature`` only and once its pushed to that. Later is your decision whether you would like to merge it to the main branch or not. Ofcourse, you do merge it when you test the feature branch changes are successfully working.
 2. A feature branch or any other branch that you create on project doesn't create any separate directory or the files, its more a pointer of the existing branch. Initially, i had thought a feature branch created has a seprate file but instead its a pointer to the same repository files and whichever changes you make to feature will be only visible to you. And to merge the change in main branch, you create a Pull Request (PR) that needs to be later approved.
-3. Creating a feature branch is not enough and you have to manually approve it after creating a PR. 
+3. Creating a feature branch is not enough and you have to manually approve it after creating a PR.
+4. Changing the runner to ``self-hosted`` is not enough, as self-hosted runner execute from your machine, you need to install the package, and setup properly to make it run.
+5. Another mistake -- initially while running the pipeline code, I had created the container and run it manually from the terminal. This should not happen as the purpose of the pipeline is pull the latest code from the GitHub repo, build the docker image, clean the old version of the docker so port 80 is free and then start a fresh container with the name ``simple-app-container``
+
+<img width="1697" height="100" alt="image" src="https://github.com/user-attachments/assets/1edaf1a9-c9e0-4bb4-a5c7-38a426f85016" />
+
+
 
 
