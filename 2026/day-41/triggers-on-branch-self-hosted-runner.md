@@ -54,6 +54,7 @@ The ``feature`` branch was not created initially so I added it for this test, an
 ** Note I had used the self-hosted runner for this example, but this can be done in Ubuntu-Latest runner too. A self-hosted runner machine is something that you manage, maintain from your GitHub Actions workflow. Unlike GitHub-hosted runner which are ephermal virtual machine provided by the GitHub. A self-hosted runner depends completely on your operating system, cloud or any on-premise server of your choice **
 
 
+
 ```
 ubuntu@ip-172-31-23-96:~/My-First-CD-Project$ git checkout -b feature
 Switched to a new branch 'feature'
@@ -72,6 +73,11 @@ branch 'feature' set up to track 'origin/feature'.
 ```
 
 <img width="1552" height="642" alt="image" src="https://github.com/user-attachments/assets/1b95d837-f604-484a-9715-aa8cd7220444" />
+
+You run the self-hosted runner with ``./run.sh`` shell script which is installed as you setup the self-hosted runner packages to your laptop/cloud. For more details on that you check GitHub documentation on setting up self-hosted runner. 
+
+<img width="1890" height="292" alt="image" src="https://github.com/user-attachments/assets/02a25c25-a11f-47b5-9755-5b1a31856ca1" />
+
 
 
 ## Learning & Observations
