@@ -9,7 +9,7 @@ on:
       - feature
 ```
 
-We are using the existing repository [1] for this project. It already has a workflow file created inside ``.github/workflows/deploy.yml``; we only need to make the above changes to make it go run while PR request gets created. There were few challenges and observation from this learning which are listed at the end.  
+We are using the existing repository [1] for this project. It already has a workflow file created inside ``.github/workflows/deploy.yml``; we only need to make the above changes to make it go run while PR request gets created. There were few challenges and observation from this learning which are listed at the end. 
 
 [1] https://github.com/yoginderbagga/My-First-CD-Project
 
@@ -49,3 +49,28 @@ jobs:
         run: docker run -d -p 80:80 --name simple-app-container simple-app-image
 ```
 
+The ``feature`` branch was not created initially so I added it for this test, and pushed the feature to the repository. Below are the steps to create the ``feature`` branch and next screenshot I made a change to the ``index.js`` file and pushed them to the ``feature`` branch``
+
+```
+ubuntu@ip-172-31-23-96:~/My-First-CD-Project$ git checkout -b feature
+Switched to a new branch 'feature'
+ubuntu@ip-172-31-23-96:~/My-First-CD-Project$ git branch 
+* feature
+  main
+ubuntu@ip-172-31-23-96:~/My-First-CD-Project$ git push -u origin feature 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/yoginderbagga/My-First-CD-Project/pull/new/feature
+remote: 
+To github.com:yoginderbagga/My-First-CD-Project.git
+ * [new branch]      feature -> feature
+branch 'feature' set up to track 'origin/feature'.
+```
+
+<img width="1552" height="642" alt="image" src="https://github.com/user-attachments/assets/1b95d837-f604-484a-9715-aa8cd7220444" />
+
+
+## Learning & Observations
+
+1. Initially I had pushed the feature branch changes to the ``main`` branch mistakenly, since its a seprate branch the changes should come from the ``feature`` only and once its pushed to that. Later is your decision whether you would like to merge it to the main branch or not. Ofcourse, you do merge it when you test the feature branch changes are successfully working. 
