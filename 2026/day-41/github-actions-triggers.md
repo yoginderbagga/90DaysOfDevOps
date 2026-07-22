@@ -48,3 +48,19 @@ Suppose you need to run the pipeline automatically upon submitting a ``pull requ
 Note -- Task 1 is completed in a different file, go here [1] to check its completion.
 
 [1] https://github.com/yoginderbagga/90DaysOfDevOps/blob/master/2026/day-41/triggers-on-branch-self-hosted-runner.md
+
+## Task 2: 
+
+Schedule Trigger : 
+
+The purpose of schedule trigger is to execute / run the pipeline at a schedule time decided by you. Suppose you want to upload an Episode of Netflix series at 8:00 PM from Monday to Friday for the complete three months. You can create a schedule trigger for that with a cronjob that does the task of automatic execution. 
+
+```
+on:
+   schedule:
+      # runs at 8:00 PM IST each day
+      - cron: '0 8 * * *
+jobs:
+   banao:
+      runs-on: ubuntu-latest
+```
