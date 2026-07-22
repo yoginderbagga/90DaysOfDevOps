@@ -53,7 +53,7 @@ Note -- Task 1 is completed in a different file, go here [1] to check its comple
 
 Schedule Trigger : 
 
-The purpose of schedule trigger is to execute / run the pipeline at a schedule time decided by you. Suppose you want to upload an Episode of Netflix series at 8:00 PM from Monday to Friday for the complete three months. You can create a schedule trigger for that with a cronjob that does the task of automatic execution. 
+The purpose of schedule trigger is to execute the pipeline at a schedule time decided by you. Suppose you want to upload an Episode of Netflix series at 8:00 PM from Monday to Friday for the complete three months. You can create a schedule trigger for that with a cronjob that does the task of automatic execution. 
 
 ```
 on:
