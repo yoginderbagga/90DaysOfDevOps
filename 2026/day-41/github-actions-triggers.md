@@ -64,3 +64,11 @@ jobs:
    banao:
       runs-on: ubuntu-latest
 ```
+
+
+## Task 3:
+
+## Task 4: Matrix Build
+
+In your GitHub actions workflow, suppose you need to run a job with multiple configurations says : different operating systems, programming language version, environments or any other combinations of factors, there you can use Matrix strategy. Which allows you to run a single job several times with all the above combinations. A perfect approach to test the application code against different environment or dependencies versions. 
+
