@@ -31,4 +31,4 @@ jobs:
    - runner's hostname
    - current user running the job
 
-3. Observe all thr three jobs running in parallel.
+3. Observe all thr three jobs running in parallel and write in your words about what you understood? Who is managing these jobs?
