@@ -18,3 +18,17 @@ Self-Hosted Runners provide you more control over the operating system, tools yo
 jobs:
   runs-on: self-hosted
 ```
+
+# Task 1: Setup a GitHub-Hosted Runner 
+
+1. Create a GitHub Actions Pipeline with 3 jobs that are running on different OS:
+   - ``ubuntu-latest``
+   - ``windows-latest``
+   - ``macos-latest``
+  
+2. Each of the job does below :
+   - print OS
+   - runner's hostname
+   - current user running the job
+
+3. Observe all thr three jobs running in parallel.
