@@ -32,3 +32,57 @@ jobs:
    - current user running the job
 
 3. Observe all thr three jobs running in parallel and write in your words about what you understood? Who is managing these jobs?
+
+Below is the matrix build strategy which runs a job across three different Operating System with the node.js version installation, and run the code, also display the operating system version, image for all the operating system that is being used on the runner machine. 
+
+```
+yoginderbagga@fedora:~/github-actions-matrix-strategy.md$ cat .github/workflows/matrix.yml 
+# Goal: Create a job to run on multiple OS ( Ubuntu and Windows Github runner) environment
+
+name: Cross Operating System Matrix Demonstration
+
+# first define the trigger section like push, pull request, schedule etc
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+    
+# second define the jobs you want to run
+jobs:
+  test-application:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+# NEW STEP: Prints the active OS version and image version
+
+      - name: Display Runner OS Version Details
+        shell: bash
+        run: |
+          echo "======================================================"
+          echo "Matrix OS Label: ${{ matrix.os }}"
+          echo "Operating System Image: $ImageOS"
+          echo "Exact Image Build Version: $ImageVersion"
+          echo "======================================================" 
+
+      - name: Setup a Node.js 
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+
+      - name: Install and Run the app  
+        run: |
+          npm install
+          npm test
+
+```
+
+<img width="1890" height="875" alt="image" src="https://github.com/user-attachments/assets/84bcc94b-b37a-455d-bdb6-940f31e7e5bb" />
+
