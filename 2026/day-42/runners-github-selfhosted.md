@@ -83,6 +83,30 @@ jobs:
           npm test
 
 ```
+```
+yoginderbagga@fedora:~/github-actions-matrix-strategy.md$ ls
+package.json  README.md  test
+yoginderbagga@fedora:~/github-actions-matrix-strategy.md$ cat package.json 
+{
+  "name": "matrix-test-app",
+  "version": "1.0.0",
+  "description": "Simple app to test GitHub Actions matrix",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo '✅ All tests passed successfully on this OS!'"
+  },
+  "dependencies": {}
+}
+```
+
+### Matrix Build Output : [ubuntu-os, window-os, mac-os]
 
 <img width="1890" height="875" alt="image" src="https://github.com/user-attachments/assets/84bcc94b-b37a-455d-bdb6-940f31e7e5bb" />
 
+
+
+
+
+# Learning & Observation 
+
+1. For Task 1, initially the pipeline didn't run as the package.json file was not included and it was needed in order to execute any node.js based application. This file reside in project root directory, hence i created on and put it there. 
