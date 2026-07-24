@@ -8,4 +8,6 @@ Create a workflow file ``.github/workflows/multi-job.yml`` with three jobs that 
 - ``test`` -- and prints a message ``Running the tests"
 - ``deploy`` -- and prints a message ``Deploying the apps``
 
+Also, make sure to run ``test`` job only after ``builds`` succeeds. And ``deploy`` runs only after ``test`` succeeds. 
+
   
