@@ -81,3 +81,14 @@ Job output passing between the jobs is used to share dynamically generated data 
 To look at the complete repository code click here [1] [1] https://github.com/yoginderbagga/multi-job-github-actions
 
 The date was retrieved in the ``build`` job using the "Outputs" and then passed to another job ``test``
+
+# Task 4: Conditional Statement in Workflow
+
+# Task 5: Linting
+
+Before implementing linting in GitHub actions. Lets understand what exactly linting is?
+Linting is the automated process in your CI/CD Pipeline to analyze the source code and catch programmatic errors, bugs, stylistic flaws, and anti-patterns before you actually build the code or execute it.
+
+<img width="1866" height="962" alt="image" src="https://github.com/user-attachments/assets/686c23cc-2996-4ec6-beba-9269391e2b2f" />
+
+
