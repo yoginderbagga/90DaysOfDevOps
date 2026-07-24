@@ -64,3 +64,12 @@ jobs:
         run: echo "Deploy applications..."
 yoginderbagga@fedora:~/multi-job-github-actions$
 ```
+
+# Task 2: Environment Variables
+
+In this task, we use environment variables at all 2 level ``Workflow Level``, ``Job Level`` and ``Step Level`` to print the details of variable respective at their scope. 
+
+Also used GitHub context variable which is a structurally organized collection of information about the workflow, variables, runner env, secrets and events that triggered them. 
+
+To look at the complete repository code click here [1]
+[1] https://github.com/yoginderbagga/multi-job-github-actions
