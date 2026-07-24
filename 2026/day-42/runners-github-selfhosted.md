@@ -112,6 +112,9 @@ Below you can see several application packages comes pre-installed including ``n
 
 # Task 3: Set Up a Self-Hosted Runner
 
+This was already cover in the previous day task to host a self-hosted runner on my Linux Fedora machine. 
+
+# Task 4: Using the Self-Hosted Runner
 
 # Learning & Observation 
 
