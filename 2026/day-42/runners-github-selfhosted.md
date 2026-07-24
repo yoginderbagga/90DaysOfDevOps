@@ -116,6 +116,10 @@ This was already cover in the previous day task to host a self-hosted runner on 
 
 # Task 4: Using the Self-Hosted Runner
 
+# Task 5: Label
+
+1. Add Label to an ( Self-hosted Runner ) 
+
 # Learning & Observation 
 
 1. For Task 1, initially the pipeline didn't run as the package.json file was not included and it was needed in order to execute any node.js based application. This file reside in project root directory, hence i created on and put it there. 
