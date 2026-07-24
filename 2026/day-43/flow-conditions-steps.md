@@ -10,4 +10,4 @@ Create a workflow file ``.github/workflows/multi-job.yml`` with three jobs that 
 
 Also, make sure to run ``test`` job only after ``builds`` succeeds. And ``deploy`` runs only after ``test`` succeeds. 
 
-  
+**Verify** : Observe the results at Action tab to see if the dependency chain works?
