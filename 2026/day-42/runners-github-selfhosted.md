@@ -118,7 +118,7 @@ This was already cover in the previous day task to host a self-hosted runner on 
 
 # Task 5: Label
 
-1. Add Label to an ( Self-hosted Runner ) 
+1. Add Label to an ( Self-hosted Runner ) : Remember that a label can only be assign to the Self-hosted runner and not to the GitHub-Hosted runner.
 
 # Learning & Observation 
 
