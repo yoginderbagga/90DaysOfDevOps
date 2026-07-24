@@ -106,10 +106,11 @@ yoginderbagga@fedora:~/github-actions-matrix-strategy.md$ cat package.json
 
 # Task 2: Explore Pre-installed Packages
 
-Below you can see several application packages comes pre-installed including ``node``, ``python``, ``docker`` and ``git`` ; so i added an echo variable to display their version info.
+Below you can see several application packages comes pre-installed including ``node``, ``python``, ``docker`` and ``git`` ; so i added an echo variable to display their version info. According to GitHub documentation some apps (runtime environment) that comes pre-installed are : Python, Node, Java, PHP, Go Ruby and .NET Core SDK.
 
 <img width="1862" height="752" alt="image" src="https://github.com/user-attachments/assets/f79d3cbc-c8e7-4432-8e8b-f6ea24ffeb53" />
 
+# Task 3: Set Up a Self-Hosted Runner
 
 
 # Learning & Observation 
