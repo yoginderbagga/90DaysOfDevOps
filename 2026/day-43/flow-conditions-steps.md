@@ -1,1 +1,1 @@
-
+In this session you will learn about controlling the flow of the pipeline, how to build jobs in a workflow, how to pass data between multiple jobs, environment variable and also using the conditional statements to execute the pipeline. 
