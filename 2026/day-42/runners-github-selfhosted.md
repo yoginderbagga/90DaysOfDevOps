@@ -104,6 +104,9 @@ yoginderbagga@fedora:~/github-actions-matrix-strategy.md$ cat package.json
 <img width="1890" height="875" alt="image" src="https://github.com/user-attachments/assets/84bcc94b-b37a-455d-bdb6-940f31e7e5bb" />
 
 
+# Task 2: Explore Pre-installed Packages
+
+
 
 
 
