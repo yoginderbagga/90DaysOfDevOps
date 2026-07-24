@@ -87,7 +87,7 @@ The date was retrieved in the ``build`` job using the "Outputs" and then passed 
 # Task 5: Linting
 
 Before implementing linting in GitHub actions. Lets understand what exactly linting is?
-Linting is the automated process in your CI/CD Pipeline to analyze the source code and catch programmatic errors, bugs, stylistic flaws, and anti-patterns before you actually build the code or execute it.
+Linting is the automated process in your CI/CD Pipeline to analyze the source code and catch programmatic errors, bugs, stylistic flaws, and anti-patterns before you actually build the code or execute it. The flow in below code is different than the task mentioned in the TWS, as i ran the ``build``, ``lint`` in parallel and and ``test`` only waits for the ``build`` to be completed first. Remember, here ``test`` job doesn't depends on the ``lint`` job. This can be different in the proudction environment, as here I have done this for learning purpose so the flow totally depends on how you want to build the workflow.
 
 <img width="1866" height="962" alt="image" src="https://github.com/user-attachments/assets/686c23cc-2996-4ec6-beba-9269391e2b2f" />
 
