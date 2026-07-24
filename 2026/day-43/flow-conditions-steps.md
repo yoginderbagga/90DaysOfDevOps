@@ -77,3 +77,7 @@ To look at the complete repository code click here [1]
 # Task 3: Job Output
 
 Job output passing between the jobs is used to share dynamically generated data or the config values across the isolated runner environment. As you know, both jobs runns on a seprate isolated virtual machine, and they can not by default share the the memory or files. Hence using ``Outputs`` you can bridge this gap.
+
+To look at the complete repository code click here [1] [1] https://github.com/yoginderbagga/multi-job-github-actions
+
+The date was retrieved in the ``build`` job using the "Outputs" and then passed to another job ``test``
