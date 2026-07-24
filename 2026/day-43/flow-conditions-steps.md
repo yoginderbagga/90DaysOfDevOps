@@ -12,7 +12,7 @@ Also, make sure to run ``test`` job only after ``builds`` succeeds. And ``deploy
 
 **Verify** : Observe the results at Action tab to see if the dependency chain works?
 
-A multi-job workflow is created below with three different jobs as mentioned above, and as you can see from the image ``build`` runs first, ``test`` runs second and ``deploy`` run finally. All the three jobs are define inside the ``jobs`` section a keyword **need** is used in test job and deploy job for creating the dependencies respectively. 
+A multi-job workflow is created below with three different jobs as mentioned above, and as you can see from the image ``build`` runs first, ``test`` runs second and ``deploy`` run finally. All the three jobs are define inside the ``jobs`` section a keyword **needs** is used in test job and deploy job for creating the dependencies respectively. 
 
 <img width="1245" height="867" alt="Screenshot 2026-07-24 223548" src="https://github.com/user-attachments/assets/a25c3d02-5e53-4b61-ada5-99f089c95846" />
 
