@@ -23,5 +23,6 @@ As I created the above workflow, i noticed that the secret ``BIG_SECRET_INFO`` v
 
 ## Task 2: Using the Secrets as the Environment Variable
 
-
-
+1. Use the Secret Variable info at the Env Variable time.
+2. Do not hardcode it and instead use it at shell command.
+3. Add the ``DOCKER_USERNAME`` and ``DOCKER_TOKEN`` as the secrets
