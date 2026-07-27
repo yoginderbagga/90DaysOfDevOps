@@ -1,6 +1,6 @@
 # GitHub Actions: Secrets, Artifacts and Tests in CI
 
-In today's session you will how to store the sensitive information securely, storing the build outputs, and running the tests of the pipeline. 
+In today's session you will how to store the sensitive information securely, storing the build outputs, and running the tests of the pipeline. Secrets variable are created from the GitHub Actions settings and they can store sensitive info about organization, the repository, environment and can be read by the workflow if you declare it in the variable. 
 
 ## Task 1: Managing GitHub Secrets 
 
