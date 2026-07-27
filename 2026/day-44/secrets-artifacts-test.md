@@ -26,3 +26,36 @@ As I created the above workflow, i noticed that the secret ``BIG_SECRET_INFO`` v
 1. Use the Secret Variable info at the Env Variable time.
 2. Do not hardcode it and instead use it at shell command.
 3. Add the ``DOCKER_USERNAME`` and ``DOCKER_TOKEN`` as the secrets
+
+
+Docker login succeeded using the above variables ``DOCKER_USERNAME`` and ``DOCKER_TOKEN`` which were created as ``secrets`` at GitHub action for this repository. Also, ensure that you first create a Docker Token at the Docker Hub website in order to use it in your pipeline. 
+
+Below is the workflow code for the same : 
+
+```
+yoginderbagga@fedora:~/docker-env-demo-github-action/docker-env-demo-github-action/.github/workflows$ cat env-docker.yml 
+#Goal: Demonstrate using GitHub Env Variable as Secrets to Login Docker Hub
+name: GitHub Env Variable as Secrets for the Docker Hub access
+on: 
+  push: 
+    branches: [ "main" ]
+jobs:
+  docker-login-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Login to Docker using Env Variable Secrets Test
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASS: ${{ secrets.DOCKER_TOKEN }}
+
+        run: |
+          echo "Initializing Docker Authentication..."
+          echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+ #         echo "These are the images: $(docker images)"
+    
+```
+
+
+
+<img width="1907" height="867" alt="image" src="https://github.com/user-attachments/assets/4b088f3c-8876-4013-8ca9-d218ca451bbe" />
