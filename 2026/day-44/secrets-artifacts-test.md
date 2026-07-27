@@ -11,3 +11,8 @@ Managing the GitHub secrets is an important task of your Continuous Integration 
 3. Now print the secret message ``${{ secrets.BIG_SECRET_INFO }}`` directly -- and observe what output you get.
 
 Write in your notes, what do you understand and why you should never print secrets in CI logs?
+
+As I created the above workflow, i noticed that the secret ``BIG_SECRET_INFO`` value which I had stored inside the settings was not printed or added inside the logs. It only prints ``*****`` in place of the secret value inside the log. Also the secret is limited to the particular virtual machine for that specific ``build`` job and the VM is removed as the workflow completes its work.
+
+**Note**: Go to repo multi-job-actions [1] to see the full workflow code. 
+[1] multi-job-actions [https://github.com/yoginderbagga/multi-job-github-actions] 
