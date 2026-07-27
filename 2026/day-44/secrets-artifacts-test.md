@@ -2,6 +2,10 @@
 
 In today's session you will how to store the sensitive information securely, storing the build outputs, and running the tests of the pipeline. Secrets variable are created from the GitHub Actions settings and they can store sensitive info about organization, the repository, environment and can be read by the workflow if you declare it in the variable. 
 
+How secrets gets injected under the hood?
+
+As you push the code, Git starts a VM to run the workflow and GitHub read your workflow file and locate the expression :$ {{ secrets.DOCKER_PASSWORD }} or whichever you had put and decrypt the password into plain text and injects it into the memory of the the running virtual machine and later on it clean up the plaintext from the memory permanently. 
+
 ## Task 1: Managing GitHub Secrets 
 
 Managing the GitHub secrets is an important task of your Continuous Integration as you safely store the sensitive information like : ``api keys``, ``tokens``, ``password`` in GitHub configuration. 
