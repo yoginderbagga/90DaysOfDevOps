@@ -61,3 +61,7 @@ jobs:
 <img width="1907" height="867" alt="image" src="https://github.com/user-attachments/assets/4b088f3c-8876-4013-8ca9-d218ca451bbe" />
 
 ## Task 3: Upload Artifacts
+
+Verified its working, artifacts file showed up inside the artifacts section of the given workflow. Use the above same workflow for this task. 
+
+Done successfully, added the step for the artifacts as well in the same workflow above and its working as verified. But double check properly as i mainly copied the code from Gemini and verify the artifacts file like app and ``test summary`` file got uploaded inside the artifact section of the workflow. 
