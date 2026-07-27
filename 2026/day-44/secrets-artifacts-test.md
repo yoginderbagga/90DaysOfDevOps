@@ -20,3 +20,8 @@ As I created the above workflow, i noticed that the secret ``BIG_SECRET_INFO`` v
 
 **Note**: Go to repo multi-job-actions [1] to see the full workflow code. 
 [1] multi-job-actions [https://github.com/yoginderbagga/multi-job-github-actions] 
+
+## Task 2: Using the Secrets as the Environment Variable
+
+
+
