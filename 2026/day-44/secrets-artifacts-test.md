@@ -59,3 +59,5 @@ jobs:
 
 
 <img width="1907" height="867" alt="image" src="https://github.com/user-attachments/assets/4b088f3c-8876-4013-8ca9-d218ca451bbe" />
+
+## Task 3: Upload Artifacts
