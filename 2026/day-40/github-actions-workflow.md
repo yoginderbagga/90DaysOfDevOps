@@ -157,3 +157,45 @@ Eventually, corrected the spelling of step function to observe the status.
 
 <img width="1871" height="838" alt="Screenshot 2026-07-18 031224" src="https://github.com/user-attachments/assets/d2fa32a5-d870-4fea-8245-fc0200e81543" />
 
+As sample workflow file sample.yml:
+
+```
+#1. Name of the workflow
+name: Demo GitHub Action workflow file
+
+#2. Trigger on which the workflow should run (push, pull request)
+on:
+   push: main
+
+#3. Declare the jobs that need to be executed(Sequence of action)
+Jobs:
+   runs-on: ubuntu-latest
+   build:
+      //
+      name: Get the Repository code
+      run: action/checkout@v4
+
+      name: Run a linux command
+      run: $(ls -l)
+
+   test:
+      name: Run the tests
+      run: npm install
+      //
+
+   deploy:
+      name: Deploy this app on ArgoCD
+      run: push on server
+```
+
+
+
+
+
+
+
+
+
+
+```
+
