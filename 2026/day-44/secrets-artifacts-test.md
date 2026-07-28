@@ -66,6 +66,8 @@ What is an Artifacts?
 
 Artifact is a file or collection of files generated during the GitHub workflow run and you would like to save this files for the future use. As you know GitHub workflow runs inside a temporary virtual machine which gets destroyed after a workflow finishes so it doesn't save any file or data, unless you explicitly declare an artifact. 
 
+Some examples of artifacts are compiled code: ``.jar``, ``.exe``, ``.apk``; results of tests ``HTML`` , ``XML`` and the log files generated after the troubleshooting. In below example, we see how to store the artifact from a workflow and store it at GitHub Actions -> **Artifacts**
+
 Verified its working, artifacts file showed up inside the artifacts section of the given workflow. Use the above same workflow for this task. 
 
 Done successfully, added the step for the artifacts as well in the same workflow above and its working as verified. But double check properly as i mainly copied the code from Gemini and verify the artifacts file like app and ``test summary`` file got uploaded inside the artifact section of the workflow. 
