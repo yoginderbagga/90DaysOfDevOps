@@ -165,30 +165,41 @@ name: Demo GitHub Action workflow file
 
 #2. Trigger on which the workflow should run (push, pull request)
 on:
-   push: main
+   push:
+      branches: [ "main" ]
 
 #3. Declare the jobs that need to be executed(Sequence of action)
-Jobs:
-   runs-on: ubuntu-latest
-   build:
+jobs:
+      build:
+         runs-on: ubuntu-latest
+         steps:
+            - name: Get the Repository code
+              uses: actions/checkout@v4
+
+            - name: Run a linux command
+              run: $(ls -l)
+
+      test:
+         runs-on: ubuntu-latest
+         needs: build
+         steps:
+            - name: Run the tests
+              run: npm install
       //
-      name: Get the Repository code
-      run: action/checkout@v4
 
-      name: Run a linux command
-      run: $(ls -l)
-
-   test:
-      name: Run the tests
-      run: npm install
-      //
-
-   deploy:
-      name: Deploy this app on ArgoCD
-      run: push on server
+      deploy:
+         runs-on: ubuntu-latest
+         steps:
+           - name: Deploy this app on ArgoCD
+             run: push on server
 ```
 
+### Observation:
 
+- When writing above workflow file, did not mention ``branches`` keyword and its needed to specify which branch to be triggered.
+- Mention ``runs-on: ubuntu-latest`` only one time throughout the above workflow. Since all 3 jobs runs on separate virtual machines hence this need to be added three times each per job
+- Did not use the ``steps`` keyword which is utmost important to declare any standard actions to be performed. **steps** is a block that holds the tasks.
+- For action that use a predefined workflow a ``uses`` keyword is used and to run a command, script etc ``run`` keyword is used. 
 
 
 
