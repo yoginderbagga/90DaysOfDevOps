@@ -30,5 +30,15 @@ Also, you can add a condition that it push step works only on the ``main`` branc
 
 ## Task 4: Status Badge
 
+1. Capture the badge URL of ``full-pipeline.yml`` workflow from the Actions tab
+2. Add it inside the ``README.md``
+3. Push -- the badge should show green
 
 ## Task 5: Pull the image and Run it
+
+1. Pull the image on your machine and run it.
+2. Verify if its working.
+
+*Learning / Observation:*
+
+Write in your words what you understand throughout building this complete pipeline and then run them as a container?
