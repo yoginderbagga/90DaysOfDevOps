@@ -74,3 +74,5 @@ Done successfully, added the step for the artifacts as well in the same workflow
 
 <img width="1891" height="972" alt="image" src="https://github.com/user-attachments/assets/da378ae8-41b7-47a3-a365-b0eb762cdac5" />
 
+## Task 5:  Run Tests in CI
+
