@@ -2,13 +2,16 @@ In this session, you are going to build a complete CI/CD Pipeline that starts fr
 
 Now you see a glimpse of real world Production level pipelines
 
-# Task 1:
+# Task 1: Getting Ready 
 
 
-# Task 2:
+# Task 2: Build your Docker Image in CI
 
 
-# Task 3:
+# Task 3: Push the image to Docker Hub
 
 
-# Task 4:
+# Task 4: Status Badge
+
+
+# Task 5: Pull the image and Run it
