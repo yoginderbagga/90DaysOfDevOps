@@ -76,3 +76,46 @@ Done successfully, added the step for the artifacts as well in the same workflow
 
 ## Task 5:  Run Tests in CI
 
+Done successfully.
+
+Created a repository [1] to with two python files ``calc.py`` consist of basic addition code in python and ``test_calc.py`` consist of code that test the python calc code. The first step is to check out the repository where the code is created as in ``github-actions-run-testing`` for this particular yaml file. Since the runner creates a fresh ubuntu OS it needs to get the repo code into that runner to execute it, and for that it first need to checkout or in simple words ``git clone`` your repository code. 
+
+```
+  - name: To checkout the repo
+        uses: actions/checkout@v4
+```
+
+```
+yoginderbagga@fedora:~/github-actions-run-testing$ cat .github/workflows/git-action-test.yml 
+#Goal: To perform testing in a GitHub Actions Pipeline by demonstrating a Py calc
+name: GitHub Actions Testing
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+  
+  
+    steps:
+      - name: To checkout the repo
+        uses: actions/checkout@v4
+
+    
+      - name: Install python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install testing Framework
+        run: pip install pytest
+
+  
+      - name: Run tests
+        run: pytest
+```
+
+[1] https://github.com/yoginderbagga/github-actions-run-testing
