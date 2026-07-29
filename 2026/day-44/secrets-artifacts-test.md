@@ -78,7 +78,7 @@ Done successfully, added the step for the artifacts as well in the same workflow
 
 Done successfully.
 
-Created a repository [1] to with two python files ``calc.py`` consist of basic addition code in python and ``test_calc.py`` consist of code that test the python calc code. The first step is to check out the repository where the code is created as in ``github-actions-run-testing`` for this particular yaml file. Since the runner creates a fresh ubuntu OS it needs to get the repo code into that runner to execute it, and for that it first need to checkout or in simple words ``git clone`` your repository code. 
+Created a repository [1] to with two python files ``calc.py`` consist of basic addition code in python and ``test_calc.py`` consist of code that test the python calc code. The first step is to check out the repository where the code is created as in ``github-actions-run-testing`` for this particular yaml file. Since the runner creates a fresh ubuntu OS it needs to get the repo code into that runner to execute it, and for that it first need to checkout or in simple words ``git clone`` your repository code. Now if you're curious what exactly is ``pyest`` in this workflow file? So its the main package python testing framework package which you install to do the testing. Normally ``pyest`` framework is used by the developers/testers/devops to make it easy to write and run the tests.
 
 ```
   - name: To checkout the repo
