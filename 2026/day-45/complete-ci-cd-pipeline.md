@@ -20,6 +20,13 @@ Verification: See the build step logs -- and confirm if the image was build corr
 
 ## Task 3: Push the image to Docker Hub
 
+1. Login to Docker Hub using the secrets
+2. Now Tag the image as ``username/repo:latest`` and ``username/repo:sha-<short-commit-hash>``
+3. Push both tags
+
+Verification: Go to Docker Hub and verify if your image is there with the tags?
+
+Also, you can add a condition that it push step works only on the ``main`` branch but not on any other branch like features or Pull Requests. 
 
 ## Task 4: Status Badge
 
