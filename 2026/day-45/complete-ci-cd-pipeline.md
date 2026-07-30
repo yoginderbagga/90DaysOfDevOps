@@ -1,6 +1,7 @@
 In this session, you are going to build a complete CI/CD Pipeline that starts from a code which gets pushed to GitHub automatically and then builds a Docker image and then ships that image to Docker Hub. There would not be any manual steps in this pipeline. 
 
-Now you see a glimpse of real world Production level pipelines.
+Now you see a glimpse of real world Production level pipelines. For this project we used complete-ci-cd repository [1] 
+[1] https://github.com/yoginderbagga/complete-ci-cd
 
 To start with first you are using an existing ``Dockerfile`` or ``Devboard project`` to be used for building the Docker image during the pipeline runs. A repository ``complete-ci-cd`` has already been created where a python+flask code ``main.py`` is added that is to display a message on the browser with port ``8080``. You also created a requirements file which has ``flask`` entry to install its dependencies and library for the flask.
 Next is ``full-pipeline.yml`` which is a workflow file to build the GitHub actions workflow from scratch. 
