@@ -42,7 +42,19 @@ Create a reusable workflow file ``.github/workflows/reusable-build.yml``
 
 Create another in same directory ``.github/workflows/call-build.yml``
 
-
+1. Trigger on push to main
+2. Add a job that uses your reusable workflow:
+```
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-build.yml
+    with:
+      app_name: "my-web-app"
+      environment: "production"
+    secrets:
+      docker_token: ${{ secrets.DOCKER_TOKEN }}
+```
+3. Push to main and watch it run
 
 
 ## Task 3:
