@@ -38,6 +38,10 @@ Create a reusable workflow file ``.github/workflows/reusable-build.yml``
    - Print a message ``Building <application_name> for <environment>
    - Print ``Docker token is set: true``
 
+Build a simple re-usable workflow here [1] as you can see there are two files ``reusable-linter.yml`` and ``main-ci.yml`` are created. The trigger is done from th``main-ci.yml`` file and ``reusable-linter.yml`` work as a reusable template and when it gets called, it setup an ubuntu virtual computer, install the requested version of Node.js and runs a fake code-checking (linting) command. 
+
+[1] https://github.com/yoginderbagga/reusable-workflow-github
+
 ## Task 3: Create a Caller Workflow
 
 Create another in same directory ``.github/workflows/call-build.yml``
