@@ -9,6 +9,7 @@ For this project, you have used **GitHub secret** which are encrypted environmen
 
 
 
+
 ## Task 1: Getting Ready 
 
 1. Use the DevBoard app you Dockerized (or any basic Dockerfile)
@@ -34,6 +35,11 @@ Verification: See the build step logs -- and confirm if the image was build corr
 Verification: Go to Docker Hub and verify if your image is there with the tags?
 
 Also, you can add a condition that it push step works only on the ``main`` branch but not on any other branch like features or Pull Requests. 
+
+Completed successfully.
+
+<img width="1906" height="922" alt="image" src="https://github.com/user-attachments/assets/bdee4d3d-de07-4a35-8d53-45ef4dd2ef9e" />
+
 
 ## Task 4: Status Badge
 
