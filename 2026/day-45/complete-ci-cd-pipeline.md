@@ -34,6 +34,14 @@ Verification: See the build step logs -- and confirm if the image was build corr
 
 Verification: Go to Docker Hub and verify if your image is there with the tags?
 
+As you can see from below output, the image was created successfully during the workflow run and it created two tags ``latest`` and a tag with ``short-commit-hash`` which is used to add a unique commit ID ``sha-31c351b`` at the end of the image name - which is a unique identifier of the commit made. To add that tag in your image, you will need to declare a variable to capture the commit id first 
+
+```
+ - name: Get short commit hash
+        id: vars
+        run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV
+```
+
 Also, you can add a condition that it push step works only on the ``main`` branch but not on any other branch like features or Pull Requests. 
 
 Completed successfully.
