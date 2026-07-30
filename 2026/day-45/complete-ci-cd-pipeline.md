@@ -38,6 +38,9 @@ Also, you can add a condition that it push step works only on the ``main`` branc
 
 Completed successfully.
 
+<img width="1907" height="927" alt="Screenshot 2026-07-30 170504" src="https://github.com/user-attachments/assets/2785b0a6-9430-41e4-98be-91a59ce5989a" />
+
+
 <img width="1906" height="922" alt="image" src="https://github.com/user-attachments/assets/bdee4d3d-de07-4a35-8d53-45ef4dd2ef9e" />
 
 
