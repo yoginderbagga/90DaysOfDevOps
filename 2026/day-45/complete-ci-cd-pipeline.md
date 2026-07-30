@@ -52,6 +52,7 @@ Completed successfully.
 <img width="1906" height="922" alt="image" src="https://github.com/user-attachments/assets/bdee4d3d-de07-4a35-8d53-45ef4dd2ef9e" />
 
 
+
 ## Task 4: Status Badge
 
 1. Capture the badge URL of ``full-pipeline.yml`` workflow from the Actions tab
@@ -62,6 +63,10 @@ Completed successfully.
 
 1. Pull the image on your machine and run it.
 2. Verify if its working.
+
+
+<img width="1580" height="407" alt="image" src="https://github.com/user-attachments/assets/319416e4-642c-433a-b1ed-c40098f2adb4" />
+
 
 *Learning / Observation:*
 
