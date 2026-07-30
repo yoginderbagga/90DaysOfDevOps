@@ -24,7 +24,25 @@ A reusable workflow is used for reusing an entire workflow/job for the purpose o
 
 A reusable workflow file lives at ``.github/workflows``
 
-## Task 2:
+## Task 2: Build a Reusable Workflow
+
+Create a reusable workflow file ``.github/workflows/reusable-build.yml``
+
+1. Use the trigger ``workflow_call``
+2. Add an ``inputs`` section with:
+   - ``application_name``
+   - ``environment``
+3. Create a ``secrets:`` section for the ``docker_token``
+4. Create a job which:
+   - Check out the repository
+   - Print a message ``Building <application_name> for <environment>
+   - Print ``Docker token is set: true``
+
+## Task 3: Create a Caller Workflow
+
+Create another in same directory ``.github/workflows/call-build.yml``
+
+
 
 
 ## Task 3:
