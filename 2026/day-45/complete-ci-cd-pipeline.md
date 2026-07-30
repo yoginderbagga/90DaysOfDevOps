@@ -77,4 +77,14 @@ Write in your words what you understand throughout building this complete pipeli
 
 1. During the creation of PAT ( personal access token ) on Docker Hub - i had used the read-only which caused the authentication issue, instead of "read-write" and that fixed the issue.
 2. Understood the purpose of using **short commit hash** value as its crucial to be used in the Docker image at the end because with this tag, you can know if someone have made changes to the code then you run right image the latest one and not any old image.
-3. Once the image was pushed to Docker Hub, pulled it to the EC2 instance and verified the status which worked fine. 
+3. Once the image was pushed to Docker Hub, pulled it to the EC2 instance and verified the status which worked fine.
+4. Use "\" to tell the shell this line continues with the next line code as well. So that it treat it as the single command instead of separate command.
+
+```
+ - name: Build Docker image
+        run: | 
+          docker build \
+            -t ${{ secrets.DOCKER_USERNAME }}/complete-ci-cd:latest \
+            -t ${{ secrets.DOCKER_USERNAME }}/complete-ci-cd:sha-${{ env.SHORT_SHA }} \
+            .
+```
