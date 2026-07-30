@@ -35,7 +35,7 @@ Verification: See the build step logs -- and confirm if the image was build corr
 
 Verification: Go to Docker Hub and verify if your image is there with the tags?
 
-As you can see from below output, the image was created successfully during the workflow run and it created two tags ``latest`` and a tag with ``short-commit-hash`` which is used to add a unique commit ID ``sha-31c351b`` at the end of the image name - which is a unique identifier of the commit made. To add that tag in your image, you will need to declare a variable to capture the commit id first 
+As you can see from below output, the image was created successfully during the workflow run and it created two tags ``latest`` and a tag with ``short-commit-hash`` which is used to add a unique commit ID ``sha-31c351b`` at the end of the image name - which is a unique identifier of the commit made. To add that tag in your image, you will need to declare a variable to capture the commit id first and use it later. 
 
 ```
  - name: Get short commit hash
@@ -65,6 +65,8 @@ Completed successfully.
 1. Pull the image on your machine and run it.
 2. Verify if its working.
 
+Once the project ran successfully, I also tested it on a different environment i.e EC2 instance so pulled the same docker image and created a new container, verified it worked successfully. 
+``docker pull yoginderbagga/complete-ci-cd:sha-4def77f``
 
 <img width="1580" height="407" alt="image" src="https://github.com/user-attachments/assets/319416e4-642c-433a-b1ed-c40098f2adb4" />
 
@@ -72,3 +74,7 @@ Completed successfully.
 *Learning / Observation:*
 
 Write in your words what you understand throughout building this complete pipeline and then run them as a container?
+
+1. During the creation of PAT ( personal access token ) on Docker Hub - i had used the read-only which caused the authentication issue, instead of "read-write" and that fixed the issue.
+2. Understood the purpose of using **short commit hash** value as its crucial to be used in the Docker image at the end because with this tag, you can know if someone have made changes to the code then you run right image the latest one and not any old image.
+3. Once the image was pushed to Docker Hub, pulled it to the EC2 instance and verified the status which worked fine. 
