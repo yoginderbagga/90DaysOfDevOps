@@ -5,6 +5,8 @@ Now you see a glimpse of real world Production level pipelines.
 To start with first you are using an existing ``Dockerfile`` or ``Devboard project`` to be used for building the Docker image during the pipeline runs. A repository ``complete-ci-cd`` has already been created where a python+flask code ``main.py`` is added that is to display a message on the browser with port ``8080``. You also created a requirements file which has ``flask`` entry to install its dependencies and library for the flask.
 Next is ``full-pipeline.yml`` which is a workflow file to build the GitHub actions workflow from scratch. 
 
+For this project, you have used **GitHub secret** which are encrypted environment variable to store the sensitive information like password or API keys and use them in the workflow. Don't worry this information don't get exposed to the user or in the code or any logs; as the workflow / pipelines completes the information for that runner gets destroyed too.
+
 
 
 ## Task 1: Getting Ready 
