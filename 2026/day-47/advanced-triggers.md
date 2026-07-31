@@ -9,4 +9,5 @@ There are different types of triggers exists in GitHub actions which starts your
    - ``release``
 2. **Manual Triggers**: they are triggers which you use to manually control a pipeline to make it execute accordingly to clicking like add a clickable button "**Run workflow**" inside the GitHub Actions UI like ``workflow_dispatch``
    **repository_dispatch** : this is a triggers workflow via a REST API call from an external or any separate application. 
-   
+
+3. **Schedule Triggers**: Suppose you want to automate a task to run periodically at fixed interval on daily basis or some days in a week or any scheduled time. You use ``schedule`` keyword paired with cron job syntax. 
