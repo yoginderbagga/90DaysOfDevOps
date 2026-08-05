@@ -1,5 +1,7 @@
 # Capstone Project DevBoard 
 
+[ visit devboard forked repo to see the full full working project for this document ]
+
 To build a complete end-to-end CI/CD Pipeline using GitHub Action, we used existing **DevBoard** project with its existing workflow that was created during the batch live class. 
 
 Used the docker compose to build all the containers with a single command and setup them on EC2 instance. Verified all container worked fine and each workflow files ran successfully except a dependency-scan.yml file. Tested all the steps to fix but due a vulnerability in one of the react router package version it didn't get fixed so far. 
