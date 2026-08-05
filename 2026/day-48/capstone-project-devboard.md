@@ -23,3 +23,6 @@ Each file serve a purpose like ``dependency-scan.yml`` file is created to scan t
 
 ## Observation & Learning
 
+1. SonarQube server setup was done on EC2 instance with a container running on 9000 port. There was an issue with SonarQube scan worfklow as well but it got fixed after adding the token and Host URL in GitHub actions.
+2. Encountered issue with ``Docker-push.yml`` as well since the Docker Hub PAT and username was not added into the actions repository secret and repository variable
+3. Dependency scan workflow issue still but that's due to a package issue with react -router and not the application code. 
