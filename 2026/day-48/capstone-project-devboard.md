@@ -20,7 +20,8 @@ Below are the workflow files:
 
 Each file serve a purpose like ``dependency-scan.yml`` file is created to scan the packages for the vulnerability found in a package.
 
-<img width="1831" height="961" alt="Screenshot 2026-08-04 073642" src="https://github.com/user-attachments/assets/cb613e3d-9391-494c-a1e6-8b01d44072d8" />
+<img width="1831" height="961" alt="Screenshot 2026-08-04 073642" src="https://github.com/user-attachments/assets/cb613e3d-9391-494c-a1e6-8b01d44072d8" /> <br> 
+
 
 <img width="1862" height="972" alt="image" src="https://github.com/user-attachments/assets/e2cbe4e2-6713-4c21-96e7-e58ec0736963" />
 
