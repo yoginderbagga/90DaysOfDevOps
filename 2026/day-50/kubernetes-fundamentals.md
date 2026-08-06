@@ -10,6 +10,12 @@ In today's task, you will learn about Kubernetes architecture, install a local c
 
 Kubernetes is an open source system for automating the deployment, scaling and managing the containerized applications. As you know, container helps in bundle and running the application. In a production environment, when the number of containers grow it becomes difficult to manage them when the application is live and you need to ensure no downtime. For example, if container goes down, and immediately another container needs to start, doing this manually is not the right approach. How about having a system which can handle this automatically? So Kubernetes handle the scaling of the application containers, managing the failovers and much more. 
 
+Kubernetes Features: 
+
+1. **Self-Healing**: If the containers fails, Kubernetes restarts the container, replace the containers or kill the containers which doesn't response to the user requirement. 
+2. DNS Service Expose and Load Balancing Management: With Kubernetes you can expose a container with its DNS name or its own IP address. Also, when the traffic to a container goes high, Kubernetes is able to load balance the network traffic so the deployment is stable.
+3. **Storage Orchestration**: Automatically mount a storage on the basis of your choice like local, on premise, or cloud.
+
 
 
 ## Task 2: Draw the Kubernetes Architecture 
