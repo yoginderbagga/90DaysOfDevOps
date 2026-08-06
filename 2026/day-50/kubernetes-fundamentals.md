@@ -22,3 +22,28 @@ In today's task, you will learn about Kubernetes architecture, install a local c
 - Kubelet
 - kube-proxy
 - Container Runtime
+
+## Task 3: Setting up Kubectl
+
+``kubectl`` is the CLI tool for managing the Kubernetes cluster. 
+
+
+## Task 4: Setting up the Local Cluster 
+
+Use any one``minikube`` OR ``kind (Kubernetes in Docker)`` to setup the Kubernetes on your laptop/cloud.
+
+
+
+## Task 5: Explore Kubernetes Basic commands
+
+```
+kubectl cluster-info
+
+kubectl get nodes
+
+kubectl describe node <node-name>
+
+kubectl get namespace
+
+kubectl get pods -A
+```
