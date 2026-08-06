@@ -8,6 +8,10 @@ In today's task, you will learn about Kubernetes architecture, install a local c
 2. Who build the Kubernetes platform and what was the reason to build it
 
 
+Kubernetes is an open source system for automating the deployment, scaling and managing the containerized applications. As you know, container helps in bundle and running the application. In a production environment, when the number of containers grow it becomes difficult to manage them when the application is live and you need to ensure no downtime. For example, if container goes down, and immediately another container needs to start, doing this manually is not the right approach. How about having a system which can handle this automatically? So Kubernetes handle the scaling of the application containers, managing the failovers and much more. 
+
+
+
 ## Task 2: Draw the Kubernetes Architecture 
 
 ### Control Plane (Master Node):
