@@ -47,3 +47,14 @@ kubectl get namespace
 
 kubectl get pods -A
 ```
+
+
+## Task 6: The Lifecycle of a Cluster 
+
+```
+kind delete cluster --name xyz
+
+kind create cluster --name xyz
+
+kubectl get nodes
+```
