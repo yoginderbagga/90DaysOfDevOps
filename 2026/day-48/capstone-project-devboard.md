@@ -49,7 +49,17 @@ NOTE: These packages are stored at ``package.json`` file.
     "react-router": "8.3.0"
   }
 ```
-4. Also, there was a small comma (,) mistake which occurred after adding the "override" block to the code. Ran below command to ``npm install --legacy-peer-deps`` which will read the new override rule and wipe out that nested ``react-router`` folder. Also, edit the ``package.json`` file and within the ``dependencies`` section change the ``"^8.3.0" to "8.3.0"``
+4. Also, there was a small comma (,) mistake which occurred after adding the "override" block to the code. Also, edit the ``package.json`` file and within the ``dependencies`` section change the ``"^8.3.0" to "8.3.0"``. Ran below command to ``npm install --legacy-peer-deps`` which will read the new override rule and wipe out that nested ``react-router`` folder.
+5. Run the ``npm audit`` to do a final scan to ensure there are no nested vulnerability and the package environment looks perfectly clean.
+6. Git Push and commit
+
+```
+git add package.json 
+git commit -m "FIX: enforce strict matching for react-router version and overrides"
+git push origin master
+```
+
+As seen at the **actions** tab there was no workflow error message anymore and it worked clean. 
 
 ## Observation & Learning
 
