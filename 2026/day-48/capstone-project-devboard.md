@@ -136,7 +136,26 @@ jobs:
 ```
 
 
-4. Add your AWS ``.pem`` key in GitHub -> Settings -> Secrets and variables -> Actions with ``EC2_SSH_KEY`` and paste the value. Push the changes to the repository. 
+4. Add your AWS ``.pem`` key in GitHub -> Settings -> Secrets and variables -> Actions with ``EC2_SSH_KEY`` and paste the value. Push the changes to the repository.
+5. There was a mistake in the docker image name due to which the newly build Docker image which consist of the latest frontend bundle didn't even get pushed to Docker hub. When running docker image inspect it shows the image from ``2026-07-26`` nearly two weeks old image and not from the latest image. 
+
+```
+docker image inspect trainwithshubham/devboard-frontend:latest --format='{{.Created}}'
+2026-07-26T07:25:06.645077359Z
+```
+Another thing, Docker Hub shows images are being pushed to ``yoginderbagga/devboard-frontend`` but the ``docker-compose.yml`` is pulling the images from here ``image: trainwithshubham/devboard-frontend:${IMAGE_TAG:-latest}`` and when running the ``docker compose pull`` command. It showed the image from ``Image trainwithshubham/devboard-frontend:latest Pulled`` which was a mismatch. Go to the ``docker-compose.yml`` workflow and change the code to this : 
+
+```
+frontend:
+  image: yoginderbagga/devboard-frontend:${IMAGE_TAG:-latest}
+
+backend:
+  image: yoginderbagga/devboard-backend:${IMAGE_TAG:-latest}
+```
+
+
+
+6. 
 
 ## Observation & Learning
 
