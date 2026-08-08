@@ -136,7 +136,7 @@ jobs:
 ```
 
 
-4. 
+4. Add your AWS ``.pem`` key in GitHub -> Settings -> Secrets and variables -> Actions with ``EC2_SSH_KEY`` and paste the value. Push the changes to the repository. 
 
 ## Observation & Learning
 
