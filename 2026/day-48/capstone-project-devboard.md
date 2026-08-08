@@ -41,7 +41,15 @@ In the initial phase of Capstone Project building there were multiple error rece
 1. Since its vulnerable package for the ``react-router`` I ran ``npm audit`` to look at the vulnerability report and ``npm audit fix`` to update automatically update the insecure dependencies packages to the secure version.
 NOTE: These packages are stored at ``package.json`` file.
 
-2. Manually upgrade the ``react-router`` and ``react-router-dom`` packages to the safe version inside the directory ``~/devboard/frontend``
+2. Manually upgrade the ``react-router`` and ``react-router-dom`` packages to the safe version inside the directory ``~/devboard/frontend``. Initially the manual upgrade didn't work as there was a peer dependency of ``react@>19.2.7`` package and updating react-router package was done but react-router-dom has its own nested copy of ``react-router`` locked inside the node_modules/react-router-dom/node_modules/react-router.
+3. To resolve nested sub-dependencies in npm is by using the ``overrides`` field inside the ``package.json`` file as mentioned below. 
+
+```
+"overrides": {
+    "react-router": "8.3.0"
+  }
+```
+4. Also, there was a small comma (,) mistake which occurred after adding the "override" block to the code. Ran below command to ``npm install --legacy-peer-deps`` which will read the new override rule and wipe out that nested ``react-router`` folder. Also, edit the ``package.json`` file and within the ``dependencies`` section change the ``"^8.3.0" to "8.3.0"``
 
 ## Observation & Learning
 
