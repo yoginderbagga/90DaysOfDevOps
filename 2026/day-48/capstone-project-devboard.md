@@ -73,7 +73,7 @@ Run timeout 60s sh -c 'until curl -s http://:8080 > /dev/null; do sleep 2; done'
 
 Since your application doesn't know about EC2 Instance IP address, you need to create a secret in GitHub with the ``EC2_HOST`` variable and add the IP address. ( don't mention http:// or 8080, just IP ) 
 
-3. The deploy.yml workflow ran and there was no error. Since browser still showed no change in the message I pushed, the next step to use ``appleboy/ssh-action`` action inside the deploy.yml file like this :
+3. The deploy.yml workflow ran and there was no error. Since browser still showed no change in the message I pushed, the next step to use ``appleboy/ssh-action`` action inside the deploy.yml file like this. As you can see in NEW ``deploy.yml`` file Docker login step was dropped as the parent workflow file ``devsecops.yml`` already contains a ``docker-push`` job that handles logging into the Docker Hub and push the newly updated image. 
 
 NEW deploy.yml file:
 ```
