@@ -73,7 +73,70 @@ Run timeout 60s sh -c 'until curl -s http://:8080 > /dev/null; do sleep 2; done'
 
 Since your application doesn't know about EC2 Instance IP address, you need to create a secret in GitHub with the ``EC2_HOST`` variable and add the IP address. ( don't mention http:// or 8080, just IP ) 
 
-3. 
+3. The deploy.yml workflow ran and there was no error. Since browser still showed no change in the message I pushed, the next step to use ``appleboy/ssh-action`` action inside the deploy.yml file like this :
+
+NEW deploy.yml file:
+```
+# Goal: To deploy the built images from CI Steps once the CI Worklow is Succeeded
+name: CD
+
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v4 # Fixed version from v7 to v4
+
+      # We use an SSH action to jump into your remote EC2 server
+      - name: Executing remote ssh commands to deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }} # Your AWS .pem private key file content
+          script: |
+            cd ~/devboard/
+            docker compose pull
+            docker compose up -d --force-recreate
+```
+OLD deploy.yml file:
+
+```
+# Goal: To deploy the built images from CI Steps once the CI Worklow is Succeeded
+
+name: CD
+
+on: 
+    workflow_call:
+
+jobs:
+    deploy:
+        
+        runs-on: self-hosted
+        steps:
+            - name: Code Checkout
+              uses: actions/checkout@v7
+
+            - name: Copy Example Env to main env
+              run: cp .env.example .env
+
+            - name: Docker Setup [Login]
+              uses: docker/login-action@v4
+              with:
+                username: ${{ vars.DOCKERHUB_USERNAME }}
+                password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+            - name: Deploy the containers with Docker Compose
+              run: |
+                docker compose pull
+                docker compose up -d
+```
+
+
+4. 
 
 ## Observation & Learning
 
