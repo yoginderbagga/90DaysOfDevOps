@@ -29,13 +29,13 @@ Each file serve a purpose like ``dependency-scan.yml`` file is created to scan t
 
 **Update: 8th August 2026**
 
-In the initial phase of Capstone Project building there were multiple error received during the time CI/CD Pipeline run and one of main error was from ``dependency-scan.yml`` workflow file which caused the workflow to not get completed. The purpose of this job is to run a security scanning check to ensure there are no packages with vulnerability. Below is the error message : 
+In the initial phase of Capstone Project building there were multiple error received during the time CI/CD Pipeline run and one of main error was from ``dependency-scan.yml`` workflow file which caused the workflow to not get completed.  The second issue was related to the deployment, as you make a change a to the frontend code from ``~/devboard/frontend/src/pages$ vim DashboardPage.jsx`` were not getting live to the deployment itself. Though the changes were getting pushed to the repository but from the repository they didn't go the application.  
 
 <img width="1412" height="482" alt="Screenshot 2026-08-05 220539" src="https://github.com/user-attachments/assets/c4057e50-9c12-4971-b850-5351f62ba93c" />
 
-``react-router`` and ``react-router-dom`` packages has a high severity security vulnerability in the package version ``6.0.0 - 7.17.0`` and needs to be updated to a version which is fixed and has no vulnerability. 
+``react-router`` and ``react-router-dom`` packages has a high severity security vulnerability in the package version ``6.0.0 - 7.17.0`` and needs to be updated to a version which is fixed and has no vulnerability. Below are the steps I have listed for both of these issues "Dependency scan" and "Change Deployed Doesn't Go Live"
 
-**Troubleshooting Steps:** 
+**Troubleshooting Steps for Dependency scan:** 
 
 
 1. Since its vulnerable package for the ``react-router`` I ran ``npm audit`` to look at the vulnerability report and ``npm audit fix`` to update automatically update the insecure dependencies packages to the secure version.
@@ -60,6 +60,20 @@ git push origin master
 ```
 
 As seen at the **actions** tab there was no workflow error message anymore and it worked clean. 
+
+**Troubleshooting Steps for Deployment Not Live** 
+
+1. Since change to the frontend go pushed to repository fine but from the repository they were not give to the application / browser. After digging further, first switched from ``self-hosted`` runner to ``ubuntu-latest`` runner. Pushed that change to the repository and verified that deploy workflow did go green. Before this, the deploy job was struck with the message : ``waiting for a runner to pick up this job`` and I had not setup the ``self-hosted`` runner on my machine which was actually given to the workflow file.
+
+2. Second the ``dast.yml`` workflow file returned an error message during the CI/CD pipeline run.
+
+```
+Run timeout 60s sh -c 'until curl -s http://:8080 > /dev/null; do sleep 2; done' timeout 60s sh -c 'until curl -s http://:8080 > /dev/null; do sleep 2; done' shell: /usr/bin/bash -e {0} Error: Process completed with exit code 124.
+```
+
+Since your application doesn't know about EC2 Instance IP address, you need to create a secret in GitHub with the ``EC2_HOST`` variable and add the IP address. ( don't mention http:// or 8080, just IP ) 
+
+3. 
 
 ## Observation & Learning
 
