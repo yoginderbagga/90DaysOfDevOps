@@ -33,7 +33,7 @@ In the initial phase of Capstone Project building there were multiple error rece
 
 <img width="1412" height="482" alt="Screenshot 2026-08-05 220539" src="https://github.com/user-attachments/assets/c4057e50-9c12-4971-b850-5351f62ba93c" />
 
-``react-router`` package has vulnerability in the package version ``6.0.0 - 7.17.0`` and needs to be updated to a version which is fixed and has no vulnerability. 
+``react-router`` and ``react-router-dom`` packages has a high severity security vulnerability in the package version ``6.0.0 - 7.17.0`` and needs to be updated to a version which is fixed and has no vulnerability. 
 
 **Troubleshooting Steps:** 
 
@@ -41,7 +41,7 @@ In the initial phase of Capstone Project building there were multiple error rece
 1. Since its vulnerable package for the ``react-router`` I ran ``npm audit`` to look at the vulnerability report and ``npm audit fix`` to update automatically update the insecure dependencies packages to the secure version.
 NOTE: These packages are stored at ``package.json`` file.
 
-2. 
+2. Manually upgrade the ``react-router`` and ``react-router-dom`` packages to the safe version inside the directory ``~/devboard/frontend``
 
 ## Observation & Learning
 
