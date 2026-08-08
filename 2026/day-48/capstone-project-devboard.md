@@ -153,9 +153,17 @@ backend:
   image: yoginderbagga/devboard-backend:${IMAGE_TAG:-latest}
 ```
 
+Run ``docker compose pull`` and ``docker compose up -d``
 
 
-6. 
+6. As soon as it was pulled, it showed the new update message done from the system to the GitHub repo. I re-check it by stopping the EC2 instance ( changed the EC2_HOST in GitHub secrets ) and it worked again. Below is the complete output of CI/CD Pipeline and DevBoard application:
+
+<img width="1905" height="1027" alt="DevBoard_Pipeline_Output" src="https://github.com/user-attachments/assets/7057e8e6-ae1a-4266-8823-037e5d11c2b7" />  
+
+
+
+<img width="1916" height="1027" alt="DevBoard_Pipeline_Success" src="https://github.com/user-attachments/assets/cc2b1179-ae0b-4cfa-9e63-b45a75cb6859" />
+
 
 ## Observation & Learning
 
