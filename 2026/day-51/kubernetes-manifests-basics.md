@@ -37,3 +37,22 @@ spec:
 ## To Build Your First Node - run below command
 
 ``yoginderbagga@fedora:~/kube-basics$ kubectl apply -f deployment.yml``
+
+To check the status of the pods that are running use below commands:
+
+```
+kubectl get pods
+kubectl get pods -o wide
+
+To get detail info about the pods :
+
+kubectl describe pod my-first-app-58b676b65b-dgjq6
+
+To read the logs :
+kubectl logs my-first-app-58b676b65b-dgjq6 
+
+To get a shell access inside the container:
+
+ kubectl exec -it my-first-app-58b676b65b-dgjq6 --  /bin/bash
+
+```
