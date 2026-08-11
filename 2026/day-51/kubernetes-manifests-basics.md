@@ -38,7 +38,8 @@ Lets understand the above four fields which are common in the Kubernetes manifes
 
 1. **apiVersion**: which API group to use. For Pods it is ``v1``
 2. **kind**: the type of the resource which is ``Deployment`` in above file; and it tells that you want to manager the containers declaratively and automatically. Means if something crashes it will keep on running.( Automatic self-healing ) 
-3. **metadata**: it is an information that uniquely identifies like names, labels of the Kubernetes objects. 
+3. **metadata**: it is an information that uniquely identifies like names, labels of the Kubernetes objects.
+4. **spec**: The desired state or specification as it says. For pods perspective, this means which containers to run and which images and port number to be used. 
 
 ## To Build Your First Node - run below command
 
