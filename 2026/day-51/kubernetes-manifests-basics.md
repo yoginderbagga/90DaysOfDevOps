@@ -34,6 +34,12 @@ spec:
 
 ```
 
+Lets understand the above four fields which are common in the Kubernetes manifest file:
+
+1. **apiVersion**: which API group to use. For Pods it is ``v1``
+2. **kind**: the type of the resource which is ``Deployment`` in above file; and it tells that you want to manager the containers declaratively and automatically. Means if something crashes it will keep on running.( Automatic self-healing ) 
+3. **metadata**: it is an information that uniquely identifies like names, labels of the Kubernetes objects. 
+
 ## To Build Your First Node - run below command
 
 ``yoginderbagga@fedora:~/kube-basics$ kubectl apply -f deployment.yml``
