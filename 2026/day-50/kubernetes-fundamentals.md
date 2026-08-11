@@ -29,14 +29,16 @@ Kubernetes control plane is combination of components (parts) which work togethe
 2. Automatically start a new container if any failure occur
 3. To move the Pods to different Node when a Nodes become unavailable. 
 
-- API Server:
-- etcd:
-- Scheduler:
+- API Server: This is the main component responsible for establishing communication between the nodes and components of the cluster. 
+- etcd: etcd is a key-value based open source storage mechanism that stores the information about resources, services, clusters and containers. It keep records of the cluster current state, desired state, runtime data and much more. 
+- Scheduler: A Kubernetes Scheduler (kube-schduler) is control plane component which is responsible for assigning the new pods to a optimal worker node within a cluster. So it is always monitoring the API server for pods that is not having any assigned Node. 
 - Controller Manager
 
 ### Worker Node: 
 
-- Kubelet
+A worker nodes in Kubernetes are the actual machines ( virtual/physical) which runs the containers applications. Worker node is managed by a Control plane, and at least one worker node is always there on a Kubernetes cluster. 
+
+- Kubelet: 
 - kube-proxy
 - Container Runtime
 
