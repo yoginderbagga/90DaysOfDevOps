@@ -38,9 +38,9 @@ Kubernetes control plane is combination of components (parts) which work togethe
 
 A worker nodes in Kubernetes are the actual machines ( virtual/physical) which runs the containers applications. Worker node is managed by a Control plane, and at least one worker node is always there on a Kubernetes cluster. 
 
-- Kubelet: Kubelet is a Kubernetes agent that runs on each node inside a cluster and it is responsible for managing the lifecycle of a container. 
-- kube-proxy
-- Container Runtime
+- Kubelet: Kubelet is a Kubernetes agent that runs on every worker node inside a cluster and it is responsible for managing the lifecycle of a container. 
+- kube-proxy: It is a network daemon which is running on each worker node that implements Kubernetes service abstraction. This maintain your network routing rules on the host operating system with ``iptables`` to manager the network incoming traffic.
+- Container Runtime: It is a software process such as ``containerd`` or ``CRI-O`` which is responsible for pulling the container images, and configuring the isolation boundaries and also managing the lifecycle of a container on the host OS. 
 
 ## Task 3: Setting up Kubectl
 
