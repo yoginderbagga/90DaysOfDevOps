@@ -56,3 +56,6 @@ To get a shell access inside the container:
  kubectl exec -it my-first-app-58b676b65b-dgjq6 --  /bin/bash
 
 ```
+Below is the output of above Pod that runs a nginx server : 
+
+<img width="1912" height="397" alt="image" src="https://github.com/user-attachments/assets/2981b848-8ae5-48dc-b857-ac3bb49d4c8a" />
