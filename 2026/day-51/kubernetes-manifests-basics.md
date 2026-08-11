@@ -8,3 +8,32 @@ The first step is always to ensure that cluster is running in our case, we are u
 
 
 ## Task 1:
+
+Kubernete resource are written using the ``YAML`` format which consist of four most common require fields : 
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-first-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webserver
+  template:
+    metadata:
+      labels:
+        app: webserver
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:stable-alpine
+        ports:
+        - containerPort: 80
+
+```
+
+## To Build Your First Node - run below command
+
+``yoginderbagga@fedora:~/kube-basics$ kubectl apply -f deployment.yml``
