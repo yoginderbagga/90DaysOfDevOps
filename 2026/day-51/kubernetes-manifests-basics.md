@@ -67,5 +67,15 @@ Below is the output of above Pod that runs a nginx server :
 
 <img width="1912" height="397" alt="image" src="https://github.com/user-attachments/assets/2981b848-8ae5-48dc-b857-ac3bb49d4c8a" />
 
+Now to scale down to 0 pods as you no longer need it for the testing. Run below command and verify :
+
+yoginderbagga@fedora:~/kube-basics$ kubectl scale deployment my-first-app --replicas=0
+deployment.apps/my-first-app scaled
+yoginderbagga@fedora:~/kube-basics$ kubectl get pods
+NAME                                   READY   STATUS    RESTARTS      AGE
+kubernetes-bootcamp-67fbdd6b79-68ppx   1/1     Running   1 (35m ago)   2d
+kubernetes-bootcamp-67fbdd6b79-pwx9d   1/1     Running   1 (35m ago)   47h
+
+
 ## Task 2: Difference Between Imperative and Declarative Kubernetes Pods Making
 
