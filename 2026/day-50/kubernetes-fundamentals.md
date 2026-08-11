@@ -20,6 +20,9 @@ Kubernetes Features:
 
 ## Task 2: Draw the Kubernetes Architecture 
 
+<img width="1352" height="649" alt="image" src="https://github.com/user-attachments/assets/0fbf57a0-90b8-440d-8d7f-37e12f389126" />
+
+
 ### Control Plane (Master Node):
 
 
