@@ -32,7 +32,7 @@ Kubernetes control plane is combination of components (parts) which work togethe
 - API Server: This is the main component responsible for establishing communication between the nodes and components of the cluster. 
 - etcd: etcd is a key-value based open source storage mechanism that stores the information about resources, services, clusters and containers. It keep records of the cluster current state, desired state, runtime data and much more. 
 - Scheduler: A Kubernetes Scheduler (kube-schduler) is control plane component which is responsible for assigning the new pods to a optimal worker node within a cluster. So it is always monitoring the API server for pods that is not having any assigned Node. 
-- Controller Manager
+- Controller Manager: It is a background daemon service which is running inside the control plane that acts as a "brain" of the Kubernetes cluster. So it maintain the actual state of the cluster as per the desired configuration. 
 
 ### Worker Node: 
 
