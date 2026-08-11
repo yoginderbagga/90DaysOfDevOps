@@ -22,6 +22,13 @@ Kubernetes Features:
 
 ### Control Plane (Master Node):
 
+
+Kubernetes control plane is combination of components (parts) which work together to manage the state of cluster.  It is the central governing layer which acts as the "brain" of a cluster. It makes the decision, schedule the workloads and detect the cluster events. For example : 
+
+1. Bring a new Pods on the node
+2. Automatically start a new container if any failure occur
+3. To move the Pods to different Node when a Nodes become unavailable. 
+
 - API Server:
 - etcd:
 - Scheduler:
