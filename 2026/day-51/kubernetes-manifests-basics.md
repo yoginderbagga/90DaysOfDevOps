@@ -78,7 +78,12 @@ kubernetes-bootcamp-67fbdd6b79-68ppx   1/1     Running   1 (35m ago)   2d
 kubernetes-bootcamp-67fbdd6b79-pwx9d   1/1     Running   1 (35m ago)   47h
 ```
 
-## Task 3: Build a Custom Pod BusyBox
+Example #2 - Created another pod ``redis_pod.yml`` with Kubernetes Manifest file,  it uses the same fields like ``apiVersion``, ``kind`` and ``metadata`` which is again mandatory field to uniquely identify pod, and organize it.
+
+<img width="1916" height="737" alt="image" src="https://github.com/user-attachments/assets/d6639045-120a-4b23-a791-c4ac4b27784b" />
+
+
+## Task 2: Build a Custom Pod BusyBox
 
 Create a new manifest name ``busybox-pod.yml`` from the start. 
 
@@ -86,5 +91,5 @@ Create a new manifest name ``busybox-pod.yml`` from the start.
 apiVersion: v1
 ```
 
-## Task 2: Difference Between Imperative and Declarative Kubernetes Pods Making
+## Task 3: Difference Between Imperative and Declarative Kubernetes Pods Making
 
