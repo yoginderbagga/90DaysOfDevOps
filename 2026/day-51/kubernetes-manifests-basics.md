@@ -114,3 +114,13 @@ As you can see, the pod went into CrashLoopBackOff status as we removed the comm
 
 ## Task 3: Difference Between Imperative and Declarative Kubernetes Pods Making
 
+In previous tasks, you tried the declarative method to build the pods in Kubernetes, lets try the imperative commands : 
+
+``kubect  run redis-pod --image:redis:latest``
+
+``kubectl get pods``
+
+<img width="1532" height="347" alt="image" src="https://github.com/user-attachments/assets/e0994cf3-988f-40f0-8bf5-4958970d29b2" />
+
+yoginderbagga@fedora:~$ kubectl get pod redis-pod -o yaml 
+
