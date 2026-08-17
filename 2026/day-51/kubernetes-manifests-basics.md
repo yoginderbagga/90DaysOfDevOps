@@ -150,3 +150,18 @@ In Kubernetes you can use key-value pair attached to a objects like the pods to 
 yoginderbagga@fedora:~/kube-basics$ kubectl label pod my-first-app-599c5f5948-ckf68 environment=productionLevel
 pod/my-first-app-599c5f5948-ckf68 labeled
 ```
+
+## Task 6: Clean Up
+
+Clean all the pods 
+
+```
+# Delete by the name of Pod
+kubectl delete pod redis-pod
+kubectl delete pod busybox-pod
+
+# delete using the manifest file
+kubectl delete -f deployment.yml
+```
+
+<img width="1802" height="187" alt="image" src="https://github.com/user-attachments/assets/3248a493-f83c-49b3-8b97-9a2c9362f905" />
