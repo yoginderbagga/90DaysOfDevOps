@@ -88,9 +88,29 @@ The kind field in the starting is used to define the kind of resource or object 
 
 Create a new manifest name ``busybox-pod.yml`` from the start. 
 
+
 ```
+yoginderbagga@fedora:~$ cat busybox-pod.yml 
+#Goal : Build a BusyBox Pod 
 apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-pod
+  labels: 
+    app: busybox
+    environment: dev
+spec:
+  containers:
+    - name: busybox
+      image: busybox:latest
+#      command: ["sh", "-c", "echo Hello from BusyBox && sleep 3600"]
+
+yoginderbagga@fedora:~$ 
+
 ```
+<img width="1436" height="255" alt="image" src="https://github.com/user-attachments/assets/536a8013-d4ea-4dab-b405-b526c773ff01" />
+
+As you can see, the pod went into CrashLoopBackOff status as we removed the command field and Kubernetes defaults back to whatever is in the container image's Dockerfile. If you keep the ``command: sh...`` then it has the shell to be executed as default command, and not a long running background service which is any database or nginx server
 
 ## Task 3: Difference Between Imperative and Declarative Kubernetes Pods Making
 
