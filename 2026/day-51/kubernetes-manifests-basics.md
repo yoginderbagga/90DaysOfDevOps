@@ -122,5 +122,19 @@ In previous tasks, you tried the declarative method to build the pods in Kuberne
 
 <img width="1532" height="347" alt="image" src="https://github.com/user-attachments/assets/e0994cf3-988f-40f0-8bf5-4958970d29b2" />
 
-yoginderbagga@fedora:~$ kubectl get pod redis-pod -o yaml 
+``yoginderbagga@fedora:~$ kubectl get pod redis-pod -o yaml``
 
+Its evident that manually writing the manifest file doesn't add extra metadata info to the pods as much as it does int YAML we generate imperative method. 
+
+## Task 4: Validate the Manifest File Before Applying it
+
+```
+yoginderbagga@fedora:~/kube-basics$ kubectl apply -f deployment.yml --dry-run=client
+deployment.apps/my-first-app configured (dry run)
+```
+
+The above dry run worked as there was no error in the deployment.yml file. But if you see below i intentionally changed the image field to an invalid field and it immediately thrown an error message during the dry-run. 
+```
+yoginderbagga@fedora:~/kube-basics$ kubectl apply -f deployment.yml --dry-run=client
+error: error parsing deployment.yml: error converting YAML to JSON: yaml: line 18: could not find expected ':'
+```
