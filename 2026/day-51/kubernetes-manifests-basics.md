@@ -78,5 +78,13 @@ kubernetes-bootcamp-67fbdd6b79-68ppx   1/1     Running   1 (35m ago)   2d
 kubernetes-bootcamp-67fbdd6b79-pwx9d   1/1     Running   1 (35m ago)   47h
 ```
 
+## Task 3: Build a Custom Pod BusyBox
+
+Create a new manifest name ``busybox-pod.yml`` from the start. 
+
+```
+apiVersion: v1
+```
+
 ## Task 2: Difference Between Imperative and Declarative Kubernetes Pods Making
 
