@@ -138,3 +138,15 @@ The above dry run worked as there was no error in the deployment.yml file. But i
 yoginderbagga@fedora:~/kube-basics$ kubectl apply -f deployment.yml --dry-run=client
 error: error parsing deployment.yml: error converting YAML to JSON: yaml: line 18: could not find expected ':'
 ```
+
+## Task 5: Pod Labeling and Filtering
+
+In Kubernetes you can use key-value pair attached to a objects like the pods to organize/group the selected resources. So the first few example of Kubernetes declarative we added the labels through YAML file itself. Now lets do it with the imperative approach : 
+
+<img width="1717" height="285" alt="image" src="https://github.com/user-attachments/assets/e7a41910-ad06-4e23-b53d-e842efd2c036" />
+
+
+```
+yoginderbagga@fedora:~/kube-basics$ kubectl label pod my-first-app-599c5f5948-ckf68 environment=productionLevel
+pod/my-first-app-599c5f5948-ckf68 labeled
+```
