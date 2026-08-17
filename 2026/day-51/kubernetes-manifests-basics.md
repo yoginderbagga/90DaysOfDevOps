@@ -165,3 +165,12 @@ kubectl delete -f deployment.yml
 ```
 
 <img width="1802" height="187" alt="image" src="https://github.com/user-attachments/assets/3248a493-f83c-49b3-8b97-9a2c9362f905" />
+
+
+## Observation / Learning
+
+In this exercise you build pods using the imperative and declarative both the method. Learned about various fields in the manifest ``.YAML`` file fields like Kind, metadata, specs, apiVersion the starting field; these all properties are necessary to build a Kubernetes resource which can be a pod, service or deployment. 
+
+You also build a custom pod ( BusyBox ) with the container image ``busybox:latest`` which basically run fine until you remove the image field with something else. Validating the manifest file is also important to see if there's any error message before you build the resource and you tried that in above excersise to see if any error occured. 
+
+Label the pods to organize them into a group, this is done in both declarative and imperative method. Verified the pod label with the ``kubectl get pods --show-labels`` command. Eventually proceed with cleaning up the resources with both by directly deleting the pod or with the manifest file ``nginx-pod.yml`` file. 
