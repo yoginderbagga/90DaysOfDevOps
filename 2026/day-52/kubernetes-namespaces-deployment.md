@@ -92,4 +92,11 @@ A standard pod doesn't come back up once its deleted, whereas Deployment Pod doe
 
 ### Task 5: Scale the Deployment
 
+As you can see we have changed the number of the replicas for the deployment ``nginx-deployment`` to 5 from 3. And then in the next command we scaled it down to number 2. 
+
+<img width="1456" height="332" alt="image" src="https://github.com/user-attachments/assets/cf0b8f68-0ce6-4d77-a7d6-a5e8ccb84fad" />
+
+<img width="1347" height="250" alt="image" src="https://github.com/user-attachments/assets/8bbb523a-e3c5-41e8-9e02-dddbc127c7e0" />
+
+**Verify** : Can confirm that Kubernetes Pod scaled down from 5 to 2. 
 
