@@ -68,4 +68,13 @@ A deployment is like a blueprint ( YAML instruction file) which gives the target
 1. Suppose if there's only one pod running this can be destructive for the business as one pod may crash and website will be down for a period of time.
 2. Second, if there are thousands of users visiting the website, "ThinkMyWeb" again overloads or gets hanged in between. You go manually launch the pod and monitor the pods yourself, how about hire a Deployment to do this for you.
 
-3. 
+What will the Deployment blueprint file do in this case?
+
+-- First, it define the exact instruction like _I want to use nginx:1.24 blueprint_
+-- Second, it says exactly 3 identical clones or the ``replicas:3`` of the app running all times. 
+
+Create a file ``nginx-deployment.yml``
+
+```
+apiVersion: apps/v1
+```
