@@ -88,3 +88,8 @@ apiVersion: apps/v1
 A standard pod doesn't come back up once its deleted, whereas Deployment Pod does come up, as you can see we deleted ``nginx-deployment-5d9c84579f-4jcdv`` pod and then immediately after it recreated a new pod with a different name ``nginx-deployment-5d9c84579f-4v4mc``
 
 <img width="1445" height="467" alt="image" src="https://github.com/user-attachments/assets/bde792ad-260b-4eb6-988f-ef96054464f3" />
+
+
+### Task 5: Scale the Deployment
+
+
