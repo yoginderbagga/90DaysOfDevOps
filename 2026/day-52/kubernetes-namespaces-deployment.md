@@ -111,3 +111,17 @@ A Kubernetes rolling update is the default deployment strategy that ``replaces o
 <img width="1767" height="372" alt="image" src="https://github.com/user-attachments/assets/eec5b53d-5de9-4070-88d7-6888b025ecbf" />
 
 <img width="1762" height="195" alt="image" src="https://github.com/user-attachments/assets/5c3f7a83-e32f-4caf-8246-a64480741127" />
+
+### Task 7: Clean Up
+
+```
+kubectl delete deployment nginx-deployment -n dev
+kubectl delete pod nginx-dev -n dev
+kubectl delete pod nginx-staging -n staging
+kubectl delete namespace dev staging production
+```
+
+<img width="1206" height="282" alt="image" src="https://github.com/user-attachments/assets/376906df-5cb4-4e91-aa71-079dff32e37c" />
+
+
+
