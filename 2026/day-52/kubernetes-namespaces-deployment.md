@@ -104,3 +104,10 @@ As you can see we have changed the number of the replicas for the deployment ``n
 
 What is rolling update in Kubernetes?
 
+A Kubernetes rolling update is the default deployment strategy that ``replaces old Pods with new ones incrementally to ensure zero downtime.`` Instead of taking down the entire application, Kubernetes updates a few Pods at a time, keeping the application available to handle traffic throughout the process.
+
+``
+
+<img width="1767" height="372" alt="image" src="https://github.com/user-attachments/assets/eec5b53d-5de9-4070-88d7-6888b025ecbf" />
+
+<img width="1762" height="195" alt="image" src="https://github.com/user-attachments/assets/5c3f7a83-e32f-4caf-8246-a64480741127" />
