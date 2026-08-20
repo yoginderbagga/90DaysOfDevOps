@@ -80,8 +80,11 @@ apiVersion: apps/v1
 ```
 <img width="1362" height="102" alt="image" src="https://github.com/user-attachments/assets/2de6d359-ac4a-48a1-9c35-0a7002ed5451" />
 
-<img width="1267" height="202" alt="image" src="https://github.com/user-attachments/assets/2c56bafc-b7d5-44d3-97f7-6a12fc47f17b" />
 
 <img width="1267" height="202" alt="image" src="https://github.com/user-attachments/assets/6663affd-da58-44f8-a053-2c7af9c0ba80" />
 
+### Task 4: Self-Healing in Kubernetes -- Delete a Pod and See if It Come Back
 
+A standard pod doesn't come back up once its deleted, whereas Deployment Pod does come up, as you can see we deleted ``nginx-deployment-5d9c84579f-4jcdv`` pod and then immediately after it recreated a new pod with a different name ``nginx-deployment-5d9c84579f-4v4mc``
+
+<img width="1445" height="467" alt="image" src="https://github.com/user-attachments/assets/bde792ad-260b-4eb6-988f-ef96054464f3" />
