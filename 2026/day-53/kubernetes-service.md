@@ -6,5 +6,5 @@ Second, it also provide Load balancing across all the pods which matches its sel
 
 ## Why Kubernetes Services?
 
-### Deploy the Application
+### Task 1: Deploy the Application
 
