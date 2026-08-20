@@ -1,7 +1,27 @@
 ## Kubernetes Namespaces and Deployment
 
 
-### Task 1: Explore the Default Namespace
+### Task 1: What is a Kubernetes Namespace and what problem does it solve?
+
+By default, everything in a cluster lives in a one space/pool whether it be -- Dev, Test or Production they all are in the same cluster. Now this creates three problems for example:
+
+**Problem 1 - Name Collision**
+If A team has used a common name say "nginx" then B team can not used the same "nginx" name
+
+**Problem 2 - No visibility** 
+
+When you run the command ``kubectl get pods`` you will see Dev, Pods, Test, stage all pods in single output so debugging is very difficult. 
+
+**Problem 3 - No boundaries**
+
+Anyone with cluster access can touch anything, one wrong command can delete the production prod. The fix is quit simple - namespace. Lets understand what namespace is through the file/system analogy.
+
+As you know, you can not have a file name report.pdf and another report.pdf in the same Document or Download folder, they can exists only if they are in the separate folder. All the default namespace goes into the default folder. 
+
+kube-system: Kubernetes own internal component like kube-dns, kube-proxy, API server so we don't need to touch it unless you know what you're doing.
+Kube public: readable by all people, even by unauthenticated , so its rarely used in the practice
+kube-node-lease: used internally to track which nodes are alive. 
+
 
 ``kubectl get namespace``
 
