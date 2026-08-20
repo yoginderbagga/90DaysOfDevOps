@@ -55,3 +55,7 @@ namespace/production created
 
 Finally, create a Kubernetes pod ``nginx-dev`` and ``nginx-staging`` and apply the namespace ``dev`` and ``staging`` which you created above. 
 <img width="1177" height="117" alt="image" src="https://github.com/user-attachments/assets/cadfe1b6-5d85-453b-8bfc-31d0af635956" />
+
+
+<img width="1281" height="427" alt="image" src="https://github.com/user-attachments/assets/5806ab3e-6501-4cc7-bd6f-54d2cb196f88" />
+
