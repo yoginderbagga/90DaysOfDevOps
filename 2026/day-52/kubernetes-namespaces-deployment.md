@@ -100,3 +100,7 @@ As you can see we have changed the number of the replicas for the deployment ``n
 
 **Verify** : Can confirm that Kubernetes Pod scaled down from 5 to 2. 
 
+### Task 6: Rolling Update
+
+What is rolling update in Kubernetes?
+
