@@ -59,3 +59,13 @@ Finally, create a Kubernetes pod ``nginx-dev`` and ``nginx-staging`` and apply t
 
 <img width="1281" height="427" alt="image" src="https://github.com/user-attachments/assets/5806ab3e-6501-4cc7-bd6f-54d2cb196f88" />
 
+### Task 3: Create the Deployment 
+
+Before creating a Deployment, lets understand what is Deployment? 
+
+A deployment is like a blueprint ( YAML instruction file) which gives the target number of replicas to be run. Now suppose, the "Deployment" in Kubernetes as a Super Robot Manager for your applications and you're running a "ThinkMyWeb" and the code runs inside a virtual container called Pod. 
+
+1. Suppose if there's only one pod running this can be destructive for the business as one pod may crash and website will be down for a period of time.
+2. Second, if there are thousands of users visiting the website, "ThinkMyWeb" again overloads or gets hanged in between. You go manually launch the pod and monitor the pods yourself, how about hire a Deployment to do this for you.
+
+3. 
