@@ -78,3 +78,7 @@ Create a file ``nginx-deployment.yml``
 ```
 apiVersion: apps/v1
 ```
+<img width="1362" height="102" alt="image" src="https://github.com/user-attachments/assets/2de6d359-ac4a-48a1-9c35-0a7002ed5451" />
+
+<img width="1267" height="202" alt="image" src="https://github.com/user-attachments/assets/2c56bafc-b7d5-44d3-97f7-6a12fc47f17b" />
+
