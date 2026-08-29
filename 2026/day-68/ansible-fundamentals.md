@@ -88,14 +88,14 @@ Modified the inventory file by adding two groups ``application`` and ``all_serve
 ```
 yoginderbagga@fedora:~/ansible-practice$ cat inventory.ini 
 [web]
-web-server ansible_host=3.87.2.8 ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/web-server-ansible.pem
+web-server ansible_host=3.87.2.X ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/web-server-ansible.pem
 
 [app]
-app-server ansible_host=54.152.217.34 ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/app-server-ansible.pem
+app-server ansible_host=54.152.217.X ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/app-server-ansible.pem
 
 
 [db]
-db-server ansible_host=34.238.252.153 ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/db-server-ansible.pem
+db-server ansible_host=34.238.252.X ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/db-server-ansible.pem
 
 
 [application:children]
