@@ -44,3 +44,30 @@ yoginderbagga@fedora:~/ansible-practice$
 ```
 
 ## Task 4: Create Inventory File
+
+Before creating an inventory file, create an Ansible Project directory and inside that directory create an inventory file. 
+
+```
+mkdir ansible-practice && cd ansible-practice
+```
+
+```
+yoginderbagga@fedora:~/ansible-practice$ cat inventory.ini 
+[web]
+web-server ansible_host=3.87.2.X ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/web-server-ansible.pem
+
+[app]
+app-server ansible_host=54.152.217.X ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/app-server-ansible.pem
+
+
+[db]
+db-server ansible_host=34.238.252.X ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/db-server-ansible.pem
+```
+
+Note one thing, I didn't use ``[all:vars] as mentioned in lab exercise as we have three different EC2 instance which all have different ``.pem`` file and hence the same file can't be used. So I declared it along with the ``ansible_host`` and ``ansible_user`` with the Public IP. 
+
+
+
+###Challenges & Observation
+
+
