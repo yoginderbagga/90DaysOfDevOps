@@ -109,6 +109,17 @@ db
 
 **Create ansible.cfg file**
 
+``ansible.cfg`` is the primary configuration file used to control the behavior, settings, and performance of the Ansible. Here you can define the inventory path, SSH connection settings, and privilege escalation parameters. 
+
+```
+yoginderbagga@fedora:~/ansible-practice$ cat ansible.cfg 
+[defaults]
+inventory = inventory.ini
+host_key_checking = False
+remote_user = ubuntu
+private_key_file = /home/yoginderbagga/web-server-ansible.pem
+```
+
 <img width="922" height="647" alt="image" src="https://github.com/user-attachments/assets/979daa77-19ee-49ef-815b-40f14a6cf18d" />
 
 
