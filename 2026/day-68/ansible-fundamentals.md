@@ -70,6 +70,17 @@ Note one thing, I didn't use ``[all:vars]`` as mentioned in lab exercise as we h
 
 <img width="1417" height="647" alt="image" src="https://github.com/user-attachments/assets/ce61c89b-2a73-4f33-b16e-cae05569b5d2" />
 
+## Task 5: Run Ad-hoc Commands
+
+Ansible ad command uses the ``/user/bin/ansible`` command-line tool for running a single, quick task on the host defined by the user simultaneously. Whereas Ansible playbooks are robust, reusable, task file , ad-hoc commands are the quick way to test an immediate infrastructure job - for example : ping connectivity, system uptimes, restarting a service or sending an emergency file. 
+
+<img width="1030" height="445" alt="image" src="https://github.com/user-attachments/assets/c17d18f0-5294-4595-8122-8711c766c635" />
+
+
+<img width="1190" height="230" alt="image" src="https://github.com/user-attachments/assets/4eb228fa-0ed5-466e-8d7e-63517f38a76c" />
+
+<img width="1532" height="562" alt="image" src="https://github.com/user-attachments/assets/70e10495-95ca-4656-8a8f-2bdab243f698" />
+
 
 ### Challenges & Observation
 
