@@ -83,7 +83,29 @@ Ansible ad command uses the ``/user/bin/ansible`` command-line tool for running 
 
 ## Task 6: Inventory Groups and Patterns
 
+Modified the inventory file by adding two groups ``application`` and ``all_servers`` which consist of host defined above. 
 
+```
+yoginderbagga@fedora:~/ansible-practice$ cat inventory.ini 
+[web]
+web-server ansible_host=3.87.2.8 ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/web-server-ansible.pem
+
+[app]
+app-server ansible_host=54.152.217.34 ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/app-server-ansible.pem
+
+
+[db]
+db-server ansible_host=34.238.252.153 ansible_user=ubuntu ansible_ssh_private_key_file=/home/yoginderbagga/db-server-ansible.pem
+
+
+[application:children]
+web
+app
+
+[all_servers:children]
+app
+db
+```
 
 
 ### Challenges & Observation
