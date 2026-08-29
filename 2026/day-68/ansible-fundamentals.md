@@ -66,8 +66,10 @@ db-server ansible_host=34.238.252.X ansible_user=ubuntu ansible_ssh_private_key_
 
 Note one thing, I didn't use ``[all:vars]`` as mentioned in lab exercise as we have three different EC2 instance which all have different ``.pem`` file and hence the same file can't be used. So I declared it along with the ``ansible_host`` and ``ansible_user`` with the Public IP. 
 
+<img width="1367" height="592" alt="image" src="https://github.com/user-attachments/assets/02144c53-d762-44c4-819e-017f15561d6a" />
 
 
-###Challenges & Observation
+
+### Challenges & Observation
 
 
