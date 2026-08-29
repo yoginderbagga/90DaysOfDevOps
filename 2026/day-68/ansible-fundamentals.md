@@ -72,4 +72,7 @@ Note one thing, I didn't use ``[all:vars]`` as mentioned in lab exercise as we h
 
 ### Challenges & Observation
 
+Received ``"Failed to connect to the host via ssh: Host key verification failed."`` first time executing the inventory file for the ``app-server`` and ``db-server``and  When i ran the command second time ``ansible all -i inventory.ini -m ping`` it worked for ``app-server`` fine. Then in third time running the inventory on the given host, it ran for all three servers. 
+
+Since this was the first time I ran playbook on all three new instances so SSH needed to verify the authenticity from the ``known host`` file and this playbook has multiple IPs hardcoded so it was time out for the remaining two IPs. There is another way to fix this "host_key_checking = False" which is a workaround but in coming exercise I would use the dynamic inventory concept which does not relies on the hardcoded IP address instead it pulls from external cloud provider like (AWS,AZure,GCP) so you don't need to mention IP explicitly each time machine reboots.
 
