@@ -68,6 +68,7 @@ Note one thing, I didn't use ``[all:vars]`` as mentioned in lab exercise as we h
 
 <img width="1367" height="592" alt="image" src="https://github.com/user-attachments/assets/02144c53-d762-44c4-819e-017f15561d6a" />
 
+<img width="1417" height="647" alt="image" src="https://github.com/user-attachments/assets/ce61c89b-2a73-4f33-b16e-cae05569b5d2" />
 
 
 ### Challenges & Observation
