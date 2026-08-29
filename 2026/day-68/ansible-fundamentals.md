@@ -107,6 +107,10 @@ app
 db
 ```
 
+**Create ansible.cfg file**
+
+<img width="922" height="647" alt="image" src="https://github.com/user-attachments/assets/979daa77-19ee-49ef-815b-40f14a6cf18d" />
+
 
 ### Challenges & Observation
 
