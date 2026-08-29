@@ -122,6 +122,7 @@ private_key_file = /home/yoginderbagga/web-server-ansible.pem
 
 <img width="922" height="647" alt="image" src="https://github.com/user-attachments/assets/979daa77-19ee-49ef-815b-40f14a6cf18d" />
 
+## Task 7: Difference between Command and Shell Module
 
 ### Challenges & Observation
 
