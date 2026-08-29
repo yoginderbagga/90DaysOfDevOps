@@ -83,7 +83,7 @@ Ansible ad command uses the ``/user/bin/ansible`` command-line tool for running 
 
 ## Task 6: Inventory Groups and Patterns
 
-Modified the inventory file by adding two groups ``application`` and ``all_servers`` which consist of host defined above. 
+Modified the inventory file by adding two groups ``application`` and ``all_servers`` parent groups which consist of child groups defined above. 
 
 ```
 yoginderbagga@fedora:~/ansible-practice$ cat inventory.ini 
