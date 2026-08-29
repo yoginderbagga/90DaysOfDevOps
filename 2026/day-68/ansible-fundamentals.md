@@ -81,6 +81,10 @@ Ansible ad command uses the ``/user/bin/ansible`` command-line tool for running 
 
 <img width="1532" height="562" alt="image" src="https://github.com/user-attachments/assets/70e10495-95ca-4656-8a8f-2bdab243f698" />
 
+## Task 6: Inventory Groups and Patterns
+
+
+
 
 ### Challenges & Observation
 
