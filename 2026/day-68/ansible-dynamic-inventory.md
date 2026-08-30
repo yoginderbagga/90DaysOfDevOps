@@ -45,4 +45,4 @@ Lets take a look at demo project ``ansible-practice`` which consist of:
    
         ```
 
-   In this demo, I had created three separate EC2 instances which all had different ``.pem`` files so its important to     declare all files path in the config file itself.
+   In this demo, I had created three separate EC2 instances which all had different ``.pem`` files so its important to     declare all files path in the config file itself. Wondering why we used ``keyed_groups`` above? This will automatically group EC2 instances inside the Ansible depending on the tags defined at AWS Instances ( like ``web``, ``app``, ``db``)
