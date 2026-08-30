@@ -15,9 +15,11 @@ Lets take a look at demo project ``ansible-practice`` which consist of:
 | setup.yml  | Playbook file  |
 
 
-### How to configure Dynamic Inventory for your Infrastrucutre?
+## How to configure Dynamic Inventory for your Infrastrucutre?
 
-1. Setup the Config file ``my_hosts.aws_ec2.yml`` (This file must ends with ``aws_ec2.yml`` as that's the plugin name)
+#### 1. Setup the Config file ``my_hosts.aws_ec2.yml`` 
+
+(This file must ends with ``aws_ec2.yml`` as that's the plugin name)
 
    ```
    plugin: amazon.aws.aws_ec2
@@ -44,4 +46,31 @@ Lets take a look at demo project ``ansible-practice`` which consist of:
         else '/home/yoginderbagga/web-server-ansible.pem'
    ```
 
-   In this demo, I had created three separate EC2 instances which all had different ``.pem`` files so its important to     declare all files path in the config file itself. Wondering why we used ``keyed_groups`` above? This will automatically group EC2 instances inside the Ansible depending on the tags defined at AWS Instances ( like ``web``, ``app``, ``db``)
+   In this demo, I had created three separate EC2 instances which all had different ``.pem`` files so its important to     declare all files path in the config file itself. Wondering why we used ``keyed_groups`` above? This will automatically group EC2 instances inside the Ansible depending on the tags defined at AWS Instances ( like ``web``, ``app``, ``db``) I have also used if-else conditions to declare the .pem files as all instances have different .pem key files and not single file will work with all instances. You may choose a different setup according to the requirement.
+
+#### 2. Verify the Configuration
+
+```
+yoginderbagga@fedora:~/ansible-practice$ ansible-inventory -i my_hosts.aws_ec2.yml --list
+   
+yoginderbagga@fedora:~/ansible-practice$ ansible-inventory -i my_hosts.aws_ec2.yml --graph
+```
+
+```   
+@all:
+  |--@ungrouped:
+  |--@aws_ec2:
+  |  |--13.220.150.X
+  |  |--18.205.159.X
+  |  |--18.212.26.X
+  |--@role_web:
+  |  |--13.220.150.X
+  |--@role_app:
+  |  |--18.205.159.X
+  |--@role_db:
+  |  |--18.212.26.X
+```  
+   
+
+ 
+Used ansible-inventory command to see and debug how exactly the dynamic inventory plugins are grouping and labeling the live EC2 IP address structure. Also, in production teams do not rely on the use of static IP addresses or hardcoded text files, because if the IP address changes it can cause the outage in production env. They heavily relies on infrastructure tags to target a specific servers ( like env_production, role_web, role_app, role_db ) And running the ``ansible-inventory --graph`` command tells us plugin filters and prefixes are parsing the correct cloud tags into the exact expected nested groups. 
