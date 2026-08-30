@@ -74,3 +74,39 @@ yoginderbagga@fedora:~/ansible-practice$ ansible-inventory -i my_hosts.aws_ec2.y
 
  
 Used ansible-inventory command to see and debug how exactly the dynamic inventory plugins are grouping and labeling the live EC2 IP address structure. Also, in production teams do not rely on the use of static IP addresses or hardcoded text files, because if the IP address changes it can cause the outage in production env. They heavily relies on infrastructure tags to target a specific servers ( like env_production, role_web, role_app, role_db ) And running the ``ansible-inventory --graph`` command tells us plugin filters and prefixes are parsing the correct cloud tags into the exact expected nested groups. 
+
+
+#### 2. Run Playbook
+
+```
+yoginderbagga@fedora:~/ansible-practice$ ansible-playbook -i my_hosts.aws_ec2.yml setup.yml 
+```
+
+Below is the playbook code, added two more tasks to install nginx server and start its service. 
+
+```
+yoginderbagga@fedora:~/ansible-practice$ cat setup.yml
+```
+
+```
+---
+- name: Test connectivity to dynamic AWS instance
+  hosts: all
+  become: true
+  tasks: 
+    - name: Ensure the connection is successfull and print a message.
+      ansible.builtin.debug:
+        msg: "Successfully connected to {{ ansible_hostname }} via dynamic inventory!"
+
+    - name: Install nginx package in all three Servers.
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+        update_cache: true
+
+    - name: Ensure Nginx Service started during boot
+      ansible.builtin.systemd:
+        name: nginx
+        state: started
+        enabled: true
+```
