@@ -110,3 +110,4 @@ yoginderbagga@fedora:~/ansible-practice$ cat setup.yml
         state: started
         enabled: true
 ```
+<img width="1351" height="711" alt="image" src="https://github.com/user-attachments/assets/9554aba3-3ee9-4d2f-906f-e89a0173258f" />
