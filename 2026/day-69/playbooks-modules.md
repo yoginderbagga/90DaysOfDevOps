@@ -46,6 +46,7 @@ Write a playbook to install and Start the Nginx web servers.
         mode: '0644'
 ```
 
+Read the output of the playbook carefully -- understand each tasks what ``changed`` ``ok`` or ``failed``. When you run the same playbook again, then you will see the output show ``ok`` instead of ``changed`` because as we discussed earlier, Ansible is idempotent, output will not change if not needed or if the package is already present. 
 
 
 
