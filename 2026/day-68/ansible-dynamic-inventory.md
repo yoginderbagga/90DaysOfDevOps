@@ -17,3 +17,32 @@ Lets take a look at demo project ``ansible-practice`` which consist of:
 
 ### How to configure Dynamic Inventory for your Infrastrucutre?
 
+1. Setup the Config file ``my_hosts.aws_ec2.yml`` (This file must ends with ``aws_ec2.yml`` as that's the plugin name)
+
+   ```
+   plugin: amazon.aws.aws_ec2
+
+   regions:
+     - us-east-1
+
+   hostnames:
+     - ip-address
+
+   keyed_groups:
+     - key: tags.Role
+       prefix: role
+
+   compose:
+     ansible_user: "'ubuntu'"
+     ansible_ssh_private_key_file: >-
+       '/home/yoginderbagga/web-server-ansible.pem'
+        if tags.Role == 'web'
+        else '/home/yoginderbagga/app-server-ansible.pem'
+        if tags.Role == 'app'
+        else '/home/yoginderbagga/db-server-ansible.pem'
+        if tags.Role == 'db'
+        else '/home/yoginderbagga/web-server-ansible.pem'
+   
+        ```
+
+   In this demo, I had created three separate EC2 instances which all had different ``.pem`` files so its important to     declare all files path in the config file itself.
