@@ -88,6 +88,7 @@ Most frequently used Ansible modules are:
 - ``lineinfile``: To add or modify a specific line in file
 
 
+Verified below playbook across all three EC2 instances and its working fine, file ``control.txt`` was copied fine to the destination directory ``/etc/nginx/conf.d`` from the source (ansible_practice)
 ```
 #Goal: To Practice Commonly used Ansible Modules
 
