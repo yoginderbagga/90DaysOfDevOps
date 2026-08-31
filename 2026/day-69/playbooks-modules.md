@@ -88,3 +88,60 @@ Most frequently used Ansible modules are:
 - ``lineinfile``: To add or modify a specific line in file
 
 
+```
+#Goal: To Practice Commonly used Ansible Modules
+
+- name: Hands-on with Ansible Common Modules
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Git & CURL package
+      ansible.builtin.apt:
+        name: 
+          - curl
+          - git
+        state: present
+
+    - name: Verify if Nginx is running
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+
+    - name: Copy the Config file
+      ansible.builtin.copy:
+        src: control.txt
+        dest: /etc/nginx/conf.d/control.txt
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Create application directory
+      ansible.builtin.file:
+        path: /opt/myapp_yogi
+        state: directory
+        owner: ubuntu
+        mode: '0755'
+
+    - name: Check the uptime 
+      ansible.builtin.command: uptime
+      register: uptime_output
+
+    - name: Print the uptime
+      ansible.builtin.debug:
+        var: uptime_output.stdout
+
+    - name: Count the Running processess
+      ansible.builtin.shell: ps aux | wc -l
+      register: process_count
+
+    - name: Show process count
+      ansible.builtin.debug: 
+        msg: "Total processess: {{ process_count.stdout }}"
+
+    - name: Set timezone in Environment
+      ansible.builtin.lineinfile: 
+        path: /etc/resolv.conf
+        line: 'nameserver 8.8.8.8'
+        state: present
+```
