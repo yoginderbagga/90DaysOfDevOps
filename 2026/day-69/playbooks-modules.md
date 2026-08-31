@@ -225,3 +225,17 @@ A keyword ``notify`` is used to call the handler by its name only when the tasks
         name: nginx
         state: restarted
 ```
+
+### Task 5: Dry Run, check Diff and Verbosity for the error
+
+1. Dry run -- This flags help you to execute a playbook or ad hoc command without actually making any modification to the managed systems. A good practice to verify the what changes will happen when you run it normally.
+2. Diff mode -- Shows a line by line comparison of changes of before and after applying the changes to the managed hosts. It works similar to the linux ``diff`` too
+3. Verbosity -- increase the output detail for the debugging purpose.
+4. Limit: -- limit to specific host
+5. List -- List the hosts that would be affected without actually running.
+
+```
+ansible-playbook install-nginx.yml --list-hosts
+ansible-playbook install-nginx.yml --list-tasks
+```
+   
