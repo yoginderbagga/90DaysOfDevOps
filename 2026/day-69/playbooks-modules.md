@@ -63,5 +63,17 @@ Ans: Yes, you can have multiple plays in a single Ansible Playbook which allows 
 3. What is the use of ``become: true`` at play and task level?
 
 Ans: Using ``become:true`` at play-level applies the privilege escalation (like using ``sudo``) to run at each tasks given in the specific play. This saves your time by providing ``become:true`` at every tasks level. Whereas if you apply ``become:true`` at the task level then it grants the sudo permission only at that particular tasks where its mentioned. Now this is clear example of least privilege principle as you're ensuring that sudo permission is given only at specific task and not the whole play.
+
+4. What happens if a task fails -- does the rest of the tasks still run?
+
+Ans: Interesting question, where we will explore ``ignore_errors: true`` and ``block/rescue`` mode. Before that, lets understand that if a particular task fails on a given host say "database" then Ansible immediately stop the execution of remaining tasks for that particular host. But the playbook will not stop the execution of tasks on global level, meaning that - if there are other hosts for that playbook Ansible will continue executing them for the other tasks where they succeeded. 
+
+- How to Continue Next Tasks Regardless of the Failure?
+  If you like a specific task to fail but want the same host to keep moving forward with rest of the playbooks then use ``ignore_errors: true``
+
+- ``block/rescude`` mode ( similar to Try/Catch logic)
+  List your tasks inside the ``block`` level and suppose if the ``block`` fails then Ansible stop those tasks execution and jump straight to the ``rescue`` section. And if the ``rescue`` tasks succeed, playbook reverts the failed status and continue running rest of the play. 
+  
+
 ###   Task 3: Playbook  Essential Modules 
 
