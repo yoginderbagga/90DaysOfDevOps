@@ -146,3 +146,11 @@ Verified below playbook across all three EC2 instances and its working fine, fil
         line: 'nameserver 8.8.8.8'
         state: present
 ```
+
+### Task 4: Use Handlers to Restart a Service when Needed.
+
+Suppose you need to restart a service or do any task but only when its actually notified by another task which reports a change in system state/environment. There you can use handler to achieve this functionality. ``Handlers`` keyword is used in the playbook to define action (restart a service) that needs to be done upon a change of configuration files or state. 
+A keyword ``notify`` is used to call the handler by its name only when the tasks results in a changed status. 
+
+
+
