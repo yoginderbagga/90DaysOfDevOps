@@ -48,7 +48,7 @@ Write a playbook to install and Start the Nginx web servers.
 
 Read the output of the playbook carefully -- understand each tasks what ``changed`` ``ok`` or ``failed``. When you run the same playbook again, then you will see the output show ``ok`` instead of ``changed`` because as we discussed earlier, Ansible is idempotent, output will not change if not needed or if the package is already present. 
 
-
+Ran the playbook couple of times, and since adding the new tasks such as "removing the index.html file", "removing the default nginx welcome page" and "create a custom index page" tasks in the existing playbook. So these were the tasks that shows ``changed`` status and the initial tasks shows ``ok``. 
 
 ### Task 2: Understand the Playbook Structure
 
