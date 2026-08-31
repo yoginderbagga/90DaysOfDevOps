@@ -58,7 +58,7 @@ Ans: Play defines where(hosts) and whom the ansible playbook should run, whereas
 
 2. Can you have multiple plays in a single playbook?
 
-Ans: Yes, you can have multiple plays in a single Ansible Playbook which allows you to target different groups of hosts, set execution settings and run the sequential steps across different infrastructure layer. For example, in first play you target the ``database`` server and ``web-servers`` in second play. 
+Ans: Yes, you can have multiple plays in a single Ansible Playbook which allows you to target different groups of hosts, set execution settings and run the sequential steps across different infrastructure layer. For example, in first play you target the ``database`` server and ``web-servers`` in second play. Here is an example from internet for the use of multiple playbook in a [Single play](https://github.com/yoginderbagga/90DaysOfDevOps/blob/master/2026/day-69/multi-tier-ansible.md)
 
 ###   Task 3: Playbook  Essential Modules 
 
