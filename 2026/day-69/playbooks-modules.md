@@ -60,5 +60,8 @@ Ans: Play defines where(hosts) and whom the ansible playbook should run, whereas
 
 Ans: Yes, you can have multiple plays in a single Ansible Playbook which allows you to target different groups of hosts, set execution settings and run the sequential steps across different infrastructure layer. For example, in first play you target the ``database`` server and ``web-servers`` in second play. Here is an example from internet for the use of multiple playbook in a [Single play](https://github.com/yoginderbagga/90DaysOfDevOps/blob/master/2026/day-69/multi-tier-ansible.md)
 
+3. What is the use of ``become: true`` at play and task level?
+
+Ans: Using ``become:true`` at play-level applies the privilege escalation (like using ``sudo``) to run at each tasks given in the specific play. This saves your time by providing ``become:true`` at every tasks level. Whereas if you apply ``become:true`` at the task level then it grants the sudo permission only at that particular tasks where its mentioned. Now this is clear example of least privilege principle as you're ensuring that sudo permission is given only at specific task and not the whole play.
 ###   Task 3: Playbook  Essential Modules 
 
