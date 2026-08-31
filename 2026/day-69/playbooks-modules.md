@@ -52,6 +52,13 @@ Ran the playbook couple of times, and since adding the new tasks such as "removi
 
 ### Task 2: Understand the Playbook Structure
 
+1. Difference between a play and task?
+
+Ans: Play defines where(hosts) and whom the ansible playbook should run, whereas the Task define what specific action to be perform on the managed hosts. In tasks, you don't specify the hosts as they just run as part of the larger context of a play. But you must explicitly define a target host for the Play. 
+
+2. Can you have multiple plays in a single playbook?
+
+Ans: Yes, you can have multiple plays in a single Ansible Playbook which allows you to target different groups of hosts, set execution settings and run the sequential steps across different infrastructure layer. For example, in first play you target the ``database`` server and ``web-servers`` in second play. 
 
 ###   Task 3: Playbook  Essential Modules 
 
