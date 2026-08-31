@@ -77,3 +77,14 @@ Ans: Interesting question, where we will explore ``ignore_errors: true`` and ``b
 
 ###   Task 3: Playbook  Essential Modules 
 
+Most frequently used Ansible modules are: 
+
+- ``yum`` / ``apt`` : To install or remove packages:
+- ``service`` : To manage the service of the application package
+- ``copy``: Copy the files from control node to the managed nodes.
+- ``file``: To create the directories and manage permissions.
+- ``command``: To run a command say ``df -h`` but no shell features.
+- ``shell``: Run a command with Shell features like ( pipes, redirects):
+- ``lineinfile``: To add or modify a specific line in file
+
+
