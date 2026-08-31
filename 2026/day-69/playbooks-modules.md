@@ -238,4 +238,8 @@ A keyword ``notify`` is used to call the handler by its name only when the tasks
 ansible-playbook install-nginx.yml --list-hosts
 ansible-playbook install-nginx.yml --list-tasks
 ```
-   
+
+### Task 6: Multiple Plays in Single Playbook
+
+Already discussed it in starting of the document and given a path to the mutiple-plays playbook as well. 
+
