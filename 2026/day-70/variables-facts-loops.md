@@ -50,3 +50,12 @@ yoginderbagga@fedora:~/ansible-practice$ cat ansible_vars.yml
         state: directory
         mode: '0755'
 ```
+
+### Task 2: group_vars and host_vars
+
+Its always preferable to keep the variable outside of the main playbooks file to keep the code clean, readable and scalable. There are two types of variable you can use in this case: 
+
+- ``group_vars/``: List of variables that applies to a complete group of machines defined in inventory.
+- ``host_vars/``: List of variables that target to a single, specific host. 
+
+
