@@ -81,3 +81,9 @@ yoginderbagga@fedora:~/ansible-practice$ cat facts.yml
       ansible.builtin.debug:
         var: ansible_interfaces
 ```
+
+## Task 4: Conditionals with when
+
+``when`` is used to control the flow of execution in Ansible playbook, similar to if-else in bash scripts. 
+
+
