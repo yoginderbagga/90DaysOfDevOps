@@ -59,3 +59,25 @@ Its always preferable to keep the variable outside of the main playbooks file to
 - ``host_vars/``: List of variables that target to a single, specific host. 
 
 
+### Task 3: Ansible Facts -- To Get System Information. 
+
+Ansible facts are the automatically gathered pieces of information about the managed host that are used to make automatic dynamic and adaptable. Instead of hardcoded values, use the system data info so playbook adapt to different operating systems, memory sizes or IP addresses. 
+
+```
+yoginderbagga@fedora:~/ansible-practice$ cat facts.yml 
+---
+- name: Facts Demo
+  hosts: all
+  tasks: 
+    - name: Show the OS info
+      ansible.builtin.debug:
+        msg: >
+          Hostname: {{ ansible_hostname }},
+          OS: {{ ansible_distribution }} {{ ansible_distribution_version }},
+          RAM: {{ ansible_memtotal_mb }}MB,
+          IP: {{ ansible_default_ipv4.address }}
+
+    - name: Show all network interfaces
+      ansible.builtin.debug:
+        var: ansible_interfaces
+```
