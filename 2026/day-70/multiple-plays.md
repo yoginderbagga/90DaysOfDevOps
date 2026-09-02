@@ -82,3 +82,30 @@ yoginderbagga@fedora:~/ansible-practice$ cat ansible_modules.yml
         msg: "Total processess: {{ process_count.stdout }}"
 ```
 
+Also, here is the inventory file which uses the AWS plugin to implement dynamic inventory : 
+
+```
+yoginderbagga@fedora:~/ansible-practice$ cat my_hosts.aws_ec2.yml 
+plugin: amazon.aws.aws_ec2
+
+regions:
+  - us-east-1
+
+hostnames:
+  - ip-address
+
+keyed_groups:
+  - key: tags.Role
+    prefix: role
+
+compose:
+  ansible_user: "'ubuntu'"
+  ansible_ssh_private_key_file: >-
+    '/home/yoginderbagga/web-server-ansible.pem'
+    if tags.Role == 'web'
+    else '/home/yoginderbagga/app-server-ansible.pem'
+    if tags.Role == 'app'
+    else '/home/yoginderbagga/db-server-ansible.pem'
+    if tags.Role == 'db'
+    else '/home/yoginderbagga/web-server-ansible.pem'
+```
