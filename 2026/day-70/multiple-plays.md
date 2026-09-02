@@ -109,3 +109,17 @@ compose:
     if tags.Role == 'db'
     else '/home/yoginderbagga/web-server-ansible.pem'
 ```
+
+ ansible.cfg
+
+ ```
+yoginderbagga@fedora:~/ansible-practice$ cat ansible.cfg 
+[defaults]
+inventory =  my_hosts.aws_ec2.yml
+host_key_checking = False
+remote_user = ubuntu
+private_key_file = /home/yoginderbagga/web-server-ansible.pem
+
+[inventory]
+enable_plugins = amazon.aws.aws_ec2
+```
