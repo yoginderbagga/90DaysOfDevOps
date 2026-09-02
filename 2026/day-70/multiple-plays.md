@@ -1,0 +1,84 @@
+### Multiple- Play inside a Single Playbook
+
+Below is an example of Multiple-Plays in a Playbook which target two different EC2 Instance as per the group created ``role_web``
+and ``role_app``
+
+```
+yoginderbagga@fedora:~/ansible-practice$ cat ansible_modules.yml 
+---
+#Goal: To Practice Commonly used Ansible Modules
+
+- name: Hands-on with Ansible Common Modules
+  hosts: role_web
+  become: true
+  tasks:
+    - name: Install Git & CURL package
+      ansible.builtin.apt:
+        name: 
+          - curl
+          - git
+        state: present
+
+    - name: Verify if Nginx is running
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+
+    - name: Copy the Config file
+      ansible.builtin.copy:
+        src: control.txt
+        dest: /etc/nginx/conf.d/control.txt
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Create application directory
+      ansible.builtin.file:
+        path: /opt/myapp_yogi
+        state: directory
+        owner: ubuntu
+        mode: '0755'
+
+    - name: Set timezone in Environment
+      ansible.builtin.lineinfile: 
+        path: /etc/resolv.conf
+        line: 'nameserver 8.8.8.8'
+        state: present
+
+    - name: Add DevOps Duties
+      ansible.builtin.lineinfile:
+        path: /etc/nginx/conf.d/control.txt
+        line: "DevOps are Deploying Websites and Databases to AWS"
+        state: present
+        create: yes
+      notify: restart nginx
+  
+  handlers:
+    - name: restart nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
+
+
+- name: Second Play with Tasks 
+  hosts: role_app
+  become: true
+  tasks:
+    - name: Check the uptime
+      ansible.builtin.command: uptime
+      register: uptime_output
+
+    - name: Print the uptime
+      ansible.builtin.debug:
+        var: uptime_output.stdout
+
+    - name: Count the Running processess
+      ansible.builtin.shell: ps aux | wc -l
+      register: process_count
+
+    - name: Show process count
+      ansible.builtin.debug:
+        msg: "Total processess: {{ process_count.stdout }}"
+```
+
