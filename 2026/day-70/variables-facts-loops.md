@@ -117,3 +117,27 @@ yoginderbagga@fedora:~/ansible-practice$ cat conditional.yml
         msg: "Web Server has enough memory"
       when: ansible_memtotal_mb >= 512
 ```
+
+### Task 5: Ansible Loops
+
+```
+yoginderbagga@fedora:~/ansible-practice$ cat loop.yml 
+---
+- name: Ansible Loop
+  hosts: all
+  become: true
+  
+  vars:
+    # List of users that needs to be created.
+    system_users:
+      - bob
+      - alice
+      - jacob
+
+  tasks:
+    - name: Create the Local user account
+      ansible.builtin.user:
+        name: "{{ item }}"
+        state: present
+        shell: /bin/bash
+```
