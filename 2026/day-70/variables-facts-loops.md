@@ -87,3 +87,33 @@ yoginderbagga@fedora:~/ansible-practice$ cat facts.yml
 ``when`` is used to control the flow of execution in Ansible playbook, similar to if-else in bash scripts. 
 
 
+```
+yoginderbagga@fedora:~/ansible-practice$ cat conditional.yml 
+---
+- name: Demonstrate Conditions in Ansible
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Install the Nginx Server on web-servers only
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+      when: tags.Role == 'web'
+
+    - name: Install MySQL (only on db servers)
+      ansible.builtin.apt:
+        name: mysql-server
+        state: present
+      when: tags.Role == 'db'
+
+    - name: Run only on Ubuntu
+      ansible.builtin.debug:
+        msg: " This is an Ubuntu Machine"
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Run when Web Server enough memory
+      ansible.builtin.debug:
+        msg: "Web Server has enough memory"
+      when: ansible_memtotal_mb >= 512
+```
