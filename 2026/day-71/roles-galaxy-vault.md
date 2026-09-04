@@ -74,3 +74,6 @@ Managed by: Ansible
 
 Here playbooks is defining what needs to be done like setting the facts such as hostname, role etc and then create a template which gets send to the /etc/motd location with the given permission. And template file define the logic how it retrieve the information such as above from the system and pass it to the playbook to display. 
 
+<img width="795" height="840" alt="image" src="https://github.com/user-attachments/assets/003d304f-a4e6-413e-bdf5-2b0f56827ff4" />
+
+<img width="976" height="667" alt="image" src="https://github.com/user-attachments/assets/4f17ef61-d752-497e-b033-d71e034c282e" />
