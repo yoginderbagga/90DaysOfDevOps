@@ -140,4 +140,5 @@ yoginderbagga@fedora:~/ansible-practice$ cat loop.yml
         name: "{{ item }}"
         state: present
         shell: /bin/bash
+      loop: "{{system_users }}"
 ```
