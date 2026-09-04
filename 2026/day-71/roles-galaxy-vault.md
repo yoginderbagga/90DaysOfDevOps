@@ -77,3 +77,30 @@ Here playbooks is defining what needs to be done like setting the facts such as 
 <img width="795" height="840" alt="image" src="https://github.com/user-attachments/assets/003d304f-a4e6-413e-bdf5-2b0f56827ff4" />
 
 <img width="976" height="667" alt="image" src="https://github.com/user-attachments/assets/4f17ef61-d752-497e-b033-d71e034c282e" />
+
+## Task 2: Ansible Role Structure 
+
+To generate an Ansible role, run below command : 
+
+``ansible-galaxy role init my_role``
+
+
+```
+roles/
+  webserver/
+    tasks/
+      main.yml                               # main task list
+    handlers/
+      main.yml                              # Handlers (Task for restarting the service etc)
+    templates/
+      nginx.conf.j2 or server-info.txt.j2    # Jinja2 templates
+    files/
+      index.html                            # Static files
+    vars/
+      main.yml                              # Role variables (high priority variable)
+    defaults/
+      main.yml                              # Default variable (low priority variable)
+    meta/
+      main.yml                              # Role metadata
+```
+  
