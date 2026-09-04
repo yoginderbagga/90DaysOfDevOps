@@ -22,12 +22,13 @@ In Ansible, Jinja2 servers as the core templating engine used to introduce dynam
 {{ ....}}
 
 {% ... %}
+```
 
 ### Ansible Galaxy:
 
 ## Task 1: Jinja2 Templates
 
-Below is an example of Jinja2 template applied on the playbook ``jinja-demo.yml`` playbook with the template file ``server-info.txt.j2``
+Below is an example of Jinja2 template applied on the playbook ``jinja-demo.yml`` playbook with the template file ``server-info.txt.j2``. Here we have three EC2 instances same name as before, same dynamic inventory as previous session, now each time user take an SSH to EC2 it prints its server name i.e ``role``, ``Public IP Address``, ``Private IP Address``, ``Operating System`` information based on the each instance configuration. 
 
 Playbook code:
 
@@ -71,4 +72,5 @@ Operating System: {{ ansible_distribution }}
 Managed by: Ansible
 ```
 
+Here playbooks is defining what needs to be done like setting the facts such as hostname, role etc and then create a template which gets send to the /etc/motd location with the given permission. And template file define the logic how it retrieve the information such as above from the system and pass it to the playbook to display. 
 
