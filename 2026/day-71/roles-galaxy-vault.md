@@ -170,3 +170,70 @@ server {
 ansible-galaxy search nginx --platform EL
 ansible-galaxy search mysql
 ```
+
+To search for a role created for the mysql run below command and it will find all the roles with mysql name in ansible galaxy community. 
+```
+yoginderbagga@fedora:~$ ansible-galaxy search mysql
+
+Found 690 roles matching your search:
+
+ Name                                                       Description
+ ----                                                       -----------
+ 0amalpartida0.ansible_role_mysql57                         install mysql community 5.7
+ tenequm.mysql                                              Simply installs MySQL 5.7 on Xenial.
+ 4linuxdevops.mysql-server                                  Instalacao e Configuracao do servidor MySQL
+ 4linuxhd.mysql_server                                      Instalacao e Configuracao do servidor MySQL
+ 5KYDEV0P5.skydevops-mysql                                  Install and configure MySQL Database
+ 6nsh.mysql_server                                          Install and configure MySQL Community Server 8.0
+ abednarik.mysqld-exporter                                  Install and configure mysqld_exporter
+ aboveops.ct_mysql                                          Ansible role deploys MySQL container
+ acandid.mysql                                              Install MySQL 8 on RedHat/CentOS 8 and Create user and database.
+ infOpen.mysql-backup                                       configure mysql-backup with xtrabackup and mysqldump
+ infOpen.mysql-server                                       Install mysql-server package
+ adarnimrod.mysql                                           Provision a MySQL server
+ adelmosilva.mysql_server                                   Instalacao e Configuracao do servidor MySQL
+ AdopteUnOps.mysql-docker                                   Ansible role to run a mysql container.
+ adshafqat.ansible_role_mysql                               Solution Designer
+```
+
+## Task 5: Ansible Vault : For Encrypting the Secret files
+
+It is recommended to never put any important credentials like API keys, tokens, passwords in plain text in your Ansible project. Ansible vault help to encrypt those sensitive data. 
+
+Step 1: Create an encrypted file
+
+``ansible-vault create group_vars/db/vault.yml``
+
+It will ask for a vault password, you can set that, and an editor will open. Add : 
+
+vault_db_password: SuperSecretP@ssw0rd
+vault_db_root_password: R00tP@ssw0rd123
+vault_api_key: sk-abc123xyz789
+
+Save and exit. 
+
+Step 2: Encrypt an existing file :
+
+``ansible-vault encrypt group_vars/db/secrets.yml``
+
+Step 3: Call the vault variable in your playbook. ``db-setup.yml``
+
+```
+---
+- name: Configure the database
+  hosts: role_db
+  become: true
+
+  tasks:
+    - name: Show the DB password
+      ansible.builtin.debug:
+        msg: "DB password is set: {{ vault_db_password | length > 0 }}"
+
+```
+
+ansible-playbook -i my_host.aws_ec2.yml db-setup.yml --ask-vault-pass
+
+
+
+
+Step 2: 
