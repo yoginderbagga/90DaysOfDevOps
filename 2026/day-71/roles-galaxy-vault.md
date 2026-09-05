@@ -26,6 +26,8 @@ In Ansible, Jinja2 servers as the core templating engine used to introduce dynam
 
 ### Ansible Galaxy:
 
+Ansible Galaxy is a community hub and repository from where you can find, share and download pre-packaged automation content like roles and collections. So instead of writing the playbook from the scratch you can download common roles like nginx, Docker, postgresSQL from there. 
+
 ## Task 1: Jinja2 Templates
 
 Below is an example of Jinja2 template applied on the playbook ``jinja-demo.yml`` playbook with the template file ``server-info.txt.j2``. Here we have three EC2 instances same name as before, same dynamic inventory as previous session, now each time user take an SSH to EC2 it prints its server name i.e ``role``, ``Public IP Address``, ``Private IP Address``, ``Operating System`` information based on the each instance configuration. 
@@ -160,4 +162,11 @@ server {
         try_files $uri $uri/ =404;
     }
 }
+```
+
+## Task 4: Ansible Galaxy : Use their Roles
+
+```
+ansible-galaxy search nginx --platform EL
+ansible-galaxy search mysql
 ```
