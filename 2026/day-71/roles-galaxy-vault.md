@@ -111,4 +111,53 @@ Role exercise is completed as per the given tasks and here is the output below :
 
 <img width="1091" height="847" alt="image" src="https://github.com/user-attachments/assets/58c1187a-1dae-48e4-84f2-f9605fafddd5" />
 
+```
+yoginderbagga@fedora:~/packet/webserver/templates$ cat index.html.j2 
+<h1>{{ app_name }}</h1>
+<p>Server: {{ ansible_hostname }}</p>
+<p>IP: {{ ansible_default_ipv4.address }}</p>
+<p>Environment: {{ app_env | default('development') }}</p>
+<p>Managed by Ansible</p>
+```
 
+```
+yoginderbagga@fedora:~/packet/webserver/templates$ cat nginx.conf.j2 
+user www-data;
+worker_processes auto;
+
+error_log /var/log/nginx/error.log;
+pid /run/nginx.pid;
+
+events {
+    worker_connections {{ max_connections }};
+}
+
+http {
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    access_log /var/log/nginx/access.log;
+
+    sendfile on;
+    keepalive_timeout 65;
+
+    include /etc/nginx/conf.d/*.conf;
+}
+```
+
+```
+yoginderbagga@fedora:~/packet/webserver/templates$ cat vhost.conf.j2 
+server {
+    listen {{ http_port }};
+    listen [::]:{{ http_port }};
+
+    server_name _;
+
+    root /var/www/{{ app_name }};
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+```
