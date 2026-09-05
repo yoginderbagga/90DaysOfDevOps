@@ -104,3 +104,11 @@ roles/
       main.yml                              # Role metadata
 ```
   
+## Task 3: Build a Role From Scratch
+
+
+Role exercise is completed as per the given tasks and here is the output below : 
+
+<img width="1091" height="847" alt="image" src="https://github.com/user-attachments/assets/58c1187a-1dae-48e4-84f2-f9605fafddd5" />
+
+
