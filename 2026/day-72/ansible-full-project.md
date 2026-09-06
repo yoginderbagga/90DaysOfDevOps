@@ -33,7 +33,7 @@ ansible-docker-project/
       defaults/main.yml
 ```
 
-Ensure to create a project directory ``ansible-docker-project``
+Ensure to create a project directory ``ansible-docker-project`` and create three specific roles for ``common``, ``docker``, and ``nginx``
 
 ```
 yoginderbagga@fedora:~/ansible-docker-project$ ansible-galaxy init roles/common
@@ -44,3 +44,60 @@ yoginderbagga@fedora:~/ansible-docker-project$ ansible-galaxy init roles/nginx
 - Role roles/nginx was created successfully
 ```
 
+### Task 2: Create the Common Roles 
+
+Purpose of this role is to provide base packages and setup your system for the docker and nginx deployment. 
+
+``roles/common/tasks/main.yml``
+
+```
+---
+- name: Update package cache
+  yum:
+    update_cache: true
+  tags: common
+
+- name: Install common packages
+  yum:
+    name: "{{ common_packages }}"
+    state: present
+  tags: common
+
+- name: Set hostname
+  hostname:
+    name: "{{ inventory_hostname }}"
+  tags: common
+
+- name: Set timezone
+  timezone:
+    name: "{{ timezone }}"
+  tags: common
+
+- name: Create deploy user
+  user:
+    name: deploy
+    groups: wheel
+    shell: /bin/bash
+    state: present
+  tags: common
+```
+
+Now add all the variable specific to ``common`` roles inside the ``group_vars/all.yml`` file. 
+
+```
+---
+timezone: Asia/Kolkata
+project_name: devops-app
+app_env: development
+common_packages:
+  - vim
+  - curl
+  - wget
+  - git
+  - htop
+  - tree
+  - jq
+  - unzip
+```
+
+## Task 3
