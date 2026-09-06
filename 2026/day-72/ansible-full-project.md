@@ -100,4 +100,18 @@ common_packages:
   - unzip
 ```
 
-## Task 3
+## Task 3: Create the Docker Role 
+
+Purpose of this role is to install the Docker package, start the docker service and pull images and run the containers. 
+
+``roles/docker/defaults/main.yml``:
+
+```
+---
+docker_app_image: nginx
+docker_app_tag: latest
+docker_app_name: myapp
+docker_app_port: 8080
+docker_container_port: 80
+```
+
