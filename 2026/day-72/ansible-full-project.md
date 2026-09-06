@@ -115,3 +115,9 @@ docker_app_port: 8080
 docker_container_port: 80
 ```
 
+Note: I followed the steps from this step till the end as per documentation(read me) including the encrypt Docker hub credential with Vault and building the master playbook to deploy it. 
+
+Ran the playbook and it did executed on few tasks but some tasks were skipped for example : ``Install Docker and run container`` and ``Configure Nginx reverse proxy`` and rest were executed as per below screenshot. 
+
+Completed tasks : ``Update System Package Cache``, ``Set Hostname`` , ``Set timezone``  ``Create a Deploy user`` . This needs to be investigated in the future when i resume this, for now we can call it a day!
+
