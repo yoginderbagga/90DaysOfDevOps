@@ -20,4 +20,6 @@ There is high possibility of the human error when the configurations are done ma
 
 3. When choosing between Terraform vs other IAC tools like (AWS CloudFormation, Pulumni, and Ansible), it depends on whether your organization is using a multi-cloud or AWS only architecture. As Terraform is a multi-cloud application which works with all major cloud provides like AWS, Ezure, GCP, Kubernetes, SAAS etc whereas CloudFormation is exclusive to AWS only.
 
-4. Declarative stands for you define the end result(desired and state) that you need to build on your cloud infrastructure rather than ``how-to`` to build that infrastructure. Now the Terraform engine handles the underlying logic, API calls and execution order to make reality match your profile. 
+4. Declarative stands for you define the end result(desired and state) that you need to build on your cloud infrastructure rather than ``how-to`` to build that infrastructure. Now the Terraform engine handles the underlying logic, API calls and execution order to make reality match your profile.
+
+### Task 2: Setup Terraform
