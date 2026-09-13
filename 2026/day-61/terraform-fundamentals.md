@@ -44,4 +44,7 @@ yoginderbagga@fedora:~/my-first-terraform$ aws sts get-caller-identity
 }
 ```
 
+### Task 3: Create an S3 Bucket with Terraform Configuration
 
+
+<img width="1361" height="505" alt="image" src="https://github.com/user-attachments/assets/bf68e541-1a39-4082-90dd-2cbaab89e8d3" />
