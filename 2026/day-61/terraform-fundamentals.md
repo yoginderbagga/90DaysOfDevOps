@@ -9,3 +9,8 @@ Since three months, you have been actively building CI/CD pipeline to integrate 
 2. What issues does IAC resolve that occurs when deploying resources manually via AWS Management console?
 3. Terraform vs other IAC tools (AWS CloudFormation, Pulumni, and Ansible)
 4. Declarative vs Cloud-agnostic.
+
+
+### Explanation
+
+1. Terraform allows you to define, deploy and manage the overall cloud infrastructure including ``servers``, ``database``, ``networks`` etc using the human readable configuration files rather than manually clicking on the AWS or other cloud console. 
