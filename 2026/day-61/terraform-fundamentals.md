@@ -8,9 +8,16 @@ Since three months, you have been actively building CI/CD pipeline to integrate 
 1. What is the use of Infrastructure as Code (IaC) and why you need it in DevOps/Cloud?
 2. What issues does IAC resolve that occurs when deploying resources manually via AWS Management console?
 3. Terraform vs other IAC tools (AWS CloudFormation, Pulumni, and Ansible)
-4. Declarative vs Cloud-agnostic.
+4. What is Declarative and Cloud-agnostic.
 
 
 ### Explanation
 
-1. Terraform allows you to define, deploy and manage the overall cloud infrastructure including ``servers``, ``database``, ``networks`` etc using the human readable configuration files rather than manually clicking on the AWS or other cloud console. 
+1. Terraform allows you to define, deploy and manage the overall cloud infrastructure including ``servers``, ``database``, ``networks`` etc using the human readable configuration files rather than manually clicking on the AWS or other cloud console. **DevOps engineers** often have to maintain the consistent cloud infrastructure across Development, Testing, and Production environment which is also time consuming when you have to build 20, 30 instance and different networks. It uses variables, modules(reusable templates) to spin up and clone the environment smoothly.
+
+2. Building the infrastructure manually with AWS management console requires you to navigate through several EC2 instance options, menus to select the resources etc. And doing this for several times just to spin up instances or create the networks is a time consuming process. Terraform let you define the infrastructure with ``HCL`` HashiCorp Configuration Language and then you run ``terraform apply`` which deploy the entire infrastructure in few seconds.
+There is high possibility of the human error when the configurations are done manually so it gets difficult to manage the entire architecture manually.
+
+3. When choosing between Terraform vs other IAC tools like (AWS CloudFormation, Pulumni, and Ansible), it depends on whether your organization is using a multi-cloud or AWS only architecture. As Terraform is a multi-cloud application which works with all major cloud provides like AWS, Ezure, GCP, Kubernetes, SAAS etc whereas CloudFormation is exclusive to AWS only.
+
+4. Declarative stands for you define the end result(desired and state) that you need to build on your cloud infrastructure rather than ``how-to`` to build that infrastructure. Now the Terraform engine handles the underlying logic, API calls and execution order to make reality match your profile. 
