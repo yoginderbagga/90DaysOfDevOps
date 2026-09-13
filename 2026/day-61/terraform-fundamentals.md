@@ -23,3 +23,25 @@ There is high possibility of the human error when the configurations are done ma
 4. Declarative stands for you define the end result(desired and state) that you need to build on your cloud infrastructure rather than ``how-to`` to build that infrastructure. Now the Terraform engine handles the underlying logic, API calls and execution order to make reality match your profile.
 
 ### Task 2: Setup Terraform
+
+First install the Terraform application and to do that ensure that Terraform repository is added in your Linux machine. Also, you can verify if the terraform is installed with ``terraform -version`` command. 
+
+Second, setup the AWS CLI in your Linux in order to use the command based AWS setup. 
+
+```
+aws configure
+# Enter the AWS Access key ID, Secret Access Key and the default region (us-east-1)
+```
+
+Verify AWS is configure with below command : 
+
+```
+yoginderbagga@fedora:~/my-first-terraform$ aws sts get-caller-identity 
+{
+    "UserId": "ABCDXYZ",
+    "Account": "3465123456",
+    "Arn": "arn:aws:iam::3465123456:user/spider_man"
+}
+```
+
+
