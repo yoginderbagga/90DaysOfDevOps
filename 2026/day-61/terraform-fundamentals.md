@@ -113,3 +113,8 @@ resource "aws_s3_bucket_public_access_block" "public_access" {
 }
 ```
 In above example, when you run ``terraform init`` command is used to initialize a new or existing Terraform directory. It downloads the ``Provider`` plugin based on the infrastructure you're using and the necessary binary files into a hidden local directory. 
+
+Here is the results after successful run of terraform apply. 
+
+<img width="1912" height="566" alt="image" src="https://github.com/user-attachments/assets/ed71c441-99da-4fbd-90bd-ae933e4b308c" />
+
