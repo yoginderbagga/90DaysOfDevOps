@@ -118,3 +118,60 @@ Here is the results after successful run of terraform apply.
 
 <img width="1912" height="566" alt="image" src="https://github.com/user-attachments/assets/ed71c441-99da-4fbd-90bd-ae933e4b308c" />
 
+### Task 4: Add an EC2 Instance in Existing Project
+
+Verified EC2 instance was added from the same ``main.tf`` file, it showed 1 resource which is the S3 bucket already exist so it was unchanged. 
+
+```
+yoginderbagga@fedora:~/s3-with-terraform$ cat main.tf 
+provider "aws" {
+    region = "us-east-1"
+}
+
+#Define the S3 Bucket Resource
+
+resource "aws_s3_bucket" "my_bucket" {
+    bucket = "yogi-s3-bucket-terraform"
+
+    tags = {
+      Environment = "Dev"
+      ManagedBy   = "Terraform"
+	}
+}
+
+resource "aws_s3_bucket_versioning" "versioning" {
+    bucket = aws_s3_bucket.my_bucket.id
+    versioning_configuration {
+      status = "Enabled"
+    }
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
+    bucket = aws_s3_bucket.my_bucket.id
+
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
+  }
+
+
+resource "aws_s3_bucket_public_access_block" "public_access" {
+    bucket = aws_s3_bucket.my_bucket.id
+
+    block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource "aws_instance" "New-world" {
+    ami = "ami-XYZ
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "TerraWorld"
+  }
+}
+```
