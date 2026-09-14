@@ -46,5 +46,15 @@ yoginderbagga@fedora:~/my-first-terraform$ aws sts get-caller-identity
 
 ### Task 3: Create an S3 Bucket with Terraform Configuration
 
+S3 Bucket (Simple Storage Service) is a cloud storage service which is used to store, manage files, data and digital objects of any sizes. You can think of S3 bucket is a container where you can store any huge size files in unlimited number. 
+
+One thing to note, an object storage service is different from a database(like PostgreSQL, MongoDB) as the database stores structure information like text, numbers, or alphabets etc whereas an S3 bucket stores unstructured files(images, videos, PDFs, and backups) 
+
+**Use Cases**
+
+
+
+
+
 
 <img width="1361" height="505" alt="image" src="https://github.com/user-attachments/assets/bf68e541-1a39-4082-90dd-2cbaab89e8d3" />
