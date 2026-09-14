@@ -178,4 +178,4 @@ resource "aws_instance" "New-world" {
 
 ### Task 5: Terraform State File
 
-
+It is also known as the single source of truth of your infrastructure, created in a JSON format. A state file is used to record the mapping between configuration files (.tf) and the real world resources deployed on the cloud provider. 
