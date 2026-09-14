@@ -175,3 +175,7 @@ resource "aws_instance" "New-world" {
   }
 }
 ```
+
+### Task 5: Terraform State File
+
+
