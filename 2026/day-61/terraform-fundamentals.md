@@ -58,5 +58,57 @@ One thing to note, an object storage service is different from a database(like P
 
 
 
-
 <img width="1361" height="505" alt="image" src="https://github.com/user-attachments/assets/bf68e541-1a39-4082-90dd-2cbaab89e8d3" />
+
+```
+yoginderbagga@fedora:~/s3-with-terraform$ terraform plan
+```
+
+```
+yoginderbagga@fedora:~/s3-with-terraform$ terraform apply 
+```
+
+```
+yoginderbagga@fedora:~/s3-with-terraform$ cat main.tf 
+provider "aws" {
+    region = "us-east-1"
+}
+
+#Define the S3 Bucket Resource
+
+resource "aws_s3_bucket" "my_bucket" {
+    bucket = "yogi-s3-bucket-terraform"
+
+    tags = {
+      Environment = "Dev"
+      ManagedBy   = "Terraform"
+	}
+}
+
+resource "aws_s3_bucket_versioning" "versioning" {
+    bucket = aws_s3_bucket.my_bucket.id
+    versioning_configuration {
+      status = "Enabled"
+    }
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
+    bucket = aws_s3_bucket.my_bucket.id
+
+    rule {
+      apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
+      }
+    }
+  }
+
+
+resource "aws_s3_bucket_public_access_block" "public_access" {
+    bucket = aws_s3_bucket.my_bucket.id
+
+    block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+```
