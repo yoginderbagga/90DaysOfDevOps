@@ -52,7 +52,9 @@ One thing to note, an object storage service is different from a database(like P
 
 **Use Cases**
 
-
+- To store user-generated content and secure document storage: Suppose when a customer takes photo of the product, invoices and uploads PDF of that via the mobile app and that file goes from application server and uploaded directly into the ``Amazon S3 bucket``
+- Big Data Analytics & Financial Auditing: Big companies tracks the transactions, user clicks, histories of millions of users in a single day. Now all these raw files, database transactions, and third party API data are continuously dumped into a massive central S3 Data Lake.
+- Your server handles the application backend logic, and S3 handles the heavy files. Now if server crashes, your data files are safe.
 
 
 
