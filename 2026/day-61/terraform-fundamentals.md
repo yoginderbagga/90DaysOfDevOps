@@ -180,4 +180,6 @@ resource "aws_instance" "New-world" {
 
 ``terraform.tfstate`` It is also known as the single source of truth of your infrastructure, created in a JSON format. A state file is used to record the mapping between configuration files (.tf) and the real world resources deployed on the cloud provider. 
 
-To put simply, Terraform file records the state of your infrastructure, it gets created when you run the ``Terraform apply`` command. Because this file is crucial for your infrastructure, you need to store it in secret place like at your S3 bucket etc.  
+To put simply, Terraform file records the state of your infrastructure, it gets created when you run the ``Terraform apply`` command. Because this file is crucial for your infrastructure, you need to store it in remote place such as cloud storage S3 with versioning, state locking and schedule backup in order to not loose the file. 
+
+
