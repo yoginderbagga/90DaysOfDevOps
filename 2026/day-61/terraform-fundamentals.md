@@ -183,3 +183,7 @@ resource "aws_instance" "New-world" {
 To put simply, Terraform file records the state of your infrastructure, it gets created when you run the ``Terraform apply`` command. Because this file is crucial for your infrastructure, you need to store it in remote place such as cloud storage S3 with versioning, state locking and schedule backup in order to not loose the file. 
 
 
+-- Terraform state file should not be stored on the GitHub as it secrets passwords, API, in plaintext format. Committing this file to - even a private repository can cause secrets leaks to everyone who has access to the repository. 
+
+### Task 6: Terraform Modify, Plan and Destroy Resources
+
