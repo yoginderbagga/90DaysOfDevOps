@@ -187,3 +187,11 @@ To put simply, Terraform file records the state of your infrastructure, it gets 
 
 ### Task 6: Terraform Modify, Plan and Destroy Resources
 
+Changed the EC2 instance tag from ``FirstTerraformServer`` to ``Modified-FirstTerraformServer`` and run ``terraform plan`` command which displayed what configuration will change like below : 
+
+<img width="1230" height="301" alt="image" src="https://github.com/user-attachments/assets/88e4290a-4150-43a1-9b04-933cbbe7aba8" />
+
+Proceed to run ``terraform apply`` command as below and changes were implemented fine. I verified at AWS console too and it does shows the new tag updated there. 
+
+
+
